@@ -1,3 +1,4 @@
 theme: jekyll-theme-minimal
 title: Ferret Stack
 description: A blog about poker, coding, beer, and a whole *stack* of other stuff
+permalink: /:title/
