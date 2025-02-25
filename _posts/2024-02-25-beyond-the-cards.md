@@ -3,9 +3,8 @@ layout: post
 title: "Beyond the Cards - How One Simple Game Reveals Poker's Complex Strategies"
 date: 2024-02-25
 categories: poker strategy
+author: Ferret Stack
 ---
-# Beyond the Cards - How One Simple Game Reveals Poker's Complex Strategies (and how understanding it can win you more money)
-
 Picture this: You arrive on the river and the dealer lays down the **4d**. An initially innocuous card, but then to your horror you notice that it completes the flush. Your opponent, having called your bets on every street, checks to you. What do you do? Value bet with your top pair? Fire a bluff with your busted straight draw? Check and hope your second pair is good? 
 
 For players looking to master game theory optimal (GTO) poker strategy, understanding complex mathematical concepts and solver output can be overwhelming and misunderstanding it could be detrimental to your winrate. Whether you're playing at the microstakes or highstakes, understanding GTO is important.
