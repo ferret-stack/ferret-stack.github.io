@@ -94,6 +94,8 @@ For more pen-stuff including more blog posts, as well as a whole stack of other 
   <a href="https://mastodon.social/@ferret_stack" target="_blank">Mastodon</a>
 </div>
 
+
+
 PS - I was hoping to find some pocket notebooks at the pens how but didn't have any luck. If anyone is able to tell me where in the UK I can get:
 - Field Notes size pocket notebooks
 - Any good rollerball / ballpoint pens to add to the collection
