@@ -23,7 +23,7 @@ Also inked is a John Twiss custom fountain pen, that was made for a group of us 
 
 I *love* the smell of this pen. The acrylic transports me straight back to when I first got it and brings so many memories. The KWZ ink smells lovely as well, with That characteristic thyme and vanilla you get from KWZ for whatever reason. Whenever I uncap this pen now I am taking a covert sniff at it like an addict trying to get his fix.
 
-<div class="image-grid grid-2">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
   <img src="/assets/images/LWES2025/currently-inked.jpg" alt="" style="width: 100%; height: auto;">
   <img src="/assets/images/LWES2025/currently-inked-closeup.jpg" alt="" style="width: 100%; height: auto;">
 </div>
@@ -37,7 +37,7 @@ But I discovered something far greater. Yesterday, as mentioned, I went to the L
 
 Here are a few pictures of some Kawecos I was tempted by, an interesting custom pen by Nine Bespoke, and a pen with a helix style internals that I'm sure would look wicked inked up.
 
-<div class="image-grid grid-4">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
   <img src="/assets/images/LWES2025/kaweco.jpg" alt="Kaweco Sport fountain pens" style="width: 100%; height: auto;">
   <img src="/assets/images/LWES2025/nine-bespoke.jpg" alt="A very nice custom pen by Nine Bespoke that had a juicy nib!" style="width: 100%; height: auto;">
   <img src="/assets/images/LWES2025/helix.jpg" alt="Helix fountain pen company" style="width: 100%; height: auto;">
