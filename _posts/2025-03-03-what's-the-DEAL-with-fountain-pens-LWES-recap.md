@@ -29,7 +29,7 @@ I *love* the smell of this pen. The acrylic transports me straight back to when 
 </div>
 
 Last fortnight I had two Parker pens inked up; the first pen I ever bought and the last pen (until yesterday) that I bought. Below are two posts that explain the pens and history a little bit more. The gist of it, however, is that I bought my first pen, the Parker Sonnet, as a way to coerce me into studying for my A level exams; if I had a nice expensive pen then surely I'd want to write and study with it?
-[Reddit post](https://www.reddit.com/r/fountainpens/comments/1irg9c4/parker_squared_a_sonnet_and_falcon_walk_into_a/?ref=share&ref_source=link)
+[Reddit post](https://www.reddit.com/r/fountainpens/comments/1irg9c4/parker_squared_a_sonnet_and_falcon_walk_into_a/?ref=share&ref_source=link)<br>
 [Instagram post](https://www.instagram.com/p/DGNLMYtssF6/?igsh=MWI2Z3ZqeWRhOXc3ag==)
 
 ## 🏙️ London Pen Show - March 2025
@@ -85,16 +85,13 @@ While we are the individual pen person to many of our friends and family who don
 
 So what's the deal with fountain pens? Idk man. But they're bloody cool, and so are the people.
 
-For more pen-stuff including more blog posts, as well as a whole stack of other interests, give me a follow:
-
 <div class="social-links">
-  <p>Follow me on social media:</p>
+  <p>For more pen-stuff including more blog posts, as well as a whole stack of other interests, give me a follow:</p>
   <a href="https://x.com/ferret_stack" target="_blank">Twitter / X</a> | 
   <a href="https://instagram.com/ferret_stack" target="_blank">Instagram</a> | 
   <a href="https://mastodon.social/@ferret_stack" target="_blank">Mastodon</a>
 </div>
-
-
+<br>
 
 PS - I was hoping to find some pocket notebooks at the pens how but didn't have any luck. If anyone is able to tell me where in the UK I can get:
 - Field Notes size pocket notebooks
