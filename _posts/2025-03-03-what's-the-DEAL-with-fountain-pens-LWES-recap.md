@@ -41,7 +41,7 @@ Here are a few pictures of some Kawecos I was tempted by, an interesting custom 
   <img src="/assets/images/LWES2025/kaweco.jpg" alt="Kaweco Sport fountain pens" style="width: 100%; height: auto; object-fit: cover;">
   <img src="/assets/images/LWES2025/nine-bespoke.jpg" alt="A very nice custom pen by Nine Bespoke that had a juicy nib!" style="width: 100%; height: auto; object-fit: cover;">
   <img src="/assets/images/LWES2025/helix.jpg" alt="Helix fountain pen company" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="/assets/images/LWES2025/helix-inked.jpg" alt="Helix fountain pen company pen with some ink inside the barrel to show off the internal design" style="width: 100%; height: 300px; object-fit: cover;">
+  <img src="/assets/images/LWES2025/helix-inked.jpg" alt="Helix fountain pen company pen with some ink inside the barrel to show off the internal design" style="width: 100%; height: auto; object-fit: cover;">
 </div>
 
 Though I am slightly shocked there's a show dedicated to pens, friends and family are even more shocked. There is eventually a point where all of us in this hobby become known as the *pen person*. There are various reactions - most people are a bit confused and they give you the "ohh... that's interesting?!" response.
