@@ -11,8 +11,8 @@ I've been enamoured by this hobby for 10 years this year, which is a pretty insa
 Every two weeks I change up  my pen and ink combinations. This fits a personal schedule of mine, which allows me to focus on a few rotating projects and so I always have two pens, with two different inks, a pocket notebook, and a trusty Retro 51 (though I am looking to expand my ballpoint / rollerball arsenal to have some extra variety).
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
-  <img src="/assets/images/LWES2025/currently-inked-sample.jpg" alt="Currently inked pens: TWSBI Eco Blue-Bronze and a John Twiss Custom pen club commemorative blue swirl pen with a titanium nib" style="width: 100%; height: auto;">
-  <img src="/assets/images/LWES2025/retro51.jpg" alt="Retro 51 Big Lava rollerball with Word pocket notebook galaxy" style="width: 100%; height: auto;">
+  <img src="/assets/images/LWES2025/currently-inked-sample.jpg" alt="Currently inked pens: TWSBI Eco Blue-Bronze and a John Twiss Custom pen club commemorative blue swirl pen with a titanium nib" style="width: 100%; height: 300px; object-fit: cover;">
+  <img src="/assets/images/LWES2025/retro51.jpg" alt="Retro 51 Big Lava rollerball with Word pocket notebook galaxy" style="width: 100%; height: 300px; object-fit: cover;">
 </div>
 
 Today marks the start of another fortnightly cycle for me, and I'm excited to ink up my most recent acquisition - a **TWSBI Eco** in blue and rose gold that I purchased yesterday at the London Writing Equipment Show [LWES]. I wanted a special pen to commemorate rediscovering my interest in the hobby, and I've paired it with **Diamine Earl Grey** ink, which has a personal connection for me. Back in 2017, I actually suggested the name *Earl Grey* in a [Reddit thread](https://www.reddit.com/r/fountainpens/comments/6ou7y2/diamine_have_offered_to_make_rfountainpens_an_ink/) where Diamine offered to create the first commemorative ink for the r/fountainpens community. To my surprise and delight, my suggestion won the community vote - I find using a celebratory grey ink to be somewhat ironic, which amuses me. So apologies to anyone who might have preferred a more colourful choice, but I think it turned out to be a wonderful ink (and the subsequent annual releases have all been cool as well).
@@ -24,8 +24,8 @@ Also inked is a John Twiss custom fountain pen, that was made for a group of us 
 I *love* the smell of this pen. The acrylic transports me straight back to when I first got it and brings so many memories. The KWZ ink smells lovely as well, with That characteristic thyme and vanilla you get from KWZ for whatever reason. Whenever I uncap this pen now I am taking a covert sniff at it like an addict trying to get his fix.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
-  <img src="/assets/images/LWES2025/currently-inked.jpg" alt="" style="width: 100%; height: auto;">
-  <img src="/assets/images/LWES2025/currently-inked-closeup.jpg" alt="" style="width: 100%; height: auto;">
+  <img src="/assets/images/LWES2025/currently-inked.jpg" alt="Currently inked pens" style="width: 100%; height: 300px; object-fit: cover;">
+  <img src="/assets/images/LWES2025/currently-inked-closeup.jpg" alt="Close up of currently inked pens" style="width: 100%; height: 300px; object-fit: cover;">
 </div>
 
 Last fortnight I had two Parker pens inked up; the first pen I ever bought and the last pen (until yesterday) that I bought. Below are two posts that explain the pens and history a little bit more. The gist of it, however, is that I bought my first pen, the Parker Sonnet, as a way to coerce me into studying for my A level exams; if I had a nice expensive pen then surely I'd want to write and study with it?
@@ -38,10 +38,10 @@ But I discovered something far greater. Yesterday, as mentioned, I went to the L
 Here are a few pictures of some Kawecos I was tempted by, an interesting custom pen by Nine Bespoke, and a pen with a helix style internals that I'm sure would look wicked inked up.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
-  <img src="/assets/images/LWES2025/kaweco.jpg" alt="Kaweco Sport fountain pens" style="width: 100%; height: auto;">
-  <img src="/assets/images/LWES2025/nine-bespoke.jpg" alt="A very nice custom pen by Nine Bespoke that had a juicy nib!" style="width: 100%; height: auto;">
-  <img src="/assets/images/LWES2025/helix.jpg" alt="Helix fountain pen company" style="width: 100%; height: auto;">
-  <img src="/assets/images/LWES2025/helix-inked.jpg" alt="Helix fountain pen company pen with some ink inside the barrel to show off the internal design" style="width: 100%; height: auto;">
+  <img src="/assets/images/LWES2025/kaweco.jpg" alt="Kaweco Sport fountain pens" style="width: 100%; height: 300px; object-fit: cover;">
+  <img src="/assets/images/LWES2025/nine-bespoke.jpg" alt="A very nice custom pen by Nine Bespoke that had a juicy nib!" style="width: 100%; height: 300px; object-fit: cover;">
+  <img src="/assets/images/LWES2025/helix.jpg" alt="Helix fountain pen company" style="width: 100%; height: 300px; object-fit: cover;">
+  <img src="/assets/images/LWES2025/helix-inked.jpg" alt="Helix fountain pen company pen with some ink inside the barrel to show off the internal design" style="width: 100%; height: 300px; object-fit: cover;">
 </div>
 
 Though I am slightly shocked there's a show dedicated to pens, friends and family are even more shocked. There is eventually a point where all of us in this hobby become known as the *pen person*. There are various reactions - most people are a bit confused and they give you the "ohh... that's interesting?!" response.
