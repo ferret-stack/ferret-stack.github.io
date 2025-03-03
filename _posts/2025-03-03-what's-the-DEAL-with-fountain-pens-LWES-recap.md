@@ -11,7 +11,7 @@ I've been enamoured by this hobby for 10 years this year, which is a pretty insa
 Every two weeks I change up  my pen and ink combinations. This fits a personal schedule of mine, which allows me to focus on a few rotating projects and so I always have two pens, with two different inks, a pocket notebook, and a trusty Retro 51 (though I am looking to expand my ballpoint / rollerball arsenal to have some extra variety).
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
-  <img src="/assets/images/LWES2025/currently-inked-sample.jpg" alt="Currently inked pens: TWSBI Eco Blue-Bronze and a John Twiss Custom pen club commemorative blue swirl pen with a titanium nib" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="/assets/images/LWES2025/currently-inked-sample.jpg" alt="Currently inked pens: TWSBI Eco Blue-Bronze and a John Twiss Custom pen club commemorative blue swirl pen with a titanium nib" style="width: 100%; height: 340px; object-fit: cover;">
   <img src="/assets/images/LWES2025/retro51.jpg" alt="Retro 51 Big Lava rollerball with Word pocket notebook galaxy" style="width: 100%; height: 340px; object-fit: cover;">
 </div>
 
