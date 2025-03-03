@@ -1,0 +1,25 @@
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.image-grid img {
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.grid-2 img {
+  width: 49%;
+}
+
+.grid-4 img {
+  width: 49%;
+}
+
+@media (max-width: 600px) {
+  .grid-2 img, .grid-4 img {
+    width: 100%;
+  }
+}
