@@ -11,11 +11,13 @@ I've been enamoured by this hobby for 10 years this year, which is a pretty insa
 Every two weeks I change up  my pen and ink combinations. This fits a personal schedule of mine, which allows me to focus on a few rotating projects and so I always have two pens, with two different inks, a pocket notebook, and a trusty Retro 51 (though I am looking to expand my ballpoint / rollerball arsenal to have some extra variety).
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
-  <img src="/assets/images/LWES/currently-inked.jpg" alt="Currently inked pens: TWSBI Eco Blue-Bronze and a John Twiss Custom pen club commemorative blue swirl pen with a titanium nib" style="width: 100%; height: auto;">
-  <img src="/assets/images/LWES/retro51.jpg" alt="Retro 51 Big Lava rollerball with Word pocket notebook galaxy" style="width: 100%; height: auto;">
+  <img src="/assets/images/LWES2025/currently-inked.jpg" alt="Currently inked pens: TWSBI Eco Blue-Bronze and a John Twiss Custom pen club commemorative blue swirl pen with a titanium nib" style="width: 100%; height: auto;">
+  <img src="/assets/images/LWES2025/retro51.jpg" alt="Retro 51 Big Lava rollerball with Word pocket notebook galaxy" style="width: 100%; height: auto;">
 </div>
 
 Today marks the start of another fortnightly cycle for me, and I'm excited to ink up my most recent acquisition - a **TWSBI Eco** in blue and rose gold that I purchased yesterday at the London Writing Equipment Show [LWES]. I wanted a special pen to commemorate rediscovering my interest in the hobby, and I've paired it with **Diamine Earl Grey** ink, which has a personal connection for me. Back in 2017, I actually suggested the name *Earl Grey* in a [Reddit thread](https://www.reddit.com/r/fountainpens/comments/6ou7y2/diamine_have_offered_to_make_rfountainpens_an_ink/) where Diamine offered to create the first commemorative ink for the r/fountainpens community. To my surprise and delight, my suggestion won the community vote - I find using a celebratory grey ink to be somewhat ironic, which amuses me. So apologies to anyone who might have preferred a more colourful choice, but I think it turned out to be a wonderful ink (and the subsequent annual releases have all been cool as well).
+
+The pen cost £44, which is a bit steep for an Eco, but it's got bronze on it so it's a *special* Eco. Indeed, given the cirucmstances, this is a special pen to me and I'll always be reminded of good things whenever I pick it up in the future.
 
 Also inked is a John Twiss custom fountain pen, that was made for a group of us at the /r/UKLondonPenClub, and is inscribed "London Pen Geeks 2016". It is inked with KWZ Grapefruit (I was pining for an orange last week so had to scratch that inky itch) and has a Bock titanium nib. Where this nib came from, I don't know. But it's in there now. As these things happen. 
 
@@ -36,10 +38,10 @@ But I discovered something far greater. Yesterday, as mentioned, I went to the L
 Here are a few pictures of some Kawecos I was tempted by, an interesting custom pen by Nine Bespoke, and a pen with a helix style internals that I'm sure would look wicked inked up.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
-  <img src="/assets/images/LWES/kaweco.jpg" alt="Kaweco Sport fountain pens" style="width: 100%; height: auto;">
-  <img src="/assets/images/LWES/nine-bespoke" alt="A very nice custom pen by Nine Bespoke that had a juicy nib!" style="width: 100%; height: auto;">
-  <img src="/assets/images/LWES/helix.jpg" alt="Helix fountain pen company" style="width: 100%; height: auto;">
-  <img src="/assets/images/LWES/helix-inked.jpg" alt="Helix fountain pen company pen with some ink inside the barrel to show off the internal design" style="width: 100%; height: auto;">
+  <img src="/assets/images/LWES2025/kaweco.jpg" alt="Kaweco Sport fountain pens" style="width: 100%; height: auto;">
+  <img src="/assets/images/LWES2025/nine-bespoke" alt="A very nice custom pen by Nine Bespoke that had a juicy nib!" style="width: 100%; height: auto;">
+  <img src="/assets/images/LWES2025/helix.jpg" alt="Helix fountain pen company" style="width: 100%; height: auto;">
+  <img src="/assets/images/LWES2025/helix-inked.jpg" alt="Helix fountain pen company pen with some ink inside the barrel to show off the internal design" style="width: 100%; height: auto;">
 </div>
 
 Though I am slightly shocked there's a show dedicated to pens, friends and family are even more shocked. There is eventually a point where all of us in this hobby become known as the *pen person*. There are various reactions - most people are a bit confused and they give you the "ohh... that's interesting?!" response.
@@ -75,11 +77,11 @@ I've also integrated a pocket notebook into the rotation to capture more miscell
 ## Pens: A Wonderful Tool and Community
 The final thing I want to touch on is the LWES again. Here I met so many old friends and faces, and some new ones. That's the other thing I love about fountain pens; the community. There are many knowledgeable and interested individuals that provide so much information and collaboration. 
 
-I got to see some friends I've made at previous fountain pen clubs, including some who commissioned the same John Twiss pen club pen as I, as well as another good friend who has set up a rather genius pen-rental community called [Pensharing](https://www.pensharing.com/) -- you can find some of my pens listed on here if you're interested to see what else I have! 
+I got to see some friends I've made at previous fountain pen clubs (and got some wicked advice on ukuleles), including some who commissioned the same John Twiss pen club pen as I, as well as another good friend who has set up a rather genius pen-rental community called [Pensharing](https://www.pensharing.com/) -- you can find some of my pens listed on here if you're interested to see what else I have! 
 
 It's not only a privilege to share this with people I know, or have come to know, but *everyone* in the community. The magic of the Internet, eh? Whether it's listening to a podcast show about pens, scrolling through /r/fountainpens, or reading (and now writing once again!) blog posts, there is no shortage of people who share the same fascination as me. 
 
-While we are the individual pen person to many of our friends and family who don't fully get our obsession, together we are pen people who absolutely *do* get the obsession. That's a pretty fucking cool thing to share, honestly.
+While we are the individual pen person to many of our friends and family who don't fully get our obsession, together we are pen people who absolutely *do* get the obsession. That's a pretty damn cool thing to share, honestly.
 
 So what's the deal with fountain pens? Idk man. But they're bloody cool, and so are the people.
 
