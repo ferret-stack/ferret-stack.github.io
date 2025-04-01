@@ -82,7 +82,7 @@ Howay the lads!
 - Ink: <span style="color:red;">Diamine Red Dragon</span>
 
 <div style="text-align: center; margin: 20px 0;">
-  <img src="/assets/images/confessions/jinhao1200.jpg" 
+  <img src="/assets/images/confessions/jinhao.jpg" 
        alt="Jinhao 1200 inked with Diamine Red Dragon" 
        style="width: 70%; 
               max-width: 500px;">
