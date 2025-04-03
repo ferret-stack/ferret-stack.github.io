@@ -52,7 +52,7 @@ The pen fills with a captured-converter. There is no removing this thing, and ev
 - Price Range: Depends
 - Ink: <span style="color:brown;">Diamine Ancient Copper</span>
 
-![Esterbook J](/assets/images/bipolar/esterbook.jpg)
+![Esterbook J](/assets/images/bipolar/esterbrook.jpg)
 
 The Esterbrook J is perhaps one of the most famous vintage pens out there, maybe only rivalled by the Parker Vacumatic or 51 pens.
 
