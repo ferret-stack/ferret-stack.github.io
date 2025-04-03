@@ -105,6 +105,8 @@ If only this happened with a bright blue or pretty pink shimmer. Alas. I like th
 ## Conclusion
 This fortnight's trio represents more than just writing instruments — they're a journey through history and craftsmanship spanning three continents. 
 
+![All pens side by side](/assets/images/bipolar/all_side.jpg)
+
 From the enigmatic Soviet Soyuz "Magpie Montblanc" with its intriguing resemblance to German luxury, to the quintessentially American Esterbrook J with its innovative hot-swappable nibs, and finally to the Japanese Taccia Spectrum with its Sailor-made nib delivering that distinctive pencil-like feedback.
 
 Each pen carries its own story—tales of cold war manufacturing, mid-century American innovation, and Japanese precision. And each delivers a unique writing experience, from the subtle flex of the Soyuz to the firm reliability of the Esterbrook to the juicy wetness of the Taccia.
