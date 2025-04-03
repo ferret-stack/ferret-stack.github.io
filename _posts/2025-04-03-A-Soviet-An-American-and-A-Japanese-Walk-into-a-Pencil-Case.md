@@ -12,7 +12,7 @@ Two of these pens represent a somewhat bipolar world order. The first, a Soyuz f
 
 The third and final pen I have in my arsenal (thankfully not a nuclear one) is a Japanese pen that has a juuuiiicy wet nib with pencil-like feedback made by Sailor.
 
-![A Soviet, An American, and a Japanese walk into a pen case](assets/images/bipolar/all.jpg)
+![A Soviet, An American, and a Japanese walk into a pen case](/assets/images/bipolar/all.jpg)
 
 ## Soyuz Magpie Montblanc
 **Specifications:**
@@ -21,7 +21,7 @@ The third and final pen I have in my arsenal (thankfully not a nuclear one) is a
 - Price Range: Depends
 - Ink: <span style="color:midnightblue;">Diamine Twilight</span>
 
-![Soyuz "Montblanc Magpie"](assets/images/bipolar/soyuz.jpg)
+![Soyuz "Montblanc Magpie"](/assets/images/bipolar/soyuz.jpg)
 
 My undergraduate degree was in Politics, Philosophy, and Economics. During my time at university I took three modules that had some sort of focus on Russia and/or the Soviet Union, and while I came to learn a lot about the political, philosophical, and economical aspects of that region throughout time, I found my pen knowledge lacking. 
 
@@ -37,9 +37,7 @@ The nib is where this pen gets *really* interesting. As I alluded to above, the 
 
 So there. I will now refer to this pen in my collection as the Magpie Montblanc, unless someone is able to give me the correct model name. This, however, I fear is perhaps lost to history. 
 
-![Comparison of Soyuz and Montblanc](assets/images/bipolar/soyuz_comp.jpg)
-
-The reason for this, perhaps, lies in the fact that Germany [reparations] 
+![Comparison of Soyuz and Montblanc](/assets/images/bipolar/soyuz_comp.jpg)
 
 The nib is wet and juicy. I don't think it's gold, but there is some flex to it. While it might be down to my writing angle as a left-handed--over-writer, I get a really smooth down stroke, but a subtle feedback whenever the pen rests itself on the left tine. It's rather nice!
 
@@ -54,7 +52,7 @@ The pen fills with a captured-converter. There is no removing this thing, and ev
 - Price Range: Depends
 - Ink: <span style="color:brown;">Diamine Ancient Copper</span>
 
-![Esterbook J](assets/images/bipolar/esterbook.jpg)
+![Esterbook J](/assets/images/bipolar/esterbook.jpg)
 
 The Esterbrook J is perhaps one of the most famous vintage pens out there, maybe only rivalled by the Parker Vacumatic or 51 pens.
 
@@ -66,7 +64,7 @@ The nib I have in this pen is marked **2556**, which is up there as one of the m
 
 Within each series, the second digit indicates the general nib type, with [5] characterising it as a general writing nib. 
 
-![Close up of the Esterbrook J nib 2556](assets/images/bipolar/esterbrook_close.jpg)
+![Close up of the Esterbrook J nib 2556](/assets/images/bipolar/esterbrook_close.jpg)
 
 I haven't inked this pen up for a very long time (it appears I was very diligent cleaning it last time - thankfully!) and after researching this pen and all the different nibs, I think I will be trying to pick up some more of these in the future. Whether different nibs or an entire new pen body to see if I could collect some more colourways. 
 
