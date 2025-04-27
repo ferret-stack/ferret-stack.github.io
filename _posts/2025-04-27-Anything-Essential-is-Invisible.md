@@ -112,9 +112,9 @@ So I picked out my Esterbrook J inked with <span style="color:brown;">Diamine An
 
 I will be cleaning them as soon as I publish this. I promise. Follow these links to read more about my thoughts on the:
 <ul>
-<li><a href="https://ferret-stack.github.io/what's-the-DEAL-with-fountain-pens-LWES-recap/">TWSBI Eco</a>
-<li><a href="https://ferret-stack.github.io/fountain-pen-confessional">Wingsung 699</a>
-<li><a href="https://ferret-stack.github.io/A-Soviet-An-American-and-A-Japanese-Walk-into-a-Pencil-Case/">Esterbrook J</a>
+<li><a href="https://ferret-stack.github.io/what's-the-DEAL-with-fountain-pens-LWES-recap/">TWSBI Eco</a><li>
+<li><a href="https://ferret-stack.github.io/fountain-pen-confessional">Wingsung 699</a></li>
+<li><a href="https://ferret-stack.github.io/A-Soviet-An-American-and-A-Japanese-Walk-into-a-Pencil-Case/">Esterbrook J</a></li>
 </ul>
 
 ## Forget the Notebook: There's an App For That!
@@ -171,7 +171,7 @@ The main thing I'm interested in is what seems to be described as a *double line
 
 The one I have has a blue tip and a pink tip - my two favourite colours! 
 
-![Double Line](/assets/images/essential/tamed.jpg)
+![Double](/assets/images/essential/tamed.jpg)
 
 It's really cool to write with this as you can use either the blue or pink, or if you hold the pen at a straighter 180 degree then you're able to write with both points at once. This gives a sort of psychedelic 70s or 80s bounce, or shadow, to the writing. 
 
