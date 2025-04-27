@@ -183,7 +183,6 @@ This has been a long post that reeks of optimism and excitement.
 I am already excited to see what other things in stationery I'll dive into over the next 14 days. I'll be updating on my notebook usage (as this will be the first proper test of the system), as well as writing with two new pens that I bought over this month - the Jinhao 82 and Kaweco Sport.
 
 I have a third pen that I will also use.. but for now, that's a surprise.
-
 <br>
 <div class="social-links">
   <p>If you'd like to find out what that surprise pen is, please consider following me on the below channels:
