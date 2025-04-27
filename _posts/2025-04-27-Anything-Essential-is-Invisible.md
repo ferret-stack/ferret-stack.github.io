@@ -112,7 +112,7 @@ So I picked out my Esterbrook J inked with <span style="color:brown;">Diamine An
 
 I will be cleaning them as soon as I publish this. I promise. Follow these links to read more about my thoughts on the:
 <ul>
-<li><a href="https://ferret-stack.github.io/what's-the-DEAL-with-fountain-pens-LWES-recap/">TWSBI Eco</a><li>
+<li><a href="https://ferret-stack.github.io/what's-the-DEAL-with-fountain-pens-LWES-recap/">TWSBI Eco</a></li>
 <li><a href="https://ferret-stack.github.io/fountain-pen-confessional">Wingsung 699</a></li>
 <li><a href="https://ferret-stack.github.io/A-Soviet-An-American-and-A-Japanese-Walk-into-a-Pencil-Case/">Esterbrook J</a></li>
 </ul>
