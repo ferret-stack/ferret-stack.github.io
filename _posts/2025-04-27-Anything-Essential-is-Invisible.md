@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Anything Essential is Invisible
-date: 2025-04-03
+date: 2025-04-27
 categories: fountain pens, essays
 author: Ferret Stack
 ---
