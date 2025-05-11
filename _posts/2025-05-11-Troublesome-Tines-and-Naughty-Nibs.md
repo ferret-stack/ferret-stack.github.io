@@ -126,7 +126,7 @@ This week I lost one of my favourite non-fountain pens as it fell out of my pock
 
 ![this](/assets/images/essential/tamed.jpg)
 
-I wrote with this in [Anything Essential is Insivible](2025-04-27-Anything-Essential-is-Invisible.md). It is a felt tip pen and so fun to use, and really handy when out and about and I'm writing in my pocket notebook and want to use two colours on the go
+I wrote with this in [Anything Essential is Insivible](Anything-Essential-is-Invisible.md). It is a felt tip pen and so fun to use, and really handy when out and about and I'm writing in my pocket notebook and want to use two colours on the go
 
 Not revolutionary, I suppose; see multi-pens. 
 
@@ -138,4 +138,11 @@ Anyway, I lost this on the Tube too.
 
 I am no longer carrying my pocket notebooks and pens in my back trouser pocket.
 
-Sooooo... I got a replacement G-TEC, and at the same time I also picked up a Uniball Jetstream and Signo. I prefer the G-TEC and Signo over the Jetstream. The other two pens are 
+Sooooo... I got a replacement G-TEC, and at the same time I also picked up a Uniball Jetstream and Signo. I prefer the G-TEC and Signo over the Jetstream. The other two pens are equally rated in my opinion. I prefer the G-TEC in theory, but in practice it is prone to the occasional hard start.
+
+<div class="social-links">
+  <p></p>
+  <a href="https://x.com/ferret_stack" target="_blank">Twitter / X</a> | 
+  <a href="https://instagram.com/ferret_stack" target="_blank">Instagram</a> | 
+  <a href="https://mastodon.social/@ferret_stack" target="_blank">Mastodon</a>
+</div>
