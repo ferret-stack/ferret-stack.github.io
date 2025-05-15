@@ -18,8 +18,8 @@ Great success!
 
 <figure style="text-align: center;">
   <div style="display: flex; gap: 20px; justify-content: center;">
-    <img src="/assets/images/naughty/all_cap_true.jpg" style="width: 50%;" />
-    <img src="/assets/images/naughty/all_cap_false.jpg" style="width: 50%;" />
+    <img src="/assets/images/naughty/all_cap_true.jpg" style="width: 100%;" />
+    <img src="/assets/images/naughty/all_cap_false.jpg" style="width: 100%;" />
   </div>
   <figcaption style="margin-top: 10px; font-style: italic;">
     L:R - Jinhao 82; Kaweco Sport; Kaweco Liliput; Pelikan M400
