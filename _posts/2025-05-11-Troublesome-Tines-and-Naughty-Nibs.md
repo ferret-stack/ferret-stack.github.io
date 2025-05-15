@@ -18,8 +18,8 @@ Great success!
 
 <figure style="text-align: center;">
   <div style="display: flex; gap: 20px; justify-content: center;">
-    <img src="/assets/images/naughty/all_cap_true.jpg" style="width: 45%;" />
-    <img src="/assets/images/naughty/all_cap_false.jpg" style="width: 45%;" />
+    <img src="/assets/images/naughty/all_cap_true.jpg" style="width: 50%;" />
+    <img src="/assets/images/naughty/all_cap_false.jpg" style="width: 50%;" />
   </div>
   <figcaption style="margin-top: 10px; font-style: italic;">
     L:R - Jinhao 82; Kaweco Sport; Kaweco Liliput; Pelikan M400
@@ -109,7 +109,7 @@ It's clear that this pen is second hand. The gold plating on the steel nib has r
 
 It needed some TLC.
 
-![The nib](/assets/images/naughty/kaweco_sport_nib.jpg)
+![The nib](/assets/images/naughty/kaewco_sport_nib.jpg)
 
 I knew there was an issue because the Kaweco Turquoise cartridge I put in it was writing with a horrible dirty orange line and was skipping as though it were trying to enter the World Hopscotch Championship
 
@@ -137,7 +137,7 @@ The 82 has a transparent feed which is cool too. Different!
 
 Though, too, the ink that this pen wrote with initially was, er, also transparent.
 
-![Transparent feed](/assets/images/naughty/jinhao_nib.jpg)
+![Transparent feed](/assets/images/naughty/jinhao_nnib.jpg)
 
 As is the trend with the pens that I've inked up this cycle, this nib was the worst of all the pens because it didn't write...
 
