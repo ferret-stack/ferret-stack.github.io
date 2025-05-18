@@ -180,3 +180,7 @@ Sooooo... I got a replacement G-TEC, and at the same time I also picked up a Uni
   <a href="https://instagram.com/ferret_stack" target="_blank">Instagram</a> | 
   <a href="https://mastodon.social/@ferret_stack" target="_blank">Mastodon</a>
 </div>
+
+<!-- GoatCounter tracking -->
+<script data-goatcounter="https://ferret-stack.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
