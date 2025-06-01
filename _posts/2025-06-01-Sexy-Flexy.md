@@ -35,7 +35,7 @@ Vintage nibs are fun, and vintage nibs in modern pens are even funner. To the po
 
 Maybe I'm overstating my bad-boy credentials, but I'll let you be the judge of that when you read what I did in the next section.
 
-![TWSBI Eco with Mabie Todd nib mod](/assets/images/sexy-flexy/twsbi_nib.jpg)
+![TWSBI Eco with Mabie Todd nib mod](/assets/images/sexy-flexy/twsbi_nib-1.jpg)
 
 While fun to use, it wouldn't be worthwhile if it wasn't also practical for day-to-day usage. 
 
@@ -45,7 +45,7 @@ It took a bit of work to get it to perform as it does; when I first made the mod
 o
 Overall, the modification works well and the flow fights strong when you push this nib to extremes. While my flex handwriting isn't the greatest, I have used this pen to perfect my flexy "Hello".
 
-![](/assets/images/sexy-flexy/.hello_twsbijpg)
+![](/assets/images/sexy-flexy/.hello_twsbi.jpg)
 
 Wanna give this this pen a spin? Visit [this](https://www.pensharing.com/en/listings/1042545-twsbi-eco-pink-w-slash-mabie-todd-vintage-f-flex-nib) link.
 ### Gotta Break A Few Eggs to Make an Omelette
@@ -137,7 +137,7 @@ Before COVID came along and ruined, er, *everything*, there used to be a monthly
 
 He wrote his own review of the pen, and you can read his review [here](https://rupertarzeian.com/2019/09/07/some-early-thoughts-on-the-staedtler-trx-fountain-pen/)
 
-![](/assets/images/sexy-flexy/trx_main.jpg)
+![](/assets/images/sexy-flexy/trx_main.jpeg)
 
 In comparison to the others I've had inked up, the nib felt very rigid, being your run of a mill steel nib. Despite the relative hardness, I thoroughly enjoy writing with this pen; the writing experience is smooth, it puts down a good wet line, and overall the TRX feels good in the hand.
 
@@ -168,7 +168,7 @@ It has been a productive two weeks. I'm proud of all the things I got done, and 
 I visited the London Graphic Centre, which is a cool little shop in Covent Garden - it's also close to Choosing Keeping, another famed stationery shop in London. I felt like a kid again exploring the pen aisles of Ryman or WH Smiths!
 
 <figure style="text-align: center;">
-  <div style="display: flex; gap: 20px; justify-content: center;">
+  <div style="display: grid; gap: 20px; justify-content: center;">
     <img src="/assets/images/sexy-flexy/lgc_1.jpg" style="width: 100%;" />
     <img src="/assets/images/sexy-flexy/lgc_2.jpg" style="width: 100%;" />
     <img src="/assets/images/sexy-flexy/lgc_3.jpg" style="width: 100%;" />
@@ -184,7 +184,7 @@ Speaking of Ryman, I have been using my Uni-ball Signo UM-120 (review incoming..
 I discovered the metallic pen will write on a lot of things, and so I've been decorating my journals with it!
 
 <figure style="text-align: center;">
-  <div style="display: flex; gap: 20px; justify-content: center;">
+  <div style="display: grid; gap: 20px; justify-content: center;">
     <img src="/assets/images/sexy-flexy/signo_UM-120_153.jpg" style="width: 100%;" />
     <img src="/assets/images/sexy-flexy/signo_journal.jpg" style="width: 100%;" />
   </div>
