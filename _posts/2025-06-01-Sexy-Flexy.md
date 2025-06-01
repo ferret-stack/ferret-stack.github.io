@@ -169,10 +169,10 @@ I visited the London Graphic Centre, which is a cool little shop in Covent Garde
 
 <figure style="text-align: center;">
   <div style="display: grid; gap: 20px; justify-content: center;">
-    <img src="/assets/images/sexy-flexy/lgc_1.jpg" style="width: 100%;" />
-    <img src="/assets/images/sexy-flexy/lgc_2.jpg" style="width: 100%;" />
-    <img src="/assets/images/sexy-flexy/lgc_3.jpg" style="width: 100%;" />
-    <img src="/assets/images/sexy-flexy/lgc_4.jpg" style="width: 100%;" />
+    <img src="/assets/images/sexy-flexy/lgc_1.jpg" style="width: 25%;" />
+    <img src="/assets/images/sexy-flexy/lgc_2.jpg" style="width: 25%;" />
+    <img src="/assets/images/sexy-flexy/lgc_3.jpg" style="width: 25%;" />
+    <img src="/assets/images/sexy-flexy/lgc_4.jpg" style="width: 25%;" />
   </div>
   <figcaption style="margin-top: 10px; font-style: italic;">
     My trip to the London Graphic Centre
@@ -185,8 +185,8 @@ I discovered the metallic pen will write on a lot of things, and so I've been de
 
 <figure style="text-align: center;">
   <div style="display: grid; gap: 20px; justify-content: center;">
-    <img src="/assets/images/sexy-flexy/signo_UM-120_153.jpg" style="width: 100%;" />
-    <img src="/assets/images/sexy-flexy/signo_journal.jpg" style="width: 100%;" />
+    <img src="/assets/images/sexy-flexy/signo_UM-120_153.jpg" style="width: 50%;" />
+    <img src="/assets/images/sexy-flexy/signo_journal.jpg" style="width: 50%;" />
   </div>
   <figcaption style="margin-top: 10px; font-style: italic;">
     I feel like a graffiti artist
