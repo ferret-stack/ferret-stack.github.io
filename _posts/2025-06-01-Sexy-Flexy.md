@@ -162,17 +162,17 @@ I agree; when writing with a pen I like to obsessively push the bottom of the ca
 
 Despite all of this, and much like the famous (infamous?) yeast extract, I love it!
 
-## Conclusion
+## Conclusionj
 It has been a productive two weeks. I'm proud of all the things I got done, and had a lot of fun using my fountain pens for it.
 
 I visited the London Graphic Centre, which is a cool little shop in Covent Garden - it's also close to Choosing Keeping, another famed stationery shop in London. I felt like a kid again exploring the pen aisles of Ryman or WH Smiths!
 
 <figure style="text-align: center;">
-  <div style="display: grid; gap: 20px; justify-content: center;">
-    <img src="/assets/images/sexy-flexy/lgc_1.jpg" style="width: 25%;" />
-    <img src="/assets/images/sexy-flexy/lgc_2.jpg" style="width: 25%;" />
-    <img src="/assets/images/sexy-flexy/lgc_3.jpg" style="width: 25%;" />
-    <img src="/assets/images/sexy-flexy/lgc_4.jpg" style="width: 25%;" />
+  <div style="display: flex; gap: 20px; justify-content: center; grid-template-columns: 50% 50%; grid-template-rows: 50% 50%; max-width: 500px;">
+    <img src="/assets/images/sexy-flexy/lgc_1.jpg" style="width: 25%;"/>
+    <img src="/assets/images/sexy-flexy/lgc_2.jpg" style="width: 25%;"/>
+    <img src="/assets/images/sexy-flexy/lgc_3.jpg" style="width: 25%;"/>
+    <img src="/assets/images/sexy-flexy/lgc_4.jpg" style="width: 25%;"/>
   </div>
   <figcaption style="margin-top: 10px; font-style: italic;">
     My trip to the London Graphic Centre
@@ -184,7 +184,7 @@ Speaking of Ryman, I have been using my Uni-ball Signo UM-120 (review incoming..
 I discovered the metallic pen will write on a lot of things, and so I've been decorating my journals with it!
 
 <figure style="text-align: center;">
-  <div style="display: grid; gap: 20px; justify-content: center;">
+  <div style="display: flex; gap: 20px; justify-content: center;">
     <img src="/assets/images/sexy-flexy/signo_UM-120_153.jpg" style="width: 50%;" />
     <img src="/assets/images/sexy-flexy/signo_journal.jpg" style="width: 50%;" />
   </div>
