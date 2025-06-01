@@ -175,7 +175,7 @@ I visited the London Graphic Centre, which is a cool little shop in Covent Garde
     <img src="/assets/images/sexy-flexy/lgc_4.jpg" style="width: 25%;"/>
   </div>
   <figcaption style="margin-top: 10px; font-style: italic;">
-    My trip to the London Graphic Centre
+    My trip to the London Graphic Centre - I remember using one of these Derwents to grind nibs...
   </figcaption>
 </figure>
 
