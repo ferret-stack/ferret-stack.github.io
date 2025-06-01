@@ -45,7 +45,7 @@ It took a bit of work to get it to perform as it does; when I first made the mod
 o
 Overall, the modification works well and the flow fights strong when you push this nib to extremes. While my flex handwriting isn't the greatest, I have used this pen to perfect my flexy "Hello".
 
-![](/assets/images/sexy-flexy/.hello_twsbi.jpg)
+![](/assets/images/sexy-flexy/hello_twsbi.jpg)
 
 Wanna give this this pen a spin? Visit [this](https://www.pensharing.com/en/listings/1042545-twsbi-eco-pink-w-slash-mabie-todd-vintage-f-flex-nib) link.
 ### Gotta Break A Few Eggs to Make an Omelette
