@@ -162,7 +162,7 @@ I agree; when writing with a pen I like to obsessively push the bottom of the ca
 
 Despite all of this, and much like the famous (infamous?) yeast extract, I love it!
 
-## Conclusionj
+## Conclusion
 It has been a productive two weeks. I'm proud of all the things I got done, and had a lot of fun using my fountain pens for it.
 
 I visited the London Graphic Centre, which is a cool little shop in Covent Garden - it's also close to Choosing Keeping, another famed stationery shop in London. I felt like a kid again exploring the pen aisles of Ryman or WH Smiths!
