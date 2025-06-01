@@ -175,7 +175,7 @@ I visited the London Graphic Centre, which is a cool little shop in Covent Garde
     <img src="/assets/images/sexy-flexy/lgc_4.jpg" style="width: 100%;"/>
   </div>
   <figcaption style="margin-top: 10px; font-style: italic;">
-    My trip to the London Graphic Centre - I remember using one of these Derwents to grind nibs...
+    My trip to the London Graphic Centre - I used to have a Derwent eraser that I used to grind nibs...
   </figcaption>
 </figure>
 
@@ -184,7 +184,7 @@ Speaking of Ryman, I have been using my Uni-ball Signo UM-120 (review incoming..
 I discovered the metallic pen will write on a lot of things, and so I've been decorating my journals with it!
 
 <figure style="text-align: center;">
-  <div style="display: grid; gap: 20px; justify-content: center;">
+  <div style="display: grid; gap: 20px; justify-content: center; grid-template-columns: 50% 50%; grid-template-rows: 50% 50%; max-width: 500px;">
     <img src="/assets/images/sexy-flexy/signo_UM-120_153.jpg" style="width: 100%;" />
     <img src="/assets/images/sexy-flexy/signo_journal.jpg" style="width: 100%;" />
   </div>
