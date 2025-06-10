@@ -170,7 +170,7 @@ a:hover {
 
 /* Individual Post Pages */
 .post {
-  max-width: 500px;  /* Narrower for better readability */
+  max-width: 650px;  /* Even narrower for better readability */
   margin: 0 auto;
   padding: 0 20px;   /* Add some padding on mobile */
 }
@@ -227,10 +227,29 @@ a:hover {
 .post-content img {
   max-width: 100%;
   height: auto;
-  margin: 1.5rem auto;  /* Center images */
+  margin: 1.5rem 0;     /* Remove auto margin */
   display: block;       /* Make them block elements */
   border-radius: 8px;   /* Slight rounding */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+/* Full width images that break out of content */
+.post-content .full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: none;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* For centered images that stay within content width */
+.post-content .center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* For really wide images, constrain them more */
