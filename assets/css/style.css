@@ -28,6 +28,57 @@ body {
   margin-bottom: 2rem;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.site-logo {
+  width: 80px;  /* Adjust size as needed */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;  /* Makes it circular */
+  border: 3px solid #e5e5e5;
+}
+
+.header-text {
+  flex: 1;
+}
+
+/* Alternative: Rectangle logo */
+.site-logo.rectangle {
+  width: 120px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+/* Alternative: Logo above title */
+.header-content.stacked {
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.header-content.stacked .site-logo {
+  width: 100px;
+  height: 100px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .site-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 .site-title {
   font-size: 2.0rem;
   margin-bottom: 0.5rem;
