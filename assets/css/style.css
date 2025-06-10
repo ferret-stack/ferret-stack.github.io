@@ -226,7 +226,7 @@ a:hover {
 /* Images */
 .post-content img {
   max-width: 50%;
-  height: auto;
+  height: 50%;
   margin: 1.5rem 0;     /* Remove auto margin */
   display: block;       /* Make them block elements */
   border-radius: 8px;   /* Slight rounding */
