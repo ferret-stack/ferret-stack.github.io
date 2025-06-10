@@ -55,7 +55,7 @@ body {
 
 /* Main Content */
 .site-content {
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 400px);
   padding-bottom: 2rem;
 }
 
