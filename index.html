@@ -1,18 +1,71 @@
 ---
 layout: default
 ---
-
 <div class="home">
-  <h1>Latest Posts</h1>
-  <ul class="post-list">
+  <header class="page-header">
+    <h1 class="page-title">Latest Posts</h1>
+    <p class="page-subtitle">Thoughts on poker, coding, beer, and life</p>
+  </header>
+
+  <main class="posts-container">
     {% for post in site.posts %}
-      <li>
-        <h2>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <article class="post-item">
+        <h2 class="post-title">
+          <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
         </h2>
-        <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-        <!-- Remove the duplicate title that was appearing -->
-      </li>
+        
+        <div class="post-meta">
+          <time class="post-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+            {{ post.date | date: "%B %d, %Y" }}
+          </time>
+          
+          {% if post.categories %}
+            <span class="post-categories">
+              {% for category in post.categories %}
+                <span class="category-tag">{{ category }}</span>
+              {% endfor %}
+            </span>
+          {% endif %}
+        </div>
+
+        {% if post.excerpt %}
+          <div class="post-excerpt">
+            {{ post.excerpt | strip_html | truncatewords: 30 }}
+            <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+          </div>
+        {% endif %}
+
+        {% if post.tags %}
+          <div class="post-tags">
+            {% for tag in post.tags %}
+              <span class="tag">#{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </article>
     {% endfor %}
-  </ul>
+  </main>
+
+  {% if site.posts.size == 0 %}
+    <div class="no-posts">
+      <p>No posts yet. Check back soon!</p>
+    </div>
+  {% endif %}
+
+  <!-- Optional: Add pagination if you have many posts -->
+  {% if paginator.total_pages > 1 %}
+    <nav class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-prev">← Newer Posts</a>
+      {% endif %}
+      
+      <span class="pagination-info">
+        Page {{ paginator.page }} of {{ paginator.total_pages }}
+      </span>
+      
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-next">Older Posts →</a>
+      {% endif %}
+    </nav>
+  {% endif %}
 </div>
