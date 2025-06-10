@@ -16,12 +16,12 @@ I was not to be defeated, however; I was determined to make these pens write how
 
 Great success!
 
-<figure style="text-align: center;">
-  <div style="display: flex; gap: 20px; justify-content: center;">
-    <img src="/assets/images/naughty/all_cap_true.jpg" style="width: 100%;" />
-    <img src="/assets/images/naughty/all_cap_false.jpg" style="width: 100%;" />
+<figure class="post-figure">
+  <div class="image-pair">
+    <img src="/assets/images/naughty/all_cap_true.jpg" alt="Pens with caps on" />
+    <img src="/assets/images/naughty/all_cap_false.jpg" alt="Pens with caps off" />
   </div>
-  <figcaption style="margin-top: 10px; font-style: italic;">
+  <figcaption>
     L:R - Jinhao 82; Kaweco Sport; Kaweco Liliput; Pelikan M400
   </figcaption>
 </figure>
