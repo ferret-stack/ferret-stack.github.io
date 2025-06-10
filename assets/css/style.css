@@ -168,9 +168,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Individual Post Pages - Replace this section in your style.css */
+/* Individual Post Pages */
 .post {
-  max-width: 700px;  /* Narrower for better readability */
+  max-width: 500px;  /* Narrower for better readability */
   margin: 0 auto;
   padding: 0 20px;   /* Add some padding on mobile */
 }
