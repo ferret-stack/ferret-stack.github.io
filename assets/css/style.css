@@ -168,18 +168,24 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Individual Post Pages */
+/* Individual Post Pages - Replace this section in your style.css */
 .post {
-  max-width: 800px;
+  max-width: 700px;  /* Narrower for better readability */
   margin: 0 auto;
+  padding: 0 20px;   /* Add some padding on mobile */
 }
 
 .post-header {
   margin-bottom: 2rem;
+  text-align: center;  /* Center the title and date */
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .post-title {
   margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  line-height: 1.2;
 }
 
 .post-meta {
@@ -189,24 +195,60 @@ a:hover {
 
 .post-content {
   font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Spacing between paragraphs */
+.post-content p {
+  margin-bottom: 1.25rem;  /* Reduced from 1.5rem */
+}
+
+/* Headings in posts */
+.post-content h1 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
 .post-content h2 {
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.75rem;
 }
 
-.post-content p {
-  margin-bottom: 1.5rem;
+.post-content h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
 }
 
+/* Images */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;  /* Center images */
+  display: block;       /* Make them block elements */
+  border-radius: 8px;   /* Slight rounding */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+/* For really wide images, constrain them more */
+.post-content p img {
+  max-width: 100%;
+  width: auto;
+  max-height: 500px;  /* Prevent super tall images */
+  object-fit: contain;
+}
+
+/* Code blocks */
 .post-content pre {
   background-color: #f6f8fa;
   border-radius: 6px;
   padding: 1rem;
   overflow-x: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e5e5e5;
 }
 
 .post-content code {
@@ -220,22 +262,90 @@ a:hover {
 .post-content pre code {
   background-color: transparent;
   padding: 0;
+  font-size: 0.875rem;
 }
 
+/* Lists */
+.post-content ul,
+.post-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 2rem;
+}
+
+.post-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquotes */
 .post-content blockquote {
-  border-left: 4px solid #e5e5e5;
-  padding-left: 1rem;
+  border-left: 4px solid #0066cc;
+  padding-left: 1.25rem;
   margin: 1.5rem 0;
-  color: #666;
+  color: #555;
   font-style: italic;
+  background-color: #f8f9fa;
+  padding: 1rem 1.25rem;
+  border-radius: 0 6px 6px 0;
 }
 
-.post-content img {
-  max-width: 100%;
-  height: auto;
-  margin: 1.5rem 0;
+/* Links in post content */
+.post-content a {
+  color: #0066cc;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
+.post-content a:hover {
+  color: #0052cc;
+  text-decoration-thickness: 2px;
+}
+
+/* Tables */
+.post-content table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-collapse: collapse;
+  border: 1px solid #e5e5e5;
+}
+
+.post-content th,
+.post-content td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #e5e5e5;
+}
+
+.post-content th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.post-content tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .post-title {
+    font-size: 2rem;
+  }
+  
+  .post-content {
+    font-size: 1rem;
+  }
+  
+  .post-content h1 {
+    font-size: 1.75rem;
+  }
+  
+  .post-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .post-content h3 {
+    font-size: 1.25rem;
+  }
+}
 /* Responsive */
 @media (max-width: 768px) {
   .post-grid {
