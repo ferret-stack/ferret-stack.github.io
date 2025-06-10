@@ -22,7 +22,7 @@ body {
 
 /* Header */
 .site-header {
-  background-color: #f8f9fa;
+  background-color: #109dff;
   border-bottom: 1px solid #e5e5e5;
   padding: 1rem 0;
   margin-bottom: 2rem;
@@ -35,11 +35,11 @@ body {
 }
 
 .site-logo {
-  width: 80px;  /* Adjust size as needed */
-  height: 80px;
+  width: 100px;  /* Adjust size as needed */
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;  /* Makes it circular */
-  border: 3px solid #e5e5e5;
+  border: 3px solid #pink;
 }
 
 .header-text {
@@ -86,17 +86,17 @@ body {
 }
 
 .site-title a {
-  color: #109dff;
+  color: pink;
   text-decoration: none;
 }
 
 .site-title a:hover {
-  color: hotpink;
+  color: limegreen;
 }
 
 .site-nav a {
   margin-right: 1rem;
-  color: #109dff;
+  color: pink;
   text-decoration: none;
 }
 
