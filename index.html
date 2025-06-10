@@ -3,15 +3,22 @@ layout: default
 ---
 <div class="home">
   <h1>Latest Posts</h1>
-  <ul class="post-list">
+  <div class="post-grid">
     {% for post in site.posts %}
-      <li>
-        <h2>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h2>
-        <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-        <!-- Remove the duplicate title that was appearing -->
-      </li>
+      <article class="post-card">
+        <div class="post-card-content">
+          <h2 class="post-card-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          <time class="post-card-date" datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%B %d, %Y" }}
+          </time>
+          {% if post.excerpt %}
+            <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          {% endif %}
+          <a href="{{ post.url | relative_url }}" class="post-card-link">Read more →</a>
+        </div>
+      </article>
     {% endfor %}
-  </ul>
+  </div>
 </div>
