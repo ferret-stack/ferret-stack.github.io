@@ -7,41 +7,34 @@ layout: default
     <p class="page-subtitle">Thoughts on poker, coding, beer, and life</p>
   </header>
 
-  <main class="posts-container">
+  <main class="posts-grid">
     {% for post in site.posts %}
-      <article class="post-item">
-        <h2 class="post-title">
-          <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
-        </h2>
-        
-        <div class="post-meta">
+      <article class="post-card">
+        <div class="post-card-content">
+          <h2 class="post-title">
+            <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
+          </h2>
+          
           <time class="post-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">
             {{ post.date | date: "%B %d, %Y" }}
           </time>
           
           {% if post.categories %}
-            <span class="post-categories">
+            <div class="post-categories">
               {% for category in post.categories %}
                 <span class="category-tag">{{ category }}</span>
               {% endfor %}
-            </span>
+            </div>
+          {% endif %}
+          
+          {% if post.tags %}
+            <div class="post-tags">
+              {% for tag in post.tags %}
+                <span class="tag">#{{ tag }}</span>
+              {% endfor %}
+            </div>
           {% endif %}
         </div>
-
-        {% if post.excerpt %}
-          <div class="post-excerpt">
-            {{ post.excerpt | strip_html | truncatewords: 30 }}
-            <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
-          </div>
-        {% endif %}
-
-        {% if post.tags %}
-          <div class="post-tags">
-            {% for tag in post.tags %}
-              <span class="tag">#{{ tag }}</span>
-            {% endfor %}
-          </div>
-        {% endif %}
       </article>
     {% endfor %}
   </main>
