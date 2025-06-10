@@ -14,7 +14,7 @@
 /* Grid layout for post cards */
 .post-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
   gap: 2rem;
   margin: 0;
   padding: 0;
