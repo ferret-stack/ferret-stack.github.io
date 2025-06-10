@@ -197,6 +197,7 @@ a:hover {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #333;
+  max-width: 300px;
 }
 
 /* Spacing between paragraphs */
