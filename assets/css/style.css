@@ -29,17 +29,18 @@ body {
 }
 
 .site-title {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  color:#109dff;
 }
 
 .site-title a {
-  color: #333;
+  color: pink;
   text-decoration: none;
 }
 
 .site-title a:hover {
-  color: #0066cc;
+  color: pink;
 }
 
 .site-nav a {
