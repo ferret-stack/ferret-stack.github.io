@@ -40,17 +40,17 @@ body {
 }
 
 .site-title a:hover {
-  color: pink;
+  color: hotpink;
 }
 
 .site-nav a {
   margin-right: 1rem;
-  color: #666;
+  color: #109dff;
   text-decoration: none;
 }
 
 .site-nav a:hover {
-  color: #0066cc;
+  color: hotppink;
 }
 
 /* Main Content */
