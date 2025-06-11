@@ -49,11 +49,11 @@ body {
 .site-title {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color:#109dff;
+  color:hotpink;
 }
 
 .site-title a {
-  color: #109dff;
+  color: hotpink;
   text-decoration: none;
 }
 
