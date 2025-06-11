@@ -7,20 +7,20 @@ author: Ferret Stack
 ---
 rush hour train<br>
 stopped at the station<br>
-"train is cancelled!"<br>
+<span style="color:red;">"train is cancelled!"</span><br>
 said the driver<br>
 
-<p>I wondered why
-as my anger brewed
-"trespasser on tracks!"
+<p>I wondered why<br>
+as my anger brewed<br>
+<span style="color:red;">"trespasser on tracks!"</span><br>
 said the driver</p>
 
-<p such selfish behaviour
-making me late home
-"for fuck sake"
+<p> such selfish behaviour<br>
+making me late home<br>
+"for fuck sake"<br>
 huffing and puffing</p>
 
-<p>So
+<p>So<br>
 <span style="margin:60px;">I</span><br>
 <span style="margin:100px; letter-spacing:10">ran</span><br>
 <span style="margin:180px;">across</span><br>
