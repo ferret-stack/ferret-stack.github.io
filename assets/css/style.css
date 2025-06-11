@@ -42,6 +42,19 @@ body {
   border: 3px solid #pink;
 }
 
+.site-logo-default {
+  z-index: 1;
+}
+
+.site-logo-hover {
+  z-index: 2;
+  opacity: 0;
+}
+
+.site-logo-wrapper:hover .site-logo-hover {
+  opacity: 1;
+}
+
 .header-text {
   flex: 1;
 }
