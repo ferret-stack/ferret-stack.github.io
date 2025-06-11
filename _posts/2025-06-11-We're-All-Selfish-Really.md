@@ -21,14 +21,14 @@ making me late home
 huffing and puffing
 
 So
-<span style="margin:60px;">I</span>
-<span style="margin:100px; letter-spacing:10">ran</span>
-<span style="margin:180px;">across</span>
-<span style="margin:250px;">the</span>
-<span style="margin:300px;">platform.</span>
-<span style="margin:300px;">Then</span>
-<span style="margin:300px;">sat</span>
-<span style="margin:300px;">back</span>
+<p style="margin:60px;">I</p>
+<p style="margin:100px; letter-spacing:10">ran</p>
+<p style="margin:180px;">across</p>
+<p style="margin:250px;">the</p>
+<p style="margin:300px;">platform.</p>
+<p style="margin:300px;">Then</p>
+<p style="margin:300px;">sat</p>
+<p style="margin:300px;">back</p>
 <span style="margin:300px;">down</span>
 
 Leaving an empty can of beer by my seat for someone else to pick up.
