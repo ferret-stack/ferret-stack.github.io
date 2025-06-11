@@ -17,19 +17,19 @@ said the driver</p>
 
 <p> such selfish behaviour<br>
 making me late home<br>
-<span style="color:darkred; font-weight:bold;">for fuck sake!"</span><br>
+<span style="color:darkred; font-weight:bold;">"for fuck sake!"</span><br>
 huffing and puffing</p>
 
 <p>So<br>
 <span style="margin:60px;">I</span><br>
 <span style="margin:100px; letter-spacing:8px;">ran</span><br>
 <span style="margin:180px; letter-spacing:10px;">across</span><br>
-<span style="margin:250px;">the</span><br>
-<span style="margin:300px;">platform.</span><br>
-<span style="margin:300px;">Then</span><br>
-<span style="margin:300px;">sat</span><br>
-<span style="margin:300px;">back</span><br>
-<span style="margin:300px;">down</span><br></p>
+<span style="margin:300px;">the</span><br>
+<span style="margin:350px;">platform.</span><br>
+<span style="margin:350px;">Then</span><br>
+<span style="margin:350px;">sat</span><br>
+<span style="margin:350px;">back</span><br>
+<span style="margin:350px;">down</span><br></p>
 
 <p>Leaving an empty can of beer by my former seat<br>for someone else to pick up.
 
