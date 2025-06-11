@@ -243,7 +243,7 @@ a:hover {
 
 /* Images - Base styles */
 .post-content img {
-  max-width: 650px;  /* Match post content width */
+  max-width: 100%;
   height: auto;
   margin: 1.5rem auto;
   display: block;
@@ -251,76 +251,68 @@ a:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* For markdown images without a wrapper */
-.post-content p img {
-  max-width: 650px;
-  width: 100%;
-  margin: 1.5rem auto;
-}
-
-/* Figure and Caption */
-.post-content figure {
-  margin: 2rem 0;
+/* Single Image Wrapper */
+.single-image {
+  margin: 2rem auto;
   text-align: center;
   max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.post-content figcaption {
+.single-image img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Two Images Side by Side */
+.image-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 2rem auto;
+  max-width: 650px;
+}
+
+.image-double img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  object-fit: cover;
+}
+
+/* Four Images in 2x2 Grid */
+.image-quad {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-rows: repeat(2, 1fr) !important;
+  gap: 15px !important;
+  margin: 2rem auto;
+  max-width: 650px;
+  width: 100%;
+}
+
+.image-quad img {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Figure container */
+figure {
+  margin: 2rem auto;
+  padding: 0;
+  max-width: 650px;
+}
+
+figcaption {
   margin-top: 0.75rem;
   font-size: 0.875rem;
   color: #666;
   font-style: italic;
-  padding: 0 1rem;
-}
-
-/* Single Image */
-.post-content .single-image {
-  margin: 2rem auto;
   text-align: center;
-  max-width: 650px;
-}
-
-.post-content .single-image img {
-  width: 100%;
-  height: auto;
-  margin: 0;
-}
-
-/* Two Images Side by Side */
-.post-content .image-double {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin: 2rem auto;
-  max-width: 650px;
-}
-
-.post-content .image-double img {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  object-fit: cover;
-  aspect-ratio: 1 / 1;  /* Makes them square */
-}
-
-/* Four Images in 2x2 Grid */
-.post-content .image-quad {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 15px;
-  margin: 2rem auto;
-  max-width: 650px;
-}
-
-.post-content .image-quad img {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  object-fit: cover;
-  aspect-ratio: 1 / 1;  /* Makes them square */
 }
 
 /* Instagram Embeds */
@@ -480,16 +472,8 @@ a:hover {
   }
   
   /* Images */
-  .post-content .image-double,
-  .post-content .image-quad {
-    grid-template-columns: 1fr;
+  .image-double,
+  .image-quad {
+    grid-template-columns: 1fr !important;
   }
-}
-
-.image-quad {
-  border: 3px solid red !important;
-}
-
-.image-quad img {
-  border: 2px solid blue !important;
 }
