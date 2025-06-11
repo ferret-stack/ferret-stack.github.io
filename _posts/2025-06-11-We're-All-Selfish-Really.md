@@ -22,7 +22,7 @@ huffing and puffing</p>
 
 <p>So<br>
 <span style="margin:60px;">I</span><br>
-<span style="margin:100px; letter-spacing:5px;">ran</span><br>
+<span style="margin:100px; letter-spacing:8px;">ran</span><br>
 <span style="margin:180px;">across</span><br>
 <span style="margin:250px;">the</span><br>
 <span style="margin:300px;">platform.</span><br>
