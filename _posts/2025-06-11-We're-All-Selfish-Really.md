@@ -24,12 +24,12 @@ huffing and puffing</p>
 <span style="margin:60px;">I</span><br>
 <span style="margin:100px; letter-spacing:8px;">ran</span><br>
 <span style="margin:180px; letter-spacing:10px;">across</span><br>
-<span style="margin:310px;">the</span><br>
-<span style="margin:375px;">platform.</span><br>
-<span style="margin:375px;">Then</span><br>
-<span style="margin:375px;">sat</span><br>
-<span style="margin:375px;">back</span><br>
-<span style="margin:375px;">down</span><br></p>
+<span style="margin:300px; letter-spacing:12px;">the</span><br>
+<span style="margin:400px;">platform.</span><br>
+<span style="margin:400px;">Then</span><br>
+<span style="margin:400px;">sat</span><br>
+<span style="margin:400px;">back</span><br>
+<span style="margin:400px;">down</span><br></p>
 
 <p>Leaving an empty can of beer by my former seat<br>for someone else to pick up.
 
