@@ -53,7 +53,7 @@ body {
 }
 
 .site-title a {
-  color: hotpink;
+  color: pink;
   text-decoration: none;
 }
 
@@ -244,7 +244,6 @@ a:hover {
 /* Images - Base styles */
 .post-content img {
   max-width: 650px;  /* Match post content width */
-  width: 100%;       /* But scale down on smaller screens */
   height: auto;
   margin: 1.5rem auto;
   display: block;
