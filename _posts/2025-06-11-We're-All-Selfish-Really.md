@@ -31,6 +31,6 @@ huffing and puffing</p>
 <span style="margin:300px;">back</span><br>
 <span style="margin:300px;">down</span><br></p>
 
-<p>Leaving an empty can of beer by my seat for someone else to pick up.
+<p>Leaving an empty can of beer by my former seat<br>for someone else to pick up.
 
 I guess that we're all selfish, really.</p>
