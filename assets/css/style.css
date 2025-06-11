@@ -34,11 +34,21 @@ body {
   gap: 2rem;
 }
 
+/* Logo with image swap - FIXED */
+.site-logo-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: inline-block;  /* Important for positioning */
+}
+
 .site-logo {
   width: 100px;  /* Adjust size as needed */
   height: 100px;
   object-fit: cover;
+  position: absolute;
   border-radius: 50%;  /* Makes it circular */
+  transition: opacity 0.5s ease
   border: 3px solid #pink;
 }
 
