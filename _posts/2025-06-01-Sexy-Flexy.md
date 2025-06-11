@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Sexy Flexy
 date: 2025-06-01
 categories: fountain pens, vintage pens, ferret-roundup
