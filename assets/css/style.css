@@ -220,10 +220,10 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Individual Post Pages
+/* Individual Post Pages */
 .post {
   max-width: 650px;  /* Even narrower for better readability */
-  margin: 20 auto;
+  margin: 50 auto;
   padding: 0 20px;   /* Add some padding on mobile */
 }
 
