@@ -16,7 +16,10 @@
   <header class="site-header">
     <div class="container">
       <div class="header-content">
-        <img src="{{ '/assets/images/ferret_stack.jpg' | relative_url }}" alt="{{ site.title }}" class="site-logo">
+        <div class="site-logo-wrapper">
+          <img src="{{ '/assets/images/ferret_stack_.jpg' | relative_url }}" alt="{{ site.title }}" class="site-logo site-logo-default">
+          <img src="{{ '/assets/images/ferret_stack_col.jpg' | relative_url }}" alt="{{ site.title }}" class="site-logo site-logo-hover">
+        </div>
         <div class="header-text">
           <h1 class="site-title">
             <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
@@ -39,7 +42,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. Dig deeper, stack smarter!.</p>
     </div>
   </footer>
 </body>
