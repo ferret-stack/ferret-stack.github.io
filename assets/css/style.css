@@ -46,52 +46,19 @@ body {
   flex: 1;
 }
 
-/* Alternative: Rectangle logo */
-.site-logo.rectangle {
-  width: 120px;
-  height: 60px;
-  border-radius: 8px;
-}
-
-/* Alternative: Logo above title */
-.header-content.stacked {
-  flex-direction: column;
-  text-align: center;
-  gap: 1rem;
-}
-
-.header-content.stacked .site-logo {
-  width: 100px;
-  height: 100px;
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-  
-  .site-logo {
-    width: 60px;
-    height: 60px;
-  }
-}
-
 .site-title {
-  font-size: 2.0rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color:#109dff;
 }
 
 .site-title a {
-  color: pink;
+  color: #109dff;
   text-decoration: none;
 }
 
 .site-title a:hover {
-  color: limegreen;
+  color: hotpink;
 }
 
 .site-nav a {
@@ -101,12 +68,12 @@ body {
 }
 
 .site-nav a:hover {
-  color: hotppink;
+  color: hotpink;
 }
 
 /* Main Content */
 .site-content {
-  min-height: calc(100vh - 400px);
+  min-height: calc(100vh - 200px);
   padding-bottom: 2rem;
 }
 
@@ -222,14 +189,14 @@ a:hover {
 
 /* Individual Post Pages */
 .post {
-  max-width: 650px;  /* Even narrower for better readability */
-  margin: 50 auto;
-  padding: 0 20px;   /* Add some padding on mobile */
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .post-header {
   margin-bottom: 2rem;
-  text-align: center;  /* Center the title and date */
+  text-align: center;
   padding-bottom: 2rem;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -249,15 +216,13 @@ a:hover {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #333;
-  max-width: 300px;
 }
 
-/* Spacing between paragraphs */
+/* Post Content Typography */
 .post-content p {
-  margin-bottom: 1.25rem;  /* Reduced from 1.5rem */
+  margin-bottom: 1.25rem;
 }
 
-/* Headings in posts */
 .post-content h1 {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
@@ -280,34 +245,14 @@ a:hover {
 .post-content img {
   max-width: 100%;
   height: auto;
-  margin: 1.5rem 0;     /* Remove auto margin */
-  display: block;       /* Make them block elements */
-  border-radius: 8px;   /* Slight rounding */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  margin: 1.5rem 0;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Full width images that break out of content */
-.post-content .full-width {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  max-width: none;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* For centered images that stay within content width */
-.post-content .center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Figure and caption styling */
-.post-content figure,
-.post-content .post-figure {
+/* Figure and Caption */
+.post-content figure {
   margin: 2rem 0;
   text-align: center;
 }
@@ -319,29 +264,78 @@ a:hover {
   font-style: italic;
 }
 
-/* Side-by-side image pairs */
-.post-content .image-pair {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+/* Single Image */
+.post-content .single-image {
+  margin: 2rem 0;
+  text-align: center;
 }
 
-.post-content .image-pair img {
-  flex: 1;
-  width: 50%;
+.post-content .single-image img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Two Images Side by Side */
+.post-content .image-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 2rem 0;
+}
+
+.post-content .image-double img {
+  width: 100%;
   height: auto;
   margin: 0;
 }
 
-/* For really wide images, constrain them more */
-.post-content p img {
-  max-width: 100%;
-  width: auto;
-  max-height: 500px;  /* Prevent super tall images */
-  object-fit: contain;
+/* Four Images in 2x2 Grid */
+.post-content .image-quad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  margin: 2rem 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Code blocks */
+.post-content .image-quad img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  object-fit: cover;
+}
+
+/* Instagram Embeds */
+.post-content .instagram-media {
+  margin: 2rem auto !important;
+  max-width: 540px !important;
+}
+
+/* Social Links */
+.post-content .social-links {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.post-content .social-links p {
+  margin-bottom: 0.5rem;
+}
+
+/* Color Spans for Ink Colors */
+.post-content span[style*="color"] {
+  font-weight: 600;
+}
+
+/* Code Blocks */
 .post-content pre {
   background-color: #f6f8fa;
   border-radius: 6px;
@@ -388,7 +382,7 @@ a:hover {
   border-radius: 0 6px 6px 0;
 }
 
-/* Links in post content */
+/* Links in Post Content */
 .post-content a {
   color: #0066cc;
   text-decoration: underline;
@@ -424,8 +418,34 @@ a:hover {
   background-color: #f8f9fa;
 }
 
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
+  /* Header */
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .site-logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Post Grid */
+  .post-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Typography */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  
+  .post-card-title {
+    font-size: 1.25rem;
+  }
+  
   .post-title {
     font-size: 2rem;
   }
@@ -445,28 +465,10 @@ a:hover {
   .post-content h3 {
     font-size: 1.25rem;
   }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .post-grid {
+  
+  /* Images */
+  .post-content .image-double,
+  .post-content .image-quad {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  
-  .post-card-title {
-    font-size: 1.25rem;
-  }
-  
-  .site-header {
-    text-align: center;
-  }
-  
-  .site-nav a {
-    display: inline-block;
-    margin: 0 0.5rem;
   }
 }
