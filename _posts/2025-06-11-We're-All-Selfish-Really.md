@@ -17,12 +17,12 @@ said the driver</p>
 
 <p> such selfish behaviour<br>
 making me late home<br>
-"for fuck sake"<br>
+<span style="color:darkred; font-weight:bold;">for fuck sake!"<br>
 huffing and puffing</p>
 
 <p>So<br>
 <span style="margin:60px;">I</span><br>
-<span style="margin:100px; letter-spacing:10">ran</span><br>
+<span style="margin:100px; letter-spacing:20;">ran</span><br>
 <span style="margin:180px;">across</span><br>
 <span style="margin:250px;">the</span><br>
 <span style="margin:300px;">platform.</span><br>
