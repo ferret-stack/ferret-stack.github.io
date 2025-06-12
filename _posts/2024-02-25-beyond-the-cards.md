@@ -30,14 +30,14 @@ When Player 1 calls and Player 2 has a Queen (a bluff), they win &#36;3 (the &#3
 Let's prove this together (don't worry - you don't need to do algebra at the poker table, but it's important to understand the concept!)
 
 $$
-\text{EV} = \text{(\% Bluff} \cdot &#36;3) - ((1 - \text{\% Bluff)} \cdot &#36;1)
+\text{EV} = \text{(\% Bluff} \cdot \text{$};3) - ((1 - \text{\% Bluff)} \cdot \text{$}1)
 $$
 As described above, Player 2 wants to make Player 1 *indifferent* and so we set EV to &#36;0. If we solve for `% Bluff`, we get a value of $\frac{1}{4}$: for every four bets that Player 2 makes, three of them should be value (Aces) and one should be a bluff (Queens). 
 
 We can also solve for the optimal calling strategy for Player 1. For this, we need to consider the game from the perspective of Player 2, in which case when Player 1 folds, they win &#36;2, and when they're called while bluffing they lose &#36;1:
 
 $$
-\text{EV} = ((1-\text{\% Call)} \cdot &#36;2) - (\text{\% Call} \cdot &#36;1)
+\text{EV} = ((1-\text{\% Call)} \cdot \text{$}2) - (\text{\% Call} \cdot \text{$}1)
 $$
 Once again, by setting EV to &#36;0 and solving for `% Call` then we get $\frac{2}{3}$ and this is the frequency that Player 1 has to call to make Player 2 indifferent between bluffing and checking with a Queen.
 
@@ -49,7 +49,7 @@ $$
 \left[\frac{1}{2} + \left(\frac{1}{2} \cdot \frac{1}{3}\right) = \frac{4}{6}\right] = \frac{2}{3}
 $$
 
-In other words, two-thirds of the time, Player 2 will bet and will win &#36;2 and thus gives an expected value of $\frac{2}{3} \cdot &#36;2 = &#36;1.33$, though as they had to ante &#36;1, this gives an overall winrate of &#36;0.33. As this is a zero sum game (what is won by the winner must be equal to what is lost by the loser), Player 1 therefore has a winrate of -\&#36;0.33 *even when they play optimally!*
+In other words, two-thirds of the time, Player 2 will bet and will win &#36;2 and thus gives an expected value of $\frac{2}{3} \cdot \text{$}2 = \text{$}1.33$, though as they had to ante &#36;1, this gives an overall winrate of &#36;0.33. As this is a zero sum game (what is won by the winner must be equal to what is lost by the loser), Player 1 therefore has a winrate of -&#36;0.33 *even when they play optimally!*
 
 Related: [A Complete Guide to Poker Positions](https://coinpoker.com/poker-position/)
 ## Applying Clairvoyance Game Theory to Real Poker Strategy: Understanding Range Polarisation
