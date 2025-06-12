@@ -16,15 +16,15 @@ In this article, we'll first dive deep into the Clairvoyance Game to understand 
 ## The Clairvoyance Game: Poker's Magic Crystal Ball
 The Clairvoyance Game theory model, also called The AKQ Game, is a theoretical game devised by Bill Chen and Jarred Ankenman in their book *The Mathematics of Poker*, which strips poker down to its absolute essence using just three cards and two players, creating a laboratory for understanding fundamental concepts and game theory optimal (GTO) poker.
 
-Each player antes $	ext{$}$1 and receives a card from a deck containing only an Ace (highest), King, and Queen (lowest). Player 1, who is first to act, always gets dealt a King, while Player 2, who is last to act, is dealt either an Ace or a Queen. The game features a single betting round where Player 1 can either check or bet $	ext{$}$1; after a check, Player 2 can likewise check or bet $	ext{$}$1; after any bet (by either player) their opponent must either call $	ext{$}$1 or fold. At showdown, the highest card wins the pot.
+Each player antes $	ext{$}$1 and receives a card from a deck containing only an Ace (highest), King, and Queen (lowest). Player 1, who is first to act, always gets dealt a King, while Player 2, who is last to act, is dealt either an Ace or a Queen. The game features a single betting round where Player 1 can either check or bet $text{$}$1; after a check, Player 2 can likewise check or bet $text{$}$1; after any bet (by either player) their opponent must either call $text{$}$1 or fold. At showdown, the highest card wins the pot.
 
 While the rules may seem similar to Texas hold 'em, it's not nearly as exciting to play as the full game. The beauty of the Clairvoyance Game reveals itself in the constant dance between exploiting opponents and protecting ourselves from exploitation. 
 
 Put yourself in the shoes of Player 2: If you never bluff your Queen, then savvy opponents will ruthlessly fold their King to your bets, thus denying crucial value to your Aces. However, if you bluff too frequently, they'll snap-call with their Kings, and punish your aggression.
 
-What is interesting about this is that it highlights you shouldn't only bet with your value hands. This conclusion isn't just theoretical - the maths shows we should bluff exactly $\frac{1}{3}$ of the time with our Queens and bet all of our Aces for value. The aim of this is to make our opponent *indifferent* to calling or folding: creating a situation where the [expected value](https://coinpoker.com/expected-value-in-poker/) of calling for Player 1 is $	ext{$}$0. 
+What is interesting about this is that it highlights you shouldn't only bet with your value hands. This conclusion isn't just theoretical - the maths shows we should bluff exactly $\frac{1}{3}$ of the time with our Queens and bet all of our Aces for value. The aim of this is to make our opponent *indifferent* to calling or folding: creating a situation where the [expected value](https://coinpoker.com/expected-value-in-poker/) of calling for Player 1 is $text{$}$0. 
 
-When Player 1 calls and Player 2 has a Queen (a bluff), they win $	ext{$}$3 (the $	ext{$}$2 already in the pot, plus Player 2's $	ext{$}$1 bet). When Player 1 has an Ace, then Player 2 loses $	ext{$}$1 (though they ante $	ext{$}$1, this is already in the pot and **is no longer theirs**).
+When Player 1 calls and Player 2 has a Queen (a bluff), they win $\text{$}$3 (the $\text{$}$2 already in the pot, plus Player 2's \$text{$}$1 bet). When Player 1 has an Ace, then Player 2 loses\$text{$}$1 (though they ante \$text{$}$1, this is already in the pot and **is no longer theirs**).
 
 ### The Mathematics Behind Game Theory Optimal Poker Strategy
 Let's prove this together (don't worry - you don't need to do algebra at the poker table, but it's important to understand the concept!)
@@ -49,7 +49,7 @@ $$
 \left[\frac{1}{2} + \left(\frac{1}{2} \cdot \frac{1}{3}\right) = \frac{4}{6}\right] = \frac{2}{3}
 $$
 
-In other words, two-thirds of the time, Player 2 will bet and will win $	ext{$}$2 and thus gives an expected value of $\frac{2}{3} \cdot \text{$}2 = \text{$}1.33$, though as they had to ante $	ext{$}$1, this gives an overall winrate of $	ext{$}$0.33. As this is a zero sum game (what is won by the winner must be equal to what is lost by the loser), Player 1 therefore has a winrate of -$	ext{$}$0.33 *even when they play optimally!*
+In other words, two-thirds of the time, Player 2 will bet and will win $\text{$}$2 and thus gives an expected value of $\frac{2}{3} \cdot \text{$}2 = \text{$}1.33$, though as they had to ante $	ext{$}$1, this gives an overall winrate of \$text{$}$0.33. As this is a zero sum game (what is won by the winner must be equal to what is lost by the loser), Player 1 therefore has a winrate of -\$text{$}$0.33 *even when they play optimally!*
 
 Related: [A Complete Guide to Poker Positions](https://coinpoker.com/poker-position/)
 ## Applying Clairvoyance Game Theory to Real Poker Strategy: Understanding Range Polarisation
@@ -80,7 +80,7 @@ Giving us a bluffing frequency of $\frac{50}{(50 + 250)} = \frac{1}{6} \approx 1
 
 **IMPORTANT:** A common mistake when analysing these scenarios is to forget that, by betting, we grow the pot. This is why `250` is in the denominator, not `200`. 
 
-On the other hand, if we overbet, perhaps $	ext{$}$300 into the $	ext{$}$200 pot, our range becomes extremely polarised. We can only really bet flushes, straights, and sets for value now. As such, we need to be bluffing a higher percentage of the time to compensate, perhaps with our aforementioned busted draws like **T8**, or **AdQh** with the nut-flush blocker (that may get even **Qd9d** to fold if our opponent is especially tight). 
+On the other hand, if we overbet, perhaps \$text{$}$300 into the \$text{$}$200 pot, our range becomes extremely polarised. We can only really bet flushes, straights, and sets for value now. As such, we need to be bluffing a higher percentage of the time to compensate, perhaps with our aforementioned busted draws like **T8**, or **AdQh** with the nut-flush blocker (that may get even **Qd9d** to fold if our opponent is especially tight). 
 
 This gives us a bluffing frequency of $\frac{300}{(300 + 500)} = \frac{3}{8} \approx 38\%$ 
 
