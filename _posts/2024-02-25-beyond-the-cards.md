@@ -34,20 +34,20 @@ Put yourself in the shoes of Player 2: If you never bluff your Queen, then savvy
 
 What is interesting about this is that it highlights you shouldn't only bet with your value hands. This conclusion isn't just theoretical - the maths shows we should bluff exactly $\frac{1}{3}$ of the time with our Queens and bet all of our Aces for value. The aim of this is to make our opponent *indifferent* to calling or folding: creating a situation where the [expected value](https://coinpoker.com/expected-value-in-poker/) of calling for Player 1 is £0. 
 
-When Player 1 calls and Player 2 has a Queen (a bluff), they win $\text{$}$3 (the £2 already in the pot, plus Player 2's £1 bet). When Player 1 has an Ace, then Player 2 loses £1 (though they ante £1, this is already in the pot and **is no longer theirs**).
+When Player 1 calls and Player 2 has a Queen (a bluff), they win £3 (the £2 already in the pot, plus Player 2's £1 bet). When Player 1 has an Ace, then Player 2 loses £1 (though they ante £1, this is already in the pot and **is no longer theirs**).
 
 ### The Mathematics Behind Game Theory Optimal Poker Strategy
-Let's prove this together (don't worry - you don't need to do algebra at the poker table, but it's important to understand the concept!)
+Let's prove this together. You don't need to do algebra at the poker table, but it's important to understand the concept!
 
 $$
-\text{EV} = \text{(\% Bluff} \cdot \text{£};3) - ((1 - \text{\% Bluff)} \cdot \text{£}1)
+\text{EV} = \text{(\% Bluff} \cdot \text{£}3) - ((1 - \text{\% Bluff)} \cdot \text{£}1)
 $$
 As described above, Player 2 wants to make Player 1 *indifferent* and so we set EV to £0. If we solve for `% Bluff`, we get a value of $\frac{1}{4}$: for every four bets that Player 2 makes, three of them should be value (Aces) and one should be a bluff (Queens). 
 
 We can also solve for the optimal calling strategy for Player 1. For this, we need to consider the game from the perspective of Player 2, in which case when Player 1 folds, they win £2, and when they're called while bluffing they lose £1:
 
 $$
-\text{EV} = ((1-\text{\% Call)} \cdot \text{$}2) - (\text{\% Call} \cdot \text{$}1)
+\text{EV} = ((1-\text{\% Call)} \cdot £2) - (\text{\% Call} \cdot £1)
 $$
 Once again, by setting EV to £0 and solving for `% Call` then we get $\frac{2}{3}$ and this is the frequency that Player 1 has to call to make Player 2 indifferent between bluffing and checking with a Queen.
 
@@ -60,7 +60,7 @@ $$
 \left[\frac{1}{2} + \left(\frac{1}{2} \cdot \frac{1}{3}\right) = \frac{4}{6}\right] = \frac{2}{3}
 $$
 
-In other words, two-thirds of the time, Player 2 will bet and will win $\text{$}$2 and thus gives an expected value of $\frac{2}{3} \cdot \text{$}2 = £1.33$, though as they had to ante £1, this gives an overall winrate of £0.33. As this is a zero sum game (what is won by the winner must be equal to what is lost by the loser), Player 1 therefore has a winrate of -£0.33 *even when they play optimally!*
+In other words, two-thirds of the time, Player 2 will bet and will win £2 and thus gives an expected value of $\frac{2}{3} \cdot £2 = £1.33$, though as they had to ante £1, this gives an overall winrate of £0.33. As this is a zero sum game (what is won by the winner must be equal to what is lost by the loser), Player 1 therefore has a winrate of -£0.33 *even when they play optimally!*
 
 Related: [A Complete Guide to Poker Positions](https://coinpoker.com/poker-position/)
 ## Applying Clairvoyance Game Theory to Real Poker Strategy: Understanding Range Polarisation
@@ -78,10 +78,11 @@ As the IP player, with a polarised range, we have a decision to make: do we bet 
 This is where the lessons from the Clairvoyance Game really shine and can help in selecting optimal bet sizes when value betting and bluffing. 
 
 Remember, if IP bets their Ace all the time and also bluffs with their Queen a third of the time, OOP's King becomes indifferent between calling and folding. The same principle applies here. If we only ever bet our flushes and better for value, OOP can easily fold their bluff catchers and beat us, but if we bluff too aggressively then OOP's decision to call with their bluff catchers becomes more trivial; we need to balance our value bets with appropriate bluffs.
+
 ### Calculating Optimal Bet Sizes and Bluffing Frequencies
 Instead of **Ah9h**, let's now assume we hold **AdQh** - a fantastic bluff candidate. Why? Well, consider this: If we hold the Ace of diamonds, it means our opponent cannot have the nut flush. They might still hold a flush, like **Qd9d**, but it isn't the *best* possible flush. Another bluff candidate could be **T8** for the busted straight draw.
 
-The size of our bet also matters. If we bet smaller, say $	ext{$}$50 into the £200 pot, we can bet a more condensed range for value, like our **Ad9h** discussed above. But this also means we need to bluff less often to remain balanced, since OOP will be getting better odds to call with their bluff catchers. We can simplify the poker mathematics from the Clairvoyance Game above to:
+The size of our bet also matters. If we bet smaller, say £50 into the £200 pot, we can bet a more condensed range for value, like our **Ad9h** discussed above. But this also means we need to bluff less often to remain balanced, since OOP will be getting better odds to call with their bluff catchers. We can simplify the poker mathematics from the Clairvoyance Game above to:
 
 $$
 \text{Bluffing Frequency} = \frac{\text{Bet}}{(\text{Bet} + \text{Pot})}
