@@ -2,6 +2,7 @@
 layout: post
 title: "Beyond the Cards - How One Simple Game Reveals Poker's Complex Strategies"
 date: 2024-02-25
+mathjax: true
 categories: poker strategy
 author: Ferret Stack
 ---
