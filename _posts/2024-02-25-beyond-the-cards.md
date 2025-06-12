@@ -6,7 +6,7 @@ mathjax: true
 categories: poker strategy
 author: Ferret Stack
 ---
-<b>Note:</b> GTO is <em>one</em> aspect of being a good player. It's not a matter of "do this and you'll print money"; you must honestly understand this and why it works. 
+<b>Note:</b> GTO is <em>one</em> aspect of poker. It's game theory optimal, not "absolutely totally and entirely" optimal. Still, understanding it is important but shouldn't be viewed in terms of "do this and you'll print money"; you must honestly understand and appreciate its strengths and weaknesses; the truths and lies.
 
 As Napoleon said:
 
@@ -107,3 +107,9 @@ By taking the concepts of the Clairvoyance Game, and understanding solver output
 The Clairvoyance Game may be simple, but it effectively illustrates the complex concepts of game theory, balanced ranfes, and exploitative play in poker. By understanding how to balance our value bets with appropriate bluffs and adapting to our opponents' tendencies, we can protect our strategy from exploitation while maximizing our profits.
 
 As you continue your poker journey, think about the game in terms of ranges and frequencies, and apply the lessons of the Clairvoyance Game to your own play. By combining a solid theoretical foundation with a keen eye for exploitation, you'll be well-equipped to navigate even the most complex poker situations with confidence and success. Remember, the true art of poker lies in adapting to specific opponents and game dynamics, and by channelling the simplicity of this toy game, you'll be one step closer to mastering the beautiful and endlessly fascinating game of poker.
+<hr>
+I'm not affiliated with Coinpoker
+
+This essay (I suppose) was written as a reply to a position they advertised for a content writer
+
+I wouldn't say no to collaboration tho x
