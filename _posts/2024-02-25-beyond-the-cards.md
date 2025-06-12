@@ -12,7 +12,7 @@ As Napoleon said:
 
 <blockquote>Laws that prove consistent in theory often prove chaotic in practice.</blockquote>
 
-Cheers.
+I guess sometimes it makes sense to 3! T5o BvB?
 
 <hr>
 
