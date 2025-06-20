@@ -11,14 +11,14 @@ stopped at the station<br>
 said the driver<br>
 
 <p>I wondered why<br>
-as my anger brewed<br>
+while sipping my beerbr>
 <span style="color:red;">"trespasser on tracks!"</span><br>
 said the driver</p>
 
-<p> such selfish behaviour<br>
+<p>such selfish behaviour<br>
 making me late home<br>
 <span style="color:darkred; font-weight:bold;">"for fuck sake!"</span><br>
-huffing and puffing</p>
+shouted the passengers</p>
 
 <p>So<br>
 <span style="margin:60px;">I</span><br>
@@ -29,8 +29,8 @@ huffing and puffing</p>
 <span style="margin:400px;">Then</span><br>
 <span style="margin:400px;">sat</span><br>
 <span style="margin:400px;">back</span><br>
-<span style="margin:400px;">down</span><br></p>
+<span style="margin:400px;">down in a new empty seat</span><br></p>
 
-<p>Leaving an empty can of beer by my former seat<br>for someone else to pick up.
+<p>leaving my empty can of beer by my former seat for someone else to pick up.
 
 I guess that we're all selfish, really.</p>
