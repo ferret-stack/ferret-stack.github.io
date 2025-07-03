@@ -22,14 +22,14 @@ shouted the passengers</p>
 
 <p>So<br>
 <span style="margin:60px;">I</span><br>
-<span style="margin:100px; letter-spacing:8px;">ran</span><br>
-<span style="margin:180px; letter-spacing:10px;">across</span><br>
-<span style="margin:300px; letter-spacing:12px;">the</span><br>
-<span style="margin:400px;">platform to get another train.</span><br>
-<span style="margin:400px;">Then</span><br>
-<span style="margin:400px;">sat</span><br>
-<span style="margin:400px;">back</span><br>
-<span style="margin:400px;">down in a new empty seat</span><br></p>
+<span style="margin:50px; letter-spacing:8px;">ran</span><br>
+<span style="margin:100px; letter-spacing:10px;">across</span><br>
+<span style="margin:200px; letter-spacing:12px;">the</span><br>
+<span style="margin:300px;">platform to get another train.</span><br>
+<span style="margin:300px;">Then</span><br>
+<span style="margin:300px;">sat</span><br>
+<span style="margin:300px;">back</span><br>
+<span style="margin:300px;">down in a new empty seat</span><br></p>
 
 <p>leaving my empty can of beer lounging in my former space for someone else to throw away.
 
