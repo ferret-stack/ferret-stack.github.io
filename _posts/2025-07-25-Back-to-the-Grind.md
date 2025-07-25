@@ -45,8 +45,16 @@ It wrote wonderfully once returned, but I had developed a preference for fine ni
 **Design**
 
 At some point Montegrappa have changed their nibs on the NeroUno, and the one that was sent back to me was a different design to the original. I don't know whether I have an old NeroUno nib, or an old one.
-- [x] [other nib] pic
-![[NeroUno Old Nib.png]]
+
+<figure>
+  <div class="image-double">
+    <img src="/assets/images/grind/montegrappa_old.png">
+    <img src="/assets/images/grind/montegrappa_nib.jpeg">
+  </div>
+  <figcaption>
+    Old nib (L) v new nib (R); L not my image
+  </figcaption>
+</figure>
 
 The original nib I had was longer/slimmer and more ornate than the one I have now. I was told that the nib would be swapped out, and I'm not complaining because an ugly nib that writes is better than the prettiest nib that doesn't write.
 
@@ -54,7 +62,7 @@ The original nib I had was longer/slimmer and more ornate than the one I have no
 
 This nib definitely isn't ugly. It's plain and simple, but the way it sits makes it stand out. Couple this with the gorgeous barrel design and you have something really beautiful. 
 
-- [x] [main shot of pen] pic
+![Montegrappa & TWSBI](/assets/images/naughty/montegrappa_twsbi.jpeg)
 
 There's some grandeur about this pen; something imposing and encapsulating about it. I imagine it would have a bit of an ego, but can you blame it?
 
@@ -74,19 +82,19 @@ The grooves aren't sharp and I've not found them to collect dirt or dust, as the
 
 The third pen that I bought into the start of my fountain pen fascination. It was also my first piston filler.
 
-- [x] [main shot of pen] pic
+![TWSBI 580](/assets/images/naughty/twsbi_writing.jpeg)
 
 Come to think of it, the first ink that I put in it was also red; the more vibrant Diamine Red Dragon. 
 
 It's been a workhorse in my collection for ten years, and over that time it's seen a number of different inks (not all red), as well as a new nib. 
 
-- [x] [close up of ink in barrel] pic
+![TWSBI 580 writing sample](/assets/images/naughty/twsbi_writing.jpeg)
 
 There was a point when I started to go a bit mad and was switching nibs between different pens, as well as grinding my own, as I discussed with my Montegrappa. This pen seems to have inherited a Schmidt gold-plated steel nib, which I ground into an architect. 
 
 There is something about this pen that just makes sense for it to have an architect grind. Maybe it's been in it so long and I've just associated it with such a shape?
 
-- [x] [close up of nib] pic
+![TWSBI 580 nib](/assets/images/naughty/twsbi_nib.jpeg)
 
 I think some work could be done to make it a bit more architect-y, but I'll hold off on doing that for the time being.
 
@@ -102,7 +110,7 @@ If it ain't broke, don't fix it (unlike my Montegrappa).
 
 A pen friend at the London Pen Club sold this to me, and I was overjoyed to get my hands on it. 
 
-- [ ] [writing sample pic] -- have it written about London; caption about the ink
+![Pelikan M620 Piccadilly Circus](/assets/images/naughty/pelikan_writing.jpeg)
 
 I didn't realise this until writing this post, but perhaps it's a slight Freudian slip that I chose this pen to ink up just after having travelled up and down northern Europe.
 
@@ -110,7 +118,7 @@ I grew up just outside of London, but still within the bounds of the M25. In my 
 
 Some of my best memories at the time were in London. I was (and remain) amazed by such a great city. Naturally, I wanted to demonstrate this admiration in pen form. 
 
-- [ ] [main shot of pen] pic
+![Montegrappa & TWSBI](/assets/images/naughty/montegrappa_twsbi_two.jpeg)
 
 The **M620 Piccadilly Circus** is part of the *City* series that Pelikan introduced in 2001. Perhaps the most famous would be the Grand Place (Brussels), with New York (model eponymously named!) coming in second place. 
 
@@ -118,11 +126,11 @@ I don't know where in the favourites-ranking people would vote this, but it was 
 
 Yes, there's some grey in the design - I assume this is a nod to the dull and grey British weather.
 
-- [ ] [close up of pen] pic
+![The pens up close](/assets/images/grind/main_close.jpeg)
 
 Interestingly, this is an M620. The Mxx0 in regular Pelikan numbering would suggest this should have gold hardware (with Mxx5 being silver). I think gold would be far too gaudy, but it does have the gold-motif nib that the Mxx0 series has. I imagine that because this is a special edition (denoted by the Mx2x), this rule isn't as hardy. Still, an interesting point to note.
 
-- [ ] [nib] pic
+![Pelikan M620 nib](/assets/images/naughty/pelikan_nib.jpeg)
 
 For an overview of the series, as well as pictures of other pens (Shanghai looks SICK), check out [The Pelikan's Perch](https://thepelikansperch.com/database/fountain-pens/m6xx/m620/), the best resource on all things Pelikan; straight from the bill!
 
@@ -139,16 +147,19 @@ Great stuff!
 
 This is the pen I've been carrying around with me as a non-fountain pen option. I am utterly in love with it. 
 
-- [ ] [peach milk] pic
+<figure>
+  <div class="image-double">
+    <img src="/assets/images/grind/uni-one-peach.jpeg">
+    <img src="/assets/images/grind/uni-one-writing.jpeg">
+  </div>
+</figure>
 
 So in love with it that when I lost it on the Tube, I immediately bought another one and was writing with it once again after it was delivered the next day (thanks, Bezos!)
 
 It's a short pen. I imagine the "-P" stands for *petite*, or something, as there is a larger version that is simply called the *One*
 
-- [ ] [model comparison] pic
-
 The first pen I had was the Peach Milk model with a 0.38mm nib; the one I have now is the Grape with a 0.5mm nib. I think I might *just* prefer the purple, but I certainly enjoy the finer nib in the pen that I lost.
 
 One of these days I'll get another **One P**, and then most likely a few more after that. So I have no doubt that, due to the miracle of consumer capitalism (er.. thanks again, Jeff), I'll end up with another Peach Milk.
 
-- [ ] [writing sample] pic
+![Uni-ball One-P Grape](/assets/images/naughty/uni-grape.jpeg)
