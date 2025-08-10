@@ -1,0 +1,124 @@
+---
+layout: default
+---
+
+<div class="creative-page">
+  <div class="ferret-hero creative">
+    <h1>✒️ Creative Ferret</h1>
+    <p>Where fountain pens meet paper, and thoughts become art. Reviews, poetry, and the occasional rambling about the perfect nib.</p>
+  </div>
+
+  <!-- Category Filters -->
+  <div class="category-filters">
+    <span class="filter-label">Category:</span>
+    <button class="filter-btn active" onclick="filterByCategory('all')">All Posts</button>
+    <button class="filter-btn" onclick="filterByCategory('fountain-pens')">Fountain Pens</button>
+    <button class="filter-btn" onclick="filterByCategory('poetry')">Poetry</button>
+    <button class="filter-btn" onclick="filterByCategory('stories')">Stories</button>
+    <button class="filter-btn" onclick="filterByCategory('essays')">Essays</button>
+  </div>
+
+  <!-- Brand Filters for Fountain Pens -->
+  <div class="brand-filters" id="brandFilters" style="display: none;">
+    <span class="filter-label">Brand:</span>
+    <button class="filter-btn active" onclick="filterByBrand('all')">All Brands</button>
+    <button class="filter-btn" onclick="filterByBrand('pelikan')">Pelikan</button>
+    <button class="filter-btn" onclick="filterByBrand('montegrappa')">Montegrappa</button>
+    <button class="filter-btn" onclick="filterByBrand('twsbi')">TWSBI</button>
+    <button class="filter-btn" onclick="filterByBrand('lamy')">Lamy</button>
+    <button class="filter-btn" onclick="filterByBrand('pilot')">Pilot</button>
+    <button class="filter-btn" onclick="filterByBrand('sailor')">Sailor</button>
+    <button class="filter-btn" onclick="filterByBrand('platinum')">Platinum</button>
+    <button class="filter-btn" onclick="filterByBrand('visconti')">Visconti</button>
+  </div>
+
+  <div class="posts-grid">
+    {% for post in site.posts %}
+      {% if post.ferret == 'creative' %}
+        <article class="post-card" 
+                 data-category="{{ post.category }}" 
+                 data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}">
+          <span class="post-category">{{ post.category | capitalize | replace: '-', ' ' }}</span>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <time>{{ post.date | date: "%B %d, %Y" }}</time>
+          <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          
+          {% if post.tags.size > 0 %}
+          <div class="post-tags">
+            {% for tag in post.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          
+          <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+let currentCategory = 'all';
+let currentBrand = 'all';
+
+function filterByCategory(category) {
+  currentCategory = category;
+  
+  // Update active button
+  document.querySelectorAll('.category-filters .filter-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  event.target.classList.add('active');
+  
+  // Show/hide brand filters based on category
+  const brandFilters = document.getElementById('brandFilters');
+  if (category === 'fountain-pens') {
+    brandFilters.style.display = 'flex';
+  } else {
+    brandFilters.style.display = 'none';
+    currentBrand = 'all';
+  }
+  
+  applyFilters();
+}
+
+function filterByBrand(brand) {
+  currentBrand = brand;
+  
+  // Update active button
+  document.querySelectorAll('.brand-filters .filter-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  event.target.classList.add('active');
+  
+  applyFilters();
+}
+
+function applyFilters() {
+  const posts = document.querySelectorAll('.post-card');
+  
+  posts.forEach(post => {
+    let showPost = true;
+    
+    // Check category filter
+    if (currentCategory !== 'all') {
+      const postCategory = post.dataset.category;
+      if (postCategory !== currentCategory) {
+        showPost = false;
+      }
+    }
+    
+    // Check brand filter (only for fountain-pens category)
+    if (currentCategory === 'fountain-pens' && currentBrand !== 'all') {
+      const postTags = post.dataset.tags.toLowerCase();
+      if (!postTags.includes(currentBrand)) {
+        showPost = false;
+      }
+    }
+    
+    // Show or hide post
+    post.style.display = showPost ? 'block' : 'none';
+  });
+}
+</script>
