@@ -2,7 +2,8 @@
 layout: post
 title: What's the DEAL with fountain pens?! (and London Pen Show recap)
 date: 2025-03-03
-categories: fountain pens, essays
+categories: fountain pens
+tags: [pelikan, montegrappa, twsbi, uniball]
 author: Ferret Stack
 ---
 I've been enamoured by this hobby for 10 years this year, which is a pretty insane thought. I still remember my initial euphoria when it came to diving into this world. All the blogs, videos, forums... It's an excitement I still carry with me today (clearly) and that I'd love to share with you here. 
