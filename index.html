@@ -1,25 +1,50 @@
 ---
 layout: default
 ---
-<script>document.body.classList.add('home-page');</script>
-<div class="home">
-  <h1>Latest Posts</h1>
-  <div class="post-grid">
-    {% for post in site.posts %}
-      <article class="post-card">
-        <div class="post-card-content">
-          <h2 class="post-card-title">
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </h2>
-          <time class="post-card-date" datetime="{{ post.date | date_to_xmlschema }}">
-            {{ post.date | date: "%B %d, %Y" }}
-          </time>
-          {% if post.excerpt %}
-            <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-          {% endif %}
-          <a href="{{ post.url | relative_url }}" class="post-card-link">Read more →</a>
-        </div>
-      </article>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Welcome to the Ferret Stack</h1>
+  <p>Where poker strategy meets code elegance, and creative ink flows freely. Dig deeper, stack smarter!</p>
+</section>
+
+<!-- Ferret Cards -->
+<section class="ferret-grid">
+  <div class="ferret-card">
+    <img src="/assets/images/poker-ferret.jpg" alt="Poker Ferret" class="ferret-icon">
+    <h2>Poker Ferret</h2>
+    <p>Diving deep into hand analysis, game theory, and the beautiful mathematics behind the felt. From micro-stakes wisdom to high-level concepts.</p>
+    <a href="/poker" class="ferret-link">Explore Poker →</a>
+  </div>
+  
+  <div class="ferret-card">
+    <img src="/assets/images/boolean-ferret.jpg" alt="Boolean Ferret" class="ferret-icon">
+    <h2>Boolean Ferret</h2>
+    <p>Building tools that matter. From Premier League odds calculations to pairs trading models, turning data into actionable insights.</p>
+    <a href="/boolean" class="ferret-link">View Projects →</a>
+  </div>
+  
+  <div class="ferret-card">
+    <img src="/assets/images/creative-ferret.jpg" alt="Creative Ferret" class="ferret-icon">
+    <h2>Creative Ferret</h2>
+    <p>Where fountain pens meet paper, and thoughts become art. Reviews, poetry, and the occasional rambling about the perfect nib.</p>
+    <a href="/creative" class="ferret-link">Read Writing →</a>
+  </div>
+</section>
+
+<!-- Recent Posts -->
+<section class="recent-posts">
+  <h2 class="section-title">Latest from the Stack</h2>
+  <div class="posts-grid">
+    {% for post in site.posts limit:3 %}
+    <article class="post-card">
+      <div class="post-card-content">
+        <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
+        <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+      </div>
+    </article>
     {% endfor %}
   </div>
-</div>
+</section>
