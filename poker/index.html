@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<div class="poker-page">
+  <div class="ferret-hero poker">
+    <h1>♠️ Poker Ferret</h1>
+    <div class="suits">
+      <span class="suit">♠</span>
+      <span class="suit">♥</span>
+      <span class="suit">♦</span>
+      <span class="suit">♣</span>
+    </div>
+    <p>Diving deep into hand analysis, game theory, and the beautiful mathematics behind the felt. From micro-stakes wisdom to high-level concepts.</p>
+  </div>
+
+  <div class="category-filters">
+    <button class="filter-btn active" onclick="filterPosts('all')">All Posts</button>
+    <button class="filter-btn" onclick="filterPosts('strategy')">Strategy</button>
+    <button class="filter-btn" onclick="filterPosts('hand-reviews')">Hand Reviews</button>
+    <button class="filter-btn" onclick="filterPosts('philosophy')">Philosophy</button>
+    <button class="filter-btn" onclick="filterPosts('gto')">GTO Theory</button>
+  </div>
+
+  <div class="posts-grid">
+    {% for post in site.posts %}
+      {% if post.ferret == 'poker' %}
+        <article class="post-card" data-category="{{ post.category }}">
+          <span class="post-category">{{ post.category | capitalize | replace: '-', ' ' }}</span>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <time>{{ post.date | date: "%B %d, %Y" }}</time>
+          <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          
+          {% if post.tags.size > 0 %}
+          <div class="post-tags">
+            {% for tag in post.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          
+          <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+function filterPosts(category) {
+  const posts = document.querySelectorAll('.post-card');
+  const buttons = document.querySelectorAll('.filter-btn');
+  
+  // Update active button
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  // Filter posts
+  posts.forEach(post => {
+    if (category === 'all' || post.dataset.category === category) {
+      post.style.display = 'block';
+    } else {
+      post.style.display = 'none';
+    }
+  });
+}
+</script>
