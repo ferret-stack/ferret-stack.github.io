@@ -2,8 +2,10 @@
 layout: post
 title: "Beyond the Cards - How One Simple Game Reveals Poker's Complex Strategies"
 date: 2024-02-25
+ferret: poker
+category: strategy
+tags: [gto, game-theory, exploitation, philosophy, poker-philosophy]
 mathjax: true
-categories: poker strategy
 author: Ferret Stack
 ---
 <b>Note:</b> GTO is <em>one</em> aspect of poker. It's game theory optimal, not "absolutely totally and entirely" optimal. Still, understanding it is important but shouldn't be viewed in terms of "do this and you'll print money"; you must honestly understand and appreciate its strengths and weaknesses; the truths and lies.
