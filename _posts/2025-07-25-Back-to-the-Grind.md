@@ -1,10 +1,13 @@
 ---
 layout: post
-title: Back to the Grind
+title: "Back to the Grind"
 date: 2025-07-25
-categories: fountain pens,pelikan, montegrappa, TWSBI, Uniball
+ferret: creative
+category: fountain-pens
+tags: [pelikan, montegrappa, twsbi, uniball, reviews]
 author: Ferret Stack
 ---
+
 I spent, at least, half of last month travelling. As a result, I put a few projects on hold for some much needed RnR.
 
 Feeling well rested,, and having expanded my pen collection quite significantly during the trip (more on this later), I was pumped to get *back to the grind*. 
