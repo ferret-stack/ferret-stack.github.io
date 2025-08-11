@@ -58,15 +58,15 @@ body {
 /* Logo with hover swap */
 .site-logo-wrapper {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin-right: 15px;
   text-decoration: none;
 }
 
 .site-logo {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   position: absolute;
   border-radius: 50%;
@@ -573,3 +573,211 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
 }
+
+  /* Project Grid Styles | Boolean */
+  .featured-projects {
+    margin: 60px 0;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  
+  .project-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project-card.featured {
+    border: 2px solid #109dff;
+  }
+  
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #109dff 0%, #1e88e5 100%);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .project-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .project-status.live {
+    background: #d4edda;
+    color: #155724;
+  }
+  
+  .project-status.coming-soon {
+    background: #fff3cd;
+    color: #856404;
+  }
+  
+  .project-status.development {
+    background: #d1ecf1;
+    color: #0c5460;
+  }
+  
+  .project-date {
+    color: #999;
+    font-size: 12px;
+  }
+  
+  .project-card h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .project-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .tech-tag {
+    background: #f0f8ff;
+    color: #109dff;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .project-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .project-link {
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .project-link.primary {
+    background: linear-gradient(135deg, #109dff 0%, #1e88e5 100%);
+    color: white;
+  }
+  
+  .project-link.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(16, 157, 255, 0.3);
+  }
+  
+  .project-link:not(.primary) {
+    border: 2px solid #109dff;
+    color: #109dff;
+    background: white;
+  }
+  
+  .project-link:not(.primary):hover {
+    background: #f0f8ff;
+  }
+  
+  .project-link.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  /* Boolean Posts Section */
+  .boolean-posts {
+    margin: 60px 0;
+  }
+  
+  .no-posts-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+  }
+  
+  .no-posts-message p {
+    color: #666;
+    font-size: 18px;
+  }
+  
+  .no-posts-message a {
+    color: #109dff;
+    font-weight: 600;
+  }
+  
+  /* GitHub Activity Section */
+  .github-activity {
+    margin: 60px 0;
+  }
+  
+  .github-card {
+    background: #24292e;
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  .github-card p {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    background: #2ea44f;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .github-link:hover {
+    background: #2c974b;
+    transform: translateY(-2px);
+  }
+  
+  .github-link svg {
+    fill: white;
+  }
