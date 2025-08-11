@@ -1,0 +1,154 @@
+---
+layout: default
+---
+
+<div class="boolean-page">
+  <div class="ferret-hero boolean">
+    <h1>💻 Boolean Ferret</h1>
+    <p>Building tools that matter. From Premier League odds calculations to pairs trading models, turning data into actionable insights.</p>
+  </div>
+
+  <!-- Featured Projects -->
+  <section class="featured-projects">
+    <h2 class="section-title">Featured Projects</h2>
+    
+    <div class="project-grid">
+      <!-- Odds Calculator Project -->
+      <div class="project-card featured">
+        <div class="project-header">
+          <span class="project-status live">LIVE</span>
+          <span class="project-date">Updated Weekly</span>
+        </div>
+        <h3>Premier League Odds Calculator</h3>
+        <p>Three years in development. ELO-based model analyzing Premier League matches to identify value bets. Compares historical performance bands with bookmaker odds to find +EV opportunities.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Selenium</span>
+          <span class="tech-tag">Pandas</span>
+          <span class="tech-tag">ELO Ratings</span>
+        </div>
+        <div class="project-links">
+          <a href="/boolean/odds-calculator" class="project-link primary">View Calculator →</a>
+          <a href="#odds-posts" class="project-link">Read Posts</a>
+        </div>
+      </div>
+
+      <!-- Pairs Trading Project -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-status coming-soon">COMING SOON</span>
+          <span class="project-date">Q1 2025</span>
+        </div>
+        <h3>Pairs Trading Model</h3>
+        <p>Statistical arbitrage model based on my undergraduate dissertation. Identifies correlated asset pairs and trades divergences. Currently being refined before release.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Statistics</span>
+          <span class="tech-tag">Quantitative Finance</span>
+          <span class="tech-tag">Cointegration</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link disabled">Coming Soon</a>
+          <a href="#pairs-posts" class="project-link">Read Posts</a>
+        </div>
+      </div>
+
+      <!-- Future Project Placeholder -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-status development">IN DEVELOPMENT</span>
+          <span class="project-date">2025</span>
+        </div>
+        <h3>Portfolio Optimizer</h3>
+        <p>Efficient frontier calculator with modern portfolio theory implementation. Helps optimize asset allocation based on risk tolerance and return objectives.</p>
+        <div class="project-tech">
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">D3.js</span>
+          <span class="tech-tag">Monte Carlo</span>
+          <span class="tech-tag">MPT</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link disabled">In Development</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Section -->
+  <section class="boolean-posts">
+    <h2 class="section-title">Boolean Blog</h2>
+    
+    <div class="category-filters">
+      <button class="filter-btn active" onclick="filterPosts('all')">All Posts</button>
+      <button class="filter-btn" onclick="filterPosts('odds-calculator')">Odds Calculator</button>
+      <button class="filter-btn" onclick="filterPosts('pairs-trading')">Pairs Trading</button>
+      <button class="filter-btn" onclick="filterPosts('tutorials')">Tutorials</button>
+      <button class="filter-btn" onclick="filterPosts('data-science')">Data Science</button>
+    </div>
+
+    <div class="posts-grid">
+      {% for post in site.posts %}
+        {% if post.ferret == 'boolean' %}
+          <article class="post-card" data-category="{{ post.category }}">
+            <span class="post-category">{{ post.category | capitalize | replace: '-', ' ' }}</span>
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <time>{{ post.date | date: "%B %d, %Y" }}</time>
+            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            
+            {% if post.tags.size > 0 %}
+            <div class="post-tags">
+              {% for tag in post.tags %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+            
+            <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+          </article>
+        {% endif %}
+      {% endfor %}
+      
+      <!-- Placeholder if no posts yet -->
+      {% assign boolean_posts = site.posts | where: 'ferret', 'boolean' %}
+      {% if boolean_posts.size == 0 %}
+        <div class="no-posts-message">
+          <p>📝 Boolean posts coming soon! Check out the <a href="/boolean/odds-calculator">Odds Calculator</a> in the meantime.</p>
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- GitHub Activity Section (Optional) -->
+  <section class="github-activity">
+    <h2 class="section-title">Open Source Contributions</h2>
+    <div class="github-card">
+      <p>Check out my code and contribute on GitHub</p>
+      <a href="https://github.com/{{ site.github_username }}" class="github-link">
+        <svg height="32" viewBox="0 0 16 16" width="32">
+          <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        View on GitHub →
+      </a>
+    </div>
+  </section>
+</div>
+
+<script>
+function filterPosts(category) {
+  const posts = document.querySelectorAll('.post-card');
+  const buttons = document.querySelectorAll('.filter-btn');
+  
+  // Update active button
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  // Filter posts
+  posts.forEach(post => {
+    if (category === 'all' || post.dataset.category === category) {
+      post.style.display = 'block';
+    } else {
+      post.style.display = 'none';
+    }
+  });
+}
+</script>
