@@ -107,6 +107,42 @@ layout: default
         </div>
       </div>
 
+      // In the results section, add a canvas for the chart
+      <div class="elo-chart-container">
+        <h3>ELO Progression</h3>
+        <canvas id="eloChart"></canvas>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+      function displayEloChart(team1, team2) {
+        // Load ELO progression data from JSON
+        fetch('/assets/data/elo_history.json')
+          .then(response => response.json())
+          .then(data => {
+            // Create chart
+            const ctx = document.getElementById('eloChart').getContext('2d');
+            new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: data.dates,
+                datasets: [{
+                  label: team1,
+                  data: data[team1],
+                  borderColor: '#109dff',
+                  tension: 0.1
+                }, {
+                  label: team2,
+                  data: data[team2],
+                  borderColor: '#ff69b4',
+                  tension: 0.1
+                }]
+              }
+            });
+          });
+      }
+      </script>
+
       <!-- Match Outcome Probabilities -->
       <div class="outcome-card">
         <h3>Match Outcome Probabilities</h3>
