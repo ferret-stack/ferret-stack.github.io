@@ -107,7 +107,6 @@ layout: default
         </div>
       </div>
 
-      // In the results section, add a canvas for the chart
       <div class="elo-chart-container">
         <h3>ELO Progression</h3>
         <canvas id="eloChart"></canvas>
@@ -384,6 +383,9 @@ function calculateOdds() {
   
   // Generate Poisson distribution
   generatePoissonGrid();
+  
+  // Show the ELO graph
+  displayEloChart(homeTeam, awayTeam);
   
   // Show results
   document.getElementById('resultsSection').style.display = 'block';
