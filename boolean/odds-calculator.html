@@ -82,7 +82,7 @@ layout: default
         Calculate Odds
       </button>
     </div>
-
+    
     <!-- Results Section -->
     <div id="resultsSection" style="display: none;">
       
@@ -343,9 +343,7 @@ function calculateOdds() {
     document.getElementById('homeOdds').textContent = (1 / currentBand.home).toFixed(2);
     document.getElementById('drawOdds').textContent = (1 / currentBand.draw).toFixed(2);
     document.getElementById('awayOdds').textContent = (1 / currentBand.away).toFixed(2);
-    
-    // Populate ELO band table
-    populateEloBandTable(currentBand);
+
   }
   
   // Generate Poisson distribution
