@@ -1,0 +1,58 @@
+{
+  "Brighton_Man Utd": {
+    "total_games": 12,
+    "Brighton_wins": 3,
+    "Man Utd_wins": 6,
+    "draws": 3,
+    "last_result": "Brighton 1-0 Man Utd",
+    "last_date": "2024-05-19"
+  },
+  "Everton_Spurs": {
+    "total_games": 38,
+    "Everton_wins": 12,
+    "Spurs_wins": 18,
+    "draws": 8,
+    "last_result": "Spurs 2-2 Everton",
+    "last_date": "2024-04-27"
+  },
+  "Crystal Palace_West Ham": {
+    "total_games": 25,
+    "Crystal Palace_wins": 8,
+    "West Ham_wins": 11,
+    "draws": 6,
+    "last_result": "West Ham 3-1 Crystal Palace",
+    "last_date": "2024-03-17"
+  },
+  "Arsenal_Liverpool": {
+    "total_games": 45,
+    "Arsenal_wins": 15,
+    "Liverpool_wins": 20,
+    "draws": 10,
+    "last_result": "Arsenal 3-1 Liverpool",
+    "last_date": "2024-02-04"
+  },
+  "Arsenal_Wolves": {
+    "total_games": 28,
+    "Arsenal_wins": 18,
+    "Wolves_wins": 5,
+    "draws": 5,
+    "last_result": "Arsenal 2-0 Wolves",
+    "last_date": "2024-08-17"
+  },
+  "Fulham_Man Utd": {
+    "total_games": 35,
+    "Fulham_wins": 8,
+    "Man Utd_wins": 20,
+    "draws": 7,
+    "last_result": "Man Utd 1-0 Fulham",
+    "last_date": "2024-08-16"
+  },
+  "Ipswich_Liverpool": {
+    "total_games": 18,
+    "Ipswich_wins": 3,
+    "Liverpool_wins": 12,
+    "draws": 3,
+    "last_result": "Liverpool 2-0 Ipswich",
+    "last_date": "2024-08-17"
+  }
+}

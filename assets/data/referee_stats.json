@@ -1,0 +1,32 @@
+{
+  "Michael Oliver": {
+    "games": 45,
+    "avg_booking_points": 41.2,
+    "avg_yellows": 3.4,
+    "avg_reds": 0.11
+  },
+  "Anthony Taylor": {
+    "games": 42,
+    "avg_booking_points": 45.8,
+    "avg_yellows": 3.8,
+    "avg_reds": 0.14
+  },
+  "Robert Jones": {
+    "games": 28,
+    "avg_booking_points": 38.6,
+    "avg_yellows": 3.1,
+    "avg_reds": 0.07
+  },
+  "Tim Robinson": {
+    "games": 15,
+    "avg_booking_points": 35.3,
+    "avg_yellows": 2.8,
+    "avg_reds": 0.07
+  },
+  "Jarred Gillett": {
+    "games": 22,
+    "avg_booking_points": 48.2,
+    "avg_yellows": 4.1,
+    "avg_reds": 0.18
+  }
+}
