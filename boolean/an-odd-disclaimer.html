@@ -1,0 +1,284 @@
+---
+layout: default
+title: Odds Calculator Overview
+---
+
+<div class="odds-disclaimer-page">
+  <!-- Hero Section with Gradient Background -->
+  <div class="disclaimer-hero">
+    <div class="container">
+      <h1 class="disclaimer-title">
+        <span class="title-emoji">⚽</span>
+        Odds Calculator Disclaimer
+        <span class="title-emoji">📊</span>
+      </h1>
+      <div class="disclaimer-subtitle">
+        Or: How I Learned to Stop Worrying and Love the Statistics
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="disclaimer-content">
+    <div class="container">
+      
+      <!-- Introduction Card -->
+      <div class="disclaimer-card intro-card">
+        <h2>The Beautiful Game Meets Beautiful Code</h2>
+        <p class="lead-text">
+          This is a pet project of mine that began in 2022 and it exists because I'm a massive nerd who loves three things: football, statistics, and that sweet dopamine hit of finding a bet that the bookies have undervalued (ha, idiots!).
+        </p>
+        
+        <div class="disclaimer-warning">
+          <span class="warning-icon">⚠️</span>
+          <div>
+            <p><strong>This isn't a "I built a betting model and now I'm rich" story.</strong></p>
+            <p>Nor will it make <em>you</em> rich.</p>
+          </div>
+        </div>
+        
+        <p>
+          This is about the journey of a self-taught coder who got obsessed with the idea that football, for all its beautiful chaos, might just be a tiny bit predictable.
+        </p>
+        
+        <p class="highlight-text">
+          And if it is? Well, that's where the fun begins, my friends.
+        </p>
+        
+        <p>
+          What started as a humble spreadsheet has evolved into a full-blown statistical analysis engine. Every week, my model wakes up, stretches its digital limbs, and goes hunting across the Premier League website for fresh data. Goals, cards, possession stats – if it happened on the pitch, my script knows about it.
+        </p>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section">
+        <h2 class="section-title">
+          <span class="beer-emoji">🍺</span>
+          FAQ: Or "Things My Mates Ask Me Down the Pub"
+        </h2>
+        <p class="section-subtitle"><em>If I had mates to go to the pub with</em></p>
+
+        <!-- Question 1: What does it DO? -->
+        <div class="faq-card">
+          <h3 class="faq-question">What does your model actually DO?</h3>
+          <div class="faq-answer">
+            <p>Glad you asked! Every week, this beast of a system:</p>
+            
+            <div class="process-list">
+              <div class="process-item">
+                <span class="process-number">1</span>
+                <div class="process-content">
+                  <strong>Scrapes match data</strong> from the Premier League website (legally, don't worry) – we're talking goals, cards, the lot
+                </div>
+              </div>
+              
+              <div class="process-item">
+                <span class="process-number">2</span>
+                <div class="process-content">
+                  <strong>Downloads ELO ratings</strong> from the brilliant folks at ClubELO who've been tracking team strengths since forever
+                </div>
+              </div>
+              
+              <div class="process-item">
+                <span class="process-number">3</span>
+                <div class="process-content">
+                  <strong>Groups historical matches</strong> into "ELO bands" – basically asking "when teams were THIS far apart in strength, what usually happened?"
+                </div>
+              </div>
+              
+              <div class="process-item">
+                <span class="process-number">4</span>
+                <div class="process-content">
+                  <strong>Calculates probabilities</strong> using actual historical data – none of this "I reckon Arsenal will win" nonsense
+                </div>
+              </div>
+              
+              <div class="process-item">
+                <span class="process-number">5</span>
+                <div class="process-content">
+                  <strong>Fetches bookmaker odds</strong> through public APIs
+                </div>
+              </div>
+              
+              <div class="process-item">
+                <span class="process-number">6</span>
+                <div class="process-content">
+                  <strong>Compares everything</strong> to find those juicy value bets where my model thinks something's more likely than the bookies do
+                </div>
+              </div>
+              
+              <div class="process-item">
+                <span class="process-number">7</span>
+                <div class="process-content">
+                  <strong>Generates lovely JSON files</strong> that make my website update automatically because I'm too lazy to do it manually
+                </div>
+              </div>
+            </div>
+            
+            <div class="philosophy-box">
+              <p class="philosophy-text">
+                The philosophy is simple: If teams with a 200-point ELO difference have historically resulted in home wins 67% of the time, and the bookies are offering odds that imply only 55%...
+              </p>
+              <p class="philosophy-punchline">
+                ...well, that's what we call value, innit?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 2: ELO -->
+        <div class="faq-card">
+          <h3 class="faq-question">What's this ELO thing you keep banging on about?</h3>
+          <div class="faq-answer">
+            <p>
+              ELO isn't an acronym (despite what it looks like) – it's named after Arpad Elo, an absolute legend who created this rating system for chess. The concept is wonderfully simple:
+            </p>
+            
+            <ul class="elo-list">
+              <li>Every team starts with a rating (usually around 1500)</li>
+              <li class="win-strong">Beat a strong team? Your rating goes up loads</li>
+              <li class="win-weak">Beat a weak team? Your rating goes up a bit</li>
+              <li class="lose-weak">Lose to a weak team? Your rating plummets faster than Manchester United's title hopes</li>
+              <li class="lose-strong">Lose to a strong team? Meh, expected that, rating drops slightly</li>
+            </ul>
+            
+            <p>
+              Think of it like a constantly updating "how good is this team RIGHT NOW" score.
+            </p>
+            
+            <p>
+              It's dynamic, it's mathematical, and it doesn't give a toss what Gary Lineker thinks, which, let's be honest, is probably for the best.
+            </p>
+            
+            <p>
+              The beauty is that ELO self-corrects. If a team goes on a mad run (looking at you, Leicester in 2016), their ELO shoots up. Hit a rough patch (hello, Chelsea in 2022)? It drops...
+            </p>
+            
+            <p>
+              ...it's like the stock market, but for football teams.
+            </p>
+            
+            <div class="fun-fact">
+              <span class="fun-fact-label">Fun Fact:</span>
+              You can actually buy shares in Manchester United (although, I wouldn't)
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 3: Poisson -->
+        <div class="faq-card">
+          <h3 class="faq-question">And Poisson? Ain't that a fish?</h3>
+          <div class="faq-answer">
+            <p>
+              Named after the mathematician, Simeon Denis Poisson (English translation: Simon Dennis Fish).
+            </p>
+            
+            <p>
+              The Poisson distribution is this brilliant bit of statistics that predicts rare events. And let's face it, scoring a goal in football is pretty rare...
+            </p>
+            
+            <p class="joke-text">
+              ...just ask any West Ham fan.
+            </p>
+            
+            <p>Here's the deal: If we know a team averages 1.5 goals per match, Poisson can tell us:</p>
+            
+            <div class="poisson-stats">
+              <div class="stat-item">
+                <span class="stat-prob">~22%</span>
+                <span class="stat-label">Probability of scoring 0 goals</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-prob">~33%</span>
+                <span class="stat-label">Probability of scoring 1 goal</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-prob">~25%</span>
+                <span class="stat-label">Probability of scoring 2 goals</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-prob">~20%</span>
+                <span class="stat-label">Probability of scoring 3+ goals</span>
+              </div>
+            </div>
+            
+            <p>
+              Now multiply those probabilities for both teams, and boom! You've got a full matrix of potential scorelines.
+            </p>
+            
+            <p>
+              The model uses this to generate those fancy score matrices you see on the site.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Section -->
+      <div class="legal-section">
+        <h2 class="section-title">
+          <span class="legal-emoji">⚖️</span>
+          The "Don't Sue Me" Section
+        </h2>
+        
+        <div class="legal-card">
+          <p class="legal-disclaimer">
+            This model is for educational purposes <em>only</em>. Past results are not guaranteed predictors of future performance. Et cetera, et cetera...
+          </p>
+          
+          <div class="legal-qa">
+            <div class="legal-item">
+              <h4>Can I get rich using this calculator?</h4>
+              <p>Sure, just like how I got rich building it. <span class="narrator">(Narrator: He did not get rich.. but he does have a donation link down below!)</span></p>
+            </div>
+            
+            <div class="legal-item">
+              <h4>Is this system foolproof?</h4>
+              <p>Consider this to be about as reliable as Reece James' Achilles heel.</p>
+            </div>
+            
+            <div class="legal-item">
+              <h4>What are these "educational purposes only"?</h4>
+              <p>Three magic words that lawyers love and punters pretend to care about. This is all a bit of fun; I've done the maths, you make the choices. If it goes wrong, we can commiserate together, but I'm not paying for your therapy.</p>
+            </div>
+            
+            <div class="legal-item">
+              <h4>Should I bet my life savings on these predictions?</h4>
+              <p>No. Give them to me instead. <span class="small-text">(Don't do this either).</span></p>
+            </div>
+            
+            <div class="legal-item">
+              <h4>Why are you sharing this if it's not guaranteed to work?</h4>
+              <p>Because I enjoy coding, football, and the faint hope that someone might find it interesting. Eek!</p>
+            </div>
+            
+            <div class="legal-item">
+              <h4>What can this calculator actually do?</h4>
+              <p>Give you interesting insights into team performance, help you understand probabilities, and <em>maybe</em> play a small part in your Super 6 family-league victory.</p>
+            </div>
+            
+            <div class="legal-item">
+              <h4>What can this calculator NOT do?</h4>
+              <p>Predict the future, account for dodgy VAR decisions, or do your laundry.</p>
+            </div>
+          </div>
+          
+          <div class="small-print">
+            <p><strong>Small print:</strong> Have fun, share this with your friends, and buy me a pint if you like:</p>
+            <a href="#" class="donation-link">
+              <span class="beer-icon">🍺</span>
+              Buy Me a Pint
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to Calculator Button -->
+      <div class="back-button-container">
+        <a href="/odds-calculator" class="back-to-calc">
+          <span>←</span> Back to the Calculator
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</div>
