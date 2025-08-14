@@ -20,32 +20,17 @@ layout: default
   <div class="ev-threshold-control">
     <label>
       Value Bet Threshold: 
-      <span class="info-icon" title="Minimum edge required to flag as value bet. Lower = more bets with smaller edge, Higher = fewer bets with stronger edge" onclick="showThresholdInfo()">ⓘ</span>
+      <span class="info-icon" title="Minimum edge required to flag as value bet. Lower = more bets with smaller edge, Higher = fewer bets with stronger edge">ⓘ</span>
     </label>
     <input type="range" id="evThreshold" min="0" max="20" value="5" step="1" onchange="updateEVThreshold()">
     <span id="evValue">5%</span>
-    <a href="/an-odd-disclaimer" class="disclaimer-link">View Full Disclaimer</a>
   </div>
 
-  <!-- Match Selection Section -->
-  <div class="match-selection-section">
-    <!-- Upcoming Fixtures (moved up) -->
-    <div class="fixtures-section compact">
-      <h2>Quick Select: Upcoming Fixtures</h2>
-      <p class="selection-info">
-        <strong>Recommended:</strong> Select from these fixtures for full analysis including bookmaker odds comparison and value bet identification.
-      </p>
-      <div class="fixtures-list" id="fixturesList">
-        <!-- Populated from JSON data -->
-      </div>
-    </div>
-
-    <!-- Manual Team Selector -->
+  <!-- Main Calculator Interface -->
+  <div class="calculator-container">
+    <!-- Team Selector -->
     <div class="team-selector-card">
-      <h2>Manual Selection: Any Match</h2>
-      <p class="selection-info">
-        Choose any two teams for historical analysis. <em>Note: Bookmaker odds comparison only available for upcoming fixtures above.</em>
-      </p>
+      <h2>Select Match</h2>
       <div class="match-selector">
         <div class="team-input">
           <label>Home Team</label>
@@ -53,9 +38,9 @@ layout: default
             <option value="">Select Team...</option>
           </select>
         </div>
-        
+
         <div class="vs-indicator">VS</div>
-        
+
         <div class="team-input">
           <label>Away Team</label>
           <select id="awayTeam" onchange="updateCalculation()">
@@ -63,16 +48,15 @@ layout: default
           </select>
         </div>
       </div>
-      
+
       <button class="calculate-btn" onclick="calculateOdds()">
         Calculate Odds
       </button>
     </div>
-  </div>
-    
+
     <!-- Results Section -->
     <div id="resultsSection" style="display: none;">
-      
+
       <!-- ELO Information -->
       <div class="elo-display">
         <div class="elo-card home">
@@ -81,14 +65,14 @@ layout: default
           <div class="elo-rank" id="homeRank">Rank: -</div>
           <div class="form-indicator" id="homeForm">Form: -</div>
         </div>
-        
+
         <div class="elo-card difference">
           <div class="elo-label">ELO Difference</div>
           <div class="elo-diff" id="eloDiff">-</div>
           <div class="elo-band" id="eloBand">Band -</div>
           <div class="band-games" id="bandGames">Based on - games</div>
         </div>
-        
+
         <div class="elo-card away">
           <div class="elo-team" id="awayTeamName">Away Team</div>
           <div class="elo-rating" id="awayElo">-</div>
@@ -120,7 +104,7 @@ layout: default
               <div class="value-indicator" id="homeValue">-</div>
             </div>
           </div>
-          
+
           <div class="outcome-item">
             <div class="outcome-label">Draw</div>
             <div class="outcome-prob" id="drawProb">-</div>
@@ -130,7 +114,7 @@ layout: default
               <div class="value-indicator" id="drawValue">-</div>
             </div>
           </div>
-          
+
           <div class="outcome-item">
             <div class="outcome-label">Away Win</div>
             <div class="outcome-prob" id="awayWinProb">-</div>
@@ -150,42 +134,27 @@ layout: default
       <div class="markets-grid">
         <!-- Total Goals -->
         <div class="market-card">
-          <h3>
-            Total Goals Markets
-            <button class="toggle-btn" onclick="toggleOddsDisplay()">
-              <span id="toggleText">Show Odds</span>
-            </button>
-          </h3>
+          <h3>Total Goals (Historical %)</h3>
           <div class="market-items">
             <div class="market-row">
               <span>Over 0.5</span>
-              <span class="odds probability" id="over05">-</span>
-              <span class="bookmaker-comparison" id="book05" style="display:none;">-</span>
-              <span class="value-indicator-small" id="value05" style="display:none;">-</span>
+              <span class="odds" id="over05">-</span>
             </div>
             <div class="market-row">
               <span>Over 1.5</span>
-              <span class="odds probability" id="over15">-</span>
-              <span class="bookmaker-comparison" id="book15" style="display:none;">-</span>
-              <span class="value-indicator-small" id="value15" style="display:none;">-</span>
+              <span class="odds" id="over15">-</span>
             </div>
             <div class="market-row">
               <span>Over 2.5</span>
-              <span class="odds probability" id="over25">-</span>
-              <span class="bookmaker-comparison" id="book25" style="display:none;">-</span>
-              <span class="value-indicator-small" id="value25" style="display:none;">-</span>
+              <span class="odds" id="over25">-</span>
             </div>
             <div class="market-row">
               <span>Over 3.5</span>
-              <span class="odds probability" id="over35">-</span>
-              <span class="bookmaker-comparison" id="book35" style="display:none;">-</span>
-              <span class="value-indicator-small" id="value35" style="display:none;">-</span>
+              <span class="odds" id="over35">-</span>
             </div>
             <div class="market-row">
               <span>Over 4.5</span>
-              <span class="odds probability" id="over45">-</span>
-              <span class="bookmaker-comparison" id="book45" style="display:none;">-</span>
-              <span class="value-indicator-small" id="value45" style="display:none;">-</span>
+              <span class="odds" id="over45">-</span>
             </div>
           </div>
         </div>
@@ -196,15 +165,11 @@ layout: default
           <div class="market-items">
             <div class="market-row">
               <span>BTTS - Yes</span>
-              <span class="odds probability" id="bttsYes">-</span>
-              <span class="bookmaker-comparison" id="bookBttsYes" style="display:none;">-</span>
-              <span class="value-indicator-small" id="valueBttsYes" style="display:none;">-</span>
+              <span class="odds" id="bttsYes">-</span>
             </div>
             <div class="market-row">
               <span>BTTS - No</span>
-              <span class="odds probability" id="bttsNo">-</span>
-              <span class="bookmaker-comparison" id="bookBttsNo" style="display:none;">-</span>
-              <span class="value-indicator-small" id="valueBttsNo" style="display:none;">-</span>
+              <span class="odds" id="bttsNo">-</span>
             </div>
           </div>
         </div>
@@ -251,6 +216,14 @@ layout: default
     </div>
   </div>
 
+  <!-- Upcoming Fixtures -->
+  <div class="fixtures-section">
+    <h2>Upcoming Fixtures</h2>
+    <div class="fixtures-list" id="fixturesList">
+      <!-- Populated from JSON data -->
+    </div>
+  </div>
+
   <!-- Information Section -->
   <div class="info-section">
     <h2>How It Works</h2>
@@ -275,6 +248,16 @@ layout: default
   </div>
 </div>
 
+<div class="small-print">
+  <p><strong>Small print:</strong> Have fun, share this with your friends, and buy me a pint if you like:</p>
+  <a href="buymeacoffee.com/ferret_stack" class="donation-link">
+  <a href="https://buymeacoffee.com/ferret_stack" class="donation-link">
+    <span class="beer-icon">🍺</span>
+    Buy Me a Pint
+    Buy Me a Beer
+  </a>
+</div>
+
 <!-- Include Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -290,7 +273,6 @@ let teamStats = {};
 let h2hRecords = {};
 let eloChart = null;
 let evThreshold = 5;
-let showAsOdds = false; // Toggle between percentages and decimal odds
 
 // Load all data on page load
 async function loadAllData() {
@@ -306,7 +288,7 @@ async function loadAllData() {
       fetch('/assets/data/team_stats.json'),
       fetch('/assets/data/h2h_records.json')
     ]);
-    
+
     // Parse JSON data
     matchesData = await responses[0].json();
     eloBands = await responses[1].json();
@@ -316,34 +298,14 @@ async function loadAllData() {
     refereeStats = await responses[5].json();
     teamStats = await responses[6].json();
     h2hRecords = await responses[7].json();
-    
+
     // Initialize page
     initializePage();
-    
+
   } catch (error) {
     console.error('Error loading data:', error);
     // Fallback with empty data
     initializePage();
-  }
-}
-
-function showThresholdInfo() {
-  alert(`Value Bet Threshold Explained:\n\n` +
-        `This slider controls the minimum edge required to flag a bet as +EV (positive expected value).\n\n` +
-        `• 5% edge: More betting opportunities, smaller margins\n` +
-        `• 10% edge: Balanced approach\n` +
-        `• 15%+ edge: Very selective, stronger value only\n\n` +
-        `Remember: Even +EV bets can lose. This tool identifies value, not guarantees.\n\n` +
-        `For full disclaimer and betting advice, click the link below.`);
-}
-
-function toggleOddsDisplay() {
-  showAsOdds = !showAsOdds;
-  document.getElementById('toggleText').textContent = showAsOdds ? 'Show %' : 'Show Odds';
-  
-  // Recalculate display if teams are selected
-  if (document.getElementById('homeTeam').value && document.getElementById('awayTeam').value) {
-    calculateOdds();
   }
 }
 
@@ -356,28 +318,28 @@ function initializePage() {
     year: 'numeric'
   });
   document.getElementById('totalMatches').textContent = matchesData.length;
-  
+
   // Set date range for chart (default last 2 years)
   document.getElementById('chartStartDate').value = new Date(today.getFullYear() - 2, today.getMonth(), today.getDate()).toISOString().split('T')[0];
   document.getElementById('chartEndDate').value = today.toISOString().split('T')[0];
-  
+
   // Populate team dropdowns
   populateTeamDropdowns();
-  
+
   // Load upcoming fixtures
   loadUpcomingFixtures();
 }
 
 function populateTeamDropdowns() {
   const teams = Object.keys(currentElo).sort();
-  
+
   const homeSelect = document.getElementById('homeTeam');
   const awaySelect = document.getElementById('awayTeam');
-  
+
   // Clear existing options except the first
   homeSelect.innerHTML = '<option value="">Select Team...</option>';
   awaySelect.innerHTML = '<option value="">Select Team...</option>';
-  
+
   teams.forEach(team => {
     homeSelect.innerHTML += `<option value="${team}">${team}</option>`;
     awaySelect.innerHTML += `<option value="${team}">${team}</option>`;
@@ -387,12 +349,12 @@ function populateTeamDropdowns() {
 function loadUpcomingFixtures() {
   const fixturesList = document.getElementById('fixturesList');
   fixturesList.innerHTML = '';
-  
+
   if (!upcomingFixtures || upcomingFixtures.length === 0) {
     fixturesList.innerHTML = '<div class="no-fixtures">No upcoming fixtures available</div>';
     return;
   }
-  
+
   upcomingFixtures.forEach(fixture => {
     const fixtureDiv = document.createElement('div');
     fixtureDiv.className = 'fixture-item';
@@ -401,11 +363,11 @@ function loadUpcomingFixtures() {
       document.getElementById('awayTeam').value = fixture.away_team;
       calculateOdds();
     };
-    
+
     // Check for value bets
     const valueBets = fixture.value_bets?.filter(bet => bet.edge >= evThreshold) || [];
     const hasValue = valueBets.length > 0;
-    
+
     fixtureDiv.innerHTML = `
       <div class="fixture-home">${fixture.home_team}</div>
       <div class="fixture-info">
@@ -415,7 +377,7 @@ function loadUpcomingFixtures() {
       </div>
       <div class="fixture-away">${fixture.away_team}</div>
     `;
-    
+
     fixturesList.appendChild(fixtureDiv);
   });
 }
@@ -423,10 +385,10 @@ function loadUpcomingFixtures() {
 function updateEVThreshold() {
   evThreshold = parseInt(document.getElementById('evThreshold').value);
   document.getElementById('evValue').textContent = evThreshold + '%';
-  
+
   // Reload fixtures to update value badges
   loadUpcomingFixtures();
-  
+
   // Recalculate if teams are selected
   if (document.getElementById('homeTeam').value && document.getElementById('awayTeam').value) {
     calculateOdds();
@@ -437,7 +399,7 @@ function updateCalculation() {
   // Auto-calculate if both teams selected
   const homeTeam = document.getElementById('homeTeam').value;
   const awayTeam = document.getElementById('awayTeam').value;
-  
+
   if (homeTeam && awayTeam && homeTeam !== awayTeam) {
     calculateOdds();
   }
@@ -446,31 +408,31 @@ function updateCalculation() {
 function calculateOdds() {
   const homeTeam = document.getElementById('homeTeam').value;
   const awayTeam = document.getElementById('awayTeam').value;
-  
+
   if (!homeTeam || !awayTeam) {
     alert('Please select both teams');
     return;
   }
-  
+
   if (homeTeam === awayTeam) {
     alert('Please select different teams');
     return;
   }
-  
+
   // Get ELO ratings
   const homeEloData = currentElo[homeTeam];
   const awayEloData = currentElo[awayTeam];
-  
+
   if (!homeEloData || !awayEloData) {
     alert('ELO data not available for selected teams');
     return;
   }
-  
+
   const homeElo = homeEloData.elo;
   const awayElo = awayEloData.elo;
   const eloDiff = Math.abs(homeElo - awayElo);
   const eloBand = Math.min(Math.floor(eloDiff / 50) + 1, 10);
-  
+
   // Update ELO display
   document.getElementById('homeTeamName').textContent = homeTeam;
   document.getElementById('awayTeamName').textContent = awayTeam;
@@ -479,26 +441,26 @@ function calculateOdds() {
   document.getElementById('awayElo').textContent = awayElo;
   document.getElementById('awayRank').textContent = `Rank: #${awayEloData.rank}`;
   document.getElementById('eloDiff').textContent = eloDiff;
-  
+
   // Update form indicators
   const homeFormData = teamStats[homeTeam]?.form;
   const awayFormData = teamStats[awayTeam]?.form;
-  
+
   if (homeFormData) {
     document.getElementById('homeForm').textContent = `Form: ${homeFormData.form_rating}/10 (${homeFormData.trend})`;
     document.getElementById('homeForm').className = `form-indicator ${homeFormData.trend}`;
   }
-  
+
   if (awayFormData) {
     document.getElementById('awayForm').textContent = `Form: ${awayFormData.form_rating}/10 (${awayFormData.trend})`;
     document.getElementById('awayForm').className = `form-indicator ${awayFormData.trend}`;
   }
-  
+
   // Get band data
   const bandData = eloBands.find(b => b.band === eloBand) || eloBands[0];
   document.getElementById('eloBand').textContent = `Band ${eloBand}: ${bandData.range}`;
   document.getElementById('bandGames').textContent = `Based on ${bandData.total_games} games`;
-  
+
   // Calculate probabilities based on who is stronger
   let homeWinProb, drawProb, awayWinProb;
   if (homeElo > awayElo) {
@@ -512,31 +474,31 @@ function calculateOdds() {
     drawProb = bandData.draw_pct;
     awayWinProb = bandData.home_win_pct;
   }
-  
+
   // Update probabilities
   document.getElementById('homeWinProb').textContent = `${(homeWinProb * 100).toFixed(1)}%`;
   document.getElementById('drawProb').textContent = `${(drawProb * 100).toFixed(1)}%`;
   document.getElementById('awayWinProb').textContent = `${(awayWinProb * 100).toFixed(1)}%`;
-  
+
   // Calculate decimal odds
   document.getElementById('homeOdds').textContent = homeWinProb > 0 ? (1 / homeWinProb).toFixed(2) : '-';
   document.getElementById('drawOdds').textContent = drawProb > 0 ? (1 / drawProb).toFixed(2) : '-';
   document.getElementById('awayOdds').textContent = awayWinProb > 0 ? (1 / awayWinProb).toFixed(2) : '-';
-  
+
   // Check if this fixture has bookmaker odds
   const fixture = upcomingFixtures.find(f => 
     f.home_team === homeTeam && f.away_team === awayTeam
   );
-  
+
   if (fixture && fixture.bookmaker_odds) {
     // Show bookmaker odds and calculate value
     document.getElementById('homeBookmaker').style.display = 'block';
     document.getElementById('drawBookmaker').style.display = 'block';
     document.getElementById('awayBookmaker').style.display = 'block';
     document.getElementById('noOddsMessage').style.display = 'none';
-    
+
     const bookOdds = fixture.bookmaker_odds;
-    
+
     // Home
     if (bookOdds.home) {
       document.getElementById('bookHomeOdds').textContent = bookOdds.home.toFixed(2);
@@ -544,7 +506,7 @@ function calculateOdds() {
       const edge = (homeWinProb - impliedProb) * 100;
       updateValueIndicator('homeValue', edge);
     }
-    
+
     // Draw
     if (bookOdds.draw) {
       document.getElementById('bookDrawOdds').textContent = bookOdds.draw.toFixed(2);
@@ -552,7 +514,7 @@ function calculateOdds() {
       const edge = (drawProb - impliedProb) * 100;
       updateValueIndicator('drawValue', edge);
     }
-    
+
     // Away
     if (bookOdds.away) {
       document.getElementById('bookAwayOdds').textContent = bookOdds.away.toFixed(2);
@@ -567,67 +529,30 @@ function calculateOdds() {
     document.getElementById('awayBookmaker').style.display = 'none';
     document.getElementById('noOddsMessage').style.display = 'block';
   }
-  
+
   // Update goal markets
-  const displayValue = (prob, marketName) => {
-    // Always display probability/odds
-    let displayText = showAsOdds
-        ? (prob > 0 ? (1 / prob).toFixed(2) : '-')
-        : `${(prob * 100).toFixed(1)}%`;
-    document.getElementById(marketName).textContent = displayText;
+  document.getElementById('over05').textContent = `${(bandData.over_05_pct * 100).toFixed(1)}%`;
+  document.getElementById('over15').textContent = `${(bandData.over_15_pct * 100).toFixed(1)}%`;
+  document.getElementById('over25').textContent = `${(bandData.over_25_pct * 100).toFixed(1)}%`;
+  document.getElementById('over35').textContent = `${(bandData.over_35_pct * 100).toFixed(1)}%`;
+  document.getElementById('over45').textContent = `${(bandData.over_45_pct * 100).toFixed(1)}%`;
 
-    // Bookmaker comparison only if fixture has odds
-    if (fixture && fixture.bookmaker_odds) {
-        const bookOdds = fixture.bookmaker_odds;
-        let marketKey = marketName.replace('over', 'over_').replace('btts', 'btts_');
-
-        if (bookOdds[marketKey]) {
-            const bookmakerOdd = bookOdds[marketKey];
-            const bookElementId = `book${marketName.charAt(0).toUpperCase() + marketName.slice(1)}`;
-            document.getElementById(bookElementId).textContent = bookmakerOdd.toFixed(2);
-            document.getElementById(bookElementId).style.display = 'inline';
-
-            const impliedProb = 1 / bookmakerOdd;
-            const edge = (prob - impliedProb) * 100;
-            const valueElement = document.getElementById(`value${marketName.charAt(0).toUpperCase() + marketName.slice(1)}`);
-
-            if (edge >= evThreshold) {
-                valueElement.textContent = `+${edge.toFixed(1)}%`;
-                valueElement.className = 'value-indicator-small positive';
-            } else if (edge < -5) {
-                valueElement.textContent = `${edge.toFixed(1)}%`;
-                valueElement.className = 'value-indicator-small negative';
-            } else {
-                valueElement.textContent = 'Fair';
-                valueElement.className = 'value-indicator-small neutral';
-            }
-            valueElement.style.display = 'inline';
-        }
-    }
-};
-  
-  displayValue(bandData.over_05_pct, 'over05');
-  displayValue(bandData.over_15_pct, 'over15');
-  displayValue(bandData.over_25_pct, 'over25');
-  displayValue(bandData.over_35_pct, 'over35');
-  displayValue(bandData.over_45_pct, 'over45');
-  
   // BTTS
-  displayValue(bandData.btts_pct, 'bttsYes');
-  displayValue(1 - bandData.btts_pct, 'bttsNo');
-  
+  document.getElementById('bttsYes').textContent = `${(bandData.btts_pct * 100).toFixed(1)}%`;
+  document.getElementById('bttsNo').textContent = `${((1 - bandData.btts_pct) * 100).toFixed(1)}%`;
+
   // Head to Head
   updateH2H(homeTeam, awayTeam);
-  
+
   // Booking Points
   updateBookingPoints(homeTeam, awayTeam, bandData);
-  
+
   // Generate Poisson grid
   generatePoissonGrid(fixture);
-  
+
   // Update ELO chart
   updateEloChart();
-  
+
   // Show results
   document.getElementById('resultsSection').style.display = 'block';
   document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
@@ -635,7 +560,7 @@ function calculateOdds() {
 
 function updateValueIndicator(elementId, edge) {
   const element = document.getElementById(elementId);
-  
+
   if (edge >= evThreshold) {
     element.className = 'value-indicator positive';
     element.textContent = `+EV ${edge.toFixed(1)}%`;
@@ -650,7 +575,7 @@ function updateValueIndicator(elementId, edge) {
 
 function updateH2H(team1, team2) {
   const h2hContent = document.getElementById('h2hContent');
-  
+
   // Find H2H record (alphabetical order)
   let key;
   if (team1 < team2) {
@@ -658,13 +583,13 @@ function updateH2H(team1, team2) {
   } else {
     key = `${team2}_${team1}`;
   }
-  
+
   const h2h = h2hRecords[key];
-  
+
   if (h2h) {
     const team1Wins = team1 < team2 ? h2h[`${team1}_wins`] : h2h[`${team2}_wins`];
     const team2Wins = team1 < team2 ? h2h[`${team2}_wins`] : h2h[`${team1}_wins`];
-    
+
     h2hContent.innerHTML = `
       <div class="market-row">
         <span>Total Games</span>
@@ -695,14 +620,14 @@ function updateH2H(team1, team2) {
 function updateBookingPoints(homeTeam, awayTeam, bandData) {
   const homeStats = teamStats[homeTeam];
   const awayStats = teamStats[awayTeam];
-  
+
   const bandBooking = bandData.avg_booking_points || 40;
   const homeBooking = homeStats?.last_10_avg_booking_points || 40;
   const awayBooking = awayStats?.last_10_avg_booking_points || 40;
-  
+
   // Weighted average: 50% band, 25% each team
   const expected = (bandBooking * 0.5) + (homeBooking * 0.25) + (awayBooking * 0.25);
-  
+
   document.getElementById('bandBooking').textContent = bandBooking.toFixed(1);
   document.getElementById('homeBooking').textContent = homeBooking.toFixed(1);
   document.getElementById('awayBooking').textContent = awayBooking.toFixed(1);
@@ -712,9 +637,9 @@ function updateBookingPoints(homeTeam, awayTeam, bandData) {
 function generatePoissonGrid(fixture) {
   const grid = document.getElementById('poissonGrid');
   grid.innerHTML = '';
-  
+
   let matrix = [];
-  
+
   // Use fixture's Poisson matrix if available, otherwise generate default
   if (fixture && fixture.poisson_matrix && fixture.poisson_matrix.length > 0) {
     matrix = fixture.poisson_matrix;
@@ -731,13 +656,13 @@ function generatePoissonGrid(fixture) {
       matrix.push(row);
     }
   }
-  
+
   // Create header row
   const headerRow = [''];
   for (let i = 0; i < 6; i++) {
     headerRow.push(i.toString());
   }
-  
+
   // Add header
   headerRow.forEach(cell => {
     const div = document.createElement('div');
@@ -745,7 +670,7 @@ function generatePoissonGrid(fixture) {
     div.textContent = cell;
     grid.appendChild(div);
   });
-  
+
   // Add data rows
   for (let i = 0; i < matrix.length; i++) {
     // Row header
@@ -753,18 +678,18 @@ function generatePoissonGrid(fixture) {
     rowHeader.className = 'poisson-cell poisson-header';
     rowHeader.textContent = i.toString();
     grid.appendChild(rowHeader);
-    
+
     // Data cells
     for (let j = 0; j < matrix[i].length; j++) {
       const div = document.createElement('div');
       div.className = 'poisson-cell';
-      
+
       // Highlight likely scores
       const prob = parseFloat(matrix[i][j]);
       if (prob > 10) {
         div.className += ' poisson-high';
       }
-      
+
       div.textContent = `${(prob * 100).toFixed(1)}%`;
       grid.appendChild(div);
     }
@@ -774,43 +699,43 @@ function generatePoissonGrid(fixture) {
 function updateEloChart() {
   const homeTeam = document.getElementById('homeTeam').value;
   const awayTeam = document.getElementById('awayTeam').value;
-  
+
   if (!homeTeam || !awayTeam) return;
-  
+
   const startDate = document.getElementById('chartStartDate').value;
   const endDate = document.getElementById('chartEndDate').value;
-  
+
   // Get ELO history for both teams
   const homeHistory = eloHistory[homeTeam] || [];
   const awayHistory = eloHistory[awayTeam] || [];
-  
+
   // Filter by date range
   const filteredHome = homeHistory.filter(h => h.date >= startDate && h.date <= endDate);
   const filteredAway = awayHistory.filter(h => h.date >= startDate && h.date <= endDate);
-  
+
   // Prepare chart data
   const allDates = [...new Set([
     ...filteredHome.map(h => h.date),
     ...filteredAway.map(h => h.date)
   ])].sort();
-  
+
   const homeData = allDates.map(date => {
     const point = filteredHome.find(h => h.date === date);
     return point ? point.elo : null;
   });
-  
+
   const awayData = allDates.map(date => {
     const point = filteredAway.find(h => h.date === date);
     return point ? point.elo : null;
   });
-  
+
   // Create or update chart
   const ctx = document.getElementById('eloChart').getContext('2d');
-  
+
   if (eloChart) {
     eloChart.destroy();
   }
-  
+
   eloChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -879,287 +804,3 @@ document.addEventListener('DOMContentLoaded', function() {
   loadAllData();
 });
 </script>
-
-<style>
-/* Additional styles for new features */
-.ev-threshold-control {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 20px auto;
-  max-width: 600px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.ev-threshold-control label {
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.info-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: #109dff;
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.info-icon:hover {
-  transform: scale(1.1);
-}
-
-.disclaimer-link {
-  margin-left: auto;
-  color: #109dff;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.disclaimer-link:hover {
-  color: #ff69b4;
-  text-decoration: underline;
-}
-
-#evThreshold {
-  flex: 1;
-  max-width: 200px;
-}
-
-#evValue {
-  font-weight: bold;
-  color: #109dff;
-  min-width: 40px;
-}
-
-.match-selection-section {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.fixtures-section.compact {
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  margin-bottom: 30px;
-}
-
-.selection-info {
-  color: #666;
-  margin-bottom: 20px;
-  padding: 15px;
-  background: #f8f9fa;
-  border-radius: 10px;
-}
-
-.selection-info strong {
-  color: #109dff;
-}
-
-.selection-info em {
-  color: #999;
-  font-size: 14px;
-}
-
-.toggle-btn {
-  float: right;
-  background: #109dff;
-  color: white;
-  border: none;
-  padding: 5px 12px;
-  border-radius: 15px;
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.toggle-btn:hover {
-  background: #0e7fd4;
-  transform: translateY(-1px);
-}
-
-.market-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #f0f0f0;
-  gap: 10px;
-}
-
-.market-row span:first-child {
-  flex: 1;
-}
-
-.odds.probability {
-  font-weight: bold;
-  color: #109dff;
-  min-width: 60px;
-  text-align: right;
-}
-
-.bookmaker-comparison {
-  color: #666;
-  font-size: 14px;
-  min-width: 50px;
-  text-align: right;
-}
-
-.value-indicator-small {
-  padding: 2px 8px;
-  border-radius: 10px;
-  font-size: 11px;
-  font-weight: 600;
-  min-width: 50px;
-  text-align: center;
-}
-
-.value-indicator-small.positive {
-  background: #d4edda;
-  color: #155724;
-}
-
-.value-indicator-small.negative {
-  background: #f8d7da;
-  color: #721c24;
-}
-
-.value-indicator-small.neutral {
-  background: #e2e3e5;
-  color: #383d41;
-}
-
-.form-indicator {
-  font-size: 12px;
-  margin-top: 5px;
-}
-
-.form-indicator.improving {
-  color: #28a745;
-}
-
-.form-indicator.declining {
-  color: #dc3545;
-}
-
-.form-indicator.stable {
-  color: #6c757d;
-}
-
-.band-games {
-  font-size: 12px;
-  color: #666;
-  margin-top: 5px;
-}
-
-.bookmaker-row {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #e0e0e0;
-}
-
-.value-indicator.positive {
-  background: #d4edda;
-  color: #155724;
-}
-
-.value-indicator.negative {
-  background: #f8d7da;
-  color: #721c24;
-}
-
-.value-indicator.neutral {
-  background: #e2e3e5;
-  color: #383d41;
-}
-
-.date-range-selector {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-  justify-content: center;
-}
-
-.date-range-selector label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.date-range-selector input {
-  padding: 5px 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.booking-card {
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  margin-bottom: 40px;
-}
-
-.booking-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.booking-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background: #f8f9fa;
-  border-radius: 10px;
-}
-
-.booking-item.highlight {
-  background: linear-gradient(135deg, #109dff 0%, #1e88e5 100%);
-  color: white;
-}
-
-.booking-label {
-  font-weight: 500;
-}
-
-.booking-value {
-  font-weight: bold;
-}
-
-.value-badge {
-  background: #28a745;
-  color: white;
-  padding: 2px 8px;
-  border-radius: 10px;
-  font-size: 11px;
-  font-weight: bold;
-}
-
-.no-fixtures {
-  text-align: center;
-  padding: 40px;
-  color: #666;
-}
-
-.no-data {
-  text-align: center;
-  padding: 20px;
-  color: #999;
-}
-</style>
