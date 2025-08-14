@@ -20,17 +20,32 @@ layout: default
   <div class="ev-threshold-control">
     <label>
       Value Bet Threshold: 
-      <span class="info-icon" title="Minimum edge required to flag as value bet. Lower = more bets with smaller edge, Higher = fewer bets with stronger edge">ⓘ</span>
+      <span class="info-icon" title="Minimum edge required to flag as value bet. Lower = more bets with smaller edge, Higher = fewer bets with stronger edge" onclick="showThresholdInfo()">ⓘ</span>
     </label>
     <input type="range" id="evThreshold" min="0" max="20" value="5" step="1" onchange="updateEVThreshold()">
     <span id="evValue">5%</span>
+    <a href="/an-odd-disclaimer" class="disclaimer-link">View Full Disclaimer</a>
   </div>
 
-  <!-- Main Calculator Interface -->
-  <div class="calculator-container">
-    <!-- Team Selector -->
+  <!-- Match Selection Section -->
+  <div class="match-selection-section">
+    <!-- Upcoming Fixtures (moved up) -->
+    <div class="fixtures-section compact">
+      <h2>Quick Select: Upcoming Fixtures</h2>
+      <p class="selection-info">
+        <strong>Recommended:</strong> Select from these fixtures for full analysis including bookmaker odds comparison and value bet identification.
+      </p>
+      <div class="fixtures-list" id="fixturesList">
+        <!-- Populated from JSON data -->
+      </div>
+    </div>
+
+    <!-- Manual Team Selector -->
     <div class="team-selector-card">
-      <h2>Select Match</h2>
+      <h2>Manual Selection: Any Match</h2>
+      <p class="selection-info">
+        Choose any two teams for historical analysis. <em>Note: Bookmaker odds comparison only available for upcoming fixtures above.</em>
+      </p>
       <div class="match-selector">
         <div class="team-input">
           <label>Home Team</label>
@@ -53,6 +68,7 @@ layout: default
         Calculate Odds
       </button>
     </div>
+  </div>
     
     <!-- Results Section -->
     <div id="resultsSection" style="display: none;">
@@ -134,27 +150,42 @@ layout: default
       <div class="markets-grid">
         <!-- Total Goals -->
         <div class="market-card">
-          <h3>Total Goals (Historical %)</h3>
+          <h3>
+            Total Goals Markets
+            <button class="toggle-btn" onclick="toggleOddsDisplay()">
+              <span id="toggleText">Show Odds</span>
+            </button>
+          </h3>
           <div class="market-items">
             <div class="market-row">
               <span>Over 0.5</span>
-              <span class="odds" id="over05">-</span>
+              <span class="odds probability" id="over05">-</span>
+              <span class="bookmaker-comparison" id="book05" style="display:none;">-</span>
+              <span class="value-indicator-small" id="value05" style="display:none;">-</span>
             </div>
             <div class="market-row">
               <span>Over 1.5</span>
-              <span class="odds" id="over15">-</span>
+              <span class="odds probability" id="over15">-</span>
+              <span class="bookmaker-comparison" id="book15" style="display:none;">-</span>
+              <span class="value-indicator-small" id="value15" style="display:none;">-</span>
             </div>
             <div class="market-row">
               <span>Over 2.5</span>
-              <span class="odds" id="over25">-</span>
+              <span class="odds probability" id="over25">-</span>
+              <span class="bookmaker-comparison" id="book25" style="display:none;">-</span>
+              <span class="value-indicator-small" id="value25" style="display:none;">-</span>
             </div>
             <div class="market-row">
               <span>Over 3.5</span>
-              <span class="odds" id="over35">-</span>
+              <span class="odds probability" id="over35">-</span>
+              <span class="bookmaker-comparison" id="book35" style="display:none;">-</span>
+              <span class="value-indicator-small" id="value35" style="display:none;">-</span>
             </div>
             <div class="market-row">
               <span>Over 4.5</span>
-              <span class="odds" id="over45">-</span>
+              <span class="odds probability" id="over45">-</span>
+              <span class="bookmaker-comparison" id="book45" style="display:none;">-</span>
+              <span class="value-indicator-small" id="value45" style="display:none;">-</span>
             </div>
           </div>
         </div>
@@ -165,11 +196,15 @@ layout: default
           <div class="market-items">
             <div class="market-row">
               <span>BTTS - Yes</span>
-              <span class="odds" id="bttsYes">-</span>
+              <span class="odds probability" id="bttsYes">-</span>
+              <span class="bookmaker-comparison" id="bookBttsYes" style="display:none;">-</span>
+              <span class="value-indicator-small" id="valueBttsYes" style="display:none;">-</span>
             </div>
             <div class="market-row">
               <span>BTTS - No</span>
-              <span class="odds" id="bttsNo">-</span>
+              <span class="odds probability" id="bttsNo">-</span>
+              <span class="bookmaker-comparison" id="bookBttsNo" style="display:none;">-</span>
+              <span class="value-indicator-small" id="valueBttsNo" style="display:none;">-</span>
             </div>
           </div>
         </div>
@@ -216,14 +251,6 @@ layout: default
     </div>
   </div>
 
-  <!-- Upcoming Fixtures -->
-  <div class="fixtures-section">
-    <h2>Upcoming Fixtures</h2>
-    <div class="fixtures-list" id="fixturesList">
-      <!-- Populated from JSON data -->
-    </div>
-  </div>
-
   <!-- Information Section -->
   <div class="info-section">
     <h2>How It Works</h2>
@@ -248,14 +275,6 @@ layout: default
   </div>
 </div>
 
-<div class="small-print">
-  <p><strong>Small print:</strong> Have fun, share this with your friends, and buy me a pint if you like:</p>
-  <a href="https://buymeacoffee.com/ferret_stack" class="donation-link">
-    <span class="beer-icon">🍺</span>
-    Buy Me a Beer
-  </a>
-</div>
-
 <!-- Include Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -271,6 +290,7 @@ let teamStats = {};
 let h2hRecords = {};
 let eloChart = null;
 let evThreshold = 5;
+let showAsOdds = false; // Toggle between percentages and decimal odds
 
 // Load all data on page load
 async function loadAllData() {
@@ -304,6 +324,26 @@ async function loadAllData() {
     console.error('Error loading data:', error);
     // Fallback with empty data
     initializePage();
+  }
+}
+
+function showThresholdInfo() {
+  alert(`Value Bet Threshold Explained:\n\n` +
+        `This slider controls the minimum edge required to flag a bet as +EV (positive expected value).\n\n` +
+        `• 5% edge: More betting opportunities, smaller margins\n` +
+        `• 10% edge: Balanced approach\n` +
+        `• 15%+ edge: Very selective, stronger value only\n\n` +
+        `Remember: Even +EV bets can lose. This tool identifies value, not guarantees.\n\n` +
+        `For full disclaimer and betting advice, click the link below.`);
+}
+
+function toggleOddsDisplay() {
+  showAsOdds = !showAsOdds;
+  document.getElementById('toggleText').textContent = showAsOdds ? 'Show %' : 'Show Odds';
+  
+  // Recalculate display if teams are selected
+  if (document.getElementById('homeTeam').value && document.getElementById('awayTeam').value) {
+    calculateOdds();
   }
 }
 
@@ -529,15 +569,57 @@ function calculateOdds() {
   }
   
   // Update goal markets
-  document.getElementById('over05').textContent = `${(bandData.over_05_pct * 100).toFixed(1)}%`;
-  document.getElementById('over15').textContent = `${(bandData.over_15_pct * 100).toFixed(1)}%`;
-  document.getElementById('over25').textContent = `${(bandData.over_25_pct * 100).toFixed(1)}%`;
-  document.getElementById('over35').textContent = `${(bandData.over_35_pct * 100).toFixed(1)}%`;
-  document.getElementById('over45').textContent = `${(bandData.over_45_pct * 100).toFixed(1)}%`;
+  const displayValue = (prob, marketName) => {
+    let displayText;
+    if (showAsOdds) {
+      // Show as decimal odds
+      displayText = prob > 0 ? (1 / prob).toFixed(2) : '-';
+    } else {
+      // Show as percentage
+      displayText = `${(prob * 100).toFixed(1)}%`;
+    }
+    document.getElementById(marketName).textContent = displayText;
+    
+    // Check for bookmaker odds and calculate value
+    if (fixture && fixture.bookmaker_odds) {
+      const bookOdds = fixture.bookmaker_odds;
+      let bookmakerOdd = null;
+      let marketKey = marketName.replace('over', 'over_').replace('btts', 'btts_');
+      
+      if (bookOdds[marketKey]) {
+        bookmakerOdd = bookOdds[marketKey];
+        document.getElementById(`book${marketName.charAt(0).toUpperCase() + marketName.slice(1)}`).textContent = bookmakerOdd.toFixed(2);
+        document.getElementById(`book${marketName.charAt(0).toUpperCase() + marketName.slice(1)}`).style.display = 'inline';
+        
+        // Calculate edge
+        const impliedProb = 1 / bookmakerOdd;
+        const edge = (prob - impliedProb) * 100;
+        const valueElement = document.getElementById(`value${marketName.charAt(0).toUpperCase() + marketName.slice(1)}`);
+        
+        if (edge >= evThreshold) {
+          valueElement.textContent = `+${edge.toFixed(1)}%`;
+          valueElement.className = 'value-indicator-small positive';
+        } else if (edge < -5) {
+          valueElement.textContent = `${edge.toFixed(1)}%`;
+          valueElement.className = 'value-indicator-small negative';
+        } else {
+          valueElement.textContent = 'Fair';
+          valueElement.className = 'value-indicator-small neutral';
+        }
+        valueElement.style.display = 'inline';
+      }
+    }
+  };
+  
+  displayValue(bandData.over_05_pct, 'over05');
+  displayValue(bandData.over_15_pct, 'over15');
+  displayValue(bandData.over_25_pct, 'over25');
+  displayValue(bandData.over_35_pct, 'over35');
+  displayValue(bandData.over_45_pct, 'over45');
   
   // BTTS
-  document.getElementById('bttsYes').textContent = `${(bandData.btts_pct * 100).toFixed(1)}%`;
-  document.getElementById('bttsNo').textContent = `${((1 - bandData.btts_pct) * 100).toFixed(1)}%`;
+  displayValue(bandData.btts_pct, 'bttsYes');
+  displayValue(1 - bandData.btts_pct, 'bttsNo');
   
   // Head to Head
   updateH2H(homeTeam, awayTeam);
