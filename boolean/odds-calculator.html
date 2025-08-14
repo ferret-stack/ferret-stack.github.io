@@ -11,8 +11,19 @@ layout: default
       Updated weekly with the latest match data and bookmaker odds.
     </p>
     <div class="last-updated">
-      Last updated: <span id="updateDate">Loading...</span>
+      Last updated: <span id="updateDate">Loading...</span> | 
+      Total matches analyzed: <span id="totalMatches">0</span>
     </div>
+  </div>
+
+  <!-- EV Threshold Control -->
+  <div class="ev-threshold-control">
+    <label>
+      Value Bet Threshold: 
+      <span class="info-icon" title="Minimum edge required to flag as value bet. Lower = more bets with smaller edge, Higher = fewer bets with stronger edge">ⓘ</span>
+    </label>
+    <input type="range" id="evThreshold" min="0" max="20" value="5" step="1" onchange="updateEVThreshold()">
+    <span id="evValue">5%</span>
   </div>
 
   <!-- Main Calculator Interface -->
@@ -25,26 +36,6 @@ layout: default
           <label>Home Team</label>
           <select id="homeTeam" onchange="updateCalculation()">
             <option value="">Select Team...</option>
-            <option value="Arsenal">Arsenal</option>
-            <option value="Aston Villa">Aston Villa</option>
-            <option value="Bournemouth">Bournemouth</option>
-            <option value="Brentford">Brentford</option>
-            <option value="Brighton">Brighton</option>
-            <option value="Chelsea">Chelsea</option>
-            <option value="Crystal Palace">Crystal Palace</option>
-            <option value="Everton">Everton</option>
-            <option value="Fulham">Fulham</option>
-            <option value="Ipswich">Ipswich</option>
-            <option value="Leicester">Leicester</option>
-            <option value="Liverpool">Liverpool</option>
-            <option value="Man City">Man City</option>
-            <option value="Man Utd">Man Utd</option>
-            <option value="Newcastle">Newcastle</option>
-            <option value="Nott'm Forest">Nott'm Forest</option>
-            <option value="Southampton">Southampton</option>
-            <option value="Spurs">Spurs</option>
-            <option value="West Ham">West Ham</option>
-            <option value="Wolves">Wolves</option>
           </select>
         </div>
         
@@ -54,26 +45,6 @@ layout: default
           <label>Away Team</label>
           <select id="awayTeam" onchange="updateCalculation()">
             <option value="">Select Team...</option>
-            <option value="Arsenal">Arsenal</option>
-            <option value="Aston Villa">Aston Villa</option>
-            <option value="Bournemouth">Bournemouth</option>
-            <option value="Brentford">Brentford</option>
-            <option value="Brighton">Brighton</option>
-            <option value="Chelsea">Chelsea</option>
-            <option value="Crystal Palace">Crystal Palace</option>
-            <option value="Everton">Everton</option>
-            <option value="Fulham">Fulham</option>
-            <option value="Ipswich">Ipswich</option>
-            <option value="Leicester">Leicester</option>
-            <option value="Liverpool">Liverpool</option>
-            <option value="Man City">Man City</option>
-            <option value="Man Utd">Man Utd</option>
-            <option value="Newcastle">Newcastle</option>
-            <option value="Nott'm Forest">Nott'm Forest</option>
-            <option value="Southampton">Southampton</option>
-            <option value="Spurs">Spurs</option>
-            <option value="West Ham">West Ham</option>
-            <option value="Wolves">Wolves</option>
           </select>
         </div>
       </div>
@@ -89,159 +60,155 @@ layout: default
       <!-- ELO Information -->
       <div class="elo-display">
         <div class="elo-card home">
-          <div class="elo-team">Home Team</div>
-          <div class="elo-rating" id="homeElo">1780</div>
-          <div class="elo-rank" id="homeRank">Rank: #12</div>
+          <div class="elo-team" id="homeTeamName">Home Team</div>
+          <div class="elo-rating" id="homeElo">-</div>
+          <div class="elo-rank" id="homeRank">Rank: -</div>
+          <div class="form-indicator" id="homeForm">Form: -</div>
         </div>
         
         <div class="elo-card difference">
           <div class="elo-label">ELO Difference</div>
-          <div class="elo-diff" id="eloDiff">-237</div>
-          <div class="elo-band" id="eloBand">Band 5</div>
+          <div class="elo-diff" id="eloDiff">-</div>
+          <div class="elo-band" id="eloBand">Band -</div>
+          <div class="band-games" id="bandGames">Based on - games</div>
         </div>
         
         <div class="elo-card away">
-          <div class="elo-team">Away Team</div>
-          <div class="elo-rating" id="awayElo">2017</div>
-          <div class="elo-rank" id="awayRank">Rank: #1</div>
+          <div class="elo-team" id="awayTeamName">Away Team</div>
+          <div class="elo-rating" id="awayElo">-</div>
+          <div class="elo-rank" id="awayRank">Rank: -</div>
+          <div class="form-indicator" id="awayForm">Form: -</div>
         </div>
       </div>
 
+      <!-- ELO Chart -->
       <div class="elo-chart-container">
         <h3>ELO Progression</h3>
+        <div class="date-range-selector">
+          <label>From: <input type="date" id="chartStartDate" onchange="updateEloChart()"></label>
+          <label>To: <input type="date" id="chartEndDate" onchange="updateEloChart()"></label>
+        </div>
         <canvas id="eloChart"></canvas>
       </div>
-      
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <script>
-      function displayEloChart(team1, team2) {
-        // Load ELO progression data from JSON
-        fetch('/assets/data/elo_history.json')
-          .then(response => response.json())
-          .then(data => {
-            // Create chart
-            const ctx = document.getElementById('eloChart').getContext('2d');
-            new Chart(ctx, {
-              type: 'line',
-              data: {
-                labels: data.dates,
-                datasets: [{
-                  label: team1,
-                  data: data[team1],
-                  borderColor: '#109dff',
-                  tension: 0.1
-                }, {
-                  label: team2,
-                  data: data[team2],
-                  borderColor: '#ff69b4',
-                  tension: 0.1
-                }]
-              }
-            });
-          });
-      }
-      </script>
 
       <!-- Match Outcome Probabilities -->
       <div class="outcome-card">
-        <h3>Match Outcome Probabilities</h3>
+        <h3>Match Outcome Probabilities (ELO Band Analysis)</h3>
         <div class="outcome-grid">
           <div class="outcome-item">
             <div class="outcome-label">Home Win</div>
-            <div class="outcome-prob" id="homeWinProb">14.13%</div>
-            <div class="outcome-odds" id="homeOdds">7.08</div>
-            <div class="bookmaker-odds">Bookmaker: <span id="bookHomeOdds">4.00</span></div>
-            <div class="value-indicator negative" id="homeValue">-EV</div>
+            <div class="outcome-prob" id="homeWinProb">-</div>
+            <div class="outcome-odds" id="homeOdds">-</div>
+            <div class="bookmaker-row" id="homeBookmaker" style="display:none;">
+              <div class="bookmaker-odds">Bookmaker: <span id="bookHomeOdds">-</span></div>
+              <div class="value-indicator" id="homeValue">-</div>
+            </div>
           </div>
           
           <div class="outcome-item">
             <div class="outcome-label">Draw</div>
-            <div class="outcome-prob" id="drawProb">22.28%</div>
-            <div class="outcome-odds" id="drawOdds">4.49</div>
-            <div class="bookmaker-odds">Bookmaker: <span id="bookDrawOdds">3.00</span></div>
-            <div class="value-indicator negative" id="drawValue">-EV</div>
+            <div class="outcome-prob" id="drawProb">-</div>
+            <div class="outcome-odds" id="drawOdds">-</div>
+            <div class="bookmaker-row" id="drawBookmaker" style="display:none;">
+              <div class="bookmaker-odds">Bookmaker: <span id="bookDrawOdds">-</span></div>
+              <div class="value-indicator" id="drawValue">-</div>
+            </div>
           </div>
           
           <div class="outcome-item">
             <div class="outcome-label">Away Win</div>
-            <div class="outcome-prob" id="awayWinProb">63.59%</div>
-            <div class="outcome-odds" id="awayOdds">1.57</div>
-            <div class="bookmaker-odds">Bookmaker: <span id="bookAwayOdds">1.80</span></div>
-            <div class="value-indicator positive" id="awayValue">+EV 14.6%</div>
+            <div class="outcome-prob" id="awayWinProb">-</div>
+            <div class="outcome-odds" id="awayOdds">-</div>
+            <div class="bookmaker-row" id="awayBookmaker" style="display:none;">
+              <div class="bookmaker-odds">Bookmaker: <span id="bookAwayOdds">-</span></div>
+              <div class="value-indicator" id="awayValue">-</div>
+            </div>
           </div>
+        </div>
+        <div id="noOddsMessage" style="display:none; text-align:center; margin-top:10px; color:#666;">
+          Bookmaker odds not available for this fixture
         </div>
       </div>
 
-
-
-      <!-- Goals Markets -->
+      <!-- Markets Grid -->
       <div class="markets-grid">
+        <!-- Total Goals -->
         <div class="market-card">
-          <h3>Total Goals</h3>
+          <h3>Total Goals (Historical %)</h3>
           <div class="market-items">
             <div class="market-row">
               <span>Over 0.5</span>
-              <span class="odds">1.08</span>
+              <span class="odds" id="over05">-</span>
             </div>
             <div class="market-row">
               <span>Over 1.5</span>
-              <span class="odds">1.36</span>
+              <span class="odds" id="over15">-</span>
             </div>
             <div class="market-row">
               <span>Over 2.5</span>
-              <span class="odds">2.05</span>
+              <span class="odds" id="over25">-</span>
             </div>
             <div class="market-row">
               <span>Over 3.5</span>
-              <span class="odds">3.50</span>
+              <span class="odds" id="over35">-</span>
             </div>
             <div class="market-row">
               <span>Over 4.5</span>
-              <span class="odds">6.50</span>
+              <span class="odds" id="over45">-</span>
             </div>
           </div>
         </div>
 
+        <!-- Both Teams to Score -->
         <div class="market-card">
           <h3>Both Teams to Score</h3>
           <div class="market-items">
             <div class="market-row">
               <span>BTTS - Yes</span>
-              <span class="odds">1.83</span>
+              <span class="odds" id="bttsYes">-</span>
             </div>
             <div class="market-row">
               <span>BTTS - No</span>
-              <span class="odds">2.00</span>
+              <span class="odds" id="bttsNo">-</span>
             </div>
           </div>
         </div>
 
+        <!-- Head to Head -->
         <div class="market-card">
-          <h3>Head to Head</h3>
-          <div class="market-items">
-            <div class="market-row">
-              <span>Total Games</span>
-              <span>8</span>
-            </div>
-            <div class="market-row">
-              <span>Home Wins</span>
-              <span>2</span>
-            </div>
-            <div class="market-row">
-              <span>Draws</span>
-              <span>3</span>
-            </div>
-            <div class="market-row">
-              <span>Away Wins</span>
-              <span>3</span>
-            </div>
+          <h3>Head to Head Record</h3>
+          <div class="market-items" id="h2hContent">
+            <div class="no-data">Select teams to view H2H</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Points -->
+      <div class="booking-card">
+        <h3>Expected Booking Points</h3>
+        <div class="booking-grid">
+          <div class="booking-item">
+            <span class="booking-label">ELO Band Average:</span>
+            <span class="booking-value" id="bandBooking">-</span>
+          </div>
+          <div class="booking-item">
+            <span class="booking-label">Home Team Average:</span>
+            <span class="booking-value" id="homeBooking">-</span>
+          </div>
+          <div class="booking-item">
+            <span class="booking-label">Away Team Average:</span>
+            <span class="booking-value" id="awayBooking">-</span>
+          </div>
+          <div class="booking-item highlight">
+            <span class="booking-label">Expected Total:</span>
+            <span class="booking-value" id="expectedBooking">-</span>
           </div>
         </div>
       </div>
 
       <!-- Poisson Distribution -->
       <div class="poisson-table">
-        <h3>Poisson Score Distribution</h3>
+        <h3>Poisson Score Distribution (Optional Analysis)</h3>
         <div id="poissonGrid" class="poisson-grid">
           <!-- Populated by JavaScript -->
         </div>
@@ -263,7 +230,7 @@ layout: default
     <div class="info-grid">
       <div class="info-card">
         <h3>📊 Data Collection</h3>
-        <p>Python script scrapes match data from Premier League website weekly, including xG, possession, shots, and all match statistics.</p>
+        <p>Python script scrapes match data from Premier League website weekly, including goals, cards, and all match statistics.</p>
       </div>
       <div class="info-card">
         <h3>🎯 ELO Ratings</h3>
@@ -281,52 +248,149 @@ layout: default
   </div>
 </div>
 
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script>
-// Sample data - this will be replaced with your JSON data
-const eloRatings = {
-  "Arsenal": { elo: 1850, rank: 4 },
-  "Aston Villa": { elo: 1700, rank: 8 },
-  "Bournemouth": { elo: 1500, rank: 15 },
-  "Brentford": { elo: 1550, rank: 13 },
-  "Brighton": { elo: 1650, rank: 10 },
-  "Chelsea": { elo: 1800, rank: 6 },
-  "Crystal Palace": { elo: 1520, rank: 14 },
-  "Everton": { elo: 1450, rank: 17 },
-  "Fulham": { elo: 1780, rank: 12 },
-  "Ipswich": { elo: 1350, rank: 20 },
-  "Leicester": { elo: 1400, rank: 19 },
-  "Liverpool": { elo: 2017, rank: 1 },
-  "Man City": { elo: 1950, rank: 2 },
-  "Man Utd": { elo: 1750, rank: 7 },
-  "Newcastle": { elo: 1820, rank: 5 },
-  "Nott'm Forest": { elo: 1680, rank: 9 },
-  "Southampton": { elo: 1420, rank: 18 },
-  "Spurs": { elo: 1900, rank: 3 },
-  "West Ham": { elo: 1600, rank: 11 },
-  "Wolves": { elo: 1480, rank: 16 }
-};
+// Global variables
+let matchesData = [];
+let eloBands = [];
+let eloHistory = {};
+let currentElo = {};
+let upcomingFixtures = [];
+let refereeStats = {};
+let teamStats = {};
+let h2hRecords = {};
+let eloChart = null;
+let evThreshold = 5;
 
-// ELO Band probabilities (from your spreadsheet)
-const eloBands = [
-  { min: -500, max: -300, home: 0.10, draw: 0.20, away: 0.70, games: 45 },
-  { min: -300, max: -200, home: 0.15, draw: 0.22, away: 0.63, games: 78 },
-  { min: -200, max: -100, home: 0.22, draw: 0.25, away: 0.53, games: 124 },
-  { min: -100, max: -50, home: 0.28, draw: 0.27, away: 0.45, games: 156 },
-  { min: -50, max: 0, home: 0.35, draw: 0.28, away: 0.37, games: 189 },
-  { min: 0, max: 50, home: 0.42, draw: 0.28, away: 0.30, games: 201 },
-  { min: 50, max: 100, home: 0.50, draw: 0.27, away: 0.23, games: 178 },
-  { min: 100, max: 200, home: 0.58, draw: 0.25, away: 0.17, games: 143 },
-  { min: 200, max: 300, home: 0.67, draw: 0.22, away: 0.11, games: 89 },
-  { min: 300, max: 500, home: 0.75, draw: 0.18, away: 0.07, games: 52 }
-];
+// Load all data on page load
+async function loadAllData() {
+  try {
+    // Load all JSON files
+    const responses = await Promise.all([
+      fetch('/assets/data/matches_data.json'),
+      fetch('/assets/data/elo_bands.json'),
+      fetch('/assets/data/elo_history.json'),
+      fetch('/assets/data/current_elo.json'),
+      fetch('/assets/data/upcoming_fixtures.json'),
+      fetch('/assets/data/referee_stats.json'),
+      fetch('/assets/data/team_stats.json'),
+      fetch('/assets/data/h2h_records.json')
+    ]);
+    
+    // Parse JSON data
+    matchesData = await responses[0].json();
+    eloBands = await responses[1].json();
+    eloHistory = await responses[2].json();
+    currentElo = await responses[3].json();
+    upcomingFixtures = await responses[4].json();
+    refereeStats = await responses[5].json();
+    teamStats = await responses[6].json();
+    h2hRecords = await responses[7].json();
+    
+    // Initialize page
+    initializePage();
+    
+  } catch (error) {
+    console.error('Error loading data:', error);
+    // Fallback with empty data
+    initializePage();
+  }
+}
 
-// Update calculation when teams are selected
+function initializePage() {
+  // Update last updated date and total matches
+  const today = new Date();
+  document.getElementById('updateDate').textContent = today.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  });
+  document.getElementById('totalMatches').textContent = matchesData.length;
+  
+  // Set date range for chart (default last 2 years)
+  document.getElementById('chartStartDate').value = new Date(today.getFullYear() - 2, today.getMonth(), today.getDate()).toISOString().split('T')[0];
+  document.getElementById('chartEndDate').value = today.toISOString().split('T')[0];
+  
+  // Populate team dropdowns
+  populateTeamDropdowns();
+  
+  // Load upcoming fixtures
+  loadUpcomingFixtures();
+}
+
+function populateTeamDropdowns() {
+  const teams = Object.keys(currentElo).sort();
+  
+  const homeSelect = document.getElementById('homeTeam');
+  const awaySelect = document.getElementById('awayTeam');
+  
+  // Clear existing options except the first
+  homeSelect.innerHTML = '<option value="">Select Team...</option>';
+  awaySelect.innerHTML = '<option value="">Select Team...</option>';
+  
+  teams.forEach(team => {
+    homeSelect.innerHTML += `<option value="${team}">${team}</option>`;
+    awaySelect.innerHTML += `<option value="${team}">${team}</option>`;
+  });
+}
+
+function loadUpcomingFixtures() {
+  const fixturesList = document.getElementById('fixturesList');
+  fixturesList.innerHTML = '';
+  
+  if (!upcomingFixtures || upcomingFixtures.length === 0) {
+    fixturesList.innerHTML = '<div class="no-fixtures">No upcoming fixtures available</div>';
+    return;
+  }
+  
+  upcomingFixtures.forEach(fixture => {
+    const fixtureDiv = document.createElement('div');
+    fixtureDiv.className = 'fixture-item';
+    fixtureDiv.onclick = () => {
+      document.getElementById('homeTeam').value = fixture.home_team;
+      document.getElementById('awayTeam').value = fixture.away_team;
+      calculateOdds();
+    };
+    
+    // Check for value bets
+    const valueBets = fixture.value_bets?.filter(bet => bet.edge >= evThreshold) || [];
+    const hasValue = valueBets.length > 0;
+    
+    fixtureDiv.innerHTML = `
+      <div class="fixture-home">${fixture.home_team}</div>
+      <div class="fixture-info">
+        <div class="fixture-date">${formatDate(fixture.date)}</div>
+        <div class="fixture-time">${fixture.time}</div>
+        ${hasValue ? `<div class="value-badge">+EV</div>` : ''}
+      </div>
+      <div class="fixture-away">${fixture.away_team}</div>
+    `;
+    
+    fixturesList.appendChild(fixtureDiv);
+  });
+}
+
+function updateEVThreshold() {
+  evThreshold = parseInt(document.getElementById('evThreshold').value);
+  document.getElementById('evValue').textContent = evThreshold + '%';
+  
+  // Reload fixtures to update value badges
+  loadUpcomingFixtures();
+  
+  // Recalculate if teams are selected
+  if (document.getElementById('homeTeam').value && document.getElementById('awayTeam').value) {
+    calculateOdds();
+  }
+}
+
 function updateCalculation() {
+  // Auto-calculate if both teams selected
   const homeTeam = document.getElementById('homeTeam').value;
   const awayTeam = document.getElementById('awayTeam').value;
   
   if (homeTeam && awayTeam && homeTeam !== awayTeam) {
-    // Auto-calculate if both teams selected
     calculateOdds();
   }
 }
@@ -346,174 +410,387 @@ function calculateOdds() {
   }
   
   // Get ELO ratings
-  const homeElo = eloRatings[homeTeam].elo;
-  const awayElo = eloRatings[awayTeam].elo;
-  const eloDiff = homeElo - awayElo;
+  const homeEloData = currentElo[homeTeam];
+  const awayEloData = currentElo[awayTeam];
+  
+  if (!homeEloData || !awayEloData) {
+    alert('ELO data not available for selected teams');
+    return;
+  }
+  
+  const homeElo = homeEloData.elo;
+  const awayElo = awayEloData.elo;
+  const eloDiff = Math.abs(homeElo - awayElo);
+  const eloBand = Math.min(Math.floor(eloDiff / 50) + 1, 10);
   
   // Update ELO display
+  document.getElementById('homeTeamName').textContent = homeTeam;
+  document.getElementById('awayTeamName').textContent = awayTeam;
   document.getElementById('homeElo').textContent = homeElo;
-  document.getElementById('homeRank').textContent = `Rank: #${eloRatings[homeTeam].rank}`;
+  document.getElementById('homeRank').textContent = `Rank: #${homeEloData.rank}`;
   document.getElementById('awayElo').textContent = awayElo;
-  document.getElementById('awayRank').textContent = `Rank: #${eloRatings[awayTeam].rank}`;
-  document.getElementById('eloDiff').textContent = eloDiff > 0 ? `+${eloDiff}` : eloDiff;
+  document.getElementById('awayRank').textContent = `Rank: #${awayEloData.rank}`;
+  document.getElementById('eloDiff').textContent = eloDiff;
   
-  // Find appropriate ELO band
-  let currentBand = null;
-  for (const band of eloBands) {
-    if (eloDiff >= band.min && eloDiff < band.max) {
-      currentBand = band;
-      break;
+  // Update form indicators
+  const homeFormData = teamStats[homeTeam]?.form;
+  const awayFormData = teamStats[awayTeam]?.form;
+  
+  if (homeFormData) {
+    document.getElementById('homeForm').textContent = `Form: ${homeFormData.form_rating}/10 (${homeFormData.trend})`;
+    document.getElementById('homeForm').className = `form-indicator ${homeFormData.trend}`;
+  }
+  
+  if (awayFormData) {
+    document.getElementById('awayForm').textContent = `Form: ${awayFormData.form_rating}/10 (${awayFormData.trend})`;
+    document.getElementById('awayForm').className = `form-indicator ${awayFormData.trend}`;
+  }
+  
+  // Get band data
+  const bandData = eloBands.find(b => b.band === eloBand) || eloBands[0];
+  document.getElementById('eloBand').textContent = `Band ${eloBand}: ${bandData.range}`;
+  document.getElementById('bandGames').textContent = `Based on ${bandData.total_games} games`;
+  
+  // Calculate probabilities based on who is stronger
+  let homeWinProb, drawProb, awayWinProb;
+  if (homeElo > awayElo) {
+    // Home team is stronger
+    homeWinProb = bandData.home_win_pct;
+    drawProb = bandData.draw_pct;
+    awayWinProb = bandData.away_win_pct;
+  } else {
+    // Away team is stronger (flip probabilities)
+    homeWinProb = bandData.away_win_pct;
+    drawProb = bandData.draw_pct;
+    awayWinProb = bandData.home_win_pct;
+  }
+  
+  // Update probabilities
+  document.getElementById('homeWinProb').textContent = `${(homeWinProb * 100).toFixed(1)}%`;
+  document.getElementById('drawProb').textContent = `${(drawProb * 100).toFixed(1)}%`;
+  document.getElementById('awayWinProb').textContent = `${(awayWinProb * 100).toFixed(1)}%`;
+  
+  // Calculate decimal odds
+  document.getElementById('homeOdds').textContent = homeWinProb > 0 ? (1 / homeWinProb).toFixed(2) : '-';
+  document.getElementById('drawOdds').textContent = drawProb > 0 ? (1 / drawProb).toFixed(2) : '-';
+  document.getElementById('awayOdds').textContent = awayWinProb > 0 ? (1 / awayWinProb).toFixed(2) : '-';
+  
+  // Check if this fixture has bookmaker odds
+  const fixture = upcomingFixtures.find(f => 
+    f.home_team === homeTeam && f.away_team === awayTeam
+  );
+  
+  if (fixture && fixture.bookmaker_odds) {
+    // Show bookmaker odds and calculate value
+    document.getElementById('homeBookmaker').style.display = 'block';
+    document.getElementById('drawBookmaker').style.display = 'block';
+    document.getElementById('awayBookmaker').style.display = 'block';
+    document.getElementById('noOddsMessage').style.display = 'none';
+    
+    const bookOdds = fixture.bookmaker_odds;
+    
+    // Home
+    if (bookOdds.home) {
+      document.getElementById('bookHomeOdds').textContent = bookOdds.home.toFixed(2);
+      const impliedProb = 1 / bookOdds.home;
+      const edge = (homeWinProb - impliedProb) * 100;
+      updateValueIndicator('homeValue', edge);
     }
+    
+    // Draw
+    if (bookOdds.draw) {
+      document.getElementById('bookDrawOdds').textContent = bookOdds.draw.toFixed(2);
+      const impliedProb = 1 / bookOdds.draw;
+      const edge = (drawProb - impliedProb) * 100;
+      updateValueIndicator('drawValue', edge);
+    }
+    
+    // Away
+    if (bookOdds.away) {
+      document.getElementById('bookAwayOdds').textContent = bookOdds.away.toFixed(2);
+      const impliedProb = 1 / bookOdds.away;
+      const edge = (awayWinProb - impliedProb) * 100;
+      updateValueIndicator('awayValue', edge);
+    }
+  } else {
+    // Hide bookmaker odds
+    document.getElementById('homeBookmaker').style.display = 'none';
+    document.getElementById('drawBookmaker').style.display = 'none';
+    document.getElementById('awayBookmaker').style.display = 'none';
+    document.getElementById('noOddsMessage').style.display = 'block';
   }
   
-  if (currentBand) {
-    document.getElementById('eloBand').textContent = `Band: ${currentBand.min} to ${currentBand.max}`;
-    
-    // Update probabilities
-    document.getElementById('homeWinProb').textContent = `${(currentBand.home * 100).toFixed(2)}%`;
-    document.getElementById('drawProb').textContent = `${(currentBand.draw * 100).toFixed(2)}%`;
-    document.getElementById('awayWinProb').textContent = `${(currentBand.away * 100).toFixed(2)}%`;
-    
-    // Calculate decimal odds
-    document.getElementById('homeOdds').textContent = (1 / currentBand.home).toFixed(2);
-    document.getElementById('drawOdds').textContent = (1 / currentBand.draw).toFixed(2);
-    document.getElementById('awayOdds').textContent = (1 / currentBand.away).toFixed(2);
-
-  }
+  // Update goal markets
+  document.getElementById('over05').textContent = `${(bandData.over_05_pct * 100).toFixed(1)}%`;
+  document.getElementById('over15').textContent = `${(bandData.over_15_pct * 100).toFixed(1)}%`;
+  document.getElementById('over25').textContent = `${(bandData.over_25_pct * 100).toFixed(1)}%`;
+  document.getElementById('over35').textContent = `${(bandData.over_35_pct * 100).toFixed(1)}%`;
+  document.getElementById('over45').textContent = `${(bandData.over_45_pct * 100).toFixed(1)}%`;
   
-  // Generate Poisson distribution
-  generatePoissonGrid();
+  // BTTS
+  document.getElementById('bttsYes').textContent = `${(bandData.btts_pct * 100).toFixed(1)}%`;
+  document.getElementById('bttsNo').textContent = `${((1 - bandData.btts_pct) * 100).toFixed(1)}%`;
   
-  // Show the ELO graph
-  displayEloChart(homeTeam, awayTeam);
+  // Head to Head
+  updateH2H(homeTeam, awayTeam);
+  
+  // Booking Points
+  updateBookingPoints(homeTeam, awayTeam, bandData);
+  
+  // Generate Poisson grid
+  generatePoissonGrid(fixture);
+  
+  // Update ELO chart
+  updateEloChart();
   
   // Show results
   document.getElementById('resultsSection').style.display = 'block';
   document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
 }
 
-function populateEloBandTable(currentBand) {
-  const tbody = document.getElementById('eloBandData');
-  tbody.innerHTML = '';
+function updateValueIndicator(elementId, edge) {
+  const element = document.getElementById(elementId);
   
-  eloBands.forEach(band => {
-    const row = tbody.insertRow();
-    if (band === currentBand) {
-      row.className = 'current-band';
-    }
-    
-    row.innerHTML = `
-      <td>${band.min} to ${band.max}</td>
-      <td>${band.games}</td>
-      <td>${(band.home * 100).toFixed(1)}%</td>
-      <td>${(band.draw * 100).toFixed(1)}%</td>
-      <td>${(band.away * 100).toFixed(1)}%</td>
-    `;
-  });
+  if (edge >= evThreshold) {
+    element.className = 'value-indicator positive';
+    element.textContent = `+EV ${edge.toFixed(1)}%`;
+  } else if (edge < -5) {
+    element.className = 'value-indicator negative';
+    element.textContent = `-EV ${Math.abs(edge).toFixed(1)}%`;
+  } else {
+    element.className = 'value-indicator neutral';
+    element.textContent = 'Fair';
+  }
 }
 
-function generatePoissonGrid() {
+function updateH2H(team1, team2) {
+  const h2hContent = document.getElementById('h2hContent');
+  
+  // Find H2H record (alphabetical order)
+  let key;
+  if (team1 < team2) {
+    key = `${team1}_${team2}`;
+  } else {
+    key = `${team2}_${team1}`;
+  }
+  
+  const h2h = h2hRecords[key];
+  
+  if (h2h) {
+    const team1Wins = team1 < team2 ? h2h[`${team1}_wins`] : h2h[`${team2}_wins`];
+    const team2Wins = team1 < team2 ? h2h[`${team2}_wins`] : h2h[`${team1}_wins`];
+    
+    h2hContent.innerHTML = `
+      <div class="market-row">
+        <span>Total Games</span>
+        <span>${h2h.total_games}</span>
+      </div>
+      <div class="market-row">
+        <span>${team1} Wins</span>
+        <span>${team1 < team2 ? team1Wins : team2Wins}</span>
+      </div>
+      <div class="market-row">
+        <span>Draws</span>
+        <span>${h2h.draws}</span>
+      </div>
+      <div class="market-row">
+        <span>${team2} Wins</span>
+        <span>${team1 < team2 ? team2Wins : team1Wins}</span>
+      </div>
+      <div class="market-row">
+        <span>Last Result</span>
+        <span style="font-size: 0.9em">${h2h.last_result}</span>
+      </div>
+    `;
+  } else {
+    h2hContent.innerHTML = '<div class="no-data">No H2H data available</div>';
+  }
+}
+
+function updateBookingPoints(homeTeam, awayTeam, bandData) {
+  const homeStats = teamStats[homeTeam];
+  const awayStats = teamStats[awayTeam];
+  
+  const bandBooking = bandData.avg_booking_points || 40;
+  const homeBooking = homeStats?.last_10_avg_booking_points || 40;
+  const awayBooking = awayStats?.last_10_avg_booking_points || 40;
+  
+  // Weighted average: 50% band, 25% each team
+  const expected = (bandBooking * 0.5) + (homeBooking * 0.25) + (awayBooking * 0.25);
+  
+  document.getElementById('bandBooking').textContent = bandBooking.toFixed(1);
+  document.getElementById('homeBooking').textContent = homeBooking.toFixed(1);
+  document.getElementById('awayBooking').textContent = awayBooking.toFixed(1);
+  document.getElementById('expectedBooking').textContent = expected.toFixed(1);
+}
+
+function generatePoissonGrid(fixture) {
   const grid = document.getElementById('poissonGrid');
   grid.innerHTML = '';
   
-  // Sample Poisson data - you'll calculate this from your model
-  const scores = [
-    ['', '0', '1', '2', '3', '4', '5+'],
-    ['0', '8.1%', '12.2%', '9.2%', '4.6%', '1.7%', '0.8%'],
-    ['1', '10.8%', '16.3%', '12.3%', '6.1%', '2.3%', '1.1%'],
-    ['2', '7.2%', '10.9%', '8.2%', '4.1%', '1.5%', '0.7%'],
-    ['3', '3.2%', '4.8%', '3.6%', '1.8%', '0.7%', '0.3%'],
-    ['4+', '1.5%', '2.3%', '1.7%', '0.9%', '0.3%', '0.2%']
-  ];
+  let matrix = [];
   
-  scores.forEach((row, i) => {
-    row.forEach((cell, j) => {
+  // Use fixture's Poisson matrix if available, otherwise generate default
+  if (fixture && fixture.poisson_matrix && fixture.poisson_matrix.length > 0) {
+    matrix = fixture.poisson_matrix;
+  } else {
+    // Generate a default matrix
+    for (let i = 0; i < 6; i++) {
+      const row = [];
+      for (let j = 0; j < 6; j++) {
+        // Simple default calculation
+        const homeProb = Math.exp(-1.2) * Math.pow(1.2, i) / factorial(i);
+        const awayProb = Math.exp(-1.0) * Math.pow(1.0, j) / factorial(j);
+        row.push((homeProb * awayProb * 100).toFixed(1));
+      }
+      matrix.push(row);
+    }
+  }
+  
+  // Create header row
+  const headerRow = [''];
+  for (let i = 0; i < 6; i++) {
+    headerRow.push(i.toString());
+  }
+  
+  // Add header
+  headerRow.forEach(cell => {
+    const div = document.createElement('div');
+    div.className = 'poisson-cell poisson-header';
+    div.textContent = cell;
+    grid.appendChild(div);
+  });
+  
+  // Add data rows
+  for (let i = 0; i < matrix.length; i++) {
+    // Row header
+    const rowHeader = document.createElement('div');
+    rowHeader.className = 'poisson-cell poisson-header';
+    rowHeader.textContent = i.toString();
+    grid.appendChild(rowHeader);
+    
+    // Data cells
+    for (let j = 0; j < matrix[i].length; j++) {
       const div = document.createElement('div');
       div.className = 'poisson-cell';
       
-      if (i === 0 || j === 0) {
-        div.className += ' poisson-header';
-      }
-      
-      // Highlight most likely scores
-      if ((i === 1 && j === 2) || (i === 2 && j === 1) || (i === 2 && j === 2)) {
+      // Highlight likely scores
+      const prob = parseFloat(matrix[i][j]);
+      if (prob > 10) {
         div.className += ' poisson-high';
       }
       
-      div.textContent = cell;
+      div.textContent = `${(prob * 100).toFixed(1)}%`;
       grid.appendChild(div);
-    });
+    }
+  }
+}
+
+function updateEloChart() {
+  const homeTeam = document.getElementById('homeTeam').value;
+  const awayTeam = document.getElementById('awayTeam').value;
+  
+  if (!homeTeam || !awayTeam) return;
+  
+  const startDate = document.getElementById('chartStartDate').value;
+  const endDate = document.getElementById('chartEndDate').value;
+  
+  // Get ELO history for both teams
+  const homeHistory = eloHistory[homeTeam] || [];
+  const awayHistory = eloHistory[awayTeam] || [];
+  
+  // Filter by date range
+  const filteredHome = homeHistory.filter(h => h.date >= startDate && h.date <= endDate);
+  const filteredAway = awayHistory.filter(h => h.date >= startDate && h.date <= endDate);
+  
+  // Prepare chart data
+  const allDates = [...new Set([
+    ...filteredHome.map(h => h.date),
+    ...filteredAway.map(h => h.date)
+  ])].sort();
+  
+  const homeData = allDates.map(date => {
+    const point = filteredHome.find(h => h.date === date);
+    return point ? point.elo : null;
+  });
+  
+  const awayData = allDates.map(date => {
+    const point = filteredAway.find(h => h.date === date);
+    return point ? point.elo : null;
+  });
+  
+  // Create or update chart
+  const ctx = document.getElementById('eloChart').getContext('2d');
+  
+  if (eloChart) {
+    eloChart.destroy();
+  }
+  
+  eloChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: allDates.map(d => formatDate(d)),
+      datasets: [{
+        label: homeTeam,
+        data: homeData,
+        borderColor: '#109dff',
+        backgroundColor: 'rgba(16, 157, 255, 0.1)',
+        tension: 0.1,
+        spanGaps: true
+      }, {
+        label: awayTeam,
+        data: awayData,
+        borderColor: '#ff69b4',
+        backgroundColor: 'rgba(255, 105, 180, 0.1)',
+        tension: 0.1,
+        spanGaps: true
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: true
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: false,
+          title: {
+            display: true,
+            text: 'ELO Rating'
+          }
+        }
+      }
+    }
   });
 }
 
-// Load upcoming fixtures (sample data)
-function loadFixtures() {
-  const fixtures = [
-    { home: "Fulham", away: "Liverpool", date: "14 Dec", time: "15:00" },
-    { home: "Arsenal", away: "Everton", date: "14 Dec", time: "15:00" },
-    { home: "Chelsea", away: "Brentford", date: "15 Dec", time: "19:00" },
-    { home: "Man City", away: "Man Utd", date: "15 Dec", time: "16:30" }
-  ];
-  
-  const fixturesList = document.getElementById('fixturesList');
-  fixturesList.innerHTML = '';
-  
-  fixtures.forEach(fixture => {
-    const div = document.createElement('div');
-    div.className = 'fixture-item';
-    div.onclick = () => {
-      document.getElementById('homeTeam').value = fixture.home;
-      document.getElementById('awayTeam').value = fixture.away;
-      calculateOdds();
-    };
-    
-    div.innerHTML = `
-      <div class="fixture-home">${fixture.home}</div>
-      <div class="fixture-info">
-        <div class="fixture-date">${fixture.date}</div>
-        <div class="fixture-time">${fixture.time}</div>
-      </div>
-      <div class="fixture-away">${fixture.away}</div>
-    `;
-    
-    fixturesList.appendChild(div);
+// Utility functions
+function formatDate(dateStr) {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: '2-digit'
   });
+}
+
+function factorial(n) {
+  if (n === 0 || n === 1) return 1;
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
 }
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
-  // Set update date
-  const today = new Date();
-  document.getElementById('updateDate').textContent = today.toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
-  });
-  
-  // Load fixtures
-  loadFixtures();
+  loadAllData();
 });
-
-// Function to load data from JSON (to be implemented)
-async function loadDataFromJSON() {
-  try {
-    // This is where you'll load your JSON files
-    const eloResponse = await fetch('/assets/data/elo_ratings_latest.json');
-    const matchesResponse = await fetch('/assets/data/matches_latest.json');
-    const predictionsResponse = await fetch('/assets/data/predictions_latest.json');
-    
-    if (eloResponse.ok) {
-      const eloData = await eloResponse.json();
-      // Update eloRatings object with real data
-      Object.assign(eloRatings, eloData);
-    }
-    
-    // Process other data...
-  } catch (error) {
-    console.log('Using sample data - JSON files not found yet');
-  }
-}
-
-// Call this when page loads
-loadDataFromJSON();
 </script>
