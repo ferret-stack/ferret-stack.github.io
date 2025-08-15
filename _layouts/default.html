@@ -31,26 +31,27 @@
   {% if site.head_include %}{% include {{ site.head_include }} %}{% endif %}
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <div class="header-content">
-        <div class="site-logo-wrapper">
-          <img src="{{ '/assets/images/ferret_stack.jpg' | relative_url }}" alt="{{ site.title }}" class="site-logo site-logo-default">
-          <img src="{{ '/assets/images/ferret_stack_col.png' | relative_url }}" alt="{{ site.title }}" class="site-logo site-logo-hover">
-        </div>
-        <div class="header-text">
-          <h1 class="site-title">
-            <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
-          </h1>
-          <nav class="site-nav">
-            <a href="{{ '/' | relative_url }}">Home</a>
-            <a href="{{ '/about' | relative_url }}">About</a>
-            <!-- Add more navigation items as needed -->
-          </nav>
-        </div>
+<header class="site-header">
+  <div class="container">
+    <div class="header-content">
+      <div class="site-logo-wrapper">
+        <img src="{{ '/assets/images/ferret_stack.jpg' | relative_url }}" alt="{{ site.title }}" class="site-logo site-logo-default">
+        <img src="{{ '/assets/images/ferret_stack_col.png' | relative_url }}" alt="{{ site.title }}" class="site-logo site-logo-hover">
+        <!-- Position relative to the logo -->
+        <img src="{{ '/assets/images/ferret_looking_up.png' | relative_url }}" alt="Ferret looking up" class="ferret-looking-up">
+      </div>
+      <div class="header-text">
+        <h1 class="site-title">
+          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        </h1>
+        <nav class="site-nav">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/about' | relative_url }}">About</a>
+        </nav>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
   <main class="site-content">
     <div class="container">
