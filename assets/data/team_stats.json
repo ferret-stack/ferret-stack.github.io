@@ -59,18 +59,6 @@
       "form_rating": 9.5
     }
   },
-  "Southampton": {
-    "last_10_avg_goals_for": 0.5,
-    "last_10_avg_goals_against": 2.3,
-    "last_10_avg_booking_points": 22.0,
-    "season_avg_booking_points": 34.4,
-    "form": {
-      "elo_change_last_5": 11,
-      "elo_change_last_10": 18,
-      "trend": "stable",
-      "form_rating": 6.1
-    }
-  },
   "Chelsea": {
     "last_10_avg_goals_for": 1.1,
     "last_10_avg_goals_against": 0.7,
@@ -143,18 +131,6 @@
       "form_rating": 3.7
     }
   },
-  "Leicester": {
-    "last_10_avg_goals_for": 0.8,
-    "last_10_avg_goals_against": 1.8,
-    "last_10_avg_booking_points": 35.0,
-    "season_avg_booking_points": 32.8,
-    "form": {
-      "elo_change_last_5": 23,
-      "elo_change_last_10": 22,
-      "trend": "improving",
-      "form_rating": 7.3
-    }
-  },
   "Man City": {
     "last_10_avg_goals_for": 2.0,
     "last_10_avg_goals_against": 0.5,
@@ -191,18 +167,6 @@
       "form_rating": 4.2
     }
   },
-  "Ipswich": {
-    "last_10_avg_goals_for": 1.0,
-    "last_10_avg_goals_against": 2.4,
-    "last_10_avg_booking_points": 36.0,
-    "season_avg_booking_points": 42.3,
-    "form": {
-      "elo_change_last_5": -17,
-      "elo_change_last_10": 0,
-      "trend": "declining",
-      "form_rating": 3.3
-    }
-  },
   "Spurs": {
     "last_10_avg_goals_for": 0.9,
     "last_10_avg_goals_against": 2.0,
@@ -237,6 +201,30 @@
       "elo_change_last_10": 45,
       "trend": "stable",
       "form_rating": 5.4
+    }
+  },
+  "Burnley": {
+    "last_10_avg_goals_for": 1.4,
+    "last_10_avg_goals_against": 1.6,
+    "last_10_avg_booking_points": 43.5,
+    "season_avg_booking_points": 33.1,
+    "form": {
+      "elo_change_last_5": -7,
+      "elo_change_last_10": -30,
+      "trend": "stable",
+      "form_rating": 4.3
+    }
+  },
+  "Leeds": {
+    "last_10_avg_goals_for": 1.1,
+    "last_10_avg_goals_against": 3.3,
+    "last_10_avg_booking_points": 36.5,
+    "season_avg_booking_points": 40.3,
+    "form": {
+      "elo_change_last_5": -9,
+      "elo_change_last_10": -47,
+      "trend": "stable",
+      "form_rating": 4.1
     }
   }
 }
