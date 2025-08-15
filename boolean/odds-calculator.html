@@ -546,7 +546,7 @@ function calculateOdds() {
   updateBookingPoints(homeTeam, awayTeam, bandData);
 
   // Generate Poisson grid
-  generatePoissonGrid(fixture);
+  generatePoissonGrid(homeTeam, awayTeam);
 
   // Update ELO chart
   updateEloChart();
@@ -632,66 +632,131 @@ function updateBookingPoints(homeTeam, awayTeam, bandData) {
   document.getElementById('expectedBooking').textContent = expected.toFixed(1);
 }
 
-function generatePoissonGrid(fixture) {
+  // Add this function to calculate Poisson for any match
+function calculatePoissonMatrix(homeTeam, awayTeam) {
+  // Get team stats
+  const homeStats = teamStats[homeTeam];
+  const awayStats = teamStats[awayTeam];
+  
+  if (!homeStats || !awayStats) {
+    return null;
+  }
+  
+  // League average (calculate from all matches)
+  let totalGoals = 0;
+  let totalMatches = matchesData.length;
+  matchesData.forEach(match => {
+    totalGoals += match.home_goals + match.away_goals;
+  });
+  const leagueAvg = totalGoals / (totalMatches * 2);
+  
+  // Calculate expected goals with home advantage
+  const homeAttack = homeStats.last_10_avg_goals_for / leagueAvg;
+  const homeDefense = homeStats.last_10_avg_goals_against / leagueAvg;
+  const awayAttack = awayStats.last_10_avg_goals_for / leagueAvg;
+  const awayDefense = awayStats.last_10_avg_goals_against / leagueAvg;
+  
+  const homeExpected = homeAttack * awayDefense * leagueAvg * 1.1;
+  const awayExpected = awayAttack * homeDefense * leagueAvg * 0.9;
+  
+  // Generate matrix
+  const matrix = [];
+  for (let i = 0; i < 6; i++) {
+    const row = [];
+    for (let j = 0; j < 6; j++) {
+      const prob = poissonPMF(i, homeExpected) * poissonPMF(j, awayExpected);
+      row.push(prob);
+    }
+    matrix.push(row);
+  }
+  
+  return {
+    matrix: matrix,
+    homeExpected: homeExpected,
+    awayExpected: awayExpected
+  };
+}
+
+// Poisson probability mass function
+function poissonPMF(k, lambda) {
+  return Math.exp(-lambda) * Math.pow(lambda, k) / factorial(k);
+}
+
+function generatePoissonGrid(homeTeam, awayTeam) {
   const grid = document.getElementById('poissonGrid');
   grid.innerHTML = '';
-
-  let matrix = [];
-
-  // Use fixture's Poisson matrix if available, otherwise generate default
-  if (fixture && fixture.poisson_matrix && fixture.poisson_matrix.length > 0) {
-    matrix = fixture.poisson_matrix;
-  } else {
-    // Generate a default matrix
-    for (let i = 0; i < 6; i++) {
-      const row = [];
-      for (let j = 0; j < 6; j++) {
-        // Simple default calculation
-        const homeProb = Math.exp(-1.2) * Math.pow(1.2, i) / factorial(i);
-        const awayProb = Math.exp(-1.0) * Math.pow(1.0, j) / factorial(j);
-        row.push((homeProb * awayProb * 100).toFixed(1));
-      }
-      matrix.push(row);
-    }
+  
+  // Calculate Poisson for this specific match
+  const poissonData = calculatePoissonMatrix(homeTeam, awayTeam);
+  
+  if (!poissonData) {
+    grid.innerHTML = '<div class="no-data">Unable to calculate Poisson distribution</div>';
+    return;
   }
-
-  // Create header row
-  const headerRow = [''];
+  
+  const matrix = poissonData.matrix;
+  
+  // Create header row with away team name
+  const headerRow = document.createElement('div');
+  headerRow.className = 'poisson-cell poisson-corner';
+  headerRow.innerHTML = `<small>${awayTeam}<br>Goals →</small>`;
+  grid.appendChild(headerRow);
+  
   for (let i = 0; i < 6; i++) {
-    headerRow.push(i.toString());
-  }
-
-  // Add header
-  headerRow.forEach(cell => {
     const div = document.createElement('div');
     div.className = 'poisson-cell poisson-header';
-    div.textContent = cell;
+    div.textContent = i.toString();
     grid.appendChild(div);
-  });
-
-  // Add data rows
+  }
+  
+  // Add data rows with home team name
   for (let i = 0; i < matrix.length; i++) {
-    // Row header
+    // Row header with team name on first row
     const rowHeader = document.createElement('div');
     rowHeader.className = 'poisson-cell poisson-header';
-    rowHeader.textContent = i.toString();
+    if (i === 0) {
+      rowHeader.innerHTML = `<small>${homeTeam}</small><br>${i}`;
+    } else {
+      rowHeader.textContent = i.toString();
+    }
     grid.appendChild(rowHeader);
-
+    
     // Data cells
     for (let j = 0; j < matrix[i].length; j++) {
       const div = document.createElement('div');
       div.className = 'poisson-cell';
-
+      
+      const prob = matrix[i][j] * 100;
+      
       // Highlight likely scores
-      const prob = parseFloat(matrix[i][j]);
-      if (prob > 10) {
+      if (prob > 5) {
         div.className += ' poisson-high';
       }
-
-      div.textContent = `${(prob * 100).toFixed(1)}%`;
+      if (prob > 10) {
+        div.className += ' poisson-very-high';
+      }
+      
+      // Add score label on hover
+      div.title = `${homeTeam} ${i}-${j} ${awayTeam}: ${prob.toFixed(1)}%`;
+      div.textContent = `${prob.toFixed(1)}%`;
       grid.appendChild(div);
     }
   }
+  
+  // Add expected goals summary
+  const existingSummary = document.querySelector('.poisson-summary');
+  if (existingSummary) {
+    existingSummary.remove();
+  }
+  
+  const summary = document.createElement('div');
+  summary.className = 'poisson-summary';
+  summary.innerHTML = `
+    <strong>Expected Goals:</strong> 
+    ${homeTeam}: ${poissonData.homeExpected.toFixed(2)} | 
+    ${awayTeam}: ${poissonData.awayExpected.toFixed(2)}
+  `;
+  grid.parentElement.appendChild(summary);
 }
 
 function updateEloChart() {
