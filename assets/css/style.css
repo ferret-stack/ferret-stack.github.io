@@ -2276,7 +2276,7 @@ body {
 .ferret-looking-up {
   position: absolute;
   bottom: -40px; /* Position below the logo area */
-  right: -80px; /* Position to the right, adjust as needed */
+  right: -50px; /* Position to the right, adjust as needed */
   width: 50px; /* Adjust size */
   height: auto;
   opacity: 0.8;
