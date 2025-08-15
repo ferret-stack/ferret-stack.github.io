@@ -602,7 +602,7 @@
     "expected_booking_points": 34.0
   },
   {
-    "home_team": "Leeds United",
+    "home_team": "Leeds",
     "away_team": "Everton",
     "date": "2025-08-18",
     "time": "19:00",
@@ -644,3 +644,4 @@
     "expected_booking_points": 34.8
   }
 ]
+
