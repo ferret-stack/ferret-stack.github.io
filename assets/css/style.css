@@ -2229,3 +2229,24 @@ body {
   padding: 20px;
   color: #999;
 }
+.poisson-corner {
+  font-weight: bold;
+  background: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.poisson-very-high {
+  background: rgba(16,157,255,0.4);
+  font-weight: bold;
+}
+
+.poisson-summary {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  text-align: center;
+}
