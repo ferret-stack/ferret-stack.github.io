@@ -11,6 +11,18 @@
       "form_rating": 3.6
     }
   },
+  "Aston Villa": {
+    "last_10_avg_goals_for": 1.9,
+    "last_10_avg_goals_against": 0.8,
+    "last_10_avg_booking_points": 41.5,
+    "season_avg_booking_points": 44.9,
+    "form": {
+      "elo_change_last_5": -351,
+      "elo_change_last_10": -287,
+      "trend": "declining",
+      "form_rating": 0
+    }
+  },
   "Bournemouth": {
     "last_10_avg_goals_for": 1.1,
     "last_10_avg_goals_against": 1.4,
@@ -71,6 +83,18 @@
       "form_rating": 9.6
     }
   },
+  "Crystal Palace": {
+    "last_10_avg_goals_for": 1.8,
+    "last_10_avg_goals_against": 1.1,
+    "last_10_avg_booking_points": 49.0,
+    "season_avg_booking_points": 39.9,
+    "form": {
+      "elo_change_last_5": -311,
+      "elo_change_last_10": -300,
+      "trend": "declining",
+      "form_rating": 0
+    }
+  },
   "Everton": {
     "last_10_avg_goals_for": 1.2,
     "last_10_avg_goals_against": 0.9,
@@ -129,6 +153,18 @@
       "elo_change_last_10": 22,
       "trend": "improving",
       "form_rating": 7.3
+    }
+  },
+  "Man City": {
+    "last_10_avg_goals_for": 2.0,
+    "last_10_avg_goals_against": 0.5,
+    "last_10_avg_booking_points": 36.0,
+    "season_avg_booking_points": 35.1,
+    "form": {
+      "elo_change_last_5": -440,
+      "elo_change_last_10": -417,
+      "trend": "declining",
+      "form_rating": 0
     }
   },
   "Man Utd": {
