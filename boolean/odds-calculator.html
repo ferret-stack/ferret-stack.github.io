@@ -16,16 +16,6 @@ layout: default
     </div>
   </div>
 
-  <!-- EV Threshold Control -->
-  <div class="ev-threshold-control">
-    <label>
-      Value Bet Threshold: 
-      <span class="info-icon" title="Minimum edge required to flag as value bet. Lower = more bets with smaller edge, Higher = fewer bets with stronger edge">ⓘ</span>
-    </label>
-    <input type="range" id="evThreshold" min="0" max="20" value="5" step="1" onchange="updateEVThreshold()">
-    <span id="evValue">5%</span>
-  </div>
-
   <!-- Main Calculator Interface -->
   <div class="calculator-container">
     <!-- Team Selector -->
@@ -89,6 +79,18 @@ layout: default
           <label>To: <input type="date" id="chartEndDate" onchange="updateEloChart()"></label>
         </div>
         <canvas id="eloChart"></canvas>
+      </div>
+      
+      <div class="ev-threshold-control">
+        <label>
+          Value Bet Threshold: 
+          <span class="info-icon" title="Minimum edge required to flag as value bet. Lower = more bets with smaller edge, Higher = fewer bets with stronger edge">ℹ</span>
+        </label>
+        <input type="range" id="evThreshold" min="0" max="20" value="5" step="1" onchange="updateEVThreshold()">
+        <span id="evValue">5%</span>
+        <a href="https://ferret-stack.github.io/boolean/an-odd-disclaimer/" class="disclaimer-link" title="Important information about betting">
+          📋 Disclaimer
+        </a>
       </div>
 
       <!-- Match Outcome Probabilities -->
@@ -159,10 +161,11 @@ layout: default
           </div>
         </div>
 
-        <!-- Both Teams to Score -->
-        <div class="market-card">
-          <h3>Both Teams to Score</h3>
-          <div class="market-items">
+      <div class="market-card">
+        <h3>BTTS & Booking Points</h3>
+        <div class="market-items">
+          <div class="market-section">
+            <h4>Both Teams to Score</h4>
             <div class="market-row">
               <span>BTTS - Yes</span>
               <span class="odds" id="bttsYes">-</span>
@@ -172,36 +175,36 @@ layout: default
               <span class="odds" id="bttsNo">-</span>
             </div>
           </div>
+          
+          <div class="market-divider"></div>
+          
+          <div class="market-section">
+            <h4>Expected Booking Points</h4>
+            <div class="market-row">
+              <span>Band Avg</span>
+              <span class="odds" id="bandBooking">-</span>
+            </div>
+            <div class="market-row">
+              <span>Home Avg</span>
+              <span class="odds" id="homeBooking">-</span>
+            </div>
+            <div class="market-row">
+              <span>Away Avg</span>
+              <span class="odds" id="awayBooking">-</span>
+            </div>
+            <div class="market-row highlight">
+              <span><strong>Expected</strong></span>
+              <span class="odds" id="expectedBooking">-</span>
+            </div>
+          </div>
         </div>
+      </div>
 
         <!-- Head to Head -->
         <div class="market-card">
           <h3>Head to Head Record</h3>
           <div class="market-items" id="h2hContent">
             <div class="no-data">Select teams to view H2H</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Booking Points -->
-      <div class="booking-card">
-        <h3>Expected Booking Points</h3>
-        <div class="booking-grid">
-          <div class="booking-item">
-            <span class="booking-label">ELO Band Average:</span>
-            <span class="booking-value" id="bandBooking">-</span>
-          </div>
-          <div class="booking-item">
-            <span class="booking-label">Home Team Average:</span>
-            <span class="booking-value" id="homeBooking">-</span>
-          </div>
-          <div class="booking-item">
-            <span class="booking-label">Away Team Average:</span>
-            <span class="booking-value" id="awayBooking">-</span>
-          </div>
-          <div class="booking-item highlight">
-            <span class="booking-label">Expected Total:</span>
-            <span class="booking-value" id="expectedBooking">-</span>
           </div>
         </div>
       </div>
