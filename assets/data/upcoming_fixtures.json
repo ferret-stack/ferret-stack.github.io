@@ -1,222 +1,646 @@
 [
   {
-    "home_team": "West Ham",
-    "away_team": "Chelsea",
-    "date": "2025-08-22",
+    "home_team": "Liverpool",
+    "away_team": "Bournemouth",
+    "date": "2025-08-15",
     "time": "19:00",
-    "game_id": "3910055b47bb7b3d2a03716c609d782a",
+    "game_id": "f37021de21572159764157dbf2e5ae62",
+    "home_elo": 1993,
+    "away_elo": 1808,
+    "elo_diff": 185,
+    "elo_band": 4,
     "bookmaker_odds": {
-      "home": 4.72,
-      "draw": 3.85,
-      "away": 1.71,
-      "over_05": null,
-      "under_05": null,
+      "home": 1.31,
+      "draw": 5.93,
+      "away": 8.28,
       "over_15": null,
       "under_15": null,
-      "over_25": 1.75,
-      "under_25": 2.08,
+      "over_25": null,
+      "under_25": null,
       "over_35": null,
       "under_35": null,
+      "over_45": null,
+      "under_45": null,
       "btts_yes": null,
       "btts_no": null
-    }
+    },
+    "model_probabilities": {
+      "home_win": 0.4118,
+      "draw": 0.2353,
+      "away_win": 0.3529
+    },
+    "value_bets": [
+      {
+        "market": "draw",
+        "edge": 6.7,
+        "model_prob": 23.5,
+        "implied_prob": 16.9,
+        "odds": 5.93
+      },
+      {
+        "market": "away_win",
+        "edge": 23.2,
+        "model_prob": 35.3,
+        "implied_prob": 12.1,
+        "odds": 8.28
+      }
+    ],
+    "poisson_matrix": [
+      [
+        0.0553,
+        0.0603,
+        0.0329,
+        0.012,
+        0.0033,
+        0.0007
+      ],
+      [
+        0.0997,
+        0.1088,
+        0.0594,
+        0.0216,
+        0.0059,
+        0.0013
+      ],
+      [
+        0.0899,
+        0.0982,
+        0.0536,
+        0.0195,
+        0.0053,
+        0.0012
+      ],
+      [
+        0.0541,
+        0.059,
+        0.0322,
+        0.0117,
+        0.0032,
+        0.0007
+      ],
+      [
+        0.0244,
+        0.0266,
+        0.0145,
+        0.0053,
+        0.0014,
+        0.0003
+      ],
+      [
+        0.0088,
+        0.0096,
+        0.0052,
+        0.0019,
+        0.0005,
+        0.0001
+      ]
+    ],
+    "expected_booking_points": 34.1
   },
   {
-    "home_team": "Man City",
-    "away_team": "Spurs",
-    "date": "2025-08-23",
+    "home_team": "Aston Villa",
+    "away_team": "Newcastle",
+    "date": "2025-08-16",
     "time": "11:30",
-    "game_id": "a5cf7c410e8dc3375a7e72b5b99ee904",
+    "game_id": "ef104c6285d1e04833a848d273a7b4ae",
+    "home_elo": 1500,
+    "away_elo": 1869,
+    "elo_diff": 369,
+    "elo_band": 8,
     "bookmaker_odds": {
-      "home": 1.46,
-      "draw": 4.7,
-      "away": 6.09,
-      "over_05": null,
-      "under_05": null,
+      "home": 2.22,
+      "draw": 3.59,
+      "away": 3.05,
       "over_15": null,
       "under_15": null,
-      "over_25": 1.44,
-      "under_25": 2.62,
-      "over_35": 2.29,
-      "under_35": 1.63,
-      "btts_yes": null,
-      "btts_no": null
-    }
-  },
-  {
-    "home_team": "Brentford",
-    "away_team": "Aston Villa",
-    "date": "2025-08-23",
-    "time": "14:00",
-    "game_id": "4470a3f0bf4871889875effd378cccb4",
-    "bookmaker_odds": {
-      "home": 3.15,
-      "draw": 3.49,
-      "away": 2.21,
-      "over_05": null,
-      "under_05": null,
-      "over_15": null,
-      "under_15": null,
-      "over_25": 1.8,
-      "under_25": 2.0,
+      "over_25": null,
+      "under_25": null,
       "over_35": null,
       "under_35": null,
+      "over_45": null,
+      "under_45": null,
       "btts_yes": null,
       "btts_no": null
-    }
+    },
+    "model_probabilities": {
+      "home_win": 0.4667,
+      "draw": 0.2,
+      "away_win": 0.3333
+    },
+    "value_bets": [
+      {
+        "market": "home_win",
+        "edge": 1.7,
+        "model_prob": 46.7,
+        "implied_prob": 45.0,
+        "odds": 2.22
+      },
+      {
+        "market": "away_win",
+        "edge": 0.6,
+        "model_prob": 33.3,
+        "implied_prob": 32.8,
+        "odds": 3.05
+      }
+    ],
+    "poisson_matrix": [],
+    "expected_booking_points": 32.5
   },
   {
-    "home_team": "Bournemouth",
-    "away_team": "Wolves",
-    "date": "2025-08-23",
+    "home_team": "Brighton",
+    "away_team": "Fulham",
+    "date": "2025-08-16",
     "time": "14:00",
-    "game_id": "ba2f41891888861179f3e6c08816ee0d",
+    "game_id": "ad4a48da31810362af7fe32298725571",
+    "home_elo": 1827,
+    "away_elo": 1782,
+    "elo_diff": 45,
+    "elo_band": 1,
     "bookmaker_odds": {
-      "home": 1.79,
-      "draw": 3.8,
-      "away": 4.27,
-      "over_05": null,
-      "under_05": null,
+      "home": 1.91,
+      "draw": 3.62,
+      "away": 3.89,
       "over_15": null,
       "under_15": null,
-      "over_25": 1.75,
-      "under_25": 2.04,
+      "over_25": null,
+      "under_25": null,
       "over_35": null,
       "under_35": null,
+      "over_45": null,
+      "under_45": null,
       "btts_yes": null,
       "btts_no": null
-    }
+    },
+    "model_probabilities": {
+      "home_win": 0.4219,
+      "draw": 0.2681,
+      "away_win": 0.31
+    },
+    "value_bets": [
+      {
+        "market": "away_win",
+        "edge": 5.3,
+        "model_prob": 31.0,
+        "implied_prob": 25.7,
+        "odds": 3.89
+      }
+    ],
+    "poisson_matrix": [
+      [
+        0.0234,
+        0.0339,
+        0.0246,
+        0.0119,
+        0.0043,
+        0.0013
+      ],
+      [
+        0.0539,
+        0.0782,
+        0.0568,
+        0.0275,
+        0.01,
+        0.0029
+      ],
+      [
+        0.0621,
+        0.0901,
+        0.0654,
+        0.0316,
+        0.0115,
+        0.0033
+      ],
+      [
+        0.0477,
+        0.0692,
+        0.0502,
+        0.0243,
+        0.0088,
+        0.0026
+      ],
+      [
+        0.0275,
+        0.0399,
+        0.0289,
+        0.014,
+        0.0051,
+        0.0015
+      ],
+      [
+        0.0127,
+        0.0184,
+        0.0133,
+        0.0064,
+        0.0023,
+        0.0007
+      ]
+    ],
+    "expected_booking_points": 37.6
   },
   {
-    "home_team": "Burnley",
-    "away_team": "Sunderland",
-    "date": "2025-08-23",
+    "home_team": "Spurs",
+    "away_team": "Burnley",
+    "date": "2025-08-16",
     "time": "14:00",
-    "game_id": "ba56f4a478af10ea9d6541009c747d14",
+    "game_id": "08ec2d2a8e67840bb3ab0e733ef2f58f",
+    "home_elo": 1774,
+    "away_elo": 1500,
+    "elo_diff": 274,
+    "elo_band": 6,
     "bookmaker_odds": {
-      "home": 2.25,
-      "draw": 3.13,
-      "away": 3.4,
-      "over_05": null,
-      "under_05": null,
+      "home": 1.37,
+      "draw": 4.79,
+      "away": 8.44,
       "over_15": null,
       "under_15": null,
-      "over_25": 2.29,
-      "under_25": 1.62,
+      "over_25": null,
+      "under_25": null,
       "over_35": null,
       "under_35": null,
+      "over_45": null,
+      "under_45": null,
       "btts_yes": null,
       "btts_no": null
-    }
+    },
+    "model_probabilities": {
+      "home_win": 0.3898,
+      "draw": 0.1525,
+      "away_win": 0.4576
+    },
+    "value_bets": [
+      {
+        "market": "away_win",
+        "edge": 33.9,
+        "model_prob": 45.8,
+        "implied_prob": 11.8,
+        "odds": 8.44
+      }
+    ],
+    "poisson_matrix": [],
+    "expected_booking_points": 34.8
   },
   {
-    "home_team": "Arsenal",
-    "away_team": "Leeds United",
-    "date": "2025-08-23",
+    "home_team": "Sunderland",
+    "away_team": "West Ham",
+    "date": "2025-08-16",
+    "time": "14:00",
+    "game_id": "86a8812bc657e2b8c75bf77880a5cf3d",
+    "home_elo": 1500,
+    "away_elo": 1750,
+    "elo_diff": 250,
+    "elo_band": 6,
+    "bookmaker_odds": {
+      "home": 3.16,
+      "draw": 3.33,
+      "away": 2.27,
+      "over_15": null,
+      "under_15": null,
+      "over_25": null,
+      "under_25": null,
+      "over_35": null,
+      "under_35": null,
+      "over_45": null,
+      "under_45": null,
+      "btts_yes": null,
+      "btts_no": null
+    },
+    "model_probabilities": {
+      "home_win": 0.3898,
+      "draw": 0.1525,
+      "away_win": 0.4576
+    },
+    "value_bets": [
+      {
+        "market": "home_win",
+        "edge": 7.3,
+        "model_prob": 39.0,
+        "implied_prob": 31.7,
+        "odds": 3.16
+      },
+      {
+        "market": "away_win",
+        "edge": 1.8,
+        "model_prob": 45.8,
+        "implied_prob": 44.0,
+        "odds": 2.27
+      }
+    ],
+    "poisson_matrix": [],
+    "expected_booking_points": 31.8
+  },
+  {
+    "home_team": "Wolves",
+    "away_team": "Man City",
+    "date": "2025-08-16",
     "time": "16:30",
-    "game_id": "cc9141e0b6656c7a8f09541b985339b2",
+    "game_id": "7f3f540489885d028ec9395ba46ee95b",
+    "home_elo": 1736,
+    "away_elo": 1500,
+    "elo_diff": 236,
+    "elo_band": 5,
     "bookmaker_odds": {
-      "home": 1.26,
-      "draw": 5.88,
-      "away": 10.76,
-      "over_05": null,
-      "under_05": null,
+      "home": 6.81,
+      "draw": 4.77,
+      "away": 1.43,
       "over_15": null,
       "under_15": null,
-      "over_25": 1.58,
-      "under_25": 2.32,
+      "over_25": null,
+      "under_25": null,
       "over_35": null,
       "under_35": null,
+      "over_45": null,
+      "under_45": null,
       "btts_yes": null,
       "btts_no": null
-    }
+    },
+    "model_probabilities": {
+      "home_win": 0.4511,
+      "draw": 0.2174,
+      "away_win": 0.3315
+    },
+    "value_bets": [
+      {
+        "market": "home_win",
+        "edge": 30.4,
+        "model_prob": 45.1,
+        "implied_prob": 14.7,
+        "odds": 6.81
+      },
+      {
+        "market": "draw",
+        "edge": 0.8,
+        "model_prob": 21.7,
+        "implied_prob": 21.0,
+        "odds": 4.77
+      }
+    ],
+    "poisson_matrix": [],
+    "expected_booking_points": 35.4
   },
   {
-    "home_team": "Everton",
-    "away_team": "Brighton",
-    "date": "2025-08-24",
+    "home_team": "Nott'm Forest",
+    "away_team": "Brentford",
+    "date": "2025-08-17",
     "time": "13:00",
-    "game_id": "14d953b49b7b81e451e25f1fdbc83ca2",
+    "game_id": "eb357add4cbd1823e64186800ab46b13",
+    "home_elo": 1803,
+    "away_elo": 1811,
+    "elo_diff": 8,
+    "elo_band": 1,
     "bookmaker_odds": {
-      "home": 3.07,
-      "draw": 3.28,
-      "away": 2.34,
-      "over_05": null,
-      "under_05": null,
+      "home": 2.11,
+      "draw": 3.39,
+      "away": 3.48,
       "over_15": null,
       "under_15": null,
-      "over_25": 2.06,
-      "under_25": 1.76,
+      "over_25": null,
+      "under_25": null,
       "over_35": null,
       "under_35": null,
+      "over_45": null,
+      "under_45": null,
       "btts_yes": null,
       "btts_no": null
-    }
+    },
+    "model_probabilities": {
+      "home_win": 0.4219,
+      "draw": 0.2681,
+      "away_win": 0.31
+    },
+    "value_bets": [
+      {
+        "market": "away_win",
+        "edge": 2.3,
+        "model_prob": 31.0,
+        "implied_prob": 28.7,
+        "odds": 3.48
+      }
+    ],
+    "poisson_matrix": [
+      [
+        0.0803,
+        0.1076,
+        0.072,
+        0.0322,
+        0.0108,
+        0.0029
+      ],
+      [
+        0.095,
+        0.1272,
+        0.0852,
+        0.038,
+        0.0127,
+        0.0034
+      ],
+      [
+        0.0561,
+        0.0752,
+        0.0504,
+        0.0225,
+        0.0075,
+        0.002
+      ],
+      [
+        0.0221,
+        0.0296,
+        0.0198,
+        0.0089,
+        0.003,
+        0.0008
+      ],
+      [
+        0.0065,
+        0.0088,
+        0.0059,
+        0.0026,
+        0.0009,
+        0.0002
+      ],
+      [
+        0.0015,
+        0.0021,
+        0.0014,
+        0.0006,
+        0.0002,
+        0.0001
+      ]
+    ],
+    "expected_booking_points": 41.0
   },
   {
-    "home_team": "Crystal Palace",
-    "away_team": "Nott'm Forest",
-    "date": "2025-08-24",
+    "home_team": "Chelsea",
+    "away_team": "Crystal Palace",
+    "date": "2025-08-17",
     "time": "13:00",
-    "game_id": "31aac9b053f387de0410559ea01dc2e1",
+    "game_id": "96395d8faab66cf7b72830844f66eda7",
+    "home_elo": 1903,
+    "away_elo": 1500,
+    "elo_diff": 403,
+    "elo_band": 9,
     "bookmaker_odds": {
-      "home": 2.35,
-      "draw": 3.24,
-      "away": 3.09,
-      "over_05": null,
-      "under_05": null,
+      "home": 1.6,
+      "draw": 4.16,
+      "away": 5.16,
       "over_15": null,
       "under_15": null,
-      "over_25": 2.11,
-      "under_25": 1.73,
+      "over_25": null,
+      "under_25": null,
       "over_35": null,
       "under_35": null,
+      "over_45": null,
+      "under_45": null,
       "btts_yes": null,
       "btts_no": null
-    }
+    },
+    "model_probabilities": {
+      "home_win": 0.5882,
+      "draw": 0.1176,
+      "away_win": 0.2941
+    },
+    "value_bets": [
+      {
+        "market": "away_win",
+        "edge": 10.0,
+        "model_prob": 29.4,
+        "implied_prob": 19.4,
+        "odds": 5.16
+      }
+    ],
+    "poisson_matrix": [],
+    "expected_booking_points": 34.8
   },
   {
-    "home_team": "Fulham",
-    "away_team": "Man Utd",
-    "date": "2025-08-24",
+    "home_team": "Man Utd",
+    "away_team": "Arsenal",
+    "date": "2025-08-17",
     "time": "15:30",
-    "game_id": "7437dfe71dec7bfdc31a5c96f4dfca9f",
+    "game_id": "4c489c20064afdb4a5623dff80c6c2d7",
+    "home_elo": 1799,
+    "away_elo": 1993,
+    "elo_diff": 194,
+    "elo_band": 4,
     "bookmaker_odds": {
-      "home": 3.32,
-      "draw": 3.48,
-      "away": 2.12,
-      "over_05": null,
-      "under_05": null,
+      "home": 3.53,
+      "draw": 3.51,
+      "away": 2.04,
       "over_15": null,
       "under_15": null,
-      "over_25": 1.76,
-      "under_25": 2.01,
+      "over_25": null,
+      "under_25": null,
       "over_35": null,
       "under_35": null,
+      "over_45": null,
+      "under_45": null,
       "btts_yes": null,
       "btts_no": null
-    }
+    },
+    "model_probabilities": {
+      "home_win": 0.4118,
+      "draw": 0.2353,
+      "away_win": 0.3529
+    },
+    "value_bets": [
+      {
+        "market": "home_win",
+        "edge": 12.9,
+        "model_prob": 41.2,
+        "implied_prob": 28.3,
+        "odds": 3.53
+      }
+    ],
+    "poisson_matrix": [
+      [
+        0.126,
+        0.1751,
+        0.1216,
+        0.0563,
+        0.0196,
+        0.0054
+      ],
+      [
+        0.086,
+        0.1194,
+        0.0829,
+        0.0384,
+        0.0133,
+        0.0037
+      ],
+      [
+        0.0293,
+        0.0407,
+        0.0283,
+        0.0131,
+        0.0045,
+        0.0013
+      ],
+      [
+        0.0067,
+        0.0093,
+        0.0064,
+        0.003,
+        0.001,
+        0.0003
+      ],
+      [
+        0.0011,
+        0.0016,
+        0.0011,
+        0.0005,
+        0.0002,
+        0.0
+      ],
+      [
+        0.0002,
+        0.0002,
+        0.0001,
+        0.0001,
+        0.0,
+        0.0
+      ]
+    ],
+    "expected_booking_points": 34.0
   },
   {
-    "home_team": "Newcastle",
-    "away_team": "Liverpool",
-    "date": "2025-08-25",
+    "home_team": "Leeds United",
+    "away_team": "Everton",
+    "date": "2025-08-18",
     "time": "19:00",
-    "game_id": "cc48d3216bca8edbd0497f9f6877d80c",
+    "game_id": "92020926e46ec2ebdc748d01a37a17b2",
+    "home_elo": 1500,
+    "away_elo": 1794,
+    "elo_diff": 294,
+    "elo_band": 6,
     "bookmaker_odds": {
-      "home": 3.32,
-      "draw": 3.85,
-      "away": 2.01,
-      "over_05": null,
-      "under_05": null,
+      "home": 2.48,
+      "draw": 3.28,
+      "away": 2.86,
       "over_15": null,
       "under_15": null,
-      "over_25": 1.5,
-      "under_25": 2.45,
-      "over_35": 2.33,
-      "under_35": 1.58,
+      "over_25": null,
+      "under_25": null,
+      "over_35": null,
+      "under_35": null,
+      "over_45": null,
+      "under_45": null,
       "btts_yes": null,
       "btts_no": null
-    }
+    },
+    "model_probabilities": {
+      "home_win": 0.3898,
+      "draw": 0.1525,
+      "away_win": 0.4576
+    },
+    "value_bets": [
+      {
+        "market": "away_win",
+        "edge": 10.8,
+        "model_prob": 45.8,
+        "implied_prob": 35.0,
+        "odds": 2.86
+      }
+    ],
+    "poisson_matrix": [],
+    "expected_booking_points": 34.8
   }
 ]
