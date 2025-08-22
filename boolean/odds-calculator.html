@@ -277,31 +277,56 @@ let evThreshold = 5;
 
 // Load all data on page load
 async function loadAllData() {
-  try {
-    // Load all JSON files
-    const responses = await Promise.all([
-      fetch('/assets/data/matches_data.json'),
-      fetch('/assets/data/elo_bands.json'),
-      fetch('/assets/data/elo_history.json'),
-      fetch('/assets/data/current_elo.json'),
-      fetch('/assets/data/upcoming_fixtures.json'),
-      fetch('/assets/data/referee_stats.json'),
-      fetch('/assets/data/team_stats.json'),
-      fetch('/assets/data/h2h_records.json')
-    ]);
-
-    // Parse JSON data
-    matchesData = await responses[0].json();
-    eloBands = await responses[1].json();
-    eloHistory = await responses[2].json();
-    currentElo = await responses[3].json();
-    upcomingFixtures = await responses[4].json();
-    refereeStats = await responses[5].json();
-    teamStats = await responses[6].json();
-    h2hRecords = await responses[7].json();
-
-    // Initialize page
-    initializePage();
+  console.log('Starting to load data...');
+  
+  const files = [
+    { name: 'matches_data', url: '/assets/data/matches_data.json', target: 'matchesData' },
+    { name: 'elo_bands', url: '/assets/data/elo_bands.json', target: 'eloBands' },
+    { name: 'elo_history', url: '/assets/data/elo_history.json', target: 'eloHistory' },
+    { name: 'current_elo', url: '/assets/data/current_elo.json', target: 'currentElo' },
+    { name: 'upcoming_fixtures', url: '/assets/data/upcoming_fixtures.json', target: 'upcomingFixtures' },
+    { name: 'referee_stats', url: '/assets/data/referee_stats.json', target: 'refereeStats' },
+    { name: 'team_stats', url: '/assets/data/team_stats.json', target: 'teamStats' },
+    { name: 'h2h_records', url: '/assets/data/h2h_records.json', target: 'h2hRecords' }
+  ];
+  
+  for (const file of files) {
+    try {
+      console.log(`Loading ${file.name}...`);
+      const response = await fetch(file.url);
+      const text = await response.text();
+      
+      // Try to parse JSON
+      try {
+        const data = JSON.parse(text);
+        window[file.target] = data;
+        console.log(`✓ ${file.name} loaded successfully`);
+      } catch (parseError) {
+        console.error(`✗ ${file.name} has invalid JSON!`);
+        console.error('Parse error:', parseError.message);
+        
+        // Show the problematic part
+        if (text.length > 1140) {
+          console.log('Content around position 1140:');
+          console.log(text.substring(1100, 1200));
+        }
+        
+        // Try to show line 82 if possible
+        const lines = text.split('\n');
+        if (lines.length >= 82) {
+          console.log('Line 81:', lines[80]);
+          console.log('Line 82:', lines[81]);
+          console.log('Line 83:', lines[82]);
+        }
+      }
+    } catch (fetchError) {
+      console.error(`Failed to fetch ${file.name}:`, fetchError);
+    }
+  }
+  
+  // Initialize page even if some files failed
+  initializePage();
+}
 
   } catch (error) {
     console.error('Error loading data:', error);
