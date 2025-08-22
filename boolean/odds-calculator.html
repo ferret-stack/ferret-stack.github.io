@@ -16,6 +16,16 @@ layout: default
     </div>
   </div>
 
+  <!-- EV Threshold Control -->
+  <div class="ev-threshold-control">
+    <label>
+      Value Bet Threshold: 
+      <span class="info-icon" title="Minimum edge required to flag as value bet. Lower = more bets with smaller edge, Higher = fewer bets with stronger edge">ⓘ</span>
+    </label>
+    <input type="range" id="evThreshold" min="0" max="20" value="5" step="1" onchange="updateEVThreshold()">
+    <span id="evValue">5%</span>
+  </div>
+
   <!-- Main Calculator Interface -->
   <div class="calculator-container">
     <!-- Team Selector -->
@@ -79,18 +89,6 @@ layout: default
           <label>To: <input type="date" id="chartEndDate" onchange="updateEloChart()"></label>
         </div>
         <canvas id="eloChart"></canvas>
-      </div>
-      
-      <div class="ev-threshold-control">
-        <label>
-          Value Bet Threshold: 
-          <span class="info-icon" title="Minimum edge required to flag as value bet. Lower = more bets with smaller edge, Higher = fewer bets with stronger edge">ℹ</span>
-        </label>
-        <input type="range" id="evThreshold" min="0" max="20" value="5" step="1" onchange="updateEVThreshold()">
-        <span id="evValue">5%</span>
-        <a href="https://ferret-stack.github.io/boolean/an-odd-disclaimer/" class="disclaimer-link" title="Important information about betting">
-          📋 Disclaimer
-        </a>
       </div>
 
       <!-- Match Outcome Probabilities -->
@@ -161,11 +159,10 @@ layout: default
           </div>
         </div>
 
-      <div class="market-card">
-        <h3>BTTS & Booking Points</h3>
-        <div class="market-items">
-          <div class="market-section">
-            <h4>Both Teams to Score</h4>
+        <!-- Both Teams to Score -->
+        <div class="market-card">
+          <h3>Both Teams to Score</h3>
+          <div class="market-items">
             <div class="market-row">
               <span>BTTS - Yes</span>
               <span class="odds" id="bttsYes">-</span>
@@ -175,36 +172,36 @@ layout: default
               <span class="odds" id="bttsNo">-</span>
             </div>
           </div>
-          
-          <div class="market-divider"></div>
-          
-          <div class="market-section">
-            <h4>Expected Booking Points</h4>
-            <div class="market-row">
-              <span>Band Avg</span>
-              <span class="odds" id="bandBooking">-</span>
-            </div>
-            <div class="market-row">
-              <span>Home Avg</span>
-              <span class="odds" id="homeBooking">-</span>
-            </div>
-            <div class="market-row">
-              <span>Away Avg</span>
-              <span class="odds" id="awayBooking">-</span>
-            </div>
-            <div class="market-row highlight">
-              <span><strong>Expected</strong></span>
-              <span class="odds" id="expectedBooking">-</span>
-            </div>
-          </div>
         </div>
-      </div>
 
         <!-- Head to Head -->
         <div class="market-card">
           <h3>Head to Head Record</h3>
           <div class="market-items" id="h2hContent">
             <div class="no-data">Select teams to view H2H</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Points -->
+      <div class="booking-card">
+        <h3>Expected Booking Points</h3>
+        <div class="booking-grid">
+          <div class="booking-item">
+            <span class="booking-label">ELO Band Average:</span>
+            <span class="booking-value" id="bandBooking">-</span>
+          </div>
+          <div class="booking-item">
+            <span class="booking-label">Home Team Average:</span>
+            <span class="booking-value" id="homeBooking">-</span>
+          </div>
+          <div class="booking-item">
+            <span class="booking-label">Away Team Average:</span>
+            <span class="booking-value" id="awayBooking">-</span>
+          </div>
+          <div class="booking-item highlight">
+            <span class="booking-label">Expected Total:</span>
+            <span class="booking-value" id="expectedBooking">-</span>
           </div>
         </div>
       </div>
@@ -275,98 +272,42 @@ let h2hRecords = {};
 let eloChart = null;
 let evThreshold = 5;
 
+// Load all data on page load
 async function loadAllData() {
-  console.log('1. Starting loadAllData...');
-  
   try {
-    console.log('2. Fetching JSON files...');
-    
-    // Try fetching each file individually to see which might fail
-    try {
-      const matchesResponse = await fetch('/assets/data/matches_data.json');
-      console.log('matches_data.json status:', matchesResponse.status);
-      matchesData = await matchesResponse.json();
-      console.log('matches loaded:', matchesData.length);
-    } catch (e) {
-      console.error('Error loading matches:', e);
-    }
-    
-    try {
-      const bandsResponse = await fetch('/assets/data/elo_bands.json');
-      console.log('elo_bands.json status:', bandsResponse.status);
-      eloBands = await bandsResponse.json();
-      console.log('bands loaded:', eloBands.length);
-    } catch (e) {
-      console.error('Error loading bands:', e);
-    }
-    
-    try {
-      const historyResponse = await fetch('/assets/data/elo_history.json');
-      console.log('elo_history.json status:', historyResponse.status);
-      eloHistory = await historyResponse.json();
-      console.log('history loaded:', Object.keys(eloHistory).length);
-    } catch (e) {
-      console.error('Error loading history:', e);
-    }
-    
-    try {
-      const eloResponse = await fetch('/assets/data/current_elo.json');
-      console.log('current_elo.json status:', eloResponse.status);
-      currentElo = await eloResponse.json();
-      console.log('currentElo loaded:', currentElo);
-      console.log('currentElo keys:', Object.keys(currentElo));
-    } catch (e) {
-      console.error('Error loading currentElo:', e);
-    }
-    
-    try {
-      const fixturesResponse = await fetch('/assets/data/upcoming_fixtures.json');
-      console.log('upcoming_fixtures.json status:', fixturesResponse.status);
-      upcomingFixtures = await fixturesResponse.json();
-      console.log('fixtures loaded:', upcomingFixtures);
-    } catch (e) {
-      console.error('Error loading fixtures:', e);
-    }
-    
-    try {
-      const refResponse = await fetch('/assets/data/referee_stats.json');
-      console.log('referee_stats.json status:', refResponse.status);
-      refereeStats = await refResponse.json();
-    } catch (e) {
-      console.error('Error loading referee stats:', e);
-    }
-    
-    try {
-      const teamResponse = await fetch('/assets/data/team_stats.json');
-      console.log('team_stats.json status:', teamResponse.status);
-      teamStats = await teamResponse.json();
-    } catch (e) {
-      console.error('Error loading team stats:', e);
-    }
-    
-    try {
-      const h2hResponse = await fetch('/assets/data/h2h_records.json');
-      console.log('h2h_records.json status:', h2hResponse.status);
-      h2hRecords = await h2hResponse.json();
-    } catch (e) {
-      console.error('Error loading h2h:', e);
-    }
-    
-    console.log('3. All data loaded, calling initializePage...');
+    // Load all JSON files
+    const responses = await Promise.all([
+      fetch('/assets/data/matches_data.json'),
+      fetch('/assets/data/elo_bands.json'),
+      fetch('/assets/data/elo_history.json'),
+      fetch('/assets/data/current_elo.json'),
+      fetch('/assets/data/upcoming_fixtures.json'),
+      fetch('/assets/data/referee_stats.json'),
+      fetch('/assets/data/team_stats.json'),
+      fetch('/assets/data/h2h_records.json')
+    ]);
+
+    // Parse JSON data
+    matchesData = await responses[0].json();
+    eloBands = await responses[1].json();
+    eloHistory = await responses[2].json();
+    currentElo = await responses[3].json();
+    upcomingFixtures = await responses[4].json();
+    refereeStats = await responses[5].json();
+    teamStats = await responses[6].json();
+    h2hRecords = await responses[7].json();
+
+    // Initialize page
     initializePage();
 
   } catch (error) {
-    console.error('Fatal error in loadAllData:', error);
-    console.log('4. Calling initializePage despite error...');
+    console.error('Error loading data:', error);
+    // Fallback with empty data
     initializePage();
   }
 }
 
 function initializePage() {
-  console.log('5. In initializePage...');
-  console.log('   currentElo:', currentElo);
-  console.log('   upcomingFixtures:', upcomingFixtures);
-  
   // Update last updated date and total matches
   const today = new Date();
   document.getElementById('updateDate').textContent = today.toLocaleDateString('en-GB', {
@@ -374,41 +315,24 @@ function initializePage() {
     month: 'long',
     year: 'numeric'
   });
-  document.getElementById('totalMatches').textContent = matchesData ? matchesData.length : 0;
+  document.getElementById('totalMatches').textContent = matchesData.length;
 
   // Set date range for chart (default last 2 years)
-  const chartStart = document.getElementById('chartStartDate');
-  const chartEnd = document.getElementById('chartEndDate');
-  if (chartStart && chartEnd) {
-    chartStart.value = new Date(today.getFullYear() - 2, today.getMonth(), today.getDate()).toISOString().split('T')[0];
-    chartEnd.value = today.toISOString().split('T')[0];
-  }
+  document.getElementById('chartStartDate').value = new Date(today.getFullYear() - 2, today.getMonth(), today.getDate()).toISOString().split('T')[0];
+  document.getElementById('chartEndDate').value = today.toISOString().split('T')[0];
 
-  console.log('6. Calling populateTeamDropdowns...');
+  // Populate team dropdowns
   populateTeamDropdowns();
 
-  console.log('7. Calling loadUpcomingFixtures...');
+  // Load upcoming fixtures
   loadUpcomingFixtures();
 }
 
 function populateTeamDropdowns() {
-  console.log('8. In populateTeamDropdowns...');
-  console.log('   currentElo object:', currentElo);
-  console.log('   Is currentElo empty?', !currentElo || Object.keys(currentElo).length === 0);
-  
-  const teams = Object.keys(currentElo || {}).sort();
-  console.log('   Teams found:', teams);
+  const teams = Object.keys(currentElo).sort();
 
   const homeSelect = document.getElementById('homeTeam');
   const awaySelect = document.getElementById('awayTeam');
-  
-  console.log('   homeSelect element:', homeSelect);
-  console.log('   awaySelect element:', awaySelect);
-
-  if (!homeSelect || !awaySelect) {
-    console.error('   ERROR: Could not find team select elements!');
-    return;
-  }
 
   // Clear existing options except the first
   homeSelect.innerHTML = '<option value="">Select Team...</option>';
@@ -418,8 +342,6 @@ function populateTeamDropdowns() {
     homeSelect.innerHTML += `<option value="${team}">${team}</option>`;
     awaySelect.innerHTML += `<option value="${team}">${team}</option>`;
   });
-  
-  console.log('   Teams added to dropdowns:', homeSelect.options.length - 1);
 }
 
 function loadUpcomingFixtures() {
