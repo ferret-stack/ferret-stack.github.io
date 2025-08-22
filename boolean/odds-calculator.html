@@ -276,7 +276,6 @@ let eloChart = null;
 let evThreshold = 5;
 
 // Load all data on page load
-// Fixed loadAllData function
 async function loadAllData() {
   console.log('Starting to load data...');
   
@@ -298,6 +297,38 @@ async function loadAllData() {
         const response = await fetch(file.url);
         const text = await response.text();
         
+        // Special debugging for current_elo
+        if (file.name === 'current_elo') {
+          console.log('=== DEBUGGING current_elo.json ===');
+          console.log('File length:', text.length);
+          console.log('First 200 chars:', text.substring(0, 200));
+          console.log('Last 200 chars:', text.substring(text.length - 200));
+          
+          // Check for BOM or weird characters at the start
+          console.log('First 10 char codes:', 
+            text.substring(0, 10).split('').map(c => c.charCodeAt(0)));
+          
+          // Show exactly what's around position 1140
+          if (text.length > 1140) {
+            console.log('Content at position 1100-1200:');
+            console.log(text.substring(1100, 1200));
+            console.log('Characters as codes around 1140:');
+            for (let i = 1135; i < 1145; i++) {
+              console.log(`Position ${i}: '${text[i]}' (code: ${text.charCodeAt(i)})`);
+            }
+          }
+          
+          // Show the exact line 82
+          const lines = text.split('\n');
+          console.log('Total lines in file:', lines.length);
+          if (lines.length >= 82) {
+            console.log('Line 80:', JSON.stringify(lines[79]));
+            console.log('Line 81:', JSON.stringify(lines[80]));
+            console.log('Line 82:', JSON.stringify(lines[81]));
+            console.log('Line 83:', JSON.stringify(lines[82]));
+          }
+        }
+        
         // Try to parse JSON
         try {
           const data = JSON.parse(text);
@@ -307,18 +338,48 @@ async function loadAllData() {
           console.error(`✗ ${file.name} has invalid JSON!`);
           console.error('Parse error:', parseError.message);
           
-          // Show the problematic part
-          if (text.length > 1140) {
-            console.log('Content around position 1140:');
-            console.log(text.substring(1100, 1200));
-          }
-          
-          // Try to show line 82 if possible
-          const lines = text.split('\n');
-          if (lines.length >= 82) {
-            console.log('Line 81:', lines[80]);
-            console.log('Line 82:', lines[81]);
-            console.log('Line 83:', lines[82]);
+          // For current_elo, try to clean and parse again
+          if (file.name === 'current_elo') {
+            console.log('Attempting to clean and parse current_elo...');
+            try {
+              // Remove BOM if present
+              let cleanedText = text.replace(/^\uFEFF/, '');
+              // Remove any null characters
+              cleanedText = cleanedText.replace(/\0/g, '');
+              // Trim whitespace
+              cleanedText = cleanedText.trim();
+              
+              const data = JSON.parse(cleanedText);
+              window[file.target] = data;
+              console.log('✓ Successfully parsed after cleaning!');
+            } catch (cleanError) {
+              console.error('Still failed after cleaning:', cleanError.message);
+              
+              // As a last resort, use the fallback data
+              console.log('Using fallback current_elo data...');
+              window.currentElo = {
+                "Arsenal": { "elo": 1998, "rank": 1 },
+                "Liverpool": { "elo": 1997, "rank": 2 },
+                "Man City": { "elo": 1968, "rank": 3 },
+                "Chelsea": { "elo": 1900, "rank": 4 },
+                "Aston Villa": { "elo": 1871, "rank": 5 },
+                "Newcastle": { "elo": 1870, "rank": 6 },
+                "Crystal Palace": { "elo": 1838, "rank": 7 },
+                "Brighton": { "elo": 1824, "rank": 8 },
+                "Nott'm Forest": { "elo": 1813, "rank": 9 },
+                "Bournemouth": { "elo": 1804, "rank": 10 },
+                "Brentford": { "elo": 1801, "rank": 11 },
+                "Man Utd": { "elo": 1795, "rank": 12 },
+                "Everton": { "elo": 1785, "rank": 13 },
+                "Fulham": { "elo": 1784, "rank": 14 },
+                "Spurs": { "elo": 1784, "rank": 15 },
+                "Leeds": { "elo": 1731, "rank": 16 },
+                "West Ham": { "elo": 1729, "rank": 17 },
+                "Wolves": { "elo": 1728, "rank": 18 },
+                "Burnley": { "elo": 1720, "rank": 19 },
+                "Sunderland": { "elo": 1568, "rank": 20 }
+              };
+            }
           }
         }
       } catch (fetchError) {
