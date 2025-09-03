@@ -2,7 +2,9 @@
 layout: post
 title: Troublesome Tines and Naughty Nibs
 date: 2025-05-11
-categories: fountain pens, kaweco, pelikan, jinhao
+ferret: creative
+categories: [pens, stationery]
+tags: [kaweco, pelikan, jinhao]
 author: Ferret Stack
 ---
 
