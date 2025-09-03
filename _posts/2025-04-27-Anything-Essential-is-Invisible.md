@@ -2,7 +2,9 @@
 layout: post
 title: Anything Essential is Invisible
 date: 2025-04-27
-categories: fountain pens, essays
+categories: [pens, stationery]
+ferret: creative
+tags: [diplomat]
 author: Ferret Stack
 ---
 It has been an intense two weeks, but the dust is finally settling. It's been busy - sometimes stressful and sometimes fun. There are a lot of changes that I feel excited and optimistic about, and I'm sure I'll share the developments soon!
