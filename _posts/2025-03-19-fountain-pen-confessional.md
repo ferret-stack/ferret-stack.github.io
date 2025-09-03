@@ -6,8 +6,6 @@ categories: fountain pens, essays
 author: Ferret Stack
 ---
 
-# Fountain Pen Confessional
-
 <div style="text-align: center;">
   <img src="/assets/images/confessions/allpens.jpg" 
        alt="Jinhao 1200 inked with Diamine Red Dragon, Wingsung 699 inked with KWZ Newkey Brown because Newcastle won the EFL Pilot Myu inked with Iroshizuku Shin-kai " 
