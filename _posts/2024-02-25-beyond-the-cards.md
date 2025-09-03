@@ -2,7 +2,7 @@
 layout: post
 title: "Beyond the Cards - How One Simple Game Reveals Poker's Complex Strategies"
 date: 2024-02-25
-ferret: [poker, creative]
+ferret: poker, creative
 tags: [gto, game-theory, exploitation, philosophy, poker-philosophy]
 mathjax: true
 author: Ferret Stack
