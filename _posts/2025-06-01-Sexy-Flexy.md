@@ -2,8 +2,9 @@
 layout: post
 title: Sexy Flexy
 date: 2025-06-01
-categories: fountain pens, vintage pens, ferret-roundup
-tags: TWSBI, Mabie Todd, Leonardo Italiana, Staedlater, Pilot
+categories: [pens, stationery]
+ferret: creative
+tags: [TWSBI, Mabie-Todd, Leonardo, Staedlater, Pilot]
 author: Ferret Stack
 ---
 3/4 of the pens I had inked up this fortnight had a soft nib of some description. 
