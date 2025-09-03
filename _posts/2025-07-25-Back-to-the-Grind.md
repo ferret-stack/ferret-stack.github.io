@@ -3,8 +3,8 @@ layout: post
 title: "Back to the Grind"
 date: 2025-07-25
 ferret: creative
-category: fountain-pens
-tags: [pelikan, montegrappa, twsbi, uniball, reviews]
+categories: [pens, stationery]
+tags: [pelikan, montegrappa, twsbi, uniball]
 author: Ferret Stack
 ---
 
