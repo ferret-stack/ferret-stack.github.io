@@ -115,7 +115,7 @@ My only gripe with this is sometimes the hooded section will twist when you unca
 
 From understated to overdressed. If the Wingsung 618 is a shy pen, the Benu Grand Sceptre is a pen that runs up to your face and shouts 
 
-> I GLOW IN THE DARK!!!!
+<div class="post-content blockquote">I GLOW IN THE DARK!!!!</div>
 
 Not that you wouldn't spot this pen a mile away if it were to run up to you (even in the dark, apparently)
 
