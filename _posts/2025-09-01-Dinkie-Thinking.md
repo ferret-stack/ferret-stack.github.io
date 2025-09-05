@@ -48,13 +48,11 @@ It was that moment I realised just how a fountain pen is indeed a better gift th
 
 That pen is the Conway Stewart 550, affectionately nicknamed "Dinkie". Although, I think that this is one of those cases where the nickname has pretty much become the standard.
 
-[close up of pen]
+![Conway Stewart Dinkie](/assets/images/dinkie/cs-main.jpeg)
 
 The lineup of pens that would eventually become the Dinkie was first released in 1922 made of vulcanite in a chased black design and without a model number (as was common for pens at the time) and proved to be a major success for Conway Stewart, with the models remaining in production for the next 50 years.
 
 In case the name wasn't a dead giveaway, the Dinkie is, er, pretty dinkie (Bri'sh slang for small).
-
-[size comparison]
 
 In fact, it was advertised as *the smallest practical fountain pen ever made*. I think they needed the caveat of practicality, as Waterman lays claim to the smallest fountain pen, with their No. 000
 
@@ -70,11 +68,9 @@ Though a rare occurrence, I've found sometimes that if you form a letter at just
 
 I enjoy writing with this a lot. The 14 carat gold nib is stubby, even a bit oblique, and the filling mechanism works perfectly even after all these years. I've not had to repair this (thankfully), although I have managed to flip the lever once and I'm surprised that didn't break the ink sac. 
 
-[nib]
+![Conway Stewart nib](/assets/images/dinkie/CS-nib.jpeg)
 
 I've got it inked up with Robert Oster Grun Schwartz. The nib is wet, so not much of the *grun* comes through, but after writing for a while you can see some of it peak its head. 
-
-[writing sample]
 
 I was sure to clean this out immediately however, as I've heard that Robert Oster inks can be a bit alkaline and aren't particularly well-suited for vintage sacs.
 
@@ -90,7 +86,7 @@ Not sure how true this is, but I'm not willing to find out.
 
 From my most sentimental pen to one of my absolute favourite pens. 
 
-[main pic]
+![Wingsung 618](/assets/images/dinkie/618-main.jpeg)
 
 The Wingsung 618 takes design from Parker and Sailor. The clip is undoubtedly Parker and the hooded nib naturally invites comparison to the Parker 51. Meanwhile, the cap band is basically a Sailor one that reads *Wingsung* on it.
 
@@ -98,7 +94,7 @@ I don't hold much opinion on this sort of stuff. Call me a hedonist, but my main
 
 ...and I really do!
 
-[close up]
+![Wingsung 618 uncapped](/assets/images/dinkie/618-uncap.jpeg)
 
 The 618 has an alluring torpedo shape, the full-demo nature is really awesome and kinda unique for a hooded nib pen (afaik). The Hypnotic Turquoise is mesmerising (or, dare I say, *hypnotic*) to watch slosh around in the transparent barrel and it's like carrying around a crystal blue ocean that happens to write. 
 
@@ -106,7 +102,7 @@ It's a pen that makes writing feel special, without being precious about it. The
 
 My only gripe with this is sometimes the hooded section will twist when you uncap the pen, so you need to turn it back before writing. Some have resorted to using shellac to keep it in place. Others (me) are just lazy and pay the rotation tax.
 
-[writing sample]
+![Wingsung nib close up](/assets/images/dinkie/618-nib.jpeg)
 
 ## Benu Grand Sceptre
 
@@ -123,13 +119,13 @@ From understated to overdressed. If the Wingsung 618 is a shy pen, the Benu Gran
 
 Not that you wouldn't spot this pen a mile away if it were to run up to you (even in the dark, apparently)
 
-[main pic & glow in dark]
+![Benu Grand Sceptre](/assets/images/dinkie/benu-main.jpeg)
 
 Blue, pink, sparkly, glittery. Love it. If I was to design a pen, I don't think it would be too dissimilar to this Benu.
 
 Looking like a miniature sceptre, it has a really unique shape, which helps make the colour pop even more. This isn't a pen that's going to get lost amongst your desk
 
-[close up]
+![Benu Grand Sceptre](/assets/images/dinkie/benu-close.jpeg)
 
 ...and if it does, well, I'd sure love to see what your desk looks like.
 
@@ -139,11 +135,19 @@ Noodler's Dragon's Napalm seemed fitting enough, in both shade and name. A fiery
 
 St. George *who*?
 
-[picture of ink bottle]
+<figure>
+  <div class="image-double">
+    <img src="/assets/images/dinkie/benu-dn.jpeg">
+    <img src="/assets/images/dinkie/dragon-napalm.jpeg">
+  </div>
+  <figcaption>
+    The ink bottle image has always confused me.. I can't quite make it out, but it's deffo a dragon
+  </figcaption>
+</figure>
 
 I found myself using this pen a lot with the Wingsung 618, as the muted orange-pink popped really well with the hypnotic turquoise ink. 
 
-[writing sample]
+![Benu](/assets/images/dinkie/benu-nib.jpeg)
 
 ## Ensso Minimalist XS
 
@@ -156,9 +160,14 @@ I found myself using this pen a lot with the Wingsung 618, as the muted orange-p
 
 The fourth pen, the Ensso Minimalist XS that I have been using lately is the newest in my collection. Interestingly enough, I seemed to pair this a lot with the Conway Stewart, which is amongst the oldest (both by release and acquisition date) in my pen arsenal. 
 
-They are (alongside the [Kaweco Liliput](troublesome-tines.md)) also the smallest that I own.
+They are (alongside the [Kaweco Liliput](https://ferret-stack.github.io/Troublesome-Tines-and-Naughty-Nibs/) also the smallest that I own.
 
-[size comparison]
+<figure>
+  <div class="image-double">
+    <img src="/assets/images/dinkie/size-comp(1).jpeg">
+    <img src="/assets/images/dinkie/size-comp(2).jpeg">
+  </div>
+</figure>
 
 While I enjoyed using the Wingsung/Benu together for their colour coordination, the Ensso and Conway Stewart appeared more similar than different, and it was this that made me so keen to pair them.
 
@@ -166,11 +175,14 @@ The dark inks work well side-by-side, and the two only told apart, really, by th
 
 Here's a writing sample about a crater that is found on the Moon. I find it quite marvellous that there is an impact crater that not only can we photograph, but we've named and defined? Mad...
 
-[writing sample]
+<figure>
+  <div class="image-double">
+    <img src="/assets/images/dinkie/ensso-main.jpeg">
+    <img src="/assets/images/dinkie/ensso-2.jpeg">
+  </div>
+</figure>
 
 It only takes short international cartridges (I mean, duh) and it absolutely *guzzles* through ink as the nib is very wet, which makes the ink pool a bit darker in spots, but also leads to some lovely shading. When you look closer, you can see more of a difference in the colour.
-
-[picture close up]
 
 When capped, the pen is even smaller than the Dinkie, although when you unsheath them they are the same size; the Ensso is the tiniest bit larger when posting.
 
@@ -190,7 +202,7 @@ Time to flip the scales, I guess!
 
 Ultem is a dirty yellow colour that feels like plastic; the black accents on this pen work well with the barrel colour. After writing the black cartridge dry that came with the pen, I put in a blue one in and just didn't vibe with it. The next darkest colour I could find was brown, and that seemed to stick (until I wrote that dry, too - I told you it was a guzzler!)
 
-[close up]
+![ensso](/assets/images/dinkie/ensso-nib)
 
 This black coated nib and dehydrated-pee yellow barrel colour needs a dark ink, that's for sure.
 
@@ -200,13 +212,18 @@ The clip perhaps looks a bit flimsy, but it's surprisingly rigid. Thinking back 
 
 Just don't do that, I guess, and you'll be fine?
 
-[clip]
+![Ensso clip](/assets/images/dinkie/ensso-clip.jpeg)
 
 ## Zebra Sarasa Clip
 
 Which leads me on to the non-fountain pen I've been using lately: A pen that isn't just named for its clip, but engineered around it.
 
-[over thames]
+<figure>
+  <div class="image-double">
+    <img src="/assets/images/dinkie/fn-1.jpeg">
+    <img src="/assets/images/dinkie/fn-2.jpeg">
+  </div>
+</figure>
 
 The spring-loaded wire clip of the Zebra Sarasa opens wide enough to swallow an entire pocket notebook, then clamps down with enough grip to survive my pocket acrobatics without leaving battle scars on the cover.
 
