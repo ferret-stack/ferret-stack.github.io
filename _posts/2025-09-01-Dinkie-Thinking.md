@@ -48,7 +48,7 @@ It was that moment I realised just how a fountain pen is indeed a better gift th
 
 That pen is the Conway Stewart 550, affectionately nicknamed "Dinkie". Although, I think that this is one of those cases where the nickname has pretty much become the standard.
 
-![Conway Stewart Dinkie](/assets/images/dinkie/cs-main.jpeg)
+![Conway Stewart Dinkie](/assets/images/dinkie/CS-main.jpeg)
 
 The lineup of pens that would eventually become the Dinkie was first released in 1922 made of vulcanite in a chased black design and without a model number (as was common for pens at the time) and proved to be a major success for Conway Stewart, with the models remaining in production for the next 50 years.
 
