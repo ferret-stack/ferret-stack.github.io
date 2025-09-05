@@ -4,7 +4,7 @@ title: "Dinkie Thinking"
 date: 2025-09-03
 ferret: creative
 category: [pens, stationery]
-tags: [ensso, conway-stewart, wingsung, benu, zebra]
+tags: [Ensso, Conway Stewart, Benu, Wingsung]
 author: Ferret Stack
 ---
 It's been an encouraging two weeks. I wrote the first chapter for a story I'm writing for my nanna (more on her later), completed a 2-day fast, and got some really great mid-week poker study done, which translated to great weekend performance at the tables
@@ -115,7 +115,7 @@ My only gripe with this is sometimes the hooded section will twist when you unca
 
 From understated to overdressed. If the Wingsung 618 is a shy pen, the Benu Grand Sceptre is a pen that runs up to your face and shouts 
 
-<div class="post-content blockquote">I GLOW IN THE DARK!!!!</div>
+> I GLOW IN THE DARK!!!
 
 Not that you wouldn't spot this pen a mile away if it were to run up to you (even in the dark, apparently)
 
