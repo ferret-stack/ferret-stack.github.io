@@ -1,14 +1,14 @@
 {
   "Liverpool": {
-    "elo": 2010,
+    "elo": 2015,
     "rank": 1
   },
   "Arsenal": {
-    "elo": 1996,
+    "elo": 2006,
     "rank": 2
   },
   "Man City": {
-    "elo": 1939,
+    "elo": 1947,
     "rank": 3
   },
   "Chelsea": {
@@ -16,67 +16,67 @@
     "rank": 4
   },
   "Newcastle": {
-    "elo": 1862,
+    "elo": 1867,
     "rank": 5
   },
   "Crystal Palace": {
-    "elo": 1854,
+    "elo": 1849,
     "rank": 6
   },
   "Aston Villa": {
-    "elo": 1846,
+    "elo": 1848,
     "rank": 7
   },
-  "Brighton": {
-    "elo": 1824,
+  "Bournemouth": {
+    "elo": 1827,
     "rank": 8
   },
-  "Bournemouth": {
-    "elo": 1818,
+  "Brighton": {
+    "elo": 1819,
     "rank": 9
   },
-  "Everton": {
-    "elo": 1804,
+  "Spurs": {
+    "elo": 1812,
     "rank": 10
   },
-  "Man Utd": {
-    "elo": 1801,
+  "Everton": {
+    "elo": 1806,
     "rank": 11
   },
   "Brentford": {
-    "elo": 1797,
+    "elo": 1801,
     "rank": 12
   },
-  "Nott'm Forest": {
-    "elo": 1795,
+  "Man Utd": {
+    "elo": 1797,
     "rank": 13
   },
-  "Spurs": {
-    "elo": 1794,
+  "Nott'm Forest": {
+    "elo": 1792,
     "rank": 14
   },
   "Fulham": {
-    "elo": 1778,
+    "elo": 1786,
     "rank": 15
   },
   "West Ham": {
-    "elo": 1739,
+    "elo": 1728,
     "rank": 16
   },
   "Leeds": {
-    "elo": 1730,
+    "elo": 1726,
     "rank": 17
   },
   "Burnley": {
-    "elo": 1720,
+    "elo": 1719,
     "rank": 18
   },
   "Wolves": {
-    "elo": 1716,
+    "elo": 1714,
     "rank": 19
   },
   "Sunderland": {
-    "elo": 1576,
+    "elo": 1585,
     "rank": 20
   }
 }
