@@ -19,7 +19,7 @@ I did not like the box it came in, and though I had significantly upgraded its c
 
 The morning I found the cage empty and the house door ajar, something broke open in my chest. I ran into the street in nothing but underwear, rain soaking through to my skin and the gravel piercing my feet, screaming its name in a banshee's cry into the grey desolate dawn. Three hours I searched, checking under cars, behind dumpsters, anywhere a small body might hide or be hiding. It had to shelter itself from the rain, because I was unable to protect it. Goosebumps on my legs, nipples hard, and my heart breaking. I understood then how completely I had been claimed - not just as an owner, but as something far more desperate. I was its sanctuary, and I had failed.
 
-It saw me before I saw it. Emerging from some plant bed soaked and shivering, just as I was, it ran directly to me with a recognition that felt like coming home and it bit my ankle. Alerting me? Disciplining me? I scooped it up, both of us trembling and hearts mending, I realised that whatever had been broken in its past was also broken in me. 
+It saw me before I saw it. Emerging from some plant bed soaked, dirty, and shivering, just as I was, it ran directly to me with a recognition that felt like coming home and it bit my ankle. Alerting me? Disciplining me? I scooped it up, both of us trembling and hearts mending, I realised that whatever had been broken in its past was also broken in me. 
 
 "You've been on an adventure," I said to it. I could read the reply in its eyes, <em><span style="color:#ff69b4;">'it's only an adventure if I'm with you.'</span></em>
 
