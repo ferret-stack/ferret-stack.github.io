@@ -7,7 +7,7 @@ category: [stories]
 author: Ferret Stack
 ---
 
-It arrived in a cardboard box with holes punched through the sides, already half-tame but wrong somehow. I had saved it from a situation I prefer not to recall, and perhaps that's why the seller had been so eager to let it go. He had three splotches on his nose and would sleep in a perfect spiral, as if following some geometric principle I couldn't grasp. He understood it, and I trusted him that he did.
+It arrived in a cardboard box with holes punched through the sides, anxious but willing. I had saved it from a situation I prefer not to recall, and perhaps that's why the seller had been so eager to let it go. It had three splotches on his nose and would sleep in a perfect spiral, as if following some geometric principle I couldn't grasp. He understood it, and I trusted him that he did.
 
 For weeks it would not play. Real ferrets, I had read, are creatures of boundless energy, but this one moved with a strange economy, each gesture calculated. When I dangled toys before it, it regarded them with what I can only describe as polite bewilderment, the way a diplomat might examine a foreign currency of no use in his own country.
 
@@ -29,6 +29,6 @@ At night, when it curls against my chest, I feel the weight of being someone's e
 
 ---
 
-But now it is gone. Torn from my chest through innocent means - a statement in the contract we shared that could not be escaped. We knew the clause was there, but didn't know how or when it would be enacted.
+But now he is gone. Torn from my arms through innocent means - a statement in the contract we shared that could not be escaped. We knew the clause was there, but didn't know how or when it would be enacted.
 
 He is lost. And so am I.
