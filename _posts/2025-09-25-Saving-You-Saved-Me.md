@@ -30,7 +30,9 @@ I often catch myself speaking to it as if were a person pretending to be an anim
 At night, when it curls against my chest, I feel the weight of being someone's entire universe, and I understand that love and captivity are sometimes indistinguishable.
 
 ---
+<br>
+But now he is gone. Torn from my chest through innocent means - the same force that gives life eventually reclaims it. We knew this ending was written into our beginning, the way winter is promised in every spring leaf. The contract we signed was love, and love's cruelest clause is that it must end. Not through failure or betrayal, but through the simple, devastating fact of being mortal creatures who dare to matter completely to each other.
 
-But now he is gone. Torn from my arms through innocent means - a statement in the contract we shared that could not be escaped. We knew the clause was there, but didn't know how or when it would be enacted.
+The house feels wrong now. I catch myself muttering to him in empty rooms, speaking into a silence that once held soft scratches on hardwood and gentle dooks. The paperwork of grief, I discover, is never-ending. Each day requires new signatures on documents I cannot read, in a language that makes less sense the longer I study it.
 
 He is lost. And so am I.
