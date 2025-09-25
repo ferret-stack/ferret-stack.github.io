@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Saving You Saved Me"
-date: 2023-04-29
+date: 2025-09-25
 ferret: creative
 category: [stories]
 author: Ferret Stack
