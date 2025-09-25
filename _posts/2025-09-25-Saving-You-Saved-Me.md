@@ -27,7 +27,7 @@ It saw me before I saw it. Emerging from some plant bed soaked, dirty, and shive
 
 I often catch myself speaking to it as if were a person pretending to be an animal, rather than the other way round. I have tamed it, and it has tamed me; we are responsible for each other. Though taming suggests a wildness conquered, what we have instead is a mutual bewilderment - two beings who have agreed to a contract neither of us can quite read, bound by the strange gravity of having nowhere else to go.
 
-At night, when it curls against my chest, I feel the weight of being someone's entire universe, and I understand that love and captivity are sometimes indistinguishable, even when the cage door stays open.
+At night, when it curls against my chest, I feel the weight of being someone's entire universe, and I understand that love and captivity are sometimes indistinguishable.
 
 ---
 
