@@ -25,9 +25,9 @@ It saw me before I saw it. Emerging from some plant bed soaked, dirty, and shive
 
 <p style="text-align: center;"><em style="color:#ff69b4;">'it's only an adventure if I'm with you.'</em></p>
 
-I often catch myself speaking to it as if were a person pretending to be an animal, rather than the other way round. I have tamed it, and it has tamed me; we are responsible for each other. Though taming suggests a wildness conquered, what we have instead is a mutual bewilderment - two beings who have agreed to a contract neither of us can quite read, bound by the strange gravity of having nowhere else to go.
+I would often catch myself speaking to it as if were a person pretending to be an animal, rather than the other way round. I have tamed it, and it has tamed me; we are responsible for each other. Though taming suggests a wildness conquered, what we have instead is a mutual bewilderment - two beings who have agreed to a contract neither of us can quite read, bound by the strange gravity of having nowhere else to go.
 
-At night, when it curls against my chest, I feel the weight of being someone's entire universe, and I understand that love and captivity are sometimes indistinguishable.
+At night, curling against my chest, I would feel the weight of being someone's entire universe. It taught me that love and captivity are sometimes indistinguishable.
 
 ---
 <br>
