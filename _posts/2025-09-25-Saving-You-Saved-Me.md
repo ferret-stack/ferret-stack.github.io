@@ -1,12 +1,17 @@
 ---
 layout: post
-title: "Saving You Saved Me"
+title: "If I See Another Lost Pet Poster, I Might Vanish With Them"
 date: 2025-09-25
 ferret: creative
 category: [stories]
 author: Ferret Stack
 ---
+A collection of two short stories about the painfulness of losing a pet
 
+RIP Wesley (27 April 2020 - 29 April 2023)
+RIP Tia (2011 - 01 October 2025)
+
+## Saving You Saved Me
 It arrived in a cardboard box with holes punched through the sides, anxious but willing. I had saved it from a situation I prefer not to recall, and perhaps that's why the seller had been so eager to let it go. It had three splotches on its nose arranged in a triangle and would sleep in a perfect spiral, as if following some geometric principle I couldn't grasp. The pattern made sense to it, and I trusted that understanding.
 
 For weeks it would not play. Real ferrets, I had read, are creatures of boundless energy, but this one moved with a strange economy, each gesture calculated. When I dangled toys before it, it regarded them with what I can only describe as polite bewilderment, the way a diplomat might examine a foreign currency of no use in his own country.
@@ -36,6 +41,23 @@ But now he is gone. Torn from my chest through innocent means - the same force t
 We knew this ending was written into our beginning, the way winter is promised in every spring leaf. The contract we signed was love, and love's cruelest clause is that it must end. Not through failure or betrayal, but through the simple, devastating fact of being mortal creatures who dare to matter completely to each other.
 
 The house feels wrong now. I catch myself muttering to him in empty rooms, speaking into a silence that once held soft scratches on hardwood and delightful dooks. 
+
+## The Architecture of Days
+The cat had been there longer than most of the furniture, longer than the wallpaper, than some of the people
+
+Seventeen years is not measured in time, but the slow and inevitable accumulation of agreements. The house had organised itself around these terms, and we had all signed without question
+
+True; in the beginning there had been negotiations. The cat had strong opinions about what brand of tuna it would eat, whose bed it would doze on at 3pm, and that tickling behind the ear was fine (but the tummy was strictly off limits)
+
+The negotiations, at some point, ceased. We just knew. The agreements became the architecture of our day
+
+But now the veterinarian had stamped the file with a date, and I’m told it is kindness. Perhaps it is. But no one consulted the house, which doesn’t know that the services it had been running for what felt like a lifetime were about to be decommissioned. The conservatory would still reach hellfire temperatures every summer, but will have no one to bask in its heat all day; the clank of the metal tin opener will still echo through the kitchen, but the detective will no longer be investigating
+
+There’s a folder somewhere with all the documentation: the first vet visit, the insurance policy that could not save it. Now filed under “concluded”. But the muscle memory of creeping out of bed so not to wake it, the expectation of weight and warmth at certain hours - these cannot be so neatly archived 
+
+I wish to explain, but how can you say goodbye when there is no language for such a thing? We built our communication on presence, on the simple fact of sharing space and time; a language without words. Only the endless repetition of being here, being here, being here
+
+“For your own good,” I try to convince us both. But it is no good
 
 The paperwork of grief, I discover, is never-ending. Each day requires new signatures on documents I cannot read, in a language that makes less sense the longer I study it.
 
