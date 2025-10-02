@@ -25,9 +25,9 @@ I did not like the box it came in, and though I had significantly upgraded its c
 
 The morning I found the cage empty and the house door ajar, something broke open in my chest. I ran into the street in nothing but underwear, rain soaking through to my skin and the gravel piercing my feet, screaming its name in a banshee's cry into the grey desolate dawn. Three hours I searched, checking under cars, behind dumpsters, anywhere a small body might hide or be hiding. It had to shelter itself from the rain, because I was unable to protect it. Goosebumps on my legs, nipples hard, and my heart breaking. I understood then how completely I had been claimed - not just as an owner, but as something far more desperate. I was its sanctuary, and I had failed.
 
-It saw me before I saw it. Emerging from some plant bed soaked, dirty, and shivering, just as I was. It ran directly to me with a recognition that felt like coming home and it bit my ankle. Alerting me? Disciplining me? I scooped it up, both of us trembling and hearts mending, I realised that whatever had been broken in its past was also broken in me. 
+It saw me before I saw it and emerged from some plant bed soaked, dirty, and shivering. Just as I was. It ran directly to me with a recognition that felt like coming home and it bit my ankle. Alerting me? Disciplining me? I scooped it up, both of us trembling and hearts mending, I realised that whatever had been broken in its past was also broken in me. 
 
-"You've been on an adventure," I said to it. I could read the reply in its eyes
+"You've been on an adventure," I said to it. I could read the reply in its eyes:
 
 <p style="text-align: center;"><em style="color:#ff69b4;">'it's only an adventure if I'm with you.'</em></p>
 
@@ -35,14 +35,17 @@ I would often catch myself speaking to it as if were a person pretending to be a
 
 At night, curling against my chest, I would feel the weight of being someone's entire universe. It taught me that love and captivity are sometimes indistinguishable.
 
----
-<br>
 But now he is gone. Torn from my chest through innocent means - the same force that gives life eventually reclaims it. 
 
 We knew this ending was written into our beginning, the way winter is promised in every spring leaf. The contract we signed was love, and love's cruelest clause is that it must end. Not through failure or betrayal, but through the simple, devastating fact of being mortal creatures who dare to matter completely to each other.
 
 The house feels wrong now. I catch myself muttering to him in empty rooms, speaking into a silence that once held soft scratches on hardwood and delightful dooks. 
 
+The paperwork of grief, I discover, is never-ending. Each day requires new signatures on documents I cannot read, in a language that makes less sense the longer I study it.
+
+He is lost. And so am I.
+
+---
 ## The Architecture of Days
 The cat had been there longer than most of the furniture, longer than the wallpaper, than some of the people
 
@@ -59,7 +62,3 @@ There’s a folder somewhere with all the documentation: the first vet visit, th
 I wish to explain, but how can you say goodbye when there is no language for such a thing? We built our communication on presence, on the simple fact of sharing space and time; a language without words. Only the endless repetition of being here, being here, being here
 
 “For your own good,” I try to convince us both. But it is no good
-
-The paperwork of grief, I discover, is never-ending. Each day requires new signatures on documents I cannot read, in a language that makes less sense the longer I study it.
-
-He is lost. And so am I.
