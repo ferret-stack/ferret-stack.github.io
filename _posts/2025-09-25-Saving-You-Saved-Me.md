@@ -8,7 +8,8 @@ author: Ferret Stack
 ---
 A collection of two short stories about the painfulness of losing a pet
 
-RIP Wesley (27 April 2020 - 29 April 2023)
+---
+RIP Wesley (27 April 2020 - 29 April 2023)<br>
 RIP Tia (2011 - 01 October 2025)
 
 ## Saving You Saved Me
