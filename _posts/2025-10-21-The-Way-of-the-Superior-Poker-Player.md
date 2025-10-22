@@ -11,7 +11,7 @@ This is poker testing you. As it always does.
 
 The question isn't whether you played it correctly. The question is: can you handle it?
 
-Most players can't. They'll rage-quit, punch their desk, post a bad beat story on Reddit about how the poker gods hate them specifically. They'll talk about the site being rigged, about how this "always happens" to them, about how unfair it all is.
+Most players can't. They'll rage-quit, punch their desk, post a bad beat story on Reddit about how the poker gods hate them specifically. They'll talk about the site being rigged, about how this "shit always happens" to them, about how unfair it all is.
 
 They're children screaming at the universe for not bending to their will.
 
