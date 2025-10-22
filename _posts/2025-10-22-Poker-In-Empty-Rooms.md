@@ -31,11 +31,13 @@ They stand in the doorway, deliberating, and the moment passes. The room was emp
 
 The difference between winning players and everyone else isn't that winners see more opportunities. It's that they <em>act</em> on them. They walk through empty rooms with the confidence of someone who knows they belong there.
 
-##You Must Fucking Love This Game
+## You Must Fucking Love This Game
 
 Here's the thing about finding empty rooms: you need to be passionate enough to look for them in the first place.
 
 You need to <em>love</em> poker. Not tolerate it as a side hustle. Not grind it joylessly for volume. You need to be genuinely fascinated by the game - by the patterns, the psychology, the endless branching complexity of human decision-making under uncertainty.
+
+**How YOU can Tame Poker:** [Way of the Superior Poker Player](https://ferret-stack.github.io/Way-of-the-Superior-Poker-Player/)
 
 Passion is what drives you to study when you'd rather be watching Netflix. It's what makes you review hands at 11pm even though you're knackered from your session. It's what transforms poker from a mechanical exercise into something alive - something you approach with curiosity rather than obligation.
 
@@ -49,19 +51,18 @@ This is flow state. This is what separates the craftsmen from the button-clicker
 
 You can't fake passion. You either care enough to see the doors, or you don't. And if you don't, you'll spend your entire career walking past empty rooms while wondering why you're not winning.
 
-##Walking Through with Conviction
+## Walking Through with Conviction
 
 Seeing the empty room is one thing. Walking through it is another.
 
 This requires action-orientation - the ability to recognise an exploit and execute immediately without second-guessing yourself. No deliberation. No hand-wringing. You see the spot, you take it. Done.
 
 <div class="callout">
-        <strong>Example:</strong> You're on the button and a tight regular opens from hijack. You three-bet with A♦9♦. They call. The flop comes K♠7♥2♣ and they check to you.
-        This is an empty room. Their range is capped, they're uncomfortable, and they're going to overfold to aggression across multiple streets. Most players see this and think: "But I only have ace-high. What if they have a king? Should I be betting this combo?"
-        Meanwhile, the winning player has already fired a small C-bet and is planning their turn and river barrels. They're not agonising over whether this specific combo is "supposed" to bet. They're focused on one thing: opponent's range is weak and capped, and relentless pressure will force them to fold too often.
+  <strong>Example:</strong> You're on the button and a tight regular opens from hijack. You three-bet with A♦9♦. They call. The flop comes K♠7♥2♣ and they check to you.
+  This is an empty room. Their range is capped, they're uncomfortable, and they're going to overfold. Most players see this and think: "But I only have ace-high. What if they have a king? Should I be betting this combo?"Meanwhile, the winning player has already fired a small C-bet and is planning their turn and river barrels. They're not agonising over whether this specific combo is "supposed" to bet. They're focused on one thing: opponent's range is weak and capped, and relentless pressure will force them to fold too often.
  </div>
 
- This is the lion in the bushes. Patient, calculated, and absolutely ruthless when the moment arrives. The lion doesn't charge wildly at every antelope that wanders past. It waits. It watches. And when the right target presents itself - isolated, vulnerable, unaware - it strikes with total conviction.
+This is the lion in the bushes. Patient, calculated, and absolutely ruthless when the moment arrives. The lion doesn't charge wildly at every antelope that wanders past. It waits. It watches. And when the right target presents itself - isolated, vulnerable, unaware - it strikes with total conviction.
 
 Compare this to the British soldier running through no-man's land. That's not conviction. That's suicide. That's the player who bluffs every river because they think aggression equals edge. They're action-oriented, sure, but they're not <em>rational</em>. They're charging into machine-gun fire because someone told them to be aggressive.
 
@@ -77,15 +78,15 @@ And crucially, you're not afraid. You're not worried about being "exploited" you
 
  There's an artistry to this that's difficult to describe. When you're playing this way - truly playing, not just executing - the game feels alive. Every decision matters. Every opponent reveals something. Every hand becomes a canvas where you're painting with reads, with timing, with pressure. You're not on autopilot anymore. You're <em>present</em>. You're creating rather than replicating, improvising rather than following scripts. It's the difference between playing an instrument and playing a recording. One is mechanical. The other is music.
 
-##When the Room Isn't Empty
+## When the Room Isn't Empty
 
 Sometimes you open the door and there's someone inside.
 
 You fire your turn probe and they raise you. You triple-barrel and they snap-call with second pair. You set up your beautiful multi-street bluff and run directly into the top of their range.
 
- This happens. When you encounter genuine opposition, you adjust or abort. You recognise this specific opponent is defending better than population and you recalibrate your strategy against them. One defended room doesn't mean all rooms are defended. You note it and move on.
+This happens. When you encounter genuine opposition, you adjust or abort. You recognise this specific opponent is defending better than population and you recalibrate your strategy against them. One defended room doesn't mean all rooms are defended. You note it and move on.
 
-##The Rise Nobody Opposes
+## The Rise Nobody Opposes
 
 Here's what's strange about climbing stakes by exploiting empty rooms: most of the time, nobody tries to stop you.
 
@@ -101,7 +102,7 @@ But you know better. You know you're seeing rooms they can't see. You know you'r
 
  Nobody opposed you. They just... didn't compete.
 
-##The Work Before the Title
+## The Work Before the Title
 
 There's a quote from <em>Atlas Shrugged</em> that captures this perfectly. It's about a character rising through a company, doing work that nobody recognises:
 
@@ -119,6 +120,6 @@ You're playing human poker. Exploit poker. <em>Winning</em> poker.
 
 And when you finally arrive at the stakes you've been working toward, you'll realise something: the title doesn't matter. The recognition doesn't matter. What matters is that you knew the rooms were empty, you had the passion to find them, and you had the conviction to walk through them.
 
-        That's poker mastery. Not theory. Not balance. Not approval.
+That's poker mastery. Not theory. Not balance. Not approval.
 
-        Just empty rooms, and the courage to claim them.
+Just empty rooms, and the courage to claim them.
