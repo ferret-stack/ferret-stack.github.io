@@ -6,8 +6,6 @@ ferret: poker
 author: Ferret Stack
 ---
 
-<body>
-    <article>
         <p>Imagine you're standing in front of a door. Behind it is a room full of money. There's no one guarding the entrance. No one inside to challenge you. The door is unlocked. What's stopping you from walking through?</p>
 
         <p>At the poker table, these moments exist constantly. There's a clarity that comes with recognising them - not euphoria, not magic, just the fresh smell of opportunity that's too good not to take. It's seeing the exact moment when your opponent's range is weak, when the population tendency is exploitable, when the path forward is undefended.</p>
@@ -124,6 +122,3 @@ author: Ferret Stack
         <p>That's poker mastery. Not theory. Not balance. Not approval.</p>
 
         <p>Just empty rooms, and the courage to claim them.</p>
-    </article>
-</body>
-</html>
