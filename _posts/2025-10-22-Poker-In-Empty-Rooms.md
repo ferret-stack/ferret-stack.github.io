@@ -1,89 +1,11 @@
 ---
 layout: post
-title: "Poker in Empty Rooms"
+title: "Poker in Empty Rooms: On Conviction, Passion, and Winning Unchallenged"
 date: 2025-10-21
 ferret: poker
 author: Ferret Stack
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Empty Rooms: On Conviction, Passion, and Winning Unchallenged</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            font-size: 18px;
-            line-height: 1.7;
-            color: #333;
-            background-color: #fff;
-            max-width: 650px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            line-height: 1.2;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-            color: #222;
-        }
-
-        h2 {
-            font-size: 1.75rem;
-            margin-top: 2rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-            color: #222;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            margin-top: 1.75rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-            color: #222;
-        }
-
-        p {
-            margin-bottom: 1.25rem;
-        }
-
-        .callout {
-            background-color: #f6f8fa;
-            border-left: 4px solid #0066cc;
-            padding: 1rem 1.25rem;
-            margin: 1.5rem 0;
-            border-radius: 0 6px 6px 0;
-        }
-
-        .callout p:last-child {
-            margin-bottom: 0;
-        }
-
-        em {
-            font-style: italic;
-        }
-
-        strong {
-            font-weight: 600;
-        }
-
-        blockquote {
-            border-left: 4px solid #0066cc;
-            padding-left: 1.25rem;
-            margin: 1.5rem 0;
-            color: #555;
-            font-style: italic;
-            background-color: #f8f9fa;
-            padding: 1rem 1.25rem;
-            border-radius: 0 6px 6px 0;
-        }
-    </style>
-</head>
 <body>
     <article>
         <h1>The Empty Rooms: On Conviction, Passion, and Winning Unchallenged</h1>
