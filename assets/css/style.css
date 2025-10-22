@@ -29,6 +29,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  margin-bottom: -10px;
   animation: slideDown 0.5s ease;
   padding: 1rem;
 }
@@ -2730,7 +2731,7 @@ a:hover {
 }
 
 .callout {
-    background-color: #f6f8fa;
+    background-color: #FBC7FF;
     border-left: 4px solid #0066cc;
     padding: 1rem 1.25rem;
     margin: 1.5rem 0;
