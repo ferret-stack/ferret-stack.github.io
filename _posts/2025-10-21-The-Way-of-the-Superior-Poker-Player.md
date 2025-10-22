@@ -5,9 +5,6 @@ date: 2025-10-21
 ferret: poker
 author: Ferret Stack
 ---
-
-# Way of the Superior Poker Player
-
 You flop a set of kings. The money goes in on the turn. Your opponent tables pocket aces - they hit their two-outer on the river. You lose a full stack.
 
 This is poker testing you. As it always does.
