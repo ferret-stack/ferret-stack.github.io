@@ -1,168 +1,188 @@
 ---
 layout: post
-title: Player Profiling Beyond HUD Stats
+title: Auto-Fold Charts Created an Army of Fake Regs (And How to Exploit Them)
 date: 2025-10-24
 ferret: poker
 author: Ferret Stack
 ---
-You sit down at a fast-fold table. Three players have 100bb stacks. One has been playing 50 hands, one 500 hands, one 2000 hands. Which one do you want on your left?
+You're at a fast-fold table. Two players show 25/20 stats. Both look like solid regs. One has 100bb after 1000 hands. One has 160bb after 300 hands. Which one is actually solid?
 
-If you're just staring at their VPIP numbers, you're missing crucial information that's sitting right there on your screen. Stack size plus hands played tells you something your HUD stats can't: how this player feels right now.
+If you're just looking at their VPIP and PFR, you can't tell. They both look competent. They both have reasonable, reg-like stats. But one of them is bleeding chips, and one of them is crushing.
 
-This isn't about replacing traditional player profiling. Your opponent's VPIP, PFR, and 3-bet stats are still fundamental. But when you're facing a close decision - should I bluff this river? Should I ISO this limper with a marginal hand? Should I value bet thin here? - the stack trajectory can tip the scales.
+Stack trajectory tells you which is which. And in modern fast-fold poker, this distinction matters more than ever.
 
-Think of it this way: traditional HUD stats are like reading someone's resume. Stack trajectory is like looking at their face right now. Both matter. But one tells you who they are, and the other tells you how they're doing.
+## The Auto-Fold Problem
 
-The most important thing you can learn from this is being able to more easily identify the shitregs from the competent regs.
+GG Poker and other fast-fold platforms have a feature that's made life both easier and more complicated: auto-fold charts. Players can configure these charts to automatically fold certain hands from certain positions. Set it up once, and the client will auto-muck 72o from UTG without you even seeing the hand.
 
-## The Gap in Fast-Fold Profiling
+This sounds convenient. And it is - for the players using them.
 
-Fast-fold poker presents a unique profiling challenge. You're not facing the same opponents hand after hand like you would at a regular table and so information on how a player is playing is at a premium. 
+But here's what it's done to the player pool: it's allowed shit players to play solid pre-flop ranges without actually understanding pre-flop strategy.
 
-While some sites track and present to everyone a player's stats, others do not. For this reason, I think playing fast-fold poker on clients like GGPoker (who do this sort of tracking) makes a lot more sense than on a client where your stats are coming from a smaller sample of times **you** faced them, such as Pokerstars (also, it's not 2005 anymore - feed where the fish play!).
+Before auto-fold charts, weak players would limp J8s from UTG because they "wanted to see a flop" or "felt like playing a hand." Their VPIP would be 35, their PFR would be 8, and you'd know immediately they were a fish. Easy money.
 
-A player with a 27/22 stat line looks like a reasonable reg. But is that player sitting on 100bb after 1000 hands, or 170bb after 200 hands? Those are radically different players in radically different mental states, and you should play against them differently. The former is likely to have a declining red line, while the latter is possibly a more balanced, if not slightly more aggressive, reg.
+Now? That same weak player downloads a decent pre-flop chart, sets up auto-fold, and suddenly their stats look like 27/22. They're opening appropriate hands from appropriate positions. They look exactly like a competent regular.
 
-(Trust me; I'm this reg)
+But they're still shit at poker. They just have a robot handling their pre-flop decisions.
 
-This isn't a crystal ball. You're not going to divine their exact hand from their stack size. But it's a tiebreaker - a small edge that helps you make slightly better decisions in marginal spots. And in fast-fold poker, where you're seeing hundreds of hands per hour, small edges compound quickly.
+Post-flop? They're still making all the same mistakes. They're still over-folding to aggression. They're still not defending properly. They're still playing scared, results-oriented poker. They're still not exploiting anyone.
 
-## The Stack-to-Hands Profiles
+The auto-fold chart makes them look like a reg. The stack trajectory reveals they're not.
 
-Let's break down what different stack trajectories actually mean.
+## The Real Tell: Stack Size After Volume
+
+When you see a player with reg-like stats sitting on 100bb after 1000 hands, you're looking at a losing player. They're down 50bb or more from where they started, which means they're losing at roughly 5bb/100.
+
+If they have reg stats but they're losing, what does that tell you?
+
+It tells you they're a shit reg. They know enough theory to open the right hands pre-flop (or they're using auto-fold charts), but they don't know how to actually win post-flop. More specifically: they're getting exploited, and they're not exploiting back.
+
+The most common leak for shit regs is a declining red line. They're losing big blinds without showdown, which means they're over-folding to aggression. They're getting bluffed off hands. They're checking back when they should be betting. They're folding when they should be calling or raising.
+
+They look like regs. They play like prey.
+
+Meanwhile, the player sitting on 160bb after 300 hands with similar stats? That's a player who's actually winning. They're not just opening the right hands - they're executing post-flop. They're finding the bluffs. They're applying pressure. They're exploiting the pool aggressively.
+
+They're the real reg. And you need to know the difference.
+
+## The Three Types of Regs
 
 <div class="callout">
-<strong>The Bleeder</strong> (1000+ hands, ~100bb stack)
+<strong>The Shit Reg</strong> (100bb or less after 800+ hands, declining red line)
 
-This player has been grinding for hours and has nothing to show for it. They're losing at a high clip. This could mean two things: they're fundamentally bad at poker, or they've been running bad and are now tilted.
+This player looks solid on paper. Their VPIP/PFR suggests competence. But they're bleeding chips.
 
-Either way, you want a piece of this with the aim of making it **even worse** for them.
+If you could see their red line, it would be declining sharply. They're losing money without showdown, which means they're over-folding to aggression. They're the player who folds to your turn probe after they checked back the flop. They're the player who gives up when you triple-barrel. They're the player who never bluffs rivers.
 
-If they're bad, they're likely a calling station (weak players call too much) or a chronic over-folder (weak players also give up too easily). Their VPIP and PFR will be helpful for deducing this of course. If the values have a gap then they're likely a calling station. If they're tighter, they're overfolding to aggression.
+They know theory. They don't execute exploits. They're playing "correctly" by some GTO standard while the entire table exploits them.
 
-<strong>Lean toward:</strong> Value strongly against calling stations and bluff players/bet thinner agains poossibly declining red line players
+<strong>How to exploit:</strong> Attack them relentlessly. Probe turns when they check back flops. Triple-barrel when you sense weakness. ISO them liberally - they'll overfold post-flop even if they defend pre-flop. Don't bother with thin value bets - they're still folding too much. But bluff them constantly - especially multi-street bluffs. They can't handle sustained aggression.
 </div>
 
 <div class="callout">
-<strong>The Heater</strong> (200bb+ stack)
+<strong>The Solid Reg</strong> (120-170bb after 200+ hands)
 
-This player is running hot. They've won big pots recently and their confidence is sky-high. This makes them dangerous in specific ways.
+This is your competent opponent. Their stats look good AND they're actually winning. They're up 20-70bb, which suggests a win rate of 5-15bb/100. They're doing something right.
 
-Heaters defend wider, call lighter, and apply more pressure. They're feeling good about their game and their luck. They'll float flops they shouldn't, call down with marginal hands, and fire big bluffs because "why not; it's been working so far!"
+These players are executing exploits properly. They're finding the folds. They're defending when they should. They're in the zone and playing good poker. Their red line is probably stable or slightly positive - they're not getting pushed around.
 
-The key insight: they're not scared of you. They're not scared of variance. They're in the zone, and that makes them both more creative and more reckless.
-
-<strong>Lean toward:</strong> Straightforward value betting (they'll pay you off), avoiding hero calls (they might actually have it), letting them bluff (they want to). Don't try to bluff them off hands - they're feeling invincible.
+<strong>How to play against:</strong> Respect them, but don't fear them. They're good, but they're not unbeatable. Play straightforward poker. Use your standard exploits. Don't get fancy. Don't try to level them. These are battles of execution, not creativity. If you're a better player, you'll win through superior fundamentals. If you're not, find a different table.
 </div>
 
 <div class="callout">
-<strong>The Grinder</strong> (120-170bb, 200+ hands played)
+<strong>The Crusher</strong> (200bb+ after 1000+ hands)
 
-This is your solid opponent and they're competent, baby! Their stack suggests they're winning at a reasonable rate - not crushing, not bleeding, just grinding effectively.
+This player is destroying the pool. They're up 100bb or more after substantial volume, which means they're winning at 10bb/100 or higher. They're finding every exploit. They're not making mistakes. They're aggressive in the right spots and they're not getting pushed around.
 
-These players are the most balanced and the most difficult to exploit purely based on psychological state. They're not tilted, they're not overconfident, they're just executing.
+These players are rare, but they exist. And when you find one, you need to know it immediately.
 
-It's my belief that these players are the more aggressive regs.
-
-<strong>Lean toward:</strong> Standard exploits based on their stats, respect their competence, don't get fancy. These are battles of execution, not creativity.
+<strong>How to play against:</strong> Avoid them if possible. If you can't avoid them (it's fast-fold, they'll show up randomly), adjust heavily. Play tighter against them. Don't bluff them without good reason. Don't try to out-level them. Minimize your losses and wait for better spots against worse players.
 </div>
 
-## Using This With Your HUD Stats
+## Exploiting the Shit Reg
 
-The magic happens when you combine stack trajectory with traditional stats. The stats tell you WHAT someone does. The stack tells you HOW THEY FEEL about what they're doing.
+The shit reg is everywhere in fast-fold poker. They're the majority of "regs" you'll face at low and mid stakes. And they're incredibly profitable to play against once you identify them.
 
-**Example 1: The 27/22 Regular**
+The beauty is that they look exactly like solid regs if you only check their VPIP and PFR. But the stack trajectory gives them away instantly.
 
-You're facing a player with 27 VPIP and 22 PFR. That's reasonable reg territory - slightly loose, aggressive enough, potentially solid.
+Here's how to exploit them:
 
-But context matters:
+**Attack with bluffs, especially multi-street.** These players can't handle sustained aggression. They'll call the flop, then fold the turn. They'll call the turn, then fold the river. They've been taught to "not pay off" and to "avoid marginal spots," so they fold too much.
 
-- **At 100bb over 1000 hands?** This player is struggling. They might be a reg who's running bad and starting to tilt. They might be a wannabe reg who doesn't have the skills to back up their aggression. Either way, they're exploitable. Their stats look solid, but their results don't. Trust the results.
+When you see a shit reg check back a flop, probe that turn relentlessly. They're capped. They're uncomfortable. They're going to overfold. This is [the empty room](https://ferret-stack.github.io/Poker-In-Empty-Rooms/) - walk through it.
 
-- **At 170bb over 200 hands?** This player is likely solid and in form. They're executing well, they're winning, they're in the zone. Respect them. Play your A-game against them. Don't try to get fancy.
+**ISO them liberally.** When a fish limps and there's a shit reg in the blinds, ISO wider than you normally would. The shit reg knows they're "supposed" to defend, but they're going to play fit-or-fold post-flop. You'll win the pot on the flop or turn more often than you should.
 
-Same stats. Completely different exploitation.
+**Don't value bet thin.** Here's the paradox: shit regs overfold to bluffs but they also overfold to value. They're not calling down light. They're not making hero calls. They're playing scared. So your thin value bets don't work as well as they should. Bluff them instead.
 
-**Example 2: The 40/35 Maniac**
+**Triple-barrel with conviction.** When you start a bluff against a shit reg, follow through. Don't give up on the turn. Don't check the river. They're going to fold if you keep firing. They can't stand the heat.
 
-You're facing a player with 40 VPIP and 35 PFR. That's extremely loose and aggressive.
+The shit reg with declining red line is a gold mine. They're sitting there with their auto-fold charts, opening the right hands, and then bleeding chips post-flop because they don't know how to actually play poker. They're the fake regs. And they're everywhere.
 
-But again, context:
+## Close Decisions: Shit Reg vs. Solid Reg
 
-- **At 100bb over 1000 hands?** This is a losing player. They're either a maniac who can't help themselves, or a calling station who occasionally remembers to bet. Either way, they're hemorrhaging chips. Isolate them relentlessly, value bet thin, and generally print money.
-
-- **At 250bb over 100 hands?** This is a heater having fun. They may not usually be this loose - they're riding a rush and playing every hand because everything's working. They're dangerous short-term. Don't try to bluff them. Wait for a hand and get paid.
-
-The stats tell you they're loose. The stack tells you WHY they're loose, and that determines how you exploit them.
-
-## Close Decision Tiebreakers
-
-This is where stack trajectory earns its keep - in the marginal spots where you're genuinely unsure what to do.
+This is where stack trajectory becomes invaluable. You're facing a marginal decision, and you're not sure if your opponent is a real reg or a fake one. Check their stack.
 
 **River Bluff Decision**
 
-You have a marginal bluff candidate on the river. Could work, might not. It's close.
+You have a marginal bluff candidate on the river. Your opponent has 26/21 stats - looks like a reg. Do you bluff?
 
-Your opponent has reasonable stats but you're not sure if they're over-folding or defending properly. You check their stack:
+Check their stack:
+- **100bb after 900 hands?** They're a shit reg. Their red line is bleeding. They're overfolds. Send the bluff.
+- **155bb after 250 hands?** They're a solid reg who's executing well. They might be defending this spot properly. Check instead.
 
-- **1000 hands at 100bb (The Bleeder)?** Their red line is likely declining - they're losing chips without showdown, which means they're over-folding to aggression. Send the bluff.
+Same stats. Different stack trajectory. Different decision.
 
-- **200 hands at 160bb (The Grinder)?** They're probably defending reasonably well and in a good mental state. Check instead. Don't turn your hand into a bluff against someone who's executing well.
+**ISO Decision with QJs**
 
-The stack trajectory tipped a 50/50 decision into a clear choice.
+Fish limps, there's a reg in the big blind with solid-looking stats. You're on the button with QJs. Do you ISO?
 
-**Isolation Decision**
+Check the reg's stack:
+- **100bb after 700 hands?** They're struggling. Even if they defend pre-flop (they might, they've read that they should), they're going to play scared post-flop. ISO liberally.
+- **170bb after 400 hands?** They're winning and probably defending well. Be more selective. QJs is marginal here - maybe just call and see a flop.
 
-You're on the button with QJs. A fish limps. There's a solid-looking regular in the big blind with decent stats. Do you ISO?
+**Turn Probe Decision**
 
-In theory, it depends on the reg's defend-versus-ISO frequency, which you don't have reliable data on. So you check their stack:
+Reg opens, you call in position. Flop comes low and they check. Do you probe?
 
-- **100bb over 800 hands?** They're struggling. They're probably not defending optimally. ISO more liberally - they're likely to overfold or play fit-or-fold post-flop.
+Check their stack:
+- **100bb after 1000 hands?** Absolutely. They're a shit reg who's checking back too much and then overfolding to aggression. This is textbook empty room exploitation.
+- **145bb after 300 hands?** They might actually be slow-playing or have a solid check-back range. Proceed more carefully.
 
-- **180bb over 300 hands?** They're in form and probably defending well. Be more selective. QJs is a marginal ISO here - maybe just call and see a flop.
+The stack trajectory tells you whether you're facing a real reg or a fake one. And that determines your entire strategy.
 
-Again, small edge. But these decisions come up constantly in fast-fold, and the cumulative effect is massive.
+## Secondary Profiles (The Others)
 
-**Thin Value Decision**
+While the focus here is on identifying shit regs from solid regs, you'll encounter other player types worth mentioning briefly.
 
-You have top pair, weak kicker on the river. It's a thin value spot. Could bet, could check. Genuinely close.
+**The Heater (200bb+ stack, fewer hands played)**
 
-Your opponent's stats don't give you a clear answer. You check their stack:
+This could be a solid reg running hot, or a fish who's hit some big hands. Either way, they're confident and loose. They'll defend wider, call lighter, and apply more pressure. Play straightforward against them - value bet when you have it, but don't try to bluff them off hands.
 
-- **220bb deep (The Heater)?** Bet it. They're feeling good, they're calling lighter than usual, they're not going to fold a pair. Get value.
+**The Maniac (40/35 stats at any stack size)**
 
-- **100bb at 1200 hands (The Bleeder)?** Now it depends. If they're a calling station type (which many bleeders are), bet it. If they're a tilt-bluffer who's spewy but folds when called, maybe check. You need a bit more information. But at minimum, the stack trajectory tells you to think carefully about which type of bleeder they are.
+These are obviously exploitable. If they're at 100bb after 1000 hands, they're a spewy fish. If they're at 200bb after 100 hands, they're a heater having fun. Either way, call them down lighter and value bet relentlessly.
 
-## Quick Glance Psychology
+**The Fresh Stack (100bb, <50 hands)**
 
-The beauty of this approach is that it takes seconds to execute. Before any major decision, glance at their stack and their hands played. That's it.
+Unknown. They either just sat down or just reloaded. No assumptions yet. Play default strategy until you have more information.
 
-You're not making radical strategy changes. You're not abandoning your fundamentals. You're just tipping 55/45 decisions into 60/40 decisions. You're adding a small percentage point of edge to marginal spots.
+But really, the game is about the regs. Because at fast-fold, especially at stakes like 50NL to 200NL, the majority of your opponents are going to be "regs" of some variety. And most of them are shit regs masquerading as solid ones.
 
-And in fast-fold poker, where you're seeing 300-400 hands per hour, these small edges compound ferociously. Over a session, you're making dozens of slightly better decisions. Over a month, that's hundreds or thousands of slightly better decisions. That's the difference between a 3bb/100 winner and a 5bb/100 winner.
+Stack trajectory lets you see through the masquerade instantly.
 
-The information is right there on your screen. Most players ignore it completely. They stare at VPIP and PFR and call it a day. You can do better.
+## The Aggressive Winner vs. The Timid Loser
 
-### The Hot/Cold Indicators
+Here's the final insight: the player sitting at 150bb after 300 hands isn't just winning - they're winning aggressively.
 
-GG Poker provides temperature indicators next to player stats - a little flame icon for "hot" players and a snowflake for "cold" players. These appear when someone's recently won or lost significant pots.
+Think about it. To build your stack from 100bb to 150bb in 300 hands, you need to be winning pots without showdown. You need to be taking down pots with aggression. You need to be bluffing successfully, applying pressure, and forcing folds.
 
-This is useful confirmation of what the stack size already suggests. A cold indicator means they've recently lost big. They might be steaming, or they might be scared. A hot indicator means they've recently won big - they're confident and loose.
+This player's red line is probably climbing. They're winning chips through aggression, not just by waiting for big hands and getting paid. They're the predator.
 
-Don't overthink these. They're just another data point confirming the psychological state you've already inferred from their stack trajectory. Cold player with declining stack? Definitely struggling. Hot player with growing stack? Definitely on a heater.
+Meanwhile, the shit reg at 100bb after 1000 hands? Their red line is bleeding. They're losing chips through passivity. They're checking when they should bet. They're folding when they should call or raise. They're the prey.
 
-Useful, but not revolutionary. The stack size and hands played tell you most of what you need to know.
+Same stats. Completely different mentalities. Completely different results.
+
+The aggressive winner is attacking empty rooms. The timid loser is getting attacked in theirs.
+
+You want to emulate the former. You want to exploit the latter.
 
 ---
 
-Traditional HUD stats are like reading someone's resume. You learn their qualifications, their experience, their general approach to the job. Stack trajectory is like looking at their face right now - are they confident? Exhausted? Frustrated? Energized?
+Traditional HUD stats are like reading someone's resume. You see their qualifications, their general approach, their style on paper. Stack trajectory is like looking at their face right now - are they winning or losing? Are they confident or scared? Are they aggressive or timid?
 
-In fast-fold poker, where your historical data on any individual player is limited, this real-time psychological information becomes even more valuable. You can't build a 2000-hand sample on someone when the player pool rotates every hand. But you can instantly see that they've been playing 1500 hands and are sitting on a short stack, or that they have 200 hands played and a massive stack.
+In fast-fold poker, where auto-fold charts let weak players masquerade as competent regs, this real-time information becomes critical. A 27/22 stat line means nothing without context. But a 27/22 at 100bb after 1000 hands? That's a shit reg with a declining red line who's getting exploited post-flop despite playing "solid" pre-flop.
 
-This isn't a replacement for solid fundamentals. You still need to understand ranges, equity, board textures, population tendencies. But once you have those fundamentals down, stack trajectory gives you a sharper edge in marginal spots.
+That's a player you attack relentlessly.
 
-The best players gather every bit of exploitable information available to them. They don't just look at VPIP and call it a day. They're synthesizing stack sizes, bet timings, table dynamics, and their own reads into a complete picture of how to maximally exploit each opponent.
+The best players don't just look at stats. They synthesize every piece of available information - stack size, hands played, bet timings, table dynamics - into a complete picture of who's actually winning and who's just pretending to be a reg.
 
-The stack trajectory information is sitting right there on your screen. Most players never even glance at it.
+Most "regs" at your stakes are shit regs. They look competent. They have reasonable stats. They might even talk a good game. But they're bleeding chips because they don't execute exploits. They play scared. They overfold. Their red lines are declining.
 
-You can be different.
+Stack trajectory reveals them instantly.
+
+The information is sitting right there on your screen. Most players never even glance at it. They see 26/20 stats and assume they're facing a solid opponent.
+
+You can be different. You can see through the masquerade.
+
+And you can exploit them mercilessly.
