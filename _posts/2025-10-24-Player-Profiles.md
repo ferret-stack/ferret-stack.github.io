@@ -13,15 +13,17 @@ This isn't about replacing traditional player profiling. Your opponent's VPIP, P
 
 Think of it this way: traditional HUD stats are like reading someone's resume. Stack trajectory is like looking at their face right now. Both matter. But one tells you who they are, and the other tells you how they're doing.
 
+The most important thing you can learn from this is being able to more easily identify the shitregs from the competent regs.
+
 ## The Gap in Fast-Fold Profiling
 
-Fast-fold poker - Rush & Cash on GG, Zone on Ignition, whatever your site calls it - presents a unique profiling challenge. You're not facing the same opponents hand after hand like you would at a regular table. The guy you just stacked isn't going to be in the very next hand seeking revenge. The player pool is constantly rotating.
+Fast-fold poker presents a unique profiling challenge. You're not facing the same opponents hand after hand like you would at a regular table and so information on how a player is playing is at a premium. 
 
-This means your sample sizes on individual players stay small. You might have 50 hands on someone. Maybe 100 if you've been grinding for hours. That's not nothing - 50 hands gives you a rough sense of VPIP and PFR - but it's not enough for granular reads on their 3-bet defense or their river bluff frequency.
+While some sites track and present to everyone a player's stats, others do not. For this reason, I think playing fast-fold poker on clients like GGPoker (who do this sort of tracking) makes a lot more sense than on a client where your stats are coming from a smaller sample of times **you** faced them, such as Pokerstars (also, it's not 2005 anymore - feed where the fish play!).
 
-What you DO have immediately available is their stack size and how many hands they've played this session. This information updates in real-time and gives you psychological context that stats alone can't provide.
+A player with a 27/22 stat line looks like a reasonable reg. But is that player sitting on 100bb after 1000 hands, or 170bb after 200 hands? Those are radically different players in radically different mental states, and you should play against them differently. The former is likely to have a declining red line, while the latter is possibly a more balanced, if not slightly more aggressive, reg.
 
-A player with a 27/22 stat line looks like a reasonable reg. But is that player sitting on 100bb after 1000 hands, or 170bb after 200 hands? Those are radically different players in radically different mental states, and you should play against them differently.
+(Trust me; I'm this reg)
 
 This isn't a crystal ball. You're not going to divine their exact hand from their stack size. But it's a tiebreaker - a small edge that helps you make slightly better decisions in marginal spots. And in fast-fold poker, where you're seeing hundreds of hands per hour, small edges compound quickly.
 
@@ -32,15 +34,13 @@ Let's break down what different stack trajectories actually mean.
 <div class="callout">
 <strong>The Bleeder</strong> (1000+ hands, ~100bb stack)
 
-This player has been grinding for hours and has nothing to show for it. They're losing at 5bb/100 or worse. This could mean two things: they're fundamentally bad at poker, or they've been running bad and are now tilted.
+This player has been grinding for hours and has nothing to show for it. They're losing at a high clip. This could mean two things: they're fundamentally bad at poker, or they've been running bad and are now tilted.
 
-Either way, you want a piece of this.
+Either way, you want a piece of this with the aim of making it **even worse** for them.
 
-If they're bad, they're likely a calling station (weak players call too much) or a chronic over-folder (weak players also give up too easily). Check their red line if you can - if it's declining sharply, they're losing big blinds without showdown, which suggests overfolding to aggression.
+If they're bad, they're likely a calling station (weak players call too much) or a chronic over-folder (weak players also give up too easily). Their VPIP and PFR will be helpful for deducing this of course. If the values have a gap then they're likely a calling station. If they're tighter, they're overfolding to aggression.
 
-If they're tilted, they're either going to be punting chips around with wild bluffs, or they've shut down completely and are playing scared.
-
-<strong>Lean toward:</strong> More bluffs (especially if red line is declining), thin value bets, liberal isolation. They're a prime target.
+<strong>Lean toward:</strong> Value strongly against calling stations and bluff players/bet thinner agains poossibly declining red line players
 </div>
 
 <div class="callout">
@@ -48,7 +48,7 @@ If they're tilted, they're either going to be punting chips around with wild blu
 
 This player is running hot. They've won big pots recently and their confidence is sky-high. This makes them dangerous in specific ways.
 
-Heaters defend wider, call lighter, and apply more pressure. They're feeling good about their game and their luck. They'll float flops they shouldn't, call down with marginal hands, and fire big bluffs because "why not, it's been working."
+Heaters defend wider, call lighter, and apply more pressure. They're feeling good about their game and their luck. They'll float flops they shouldn't, call down with marginal hands, and fire big bluffs because "why not; it's been working so far!"
 
 The key insight: they're not scared of you. They're not scared of variance. They're in the zone, and that makes them both more creative and more reckless.
 
@@ -58,21 +58,13 @@ The key insight: they're not scared of you. They're not scared of variance. They
 <div class="callout">
 <strong>The Grinder</strong> (120-170bb, 200+ hands played)
 
-This is your solid opponent. They're either a competent regular or a recreational player who's currently in the zone and playing good poker. Their stack suggests they're winning at a reasonable rate - not crushing, not bleeding, just grinding effectively.
+This is your solid opponent and they're competent, baby! Their stack suggests they're winning at a reasonable rate - not crushing, not bleeding, just grinding effectively.
 
 These players are the most balanced and the most difficult to exploit purely based on psychological state. They're not tilted, they're not overconfident, they're just executing.
 
+It's my belief that these players are the more aggressive regs.
+
 <strong>Lean toward:</strong> Standard exploits based on their stats, respect their competence, don't get fancy. These are battles of execution, not creativity.
-</div>
-
-<div class="callout">
-<strong>The Fresh Stack</strong> (100bb, <50 hands played)
-
-This player either just sat down or just reloaded after busting. You don't know which, and you don't know their current mental state.
-
-If they just sat down, they're a complete unknown. If they just reloaded, they might be tilted or they might have shaken it off. You need more information.
-
-<strong>Lean toward:</strong> Default strategies based on population tendencies until you gather more data. Don't make assumptions.
 </div>
 
 ## Using This With Your HUD Stats
@@ -99,7 +91,7 @@ But again, context:
 
 - **At 100bb over 1000 hands?** This is a losing player. They're either a maniac who can't help themselves, or a calling station who occasionally remembers to bet. Either way, they're hemorrhaging chips. Isolate them relentlessly, value bet thin, and generally print money.
 
-- **At 250bb over 100 hands?** This is a heater having fun. They're not usually this loose - they're riding a rush and playing every hand because everything's working. They're dangerous short-term. Don't try to bluff them. Wait for a hand and get paid.
+- **At 250bb over 100 hands?** This is a heater having fun. They may not usually be this loose - they're riding a rush and playing every hand because everything's working. They're dangerous short-term. Don't try to bluff them. Wait for a hand and get paid.
 
 The stats tell you they're loose. The stack tells you WHY they're loose, and that determines how you exploit them.
 
