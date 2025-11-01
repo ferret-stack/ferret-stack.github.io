@@ -187,8 +187,8 @@
     "form": {
       "elo_change_last_5": 210,
       "elo_change_last_10": -40,
-      "trend": "improving",
-      "form_rating": 10
+      "trend": "declining",
+      "form_rating": 4.1
     }
   },
   "Wolves": {
