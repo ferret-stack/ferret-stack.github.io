@@ -466,14 +466,14 @@ function calculateOdds() {
   let homeWinProb, drawProb, awayWinProb;
   if (homeElo > awayElo) {
     // Home team is stronger
-    homeWinProb = bandData.home_win_pct;
+    homeWinProb = bandData.stronger_win_pct;
     drawProb = bandData.draw_pct;
-    awayWinProb = bandData.away_win_pct;
+    awayWinProb = bandData.weaker_win_pct;
   } else {
-    // Away team is stronger (flip probabilities)
-    homeWinProb = bandData.away_win_pct;
+    // Away team is stronger (so home team is weaker)
+    homeWinProb = bandData.weaker_win_pct;
     drawProb = bandData.draw_pct;
-    awayWinProb = bandData.home_win_pct;
+    awayWinProb = bandData.stronger_win_pct;
   }
 
   // Update probabilities
