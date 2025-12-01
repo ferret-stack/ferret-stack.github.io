@@ -214,5 +214,29 @@
       "trend": "improving",
       "form_rating": 8.2
     }
+  },
+    "Man City": {
+    "last_10_avg_goals_for": 1.9,
+    "last_10_avg_goals_against": 0.9,
+    "last_10_avg_booking_points": 0,
+    "season_avg_booking_points": 33,
+    "form": {
+      "elo_change_last_5": 38,
+      "elo_change_last_10":48 ,
+      "trend": "improving",
+      "form_rating": 7
+    }
+  },
+    "Liverpool": {
+    "last_10_avg_goals_for": 1.3,
+    "last_10_avg_goals_against":1.3 ,
+    "last_10_avg_booking_points":0 ,
+    "season_avg_booking_points": 0,
+    "form": {
+      "elo_change_last_5": -19,
+      "elo_change_last_10": -24,
+      "trend": "declining" ,
+      "form_rating": 3.2
+    }
   }
 }
