@@ -1,114 +1,114 @@
 {
   "Arsenal": {
-    "elo": 1985,
+    "elo": 2037,
     "rank": 1
   },
   "Man City": {
-    "elo": 1978,
+    "elo": 2003,
     "rank": 2
   },
   "Liverpool": {
-    "elo": 1928,
+    "elo": 1957,
     "rank": 3
   },
-  "Spurs": {
-    "elo": 1883,
+  "Chelsea": {
+    "elo": 1921,
     "rank": 4
   },
-  "Chelsea": {
-    "elo": 1869,
+  "Aston Villa": {
+    "elo": 1907,
     "rank": 5
   },
-  "Nott'm Forest": {
-    "elo": 1843,
+  "Newcastle": {
+    "elo": 1904,
     "rank": 6
   },
-  "Brentford": {
-    "elo": 1834,
+  "Brighton": {
+    "elo": 1879,
     "rank": 7
   },
-  "Brighton": {
-    "elo": 1833,
+  "Crystal Palace": {
+    "elo": 1873,
     "rank": 8
   },
-  "Aston Villa": {
-    "elo": 1828,
+  "Brentford": {
+    "elo": 1855,
     "rank": 9
   },
   "Man Utd": {
-    "elo": 1827,
+    "elo": 1847,
     "rank": 10
   },
-  "Crystal Palace": {
-    "elo": 1819,
+  "Spurs": {
+    "elo": 1832,
     "rank": 11
   },
-  "Newcastle": {
-    "elo": 1817,
+  "Bournemouth": {
+    "elo": 1815,
     "rank": 12
   },
-  "Bournemouth": {
-    "elo": 1758,
+  "Sunderland": {
+    "elo": 1813,
     "rank": 13
   },
-  "Fulham": {
-    "elo": 1751,
+  "Everton": {
+    "elo": 1806,
     "rank": 14
   },
-  "West Ham": {
-    "elo": 1745,
+  "Fulham": {
+    "elo": 1802,
     "rank": 15
   },
-  "Everton": {
-    "elo": 1716,
+  "Nott'm Forest": {
+    "elo": 1788,
     "rank": 16
   },
-  "Leeds": {
-    "elo": 1714,
+  "West Ham": {
+    "elo": 1765,
     "rank": 17
   },
-  "Wolves": {
-    "elo": 1673,
+  "Luton": {
+    "elo": 1687,
     "rank": 18
   },
-  "Sunderland": {
-    "elo": 1642,
+  "Ipswich": {
+    "elo": 1679,
     "rank": 19
   },
-  "Burnley": {
-    "elo": 1641,
+  "West Brom": {
+    "elo": 1679,
     "rank": 20
   },
   "Leicester": {
-    "elo": 1639,
+    "elo": 1674,
     "rank": 21
   },
-  "West Brom": {
-    "elo": 1552,
+  "Wolves": {
+    "elo": 1674,
     "rank": 22
   },
-  "Luton": {
-    "elo": 1544,
+  "Leeds": {
+    "elo": 1671,
     "rank": 23
   },
-  "Ipswich": {
-    "elo": 1532,
+  "Burnley": {
+    "elo": 1666,
     "rank": 24
   },
-  "Southampton": {
-    "elo": 1524,
+  "Watford": {
+    "elo": 1643,
     "rank": 25
   },
   "Norwich": {
-    "elo": 1512,
+    "elo": 1642,
     "rank": 26
   },
-  "Watford": {
-    "elo": 1508,
+  "Sheffield Utd": {
+    "elo": 1570,
     "rank": 27
   },
-  "Sheffield Utd": {
-    "elo": 1484,
+  "Southampton": {
+    "elo": 1563,
     "rank": 28
   }
 }
