@@ -499,30 +499,27 @@ function calculateOdds() {
     document.getElementById('noOddsMessage').style.display = 'none';
 
     const bookOdds = fixture.bookmaker_odds;
-
-    // Home
-    if (bookOdds.home) {
-      document.getElementById('bookHomeOdds').textContent = bookOdds.home.toFixed(2);
-      const impliedProb = 1 / bookOdds.home;
-      const edge = (homeWinProb - impliedProb) * 100;
-      updateValueIndicator('homeValue', edge);
-    }
-
-    // Draw
-    if (bookOdds.draw) {
-      document.getElementById('bookDrawOdds').textContent = bookOdds.draw.toFixed(2);
-      const impliedProb = 1 / bookOdds.draw;
-      const edge = (drawProb - impliedProb) * 100;
-      updateValueIndicator('drawValue', edge);
-    }
-
-    // Away
-    if (bookOdds.away) {
-      document.getElementById('bookAwayOdds').textContent = bookOdds.away.toFixed(2);
-      const impliedProb = 1 / bookOdds.away;
-      const edge = (awayWinProb - impliedProb) * 100;
-      updateValueIndicator('awayValue', edge);
-    }
+  
+  // Home
+  if (bookOdds.home) {
+    document.getElementById('bookHomeOdds').textContent = bookOdds.home.toFixed(2);
+    const edge = ((homeWinProb * bookOdds.home) - 1) * 100;
+    updateValueIndicator('homeValue', edge);
+  }
+  
+  // Draw
+  if (bookOdds.draw) {
+    document.getElementById('bookDrawOdds').textContent = bookOdds.draw.toFixed(2);
+    const edge = ((drawProb * bookOdds.draw) - 1) * 100;
+    updateValueIndicator('drawValue', edge);
+  }
+  
+  // Away
+  if (bookOdds.away) {
+    document.getElementById('bookAwayOdds').textContent = bookOdds.away.toFixed(2);
+    const edge = ((awayWinProb * bookOdds.away) - 1) * 100;
+    updateValueIndicator('awayValue', edge);
+  }
   } else {
     // Hide bookmaker odds
     document.getElementById('homeBookmaker').style.display = 'none';
