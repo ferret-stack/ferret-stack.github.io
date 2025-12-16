@@ -126,6 +126,7 @@ layout: default
               <div class="value-indicator" id="awayValue">-</div>
             </div>
           </div>
+          <h4 id="venueDisplay">🏟️ Home Advantage = Loading...</h4>
         </div>
         <div id="noOddsMessage" style="display:none; text-align:center; margin-top:10px; color:#666;">
           Bookmaker odds not available for this fixture
@@ -213,7 +214,7 @@ layout: default
       <div class="poisson-table">
         <h3>Poisson Score Distribution</h3>
         <div id="poissonGrid" class="poisson-grid">
-          <!-- Populated by JavaScript -->
+          <!-- Populated by Java -->
         </div>
       </div>
     </div>
@@ -274,6 +275,7 @@ let teamStats = {};
 let h2hRecords = {};
 let eloChart = null;
 let evThreshold = 5;
+let venueAdjustment = {};
 
 // Load all data on page load
 async function loadAllData() {
@@ -287,7 +289,8 @@ async function loadAllData() {
       fetch('/assets/data/upcoming_fixtures.json'),
       fetch('/assets/data/referee_stats.json'),
       fetch('/assets/data/team_stats.json'),
-      fetch('/assets/data/h2h_records.json')
+      fetch('/assets/data/h2h_records.json'),
+      fetch('/assets/data/venue_adjustment.json')
     ]);
 
     // Parse JSON data
@@ -299,6 +302,7 @@ async function loadAllData() {
     refereeStats = await responses[5].json();
     teamStats = await responses[6].json();
     h2hRecords = await responses[7].json();
+    venueAdjustment = await responses[8].json();
 
     // Initialize page
     initializePage();
@@ -329,6 +333,38 @@ function initializePage() {
 
   // Load upcoming fixtures
   loadUpcomingFixtures();
+}
+
+function getVenueAdjustedProbabilities(homeElo, awayElo, bandData) {
+  const homeMult = venueAdjustment.home_multiplier || 1.11;
+  const awayMult = venueAdjustment.away_multiplier || 0.89;
+  
+  const isStrongerHome = homeElo >= awayElo;
+  
+  let strongerAdj, weakerAdj, drawAdj;
+  
+  if (isStrongerHome) {
+    strongerAdj = bandData.stronger_win_pct * homeMult;
+    weakerAdj = bandData.weaker_win_pct * awayMult;
+    drawAdj = bandData.draw_pct * 0.95;
+  } else {
+    strongerAdj = bandData.stronger_win_pct * awayMult;
+    weakerAdj = bandData.weaker_win_pct * homeMult;
+    drawAdj = bandData.draw_pct * 1.05;
+  }
+  
+  // Normalize
+  const total = strongerAdj + weakerAdj + drawAdj;
+  strongerAdj /= total;
+  weakerAdj /= total;
+  drawAdj /= total;
+  
+  // Map to home/away
+  if (isStrongerHome) {
+    return { homeWin: strongerAdj, draw: drawAdj, awayWin: weakerAdj };
+  } else {
+    return { homeWin: weakerAdj, draw: drawAdj, awayWin: strongerAdj };
+  }
 }
 
 function populateTeamDropdowns() {
@@ -462,19 +498,11 @@ function calculateOdds() {
   document.getElementById('eloBand').textContent = `Band ${eloBand}: ${bandData.range}`;
   document.getElementById('bandGames').textContent = `Based on ${bandData.total_games} games`;
 
-  // Calculate probabilities based on who is stronger
-  let homeWinProb, drawProb, awayWinProb;
-  if (homeElo > awayElo) {
-    // Home team is stronger
-    homeWinProb = bandData.stronger_win_pct;
-    drawProb = bandData.draw_pct;
-    awayWinProb = bandData.weaker_win_pct;
-  } else {
-    // Away team is stronger (so home team is weaker)
-    homeWinProb = bandData.weaker_win_pct;
-    drawProb = bandData.draw_pct;
-    awayWinProb = bandData.stronger_win_pct;
-  }
+  // Calculate probabilities with venue adjustment
+  const adjustedProbs = getVenueAdjustedProbabilities(homeElo, awayElo, bandData);
+  let homeWinProb = adjustedProbs.homeWin;
+  let drawProb = adjustedProbs.draw;
+  let awayWinProb = adjustedProbs.awayWin;
 
   // Update probabilities
   document.getElementById('homeWinProb').textContent = `${(homeWinProb * 100).toFixed(1)}%`;
@@ -550,6 +578,16 @@ function calculateOdds() {
 
   // Update ELO chart
   updateEloChart();
+
+  // Update venue info display
+  if (venueAdjustment.home_multiplier) {
+    document.getElementById('venueInfo').style.display = 'block';
+    document.getElementById('homeBoost').textContent = `+${((venueAdjustment.home_multiplier - 1) * 100).toFixed(0)}%`;
+    document.getElementById('awayPenalty').textContent = `-${((1 - venueAdjustment.away_multiplier) * 100).toFixed(0)}%`;
+    document.getElementById('venueSampleSize').textContent = `${venueAdjustment.sample_size.toLocaleString()} matches`;
+  }
+  // Display Home advantage
+  document.getElementById('venueDisplay').textContent = `🏟️ Home Advantage = +${((venueAdjustment.home_multiplier - 1) * 100).toFixed(0)}%`;
 
   // Show results
   document.getElementById('resultsSection').style.display = 'block';
