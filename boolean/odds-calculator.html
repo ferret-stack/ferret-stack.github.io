@@ -579,13 +579,6 @@ function calculateOdds() {
   // Update ELO chart
   updateEloChart();
 
-  // Update venue info display
-  if (venueAdjustment.home_multiplier) {
-    document.getElementById('venueInfo').style.display = 'block';
-    document.getElementById('homeBoost').textContent = `+${((venueAdjustment.home_multiplier - 1) * 100).toFixed(0)}%`;
-    document.getElementById('awayPenalty').textContent = `-${((1 - venueAdjustment.away_multiplier) * 100).toFixed(0)}%`;
-    document.getElementById('venueSampleSize').textContent = `${venueAdjustment.sample_size.toLocaleString()} matches`;
-  }
   // Display Home advantage
   document.getElementById('venueDisplay').textContent = `🏟️ Home Advantage = +${((venueAdjustment.home_multiplier - 1) * 100).toFixed(0)}%`;
 
