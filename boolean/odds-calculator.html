@@ -317,12 +317,12 @@ async function loadAllData() {
 function initializePage() {
   // Update last updated date and total matches
   const today = new Date();
-  document.getElementById('updateDate').textContent = today.toLocaleDateString('en-GB', {
+  document.getElementById('updateDate').textContent = new Date(venueAdjustment.last_updated).toLocaleDateString('en-GB', {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
   });
-  document.getElementById('totalMatches').textContent = matchesData.length;
+  document.getElementById('totalMatches').textContent = venueAdjustment.sample_size;
 
   // Set date range for chart (default last 2 years)
   document.getElementById('chartStartDate').value = new Date(today.getFullYear() - 2, today.getMonth(), today.getDate()).toISOString().split('T')[0];
