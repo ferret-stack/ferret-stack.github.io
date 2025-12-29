@@ -1,11 +1,11 @@
 {
   "home_multiplier": 1.102,
-  "away_multiplier": 0.899,
-  "home_win_rate": 0.6057,
-  "away_win_rate": 0.494,
-  "combined_rate": 0.5494,
-  "sample_size": 1993,
-  "stronger_home_games": 989,
-  "stronger_away_games": 1004,
-  "last_updated": "2025-12-23"
+  "away_multiplier": 0.9,
+  "home_win_rate": 0.6056,
+  "away_win_rate": 0.4945,
+  "combined_rate": 0.5497,
+  "sample_size": 2003,
+  "stronger_home_games": 994,
+  "stronger_away_games": 1009,
+  "last_updated": "2025-12-29"
 }
