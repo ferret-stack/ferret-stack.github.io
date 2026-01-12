@@ -166,5 +166,77 @@
       "btts_yes": 1.88,
       "btts_no": 1.8
     }
+  },
+  {
+    "home_team": "Wolves",
+    "away_team": "Newcastle",
+    "date": "2026-01-18",
+    "time": "14:00",
+    "game_id": "e15eb2362921b16a6b6a0397ce607a11",
+    "bookmaker_odds": {
+      "home": 4.44,
+      "draw": 3.85,
+      "away": 1.73,
+      "over_05": 1.03,
+      "under_05": 12.25,
+      "over_15": 1.19,
+      "under_15": 4.2,
+      "over_25": 1.69,
+      "under_25": 2.12,
+      "over_35": 2.68,
+      "under_35": 1.41,
+      "over_45": 4.9,
+      "under_45": 1.14,
+      "btts_yes": 1.64,
+      "btts_no": 2.11
+    }
+  },
+  {
+    "home_team": "Aston Villa",
+    "away_team": "Everton",
+    "date": "2026-01-18",
+    "time": "16:30",
+    "game_id": "80b312e80c4c6e8f267a99606665ac8c",
+    "bookmaker_odds": {
+      "home": 1.66,
+      "draw": 3.77,
+      "away": 5.07,
+      "over_05": 1.05,
+      "under_05": 9.5,
+      "over_15": 1.28,
+      "under_15": 3.4,
+      "over_25": 1.88,
+      "under_25": 1.87,
+      "over_35": 3.1,
+      "under_35": 1.33,
+      "over_45": 5.75,
+      "under_45": 1.11,
+      "btts_yes": 1.87,
+      "btts_no": 1.86
+    }
+  },
+  {
+    "home_team": "Brighton",
+    "away_team": "Bournemouth",
+    "date": "2026-01-19",
+    "time": "20:00",
+    "game_id": "342788786c22e570ed2da53a9608113f",
+    "bookmaker_odds": {
+      "home": 1.83,
+      "draw": 3.86,
+      "away": 3.86,
+      "over_05": 1.02,
+      "under_05": 13.0,
+      "over_15": 1.15,
+      "under_15": 4.87,
+      "over_25": 1.54,
+      "under_25": 2.4,
+      "over_35": 2.25,
+      "under_35": 1.6,
+      "over_45": 3.8,
+      "under_45": 1.22,
+      "btts_yes": 1.51,
+      "btts_no": 2.41
+    }
   }
 ]
