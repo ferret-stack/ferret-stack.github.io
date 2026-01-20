@@ -109,7 +109,7 @@ It took a few attempts to get this pen to work with this nib, and honestly, I do
 Regardless, this pen holds up incredibly well with flex writing and, in the end, the sacrifices, cursing, and cut thumbs (and feeds) were all worth it
 
 <div class="image-double">
-  <img src="/assets/images/blue-velvet/twsbi-flex,jpg">
+  <img src="/assets/images/blue-velvet/twsbi-flex.jpg">
   <img src="/assets/images/blue-velvet/twsbi-hello-flex.jpg">
 </div>
 
