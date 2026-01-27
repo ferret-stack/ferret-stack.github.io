@@ -281,16 +281,18 @@ let venueAdjustment = {};
 async function loadAllData() {
   try {
     // Load all JSON files
+    const DATA_BASE_URL = 'https://raw.githubusercontent.com/ferret-stack/odds-calculator/main/data';
+    
     const responses = await Promise.all([
-      fetch('/assets/data/matches_data.json'),
-      fetch('/assets/data/elo_bands.json'),
-      fetch('/assets/data/elo_history.json'),
-      fetch('/assets/data/current_elo.json'),
-      fetch('/assets/data/upcoming_fixtures.json'),
-      fetch('/assets/data/referee_stats.json'),
-      fetch('/assets/data/team_stats.json'),
-      fetch('/assets/data/h2h_records.json'),
-      fetch('/assets/data/venue_adjustment.json')
+      fetch(`${DATA_BASE_URL}/matches_data.json`),
+      fetch(`${DATA_BASE_URL}/elo_bands.json`),
+      fetch(`${DATA_BASE_URL}/elo_history.json`),
+      fetch(`${DATA_BASE_URL}/current_elo.json`),
+      fetch(`${DATA_BASE_URL}/upcoming_fixtures.json`),
+      fetch(`${DATA_BASE_URL}/referee_stats.json`),
+      fetch(`${DATA_BASE_URL}/team_stats.json`),
+      fetch(`${DATA_BASE_URL}/h2h_records.json`),
+      fetch(`${DATA_BASE_URL}/venue_adjustment.json`)
     ]);
 
     // Parse JSON data
