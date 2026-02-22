@@ -7,22 +7,18 @@ category: [pens, stationery]
 tags: [lamy]
 author: Ferret Stack
 ---
-
 At the end of January I won an eBay auction for a joblot of Lamy pens and so this fortnight rotation has been focused on using them - a whole Safari *safari*, if you will 
 
-(ba dum tss)
-
-> [!picture] Lamy Safari safari
+<div class="single-image">
+  <img src="/assets/images/safari-safari/safari-hero.jpeg">
+</div>
+<figcaption>Ba dum tss!</figcaption>
 
 I have more pens than I do hands (significantly more) and I want to write about them. These aren't reviews; more pensive thoughts, or inky meditations
 
 If you're looking for nib measurements and posting lengths, you'll want to look elsewhere
 
 If you want to know why a grown adult gets unreasonably excited about a pen that's marketed to schoolchildren, you're in the right place
-
-
-> [!picture] All Pens Together
-> 2x2 picture of all pens together + sample of writing
 
 But first, let me tell you about Pokémon
 
@@ -34,10 +30,10 @@ Instead, I played an old GameBoy game called Dragon Warrior Monsters, which (in 
 
 So I'm not exactly knowledgeable, but I know two important things about Pokémon. First: there's an electric yellow cat that people quite like. Second: you have to choose between three starter creatures when you begin your adventure
 
-
-> [!picture] Pikachu
-> A poorly drawn picture of Pikachu
-> **CAPTION:** This is what you'd receive if you ordered Pikachu off Temu
+<div class="single-image">
+  <img src="/assets/images/safari-safari/pika-1.jpeg">
+</div>
+<figcaption>If you ordered Pikachu off Wish</figcaption>
 
 People diving into a new hobby are often faced with this same "what do I start with" decision. If Nintendo suddenly swapped out electric cats and water turtles for fountain pens (probably best not to mix those two; sounds like a fire hazard), the Lamy Safari would absolutely be one of the starter options
 
@@ -58,15 +54,17 @@ Not *just* fountain pens (of which there are three) but also a mechanical pencil
 #### Charcoal Black
 **Ink: Diamine Syrah**
 
-> [!picture] Charcol pen picture
-> 2x1 picture of the charcoal pen and writing sample
+<div class="single-image">
+  <img src="/assets/images/safari-safari/charcoal.jpeg">
+</div>
 
 Most Safaris come with a silver steel nib, but this one has a black coated nib to match the rest of the pen, which looks properly sleek against the matte body
 
 The nib ran a bit dry when I first got it, which is typical of both black-coated nibs and pens that you get for a good price on eBay. A rinse with soapy water sorted it out and it turns out to be a rather wet writer
 
-
-> [!picture] Nib close up
+<div class="single-image">
+  <img src="/assets/images/safari-safari/charcoal-close.jpeg">
+</div>
 
 Occasionally I will hit what I call a *crispy* angle; a slight misalignment where the ink doesn't lay down uniformly. Whether this is a user-error or a characteristic of the black coating, I'm unsure. It's not enough to upset me, however
 
@@ -75,8 +73,10 @@ The nib is broad, which isn't my usual preference, but I've come around to it. T
 #### Coral
 **Ink: Diamine Twilight**
 
-> [!picture] Coral
-> 2x1 picture of the pen with writing sample
+<div class="image-double">
+  <img src="/assets/images/safari-safari/coral.jpeg">
+  <img src="/assets/images/safari-safar/coral-close.jpeg">
+</div>
 
 A pinkish pen that reminds me of a Monzo card
 
@@ -86,14 +86,14 @@ Very *me*
 
 I slightly regret inking this with Diamine Twilight because it doesn't really do the rest of the pen much justice. Next time I will choose something with a bit more punch in it to match - Noodler's Dragon's Napalm would be a very good choice
 
-> [!picture] Dragon's Napalm
-> Swatch of DN ink next to the pne
+\[Dragons Napalm placeholder]
 
 #### Hey Now, You're an Al-Star
 **Ink: Diamine Eau de Nil**
 
-> [!picture] Al-Star
-> 2x1 picture of pen + writing sample
+<div class="single-image">
+  <img src="/assets/images/safari-safari/al-star.jpeg">
+</div>
 
 Here's my confession: I prefer the Safari over the Al-Star. The Safari looks more _down to earth_; the Al-Star seems like it's trying a little too hard
 
@@ -107,22 +107,24 @@ The process only took two tries so it wasn't too laborious (or wasteful of preci
 
 The bright pink tape actually looks quite cool against the reddish-pink body
 
-> [!picture] Close up of pen
-> Close up to show the washi tape and also the section coming apart
-> **CAPTION:** Maybe I should start adding washi tape to more of my pens?
+<div class="single-image">
+  <img src="/assets/images/safari-safari/coral-close.jpeg">
+</div>
+<figcaption>Maybe I shold start adding washi tape to more of my pens?</figcaption>
 
 ## Non-Fountain Pens 
 
 #### Ballpoint (Vista)
 
-I referenced demonstrator pens in the [[Jinhao 9019]] post, but I'd never used a demonstrator _ballpoint_ before
+I referenced demonstrator pens in the [Jinhao 9019](https://ferret-stack.github.io/Jinhao-9019/) post, but I'd never used a demonstrator _ballpoint_ before
 
 Unless you count the Bic Cristal
 
 (lol)
 
-> [!picture] Vista
-> Single picture of the pen
+<div class="single-image">
+  <img src="/assets/images/safari-safari/vista-1.jpeg">
+</div>
 
 The Lamy M16 refill stands out in this pen as it's quite chonky, and with its all metallic design, makes a statement
 
@@ -131,9 +133,10 @@ The ink contained within it, however, does not leave much of an impact and write
 This is a term I decided upon when I was 8 years old and I've been using it to describe a pen that writes a line that isn't that consistent; a bit washed out or dry
 
 
-> [!picture] Rusty Writing
-> Close up of how the pen writes
-> **CAPTION:** The M16 ink is decidedly rusty
+<div class="single-image">
+  <img src="/assets/images/safari-safari/vista-rust.jpeg">
+</div>
+<figcaption>The M16 refill is decidedly rusty...</figcaption>
 
 As such, I'll probably be swapping in the M17 refill (which uses Uniball's Jetstream ink) to elevate the writing experience. I really like the transparent design of the Vista and I would get a lot of use out of this pen with a nicer ink
 
@@ -145,21 +148,16 @@ I believe you get what you pay for, though
 
 In the package was also a red rollerball. Unlike the ballpoint, the ink in this is pretty spectacular. It's a *very* wet ink and I have had occasions where, due to being left handed, I've smudged the writing
 
-
-> [!picture] Pen + writing sample
-> 2x1 picture of the pen and writing sample + smudge
-
 So wet and smooth that it didn't take me long to realise how easy it is to stain a pair of grey joggers if you're not careful while this pen is uncapped
 
 Design-wise the rollerballs look identical to the fountain pens, but you can tell which is which as the FPs have a '+' on the finial, while the rollerballs have  a '-'
 
 I hope having a minus sign, while your fountain pen cousins have a plus, on its finial doesn't give the rollerball models an inferiority complex
 
-
-> [!picture] Finials
-> Picture of the two finials
-> **CAPTION:** Paging Dr. Freud...
-
+<div class="single-image">
+  <img src="/assets/images/safari-safari/freud.jpeg">
+</div>
+<figcaption>Paging Dr. Freud - my pen has anxiety!</figcaption>
 
 #### Mechanical Pencil
 
@@ -170,8 +168,9 @@ My excitement turned to disappointment pretty quickly, as the mechanism doesn't 
 I've disassembled, reassembled, and repeated (about ninety five million times) to no avail; it seems the clutch mechanism holding the lead is broken
 
 
-> [!picture] Mechanical Pencil + disassembly
-> 2x1 picture of pencil + disassembly
+<div class="single-image">
+  <img src="/assets/images/safari-safari/mech.jpeg">
+</div>
 
 
 When you do get a little bit of lead poking its head out, like a turtle coming out of its shell, the pressure against the page will push it right back in again
@@ -198,8 +197,6 @@ I'm unsure how this will be integrated into the design, but fingers crossed it w
 When discussing the Lamy Safari, you're inevitably going to get into the Safar/Al-Star debate, or the conversation about the grip design 
 The final thing that I'll mention about these pens is the grip
 
-> [!picture] Grip close up
-
 I hold my pens like an utter degenerate. I don't know what happened in my early school years, perhaps I had chicken pox the day it was being taught, but I never learned how to hold a pen correctly
 
 I remember seeing classmates with these weird rubber grips on their pencils, but for some reason I never got one and so, as a result, I hold my pen like a caveman probably would
@@ -210,7 +207,7 @@ I'm pretty agnostic to the whole grip debate on most pens; the only grip section
 
 The grip on these pens doesn't seem to bother me. It isn't *comfortable*, but not exactly uncomfortable either; I just get on with it
 
-\#stoic
+hashtag _stoic_
 
 I do seriously need to reconsider how I grip a pen however. As I write hooked and have such a tight grip on the pen, writing for long periods of time can get pretty uncomfortable and I'm sure it's going to fuck up my wrist later in life if I don't
 
