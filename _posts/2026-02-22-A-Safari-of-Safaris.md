@@ -52,7 +52,7 @@ Not *just* fountain pens (of which there are three) but also a mechanical pencil
 
 ### Fountain Pens
 #### Charcoal Black
-**Ink: Diamine Syrah**
+<b>Ink: <span style="color:darkred;">Diamine Syrah</span></b>
 
 <div class="single-image">
   <img src="/assets/images/safari-safari/charcoal.jpeg">
@@ -71,11 +71,11 @@ Occasionally I will hit what I call a *crispy* angle; a slight misalignment wher
 The nib is broad, which isn't my usual preference, but I've come around to it. There's some nice feedback there. Again, I think, from the black coating
 
 #### Coral
-**Ink: Diamine Twilight**
+<b>Ink: <span style="color:midnightblue;">Diamine Twilight</span></b>
 
 <div class="image-double">
   <img src="/assets/images/safari-safari/coral.jpeg">
-  <img src="/assets/images/safari-safar/coral-close.jpeg">
+  <img src="/assets/images/safari-safari/coral-close.jpeg">
 </div>
 
 A pinkish pen that reminds me of a Monzo card
@@ -84,12 +84,12 @@ I think this one is my favourite of the fountain pens as I really like the colou
 
 Very *me*
 
-I slightly regret inking this with Diamine Twilight because it doesn't really do the rest of the pen much justice. Next time I will choose something with a bit more punch in it to match - Noodler's Dragon's Napalm would be a very good choice
+I slightly regret inking this with <span style="color:darkmidnight;">Diamine Twilight</span> because it doesn't really do the rest of the pen much justice. Next time I will choose something with a bit more punch in it to match - Noodler's <span style="color:lightcoral;">Dragon's Napalm</span> would be a very good choice
 
 \[Dragons Napalm placeholder]
 
 #### Hey Now, You're an Al-Star
-**Ink: Diamine Eau de Nil**
+<b>Ink: <span style="color:teal;">Diamine Eau de Nil</span></b>
 
 <div class="single-image">
   <img src="/assets/images/safari-safari/al-star.jpeg">
