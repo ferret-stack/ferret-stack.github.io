@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Leaves of Absence"
-date: 2026-01-14
+title: "Proof of Age"
+date: 2026-04-01
 ferret: creative
 category: [stories]
 author: Ferret Stack
@@ -9,10 +9,10 @@ author: Ferret Stack
 The self-checkout had a camera mounted above it now. A small grey dome, angled downward, watching. Not to help you. Just to watch.
 
 I had already scanned most of my items. Bread, milk, pasta. Then the bottle of IPA, which the machine accepted with a beep before thinking better of it. The screen paused. A message appeared in large orange letters: APPROVAL NEEDED. PLEASE WAIT FOR ASSISTANCE.
+
 I waited.
 
 There was a button to press, to alert a member of staff. I pressed it. A light above the terminal began to flash. The machine went quiet, as if it too was waiting to see how this would resolve.
-
 
 He arrived after a minute. Young. Spotty. Carrying himself with the particular confidence of someone who has recently been given a lanyard. He looked at my items. He looked at the screen. Then he looked at me — a slow, almost clinical sweep, the kind of assessment that tries to disguise itself as something else. His eyes moved from my face to my jacket to my face again, like he was doing maths he hadn't been taught.
 
