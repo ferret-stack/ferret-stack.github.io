@@ -10,7 +10,7 @@ layout: default
 </section>
 
 <hr width="100%" size="2" color=#109dff noshade>
-<h2>Tools & Projects</h2>
+<h2 class="section-title">Tools & Projects</h2>
 <!-- Ferret Cards -->
 <section class="ferret-grid">
   <div class="ferret-card">
@@ -35,19 +35,40 @@ layout: default
   </div>
 </section>
 
-<!-- Recent Posts -->
-<section class="recent-posts">
-  <h2 class="section-title">Latest from the Stack</h2>
-  <div class="posts-grid">
-    {% for post in site.posts limit:3 %}
-    <article class="post-card">
-      <div class="post-card-content">
-        <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
-        <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
-        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-        <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
-      </div>
-    </article>
-    {% endfor %}
-  </div>
-</section>
+<section>
+  <h2 class="section-title">Find me Elsewhere...</h2>
+     <p>
+      The writing lives off-site. <strong>Boolean Ferret</strong> (betting models &amp;
+      data analysis), <strong>Poker Ferret</strong> (hand analysis &amp; game theory),
+      and <strong>Creative Ferret</strong> (fiction &amp; long-form) have all moved to a
+      dedicated self-hosted website.
+    </p>
+ 
+    <div class="fs-links-row">
+ 
+      <a href="#" class="fs-ext-link" title="Coming soon">
+        <span class="fs-ext-icon">👻</span>
+        <span class="fs-ext-inner">
+          <span class="fs-ext-name">Ferret Stack</span>
+          <span class="fs-ext-sub">Ghost — coming soon</span>
+        </span>
+      </a>
+ 
+      <a href="https://x.com/ferret_stack" class="fs-ext-link" target="_blank" rel="noopener">
+        <span class="fs-ext-icon">𝕏</span>
+        <span class="fs-ext-inner">
+          <span class="fs-ext-name">@ferret_stack</span>
+          <span class="fs-ext-sub">Twitter / X</span>
+        </span>
+      </a>
+ 
+      <a href="https://mastodon.social/@ferret_stack" class="fs-ext-link" target="_blank" rel="noopener">
+        <span class="fs-ext-icon">🐘</span>
+        <span class="fs-ext-inner">
+          <span class="fs-ext-name">ferret-stack</span>
+          <span class="fs-ext-sub">Mastodon</span>
+        </span>
+      </a>
+ 
+    </div>
+  </section>
