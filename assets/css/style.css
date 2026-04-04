@@ -2821,6 +2821,7 @@ blockquote {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+    margin-bottom: 2.5rem;
   }
   
   .site-logo {
