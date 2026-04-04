@@ -1265,6 +1265,10 @@ body {
     .stats-bar {
       grid-template-columns: repeat(2, 1fr);
     }
+    
+    .fs-links-row {
+      margin-left:0px;
+    }
   }
 
 /* Odds Calculator Disclaimer Page Styles */
