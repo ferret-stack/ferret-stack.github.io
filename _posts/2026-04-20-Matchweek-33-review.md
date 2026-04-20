@@ -1,14 +1,12 @@
 ---
 layout: post
-title: Matchweek 33: Review
+title: Matchweek 33 Review
 date: 2026-04-20
 ferret: boolean
 author: Ferret Stack
 ---
 ## The Model Isn't Always Right... But It's Never Wrong
-
-
-The bad news is none of our bets hit, meaning our £102 bankroll, coupled with a total portfolio stake of £6, is now below starting level
+[Matchweek 33](https://ferret-stack.github.io/Matchweek-33/) ends with bad news and good news. The bad news is none of our bets hit, meaning our £102 bankroll, coupled with a total portfolio stake of £6, is now below starting level
 
 The good news is that there were a few promotions on the bookmaker that I use and I was able to claw back most of this in free spins, meaning we're actually just 2p below our initial bankroll
 
