@@ -6,7 +6,7 @@ ferret: boolean
 author: Ferret Stack
 ---
 ## The Model Isn't Always Right... But It's Never Wrong
-[Matchweek 33](https://ferret-stack.github.io/Matchweek-33/) concludes with bad news and good news
+
 
 The bad news is none of our bets hit, meaning our £102 bankroll, coupled with a total portfolio stake of £6, is now below starting level
 
