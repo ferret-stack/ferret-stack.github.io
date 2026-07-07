@@ -1,114 +1,226 @@
 {
   "Arsenal": {
-    "elo": 2040,
-    "rank": 1
+    "elo": 1767,
+    "rank": 1,
+    "long_elo": 1767,
+    "long_rank": 1,
+    "rolling_elo": 1696,
+    "rolling_rank": 1
   },
   "Man City": {
-    "elo": 2002,
-    "rank": 2
-  },
-  "Liverpool": {
-    "elo": 1953,
-    "rank": 3
-  },
-  "Aston Villa": {
-    "elo": 1934,
-    "rank": 4
-  },
-  "Chelsea": {
-    "elo": 1905,
-    "rank": 5
-  },
-  "Newcastle": {
-    "elo": 1901,
-    "rank": 6
-  },
-  "Brentford": {
-    "elo": 1866,
-    "rank": 7
-  },
-  "Brighton": {
-    "elo": 1861,
-    "rank": 8
+    "elo": 1765,
+    "rank": 2,
+    "long_elo": 1765,
+    "long_rank": 2,
+    "rolling_elo": 1684,
+    "rolling_rank": 2
   },
   "Man Utd": {
-    "elo": 1857,
-    "rank": 9
+    "elo": 1645,
+    "rank": 3,
+    "long_elo": 1645,
+    "long_rank": 3,
+    "rolling_elo": 1599,
+    "rolling_rank": 3
   },
-  "Crystal Palace": {
-    "elo": 1830,
-    "rank": 10
+  "Liverpool": {
+    "elo": 1641,
+    "rank": 4,
+    "long_elo": 1641,
+    "long_rank": 4,
+    "rolling_elo": 1569,
+    "rolling_rank": 5
   },
-  "Sunderland": {
-    "elo": 1823,
-    "rank": 11
-  },
-  "Spurs": {
-    "elo": 1818,
-    "rank": 12
-  },
-  "Fulham": {
-    "elo": 1814,
-    "rank": 13
-  },
-  "Everton": {
-    "elo": 1812,
-    "rank": 14
+  "Aston Villa": {
+    "elo": 1606,
+    "rank": 5,
+    "long_elo": 1606,
+    "long_rank": 5,
+    "rolling_elo": 1559,
+    "rolling_rank": 6
   },
   "Bournemouth": {
-    "elo": 1807,
-    "rank": 15
+    "elo": 1605,
+    "rank": 6,
+    "long_elo": 1605,
+    "long_rank": 6,
+    "rolling_elo": 1575,
+    "rolling_rank": 4
+  },
+  "Brighton": {
+    "elo": 1589,
+    "rank": 7,
+    "long_elo": 1589,
+    "long_rank": 7,
+    "rolling_elo": 1549,
+    "rolling_rank": 7
+  },
+  "Newcastle": {
+    "elo": 1575,
+    "rank": 8,
+    "long_elo": 1575,
+    "long_rank": 8,
+    "rolling_elo": 1525,
+    "rolling_rank": 11
+  },
+  "Chelsea": {
+    "elo": 1572,
+    "rank": 9,
+    "long_elo": 1572,
+    "long_rank": 9,
+    "rolling_elo": 1526,
+    "rolling_rank": 10
+  },
+  "Brentford": {
+    "elo": 1570,
+    "rank": 10,
+    "long_elo": 1570,
+    "long_rank": 10,
+    "rolling_elo": 1535,
+    "rolling_rank": 8
   },
   "Nott'm Forest": {
-    "elo": 1776,
-    "rank": 16
+    "elo": 1546,
+    "rank": 11,
+    "long_elo": 1546,
+    "long_rank": 11,
+    "rolling_elo": 1515,
+    "rolling_rank": 12
   },
-  "West Ham": {
-    "elo": 1763,
-    "rank": 17
+  "Everton": {
+    "elo": 1541,
+    "rank": 12,
+    "long_elo": 1541,
+    "long_rank": 12,
+    "rolling_elo": 1510,
+    "rolling_rank": 13
+  },
+  "Crystal Palace": {
+    "elo": 1534,
+    "rank": 13,
+    "long_elo": 1534,
+    "long_rank": 13,
+    "rolling_elo": 1497,
+    "rolling_rank": 15
+  },
+  "Fulham": {
+    "elo": 1534,
+    "rank": 14,
+    "long_elo": 1534,
+    "long_rank": 14,
+    "rolling_elo": 1496,
+    "rolling_rank": 16
+  },
+  "Sunderland": {
+    "elo": 1534,
+    "rank": 15,
+    "long_elo": 1534,
+    "long_rank": 15,
+    "rolling_elo": 1506,
+    "rolling_rank": 14
   },
   "Leeds": {
-    "elo": 1735,
-    "rank": 18
+    "elo": 1520,
+    "rank": 16,
+    "long_elo": 1520,
+    "long_rank": 16,
+    "rolling_elo": 1531,
+    "rolling_rank": 9
   },
-  "Luton": {
-    "elo": 1687,
-    "rank": 19
+  "West Ham": {
+    "elo": 1488,
+    "rank": 17,
+    "long_elo": 1488,
+    "long_rank": 17,
+    "rolling_elo": 1453,
+    "rolling_rank": 17
   },
-  "Ipswich": {
-    "elo": 1679,
-    "rank": 20
-  },
-  "West Brom": {
-    "elo": 1679,
-    "rank": 21
-  },
-  "Leicester": {
-    "elo": 1674,
-    "rank": 22
-  },
-  "Burnley": {
-    "elo": 1663,
-    "rank": 23
+  "Spurs": {
+    "elo": 1480,
+    "rank": 18,
+    "long_elo": 1480,
+    "long_rank": 18,
+    "rolling_elo": 1433,
+    "rolling_rank": 18
   },
   "Wolves": {
-    "elo": 1655,
-    "rank": 24
+    "elo": 1395,
+    "rank": 19,
+    "long_elo": 1395,
+    "long_rank": 19,
+    "rolling_elo": 1362,
+    "rolling_rank": 21
   },
-  "Watford": {
-    "elo": 1643,
-    "rank": 25
+  "Luton": {
+    "elo": 1387,
+    "rank": 20,
+    "long_elo": 1387,
+    "long_rank": 20,
+    "rolling_elo": null,
+    "rolling_rank": null
+  },
+  "West Brom": {
+    "elo": 1382,
+    "rank": 21,
+    "long_elo": 1382,
+    "long_rank": 21,
+    "rolling_elo": null,
+    "rolling_rank": null
+  },
+  "Ipswich": {
+    "elo": 1382,
+    "rank": 22,
+    "long_elo": 1382,
+    "long_rank": 22,
+    "rolling_elo": 1351,
+    "rolling_rank": 22
+  },
+  "Leicester": {
+    "elo": 1380,
+    "rank": 23,
+    "long_elo": 1380,
+    "long_rank": 23,
+    "rolling_elo": 1368,
+    "rolling_rank": 20
+  },
+  "Burnley": {
+    "elo": 1346,
+    "rank": 24,
+    "long_elo": 1346,
+    "long_rank": 24,
+    "rolling_elo": 1370,
+    "rolling_rank": 19
   },
   "Norwich": {
-    "elo": 1642,
-    "rank": 26
+    "elo": 1345,
+    "rank": 25,
+    "long_elo": 1345,
+    "long_rank": 25,
+    "rolling_elo": null,
+    "rolling_rank": null
+  },
+  "Watford": {
+    "elo": 1341,
+    "rank": 26,
+    "long_elo": 1341,
+    "long_rank": 26,
+    "rolling_elo": null,
+    "rolling_rank": null
   },
   "Sheffield Utd": {
-    "elo": 1570,
-    "rank": 27
+    "elo": 1280,
+    "rank": 27,
+    "long_elo": 1280,
+    "long_rank": 27,
+    "rolling_elo": null,
+    "rolling_rank": null
   },
   "Southampton": {
-    "elo": 1563,
-    "rank": 28
+    "elo": 1250,
+    "rank": 28,
+    "long_elo": 1250,
+    "long_rank": 28,
+    "rolling_elo": 1291,
+    "rolling_rank": 23
   }
 }

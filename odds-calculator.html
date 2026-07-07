@@ -338,21 +338,27 @@ function initializePage() {
 }
 
 function getVenueAdjustedProbabilities(homeElo, awayElo, bandData) {
-  const homeMult = venueAdjustment.home_multiplier || 1.11;
-  const awayMult = venueAdjustment.away_multiplier || 0.89;
-  
+  // All multipliers are measured from the data by the pipeline's rebuild step
+  // and shipped in venue_adjustment.json: P(outcome | venue of stronger) / P(outcome)
+  const homeMult = venueAdjustment.home_multiplier || 1.1;
+  const awayMult = venueAdjustment.away_multiplier || 0.9;
+  const weakerHomeMult = venueAdjustment.weaker_home_multiplier || awayMult;
+  const weakerAwayMult = venueAdjustment.weaker_away_multiplier || homeMult;
+  const drawHomeMult = venueAdjustment.draw_home_multiplier || 0.95;
+  const drawAwayMult = venueAdjustment.draw_away_multiplier || 1.05;
+
   const isStrongerHome = homeElo >= awayElo;
-  
+
   let strongerAdj, weakerAdj, drawAdj;
-  
+
   if (isStrongerHome) {
     strongerAdj = bandData.stronger_win_pct * homeMult;
-    weakerAdj = bandData.weaker_win_pct * awayMult;
-    drawAdj = bandData.draw_pct * 0.95;
+    weakerAdj = bandData.weaker_win_pct * weakerAwayMult;
+    drawAdj = bandData.draw_pct * drawHomeMult;
   } else {
     strongerAdj = bandData.stronger_win_pct * awayMult;
-    weakerAdj = bandData.weaker_win_pct * homeMult;
-    drawAdj = bandData.draw_pct * 1.05;
+    weakerAdj = bandData.weaker_win_pct * weakerHomeMult;
+    drawAdj = bandData.draw_pct * drawAwayMult;
   }
   
   // Normalize
