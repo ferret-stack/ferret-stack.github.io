@@ -1121,6 +1121,12 @@ body {
     color: #109dff;
   }
 
+  /* Mobile-only market picker (Goals / BTTS / Booking Points). Hidden by
+     default; shown and wired up inside the 768px breakpoint below. */
+  .market-select-mobile {
+    display: none;
+  }
+
   /* Poisson Table */
   .poisson-table {
     background: white;
@@ -1526,6 +1532,42 @@ body {
     .market-card h3 {
       font-size: 15px;
       margin-bottom: 10px;
+    }
+
+    /* Market picker: Goals / BTTS / Booking Points collapse behind a
+       dropdown on mobile so only one shows at a time. H2H (no
+       --selectable class) is left out and always stays visible. */
+    .market-select-mobile {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .market-select-mobile label {
+      display: block;
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .market-select-mobile select {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .market-card--selectable {
+      display: none;
+    }
+
+    .market-card--selectable.active {
+      display: block;
+    }
+
+    .market-card--selectable:not(:first-child) {
+      border-top: none;
     }
 
     .market-row {

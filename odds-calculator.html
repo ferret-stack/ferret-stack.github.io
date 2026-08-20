@@ -135,8 +135,18 @@ layout: default
 
       <!-- Markets Grid -->
       <div class="markets-grid">
+        <!-- Mobile-only market picker: swaps between Goals / BTTS / Booking Points -->
+        <div class="market-select-mobile">
+          <label for="marketSelect">View Market</label>
+          <select id="marketSelect" onchange="switchMarketView(this.value)">
+            <option value="goals">Goals Markets</option>
+            <option value="btts">BTTS</option>
+            <option value="booking">Booking Points</option>
+          </select>
+        </div>
+
         <!-- Total Goals -->
-        <div class="market-card">
+        <div class="market-card market-card--selectable active" data-market="goals">
           <h3>Total Goals (Historical %)</h3>
           <div class="market-items">
             <div class="market-row">
@@ -162,11 +172,9 @@ layout: default
           </div>
         </div>
 
-      <div class="market-card">
-        <h3>BTTS & Booking Points</h3>
-        <div class="market-items">
-          <div class="market-section">
-            <h4>Both Teams to Score</h4>
+        <div class="market-card market-card--selectable" data-market="btts">
+          <h3>Both Teams to Score</h3>
+          <div class="market-items">
             <div class="market-row">
               <span>BTTS - Yes</span>
               <span class="odds" id="bttsYes">-</span>
@@ -176,11 +184,11 @@ layout: default
               <span class="odds" id="bttsNo">-</span>
             </div>
           </div>
-          
-          <div class="market-divider"></div>
-          
-          <div class="market-section">
-            <h4>Expected Booking Points</h4>
+        </div>
+
+        <div class="market-card market-card--selectable" data-market="booking">
+          <h3>Expected Booking Points</h3>
+          <div class="market-items">
             <div class="market-row">
               <span>Band Avg</span>
               <span class="odds" id="bandBooking">-</span>
@@ -199,9 +207,8 @@ layout: default
             </div>
           </div>
         </div>
-      </div>
 
-        <!-- Head to Head -->
+        <!-- Head to Head - always visible, not part of the mobile market picker -->
         <div class="market-card">
           <h3>Head to Head Record</h3>
           <div class="market-items" id="h2hContent">
@@ -895,8 +902,18 @@ function factorial(n) {
   return result;
 }
 
+// Mobile market picker: shows only the selected market card (Goals / BTTS / Booking Points).
+// H2H is unaffected and always stays visible. Has no effect above the mobile breakpoint,
+// where the CSS grid shows every card regardless of the "active" class.
+function switchMarketView(market) {
+  document.querySelectorAll('.market-card--selectable').forEach(function(card) {
+    card.classList.toggle('active', card.dataset.market === market);
+  });
+}
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
   loadAllData();
+  switchMarketView(document.getElementById('marketSelect').value);
 });
 </script>
