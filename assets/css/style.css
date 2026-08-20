@@ -1251,23 +1251,180 @@ body {
     line-height: 1.6;
   }
 
+  /* ELO Chart container - keeps Chart.js canvas from overflowing its box */
+  .elo-chart-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .elo-chart-container canvas {
+    max-width: 100%;
+  }
+
   /* Responsive */
   @media (max-width: 768px) {
+    .odds-calculator-page {
+      padding: 15px;
+      overflow-x: hidden;
+    }
+
+    .calc-header {
+      padding: 25px 15px;
+      margin-bottom: 25px;
+    }
+
+    .calc-header h1 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .calc-description {
+      font-size: 15px;
+    }
+
+    .last-updated {
+      font-size: 12px;
+    }
+
+    .team-selector-card {
+      padding: 18px;
+      margin-bottom: 25px;
+    }
+
     .match-selector {
       grid-template-columns: 1fr;
+      gap: 15px;
     }
-    
+
+    .vs-indicator {
+      padding-bottom: 0;
+      text-align: center;
+    }
+
+    .calculate-btn {
+      width: 100%;
+      padding: 15px 20px;
+    }
+
     .elo-display,
     .outcome-grid {
       grid-template-columns: 1fr;
     }
-    
+
+    .outcome-card {
+      padding: 18px;
+    }
+
     .stats-bar {
       grid-template-columns: repeat(2, 1fr);
     }
-    
+
+    /* Value bet threshold row: stack instead of overflowing horizontally */
+    .ev-threshold-control {
+      flex-wrap: wrap;
+      padding: 15px;
+      gap: 10px;
     }
-  
+
+    .ev-threshold-control label {
+      flex: 1 1 100%;
+    }
+
+    #evThreshold {
+      flex: 1 1 auto;
+      max-width: none;
+    }
+
+    .disclaimer-link {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+
+    /* Date range selector: stack the two date pickers */
+    .date-range-selector {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+
+    .date-range-selector input {
+      width: 100%;
+    }
+
+    /* Markets grid: single column, min width causes overflow otherwise */
+    .markets-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .market-card {
+      padding: 18px;
+    }
+
+    /* Poisson table: allow horizontal scroll instead of breaking page layout */
+    .poisson-table {
+      padding: 15px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .poisson-grid {
+      min-width: 340px;
+      font-size: 12px;
+    }
+
+    .poisson-cell {
+      padding: 6px 4px;
+    }
+
+    /* Fixtures */
+    .fixture-item {
+      padding: 15px;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 8px;
+    }
+
+    .fixture-home,
+    .fixture-away {
+      font-size: 14px;
+    }
+
+    .fixture-info {
+      padding: 0 8px;
+    }
+
+    /* Info section */
+    .info-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .info-card {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .calc-header h1 {
+      font-size: 24px;
+    }
+
+    .outcome-prob {
+      font-size: 26px;
+    }
+
+    .elo-rating,
+    .elo-diff {
+      font-size: 28px;
+    }
+
+    .poisson-grid {
+      min-width: 300px;
+      font-size: 11px;
+    }
+  }
+
 
 /* Odds Calculator Disclaimer Page Styles */
 
