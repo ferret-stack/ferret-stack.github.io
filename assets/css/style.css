@@ -1121,6 +1121,12 @@ body {
     color: #109dff;
   }
 
+  /* Mobile-only market picker (Goals / BTTS / Booking Points). Hidden by
+     default; shown and wired up inside the 768px breakpoint below. */
+  .market-select-mobile {
+    display: none;
+  }
+
   /* Poisson Table */
   .poisson-table {
     background: white;
@@ -1251,23 +1257,496 @@ body {
     line-height: 1.6;
   }
 
-  /* Responsive */
+  /* ELO Chart container - keeps Chart.js canvas from overflowing its box */
+  .elo-chart-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .elo-chart-container canvas {
+    max-width: 100%;
+  }
+
+  /* ============================================================
+     Mobile — this is a purpose-built compact layout, not a shrunk
+     desktop page: fewer separately-boxed "callout" cards (chrome
+     moves from repeated children onto the parent, with thin divider
+     lines between them instead), tighter spacing throughout, and the
+     ELO/outcome rows stay compact 3-column strips instead of
+     stacking into tall blocks.
+     ============================================================ */
   @media (max-width: 768px) {
+    .odds-calculator-page {
+      padding: 14px;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    .calc-header {
+      padding: 20px 16px;
+      margin-bottom: 22px;
+      border-radius: 14px;
+    }
+
+    .calc-header h1 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .calc-description {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .last-updated {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* Team selector */
+    .team-selector-card {
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    .team-selector-card h2 {
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
     .match-selector {
       grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
     }
-    
-    .elo-display,
+
+    .team-input select {
+      padding: 11px 12px;
+      min-height: 44px;
+      font-size: 15px;
+      border-radius: 8px;
+    }
+
+    .vs-indicator {
+      padding-bottom: 0;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .calculate-btn {
+      width: 100%;
+      padding: 13px 20px;
+      min-height: 44px;
+      border-radius: 12px;
+    }
+
+    /* ELO row — flattened into one compact strip, stays 3 across */
+    .elo-display {
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0;
+      margin-bottom: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 12px 8px;
+    }
+
+    .elo-card {
+      background: none;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 4px 8px;
+    }
+
+    .elo-card.home {
+      border-left: none;
+      border-right: 1px solid #eee;
+    }
+
+    .elo-card.away {
+      border-left: 1px solid #eee;
+    }
+
+    .elo-card.difference {
+      background: none;
+      padding: 4px 10px;
+    }
+
+    .elo-label {
+      font-size: 10px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .elo-team {
+      font-size: 11px;
+      margin-bottom: 4px;
+    }
+
+    .elo-rating,
+    .elo-diff {
+      font-size: 22px;
+      margin-bottom: 2px;
+    }
+
+    .elo-rank,
+    .elo-band,
+    .band-games,
+    .form-indicator {
+      font-size: 10px;
+      margin-top: 2px;
+    }
+
+    /* Outcome probabilities — flattened, stays 3 across */
+    .outcome-card {
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    .outcome-card h3 {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
     .outcome-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .outcome-item {
+      background: none;
+      border-radius: 0;
+      padding: 6px 6px 10px;
+    }
+
+    /* nth-child, not :not(:last-child) — #venueDisplay (an <h4>) is the
+       grid's true last child, so :not(:last-child) would wrongly leave
+       the Away Win item unbordered while still matching it. */
+    .outcome-item:nth-child(1),
+    .outcome-item:nth-child(2) {
+      border-right: 1px solid #eee;
+    }
+
+    .outcome-label {
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .outcome-prob {
+      font-size: 24px;
+      margin-bottom: 2px;
+    }
+
+    .outcome-odds {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .bookmaker-odds {
+      font-size: 11px;
+      margin-bottom: 6px;
+    }
+
+    .value-indicator {
+      font-size: 10px;
+      padding: 3px 6px;
+    }
+
+    #venueDisplay {
+      grid-column: 1 / -1;
+      margin-top: 10px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* Value-bet threshold row */
+    .ev-threshold-control {
+      flex-wrap: wrap;
+      padding: 12px 14px;
+      border-radius: 10px;
+      gap: 8px;
+    }
+
+    .ev-threshold-control label {
+      flex: 1 1 100%;
+      font-size: 13px;
+    }
+
+    #evThreshold {
+      flex: 1 1 auto;
+      max-width: none;
+      height: 44px;
+    }
+
+    #evValue {
+      font-size: 13px;
+      min-width: 30px;
+    }
+
+    .disclaimer-link {
+      flex: 1 1 100%;
+      text-align: center;
+      padding: 8px;
+      min-height: 44px;
+    }
+
+    /* Date range selector: stack the two date pickers */
+    .date-range-selector {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+
+    .date-range-selector input {
+      width: 100%;
+    }
+
+    /* Markets grid — merged into one card, divider lines between sections */
+    .markets-grid {
       grid-template-columns: 1fr;
+      gap: 0;
+      margin-bottom: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 14px 16px;
     }
-    
-    .stats-bar {
+
+    .market-card {
+      background: none;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 12px 0;
+    }
+
+    .market-card:not(:first-child) {
+      border-top: 1px solid #eee;
+    }
+
+    .market-card h3 {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    /* Market picker: Goals / BTTS / Booking Points collapse behind a
+       dropdown on mobile so only one shows at a time. H2H (no
+       --selectable class) is left out and always stays visible. */
+    .market-select-mobile {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .market-select-mobile label {
+      display: block;
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .market-select-mobile select {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .market-card--selectable {
+      display: none;
+    }
+
+    .market-card--selectable.active {
+      display: block;
+    }
+
+    .market-card--selectable:not(:first-child) {
+      border-top: none;
+    }
+
+    .market-row {
+      padding: 7px 0;
+      font-size: 14px;
+    }
+
+    .market-section h4 {
+      font-size: 13px;
+      margin: 8px 0 4px;
+    }
+
+    .market-divider {
+      border-top: 1px solid #f0f0f0;
+      margin: 8px 0;
+    }
+
+    /* Poisson grid — flattened toward the page background, stays a
+       horizontal-scroll data table (never collapses, 7 columns) */
+    .poisson-table {
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: none;
+      background: #fbfbfc;
+      margin-bottom: 20px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .poisson-table h3 {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .poisson-grid {
+      min-width: 340px;
+      font-size: 12px;
+    }
+
+    .poisson-cell {
+      padding: 6px 4px;
+    }
+
+    /* Fixtures — merged into one bordered list */
+    .fixtures-section {
+      margin-top: 24px;
+    }
+
+    .fixtures-section h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .fixtures-list {
+      gap: 0;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 4px 14px;
+    }
+
+    .fixture-item {
+      background: none;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 12px 0;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 8px;
+      min-height: 44px;
+    }
+
+    .fixture-item:not(:last-child) {
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    /* Desktop's translateX/shadow hover looks broken once items are
+       flattened into one bordered list — use a flat tap-feedback tint. */
+    .fixture-item:hover,
+    .fixture-item:active {
+      transform: none;
+      box-shadow: none;
+      background: #f8f9fa;
+    }
+
+    .fixture-home,
+    .fixture-away {
+      font-size: 13px;
+    }
+
+    .fixture-info {
+      padding: 0 6px;
+    }
+
+    /* Info section — flattened, demoted (lowest scan priority) */
+    .info-section {
+      margin-top: 24px;
+    }
+
+    .info-section h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .info-grid {
       grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
     }
-    
+
+    .info-card {
+      background: #f8f9fa;
+      box-shadow: none;
+      border-radius: 10px;
+      padding: 12px;
+      text-align: left;
     }
-  
+
+    .info-card h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .info-card p {
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .calc-header h1 {
+      font-size: 22px;
+    }
+
+    .last-updated {
+      font-size: 11px;
+    }
+
+    .elo-rating,
+    .elo-diff {
+      font-size: 19px;
+    }
+
+    .elo-team {
+      font-size: 10px;
+    }
+
+    .outcome-prob {
+      font-size: 21px;
+    }
+
+    .poisson-grid {
+      min-width: 300px;
+      font-size: 11px;
+    }
+
+    .poisson-cell {
+      padding: 4px 3px;
+    }
+
+    /* 2 columns get cramped at this width — collapse to a divided list */
+    .info-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      padding: 4px 14px;
+    }
+
+    .info-card {
+      background: none;
+      border-radius: 0;
+      padding: 12px 0;
+    }
+
+    .info-card:not(:last-child) {
+      border-bottom: 1px solid #f0f0f0;
+    }
+  }
+
 
 /* Odds Calculator Disclaimer Page Styles */
 
