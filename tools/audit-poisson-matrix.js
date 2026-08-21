@@ -16,70 +16,17 @@
 
 const fs = require('fs');
 const path = require('path');
-const vm = require('vm');
 const { validateScoreMatrix } = require('./validate-score-matrix.js');
+const {
+  extractPageScript,
+  loadPageScope,
+  fetchLiveData,
+  usableFixtures,
+  DATA_BASE_URL
+} = require('./load-page-scope.js');
 
 const HTML_PATH = path.join(__dirname, '..', 'odds-calculator.html');
-const DATA_BASE_URL = 'https://raw.githubusercontent.com/ferret-stack/odds-calculator/main/data';
 const MIN_FIXTURES = 5;
-
-/** Pull the inline <script> body (the one defining calculatePoissonMatrix) out of the page. */
-function extractPageScript(html) {
-  const blocks = [...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi)]
-    .map(m => m[1]);
-  const block = blocks.find(b => b.includes('function calculatePoissonMatrix'));
-  if (!block) {
-    throw new Error('Could not find the inline <script> defining calculatePoissonMatrix');
-  }
-  return block;
-}
-
-/** Evaluate the page script in a sandbox, returning the sandbox as the page's global scope. */
-function loadPageScope(scriptBody) {
-  const noop = () => {};
-  const stubElement = {
-    innerHTML: '', textContent: '', value: '', className: '', style: {},
-    dataset: {}, classList: { toggle: noop, add: noop, remove: noop },
-    appendChild: noop, addEventListener: noop
-  };
-  const sandbox = {
-    console,
-    document: {
-      getElementById: () => stubElement,
-      querySelectorAll: () => [],
-      createElement: () => Object.create(stubElement),
-      addEventListener: noop   // swallows DOMContentLoaded -> loadAllData never fires
-    },
-    window: {},
-    Chart: function Chart() {}
-  };
-  sandbox.globalThis = sandbox;
-  vm.createContext(sandbox);
-
-  // The page declares its state with `let` (e.g. `let teamStats = {}`), which creates a
-  // lexical binding that never lands on the sandbox object — so it cannot be populated
-  // from outside. A bridge appended to the SAME evaluation shares that lexical scope,
-  // giving us a handle on the page's real variables. The HTML file itself is untouched.
-  const bridge = `
-;globalThis.__bridge = {
-  setData(m, t) { matchesData = m; teamStats = t; },
-  getLeagueContext() { return { matchCount: matchesData.length }; },
-  calculatePoissonMatrix
-};`;
-  vm.runInContext(scriptBody + bridge, sandbox, { filename: 'odds-calculator.html<script>' });
-
-  const bridged = sandbox.__bridge;
-  if (!bridged || typeof bridged.calculatePoissonMatrix !== 'function') {
-    throw new Error('calculatePoissonMatrix was not defined after evaluating the page script');
-  }
-  return bridged;
-}
-
-async function fetchJson(name) {
-  const res = await fetch(`${DATA_BASE_URL}/${name}`);
-  if (!res.ok) throw new Error(`GET ${name} -> HTTP ${res.status}`);
-  return res.json();
-}
 
 /** Self-check: prove each validator rule actually fires before trusting a "pass". */
 function selfTestValidator() {
@@ -115,11 +62,7 @@ async function main() {
 
   const page = loadPageScope(extractPageScript(fs.readFileSync(HTML_PATH, 'utf8')));
 
-  const [matchesData, teamStats, upcomingFixtures] = await Promise.all([
-    fetchJson('matches_data.json'),
-    fetchJson('team_stats.json'),
-    fetchJson('upcoming_fixtures.json')
-  ]);
+  const { matchesData, teamStats, upcomingFixtures } = await fetchLiveData();
 
   // Populate exactly the globals the page populates in loadAllData().
   page.setData(matchesData, teamStats);
@@ -138,9 +81,7 @@ async function main() {
   console.log(`  fixtures served ${upcomingFixtures.length}`);
   console.log(`  leagueAvg       ${leagueAvg.toFixed(6)} goals/team/match\n`);
 
-  const fixtures = upcomingFixtures
-    .filter(f => teamStats[f.home_team] && teamStats[f.away_team])
-    .slice(0, Math.max(MIN_FIXTURES, 6));
+  const fixtures = usableFixtures(upcomingFixtures, teamStats, Math.max(MIN_FIXTURES, 6));
 
   if (fixtures.length < MIN_FIXTURES) {
     throw new Error(`Only ${fixtures.length} usable fixtures; need at least ${MIN_FIXTURES}`);

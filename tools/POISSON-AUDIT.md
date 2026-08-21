@@ -2,7 +2,9 @@
 
 **Date:** 2026-08-21
 **Scope:** `calculatePoissonMatrix()` / `generatePoissonGrid()` in `odds-calculator.html`
-**Status:** Audit only — no code was changed. No fix has been applied or proposed here.
+**Status:** Audit findings below, followed by the truncation fix (grid extended 0–5 → 0–10)
+and its post-fix measurements. The venue-adjustment discrepancy remains **flagged only** —
+no wiring change was made.
 
 `boolean/odds-calculator.html` is byte-identical to `odds-calculator.html` (verified with
 `diff`), so these findings apply to both copies.
@@ -18,7 +20,11 @@
   hand-copy that could drift. Data is fetched from the same `DATA_BASE_URL` the live page uses,
   and fixtures come from `upcoming_fixtures.json` — real fixtures served on the live site.
 
-Run with `node tools/audit-poisson-matrix.js`.
+- `tools/compare-poisson-matrix.js` — proves an edit to the matrix left the pre-existing cells
+  untouched, by rebuilding the old function from git and comparing with `Object.is`.
+- `tools/load-page-scope.js` — shared extraction + sandbox helper used by both scripts.
+
+Run with `node tools/audit-poisson-matrix.js` and `node tools/compare-poisson-matrix.js`.
 
 The validator self-tests first (a matrix summing to exactly 1.0 passes; a matrix with a
 negative fails (b); a matrix with a value > 1 fails (c)) so a "pass" below cannot be vacuous.
@@ -36,7 +42,7 @@ negative fails (b); a matrix with a value > 1 fails (c)) so a "pass" below canno
 `leagueAvg` and all expected-goals values are in a football-plausible range, so the matrices
 tested are real output, not the product of malformed input.
 
-## Results — 6 real fixtures
+## Results — 6 real fixtures (BEFORE the fix, 6×6 grid)
 
 Every matrix is 6×6 (36 cells, 0–5 goals per side).
 
@@ -51,7 +57,7 @@ Every matrix is 6×6 (36 cells, 0–5 goals per side).
 
 **6 fixtures tested, 0 passed, 6 failed.**
 
-### Reading of the numbers
+### Reading of the numbers (before)
 
 - **(b) and (c) pass everywhere.** No negative probabilities, no probability above 1.0, no
   non-finite cells across all 216 cells. The PMF arithmetic itself is well-formed.
@@ -64,6 +70,51 @@ Every matrix is 6×6 (36 cells, 0–5 goals per side).
   the grid. Man City at `homeExpected = 2.90` loses the most.
 - No renormalisation happens anywhere between `calculatePoissonMatrix` and the rendered grid,
   so displayed scoreline percentages are understated by the deficit shown above.
+
+## The fix — grid extended to 0–10 goals per side
+
+`calculatePoissonMatrix` now builds an **11×11** matrix (`MAX_GOALS = 10`, inclusive) instead
+of 6×6. The extra cells are genuine Poisson probabilities for scorelines 6–10; **nothing was
+renormalised**, and the expected-goals formula and the `1.1` / `0.9` multipliers were not
+touched. `generatePoissonGrid`'s column-header loop, which had its own hardcoded `6`, now
+sizes itself from `matrix[0].length`.
+
+### The original 36 cells are bit-identical
+
+`tools/compare-poisson-matrix.js` reconstructs the pre-fix function from
+`git show <ref>:odds-calculator.html`, evaluates it alongside the working-tree version against
+the same live data, and compares the overlapping 0–5 block with `Object.is` — exact bit
+equality, not an epsilon. For all six fixtures:
+
+```
+36/36 identical cells, 0 differing, expected goals unchanged   (6x6 -> 11x11)
+```
+
+Run it with `node tools/compare-poisson-matrix.js`.
+
+### Results — same 6 fixtures (AFTER the fix, 11×11 grid)
+
+| Fixture (2026-05-24) | Sum before (6×6) | **Sum after (11×11)** | Deviation | (a) | (b) | (c) |
+|---|---|---|---|---|---|---|
+| Crystal Palace vs Arsenal | 0.9976016636 | **0.9999998488** | −0.0000001512 | PASS | PASS | PASS |
+| Man City vs Aston Villa | 0.9251427028 | **0.9997773053** | −0.0002226947 | PASS | PASS | PASS |
+| Nott'm Forest vs Bournemouth | 0.9968782034 | **0.9999998019** | −0.0000001981 | PASS | PASS | PASS |
+| Liverpool vs Brentford | 0.9736560208 | **0.9999840977** | −0.0000159023 | PASS | PASS | PASS |
+| Brighton vs Man Utd | 0.9935120799 | **0.9999990262** | −0.0000009738 | PASS | PASS | PASS |
+| Burnley vs Wolves | 0.9960941353 | **0.9999997355** | −0.0000002645 | PASS | PASS | PASS |
+
+**6 fixtures tested, 6 passed, 0 failed.** Man City vs Aston Villa is the binding case — the
+highest `homeExpected` (2.90) and so the fattest tail — and its residual deficit of 2.2×10⁻⁴
+is the largest of the six, comfortably inside the ±0.001 tolerance. The remaining deviations
+are the genuine mass beyond 10 goals per side, not rounding.
+
+### Rendering
+
+The grid is now 12×12 rendered cells (121 data cells plus headers, up from 36). Verified with
+Playwright at 375px, 768px and 1280px: 12 grid columns at every width, header row aligned with
+the data columns, no wrapped or orphaned cells, the table scrolling horizontally inside
+`.poisson-table` at 375px (524px content in a 347px box), and the page body never scrolling
+horizontally at any width.
 
 ## Where `teamStats`' expected-goals values come from
 
@@ -133,6 +184,34 @@ The expected-goals math hardcodes `* 1.1` (home) and `* 0.9` (away) at
 (`venueAdjustment.home_multiplier || 1.11`, `venueAdjustment.away_multiplier || 0.89`), and
 `venueAdjustment.json` is fetched at `odds-calculator.html:302` — but
 `calculatePoissonMatrix` never consults it.
+
+### The live data has drifted from the fallbacks too
+
+Fetched live from `${DATA_BASE_URL}/venue_adjustment.json`:
+
+```json
+{ "home_multiplier": 1.098, "away_multiplier": 0.898,
+  "home_win_rate": 0.5759, "away_win_rate": 0.4711,
+  "sample_size": 2194, "last_updated": "2026-08-15" }
+```
+
+The served values are **1.098 / 0.898** — they do **not** match the `|| 1.11` / `|| 0.89`
+fallbacks at `odds-calculator.html:348-349`. Three different multiplier pairs are therefore
+in play at once:
+
+| Pair | Where | Used by |
+|---|---|---|
+| 1.1 / 0.9 | hardcoded, `odds-calculator.html:699-700` | `calculatePoissonMatrix` |
+| 1.11 / 0.89 | fallback constants, `odds-calculator.html:348-349` | `getVenueAdjustedProbabilities`, only when the fetch fails |
+| 1.098 / 0.898 | live `venue_adjustment.json` | `getVenueAdjustedProbabilities` in practice |
+
+**Consequence:** pointing `calculatePoissonMatrix` at `venueAdjustment` is **not** a no-op
+one-liner. Because the live values differ from both the hardcoded pair and the documented
+fallbacks, the swap changes Poisson output no matter which pair is deemed authoritative, and
+it needs an explicit decision on which is correct plus a defined behaviour for when the fetch
+fails (the fallbacks themselves being stale). Note the live file also carries
+`sample_size: 2194` against the 2205 matches in `matches_data.json`, so the two datasets are
+not generated from the identical match set.
 
 Recorded as an observation only. Reconciling this is a separate task and was not investigated
 here.

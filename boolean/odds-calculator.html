@@ -699,11 +699,14 @@ function calculatePoissonMatrix(homeTeam, awayTeam) {
   const homeExpected = homeAttack * awayDefense * leagueAvg * 1.1;
   const awayExpected = awayAttack * homeDefense * leagueAvg * 0.9;
   
-  // Generate matrix
+  // Generate matrix. MAX_GOALS is inclusive, so this is an 11x11 grid (0-10 per side).
+  // The bound has to be high enough that the tail mass left outside the grid is negligible:
+  // at 0-5 the scorelines summed to as little as 0.925 for high-scoring fixtures.
+  const MAX_GOALS = 10;
   const matrix = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i <= MAX_GOALS; i++) {
     const row = [];
-    for (let j = 0; j < 6; j++) {
+    for (let j = 0; j <= MAX_GOALS; j++) {
       const prob = poissonPMF(i, homeExpected) * poissonPMF(j, awayExpected);
       row.push(prob);
     }
@@ -742,7 +745,8 @@ function generatePoissonGrid(homeTeam, awayTeam) {
   headerRow.innerHTML = `<small>${awayTeam}<br>Goals →</small>`;
   grid.appendChild(headerRow);
   
-  for (let i = 0; i < 6; i++) {
+  // Column headers are the away-goal axis, so size them from the row width.
+  for (let i = 0; i < matrix[0].length; i++) {
     const div = document.createElement('div');
     div.className = 'poisson-cell poisson-header';
     div.textContent = i.toString();
