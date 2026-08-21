@@ -1134,6 +1134,8 @@ body {
     border-radius: 20px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     margin-bottom: 40px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .poisson-table h3 {
@@ -1143,13 +1145,16 @@ body {
 
   .poisson-grid {
     display: grid;
-    grid-template-columns: 50px repeat(6, 1fr);
+    grid-template-columns: 50px repeat(11, minmax(0, 1fr));
     gap: 2px;
     font-size: 14px;
+    /* 12 columns (0-10 goals + row header) need more room than the container
+       always has; .poisson-table scrolls rather than letting cells crush. */
+    min-width: 720px;
   }
 
   .poisson-cell {
-    padding: 10px;
+    padding: 10px 4px;
     text-align: center;
     background: #f8f9fa;
     border-radius: 5px;
@@ -1586,7 +1591,7 @@ body {
     }
 
     /* Poisson grid — flattened toward the page background, stays a
-       horizontal-scroll data table (never collapses, 7 columns) */
+       horizontal-scroll data table (never collapses, 12 columns) */
     .poisson-table {
       padding: 12px;
       border-radius: 10px;
@@ -1603,12 +1608,12 @@ body {
     }
 
     .poisson-grid {
-      min-width: 340px;
-      font-size: 12px;
+      min-width: 560px;
+      font-size: 11px;
     }
 
     .poisson-cell {
-      padding: 6px 4px;
+      padding: 5px 3px;
     }
 
     /* Fixtures — merged into one bordered list */
@@ -1718,12 +1723,12 @@ body {
     }
 
     .poisson-grid {
-      min-width: 300px;
-      font-size: 11px;
+      min-width: 500px;
+      font-size: 10px;
     }
 
     .poisson-cell {
-      padding: 4px 3px;
+      padding: 4px 2px;
     }
 
     /* 2 columns get cramped at this width — collapse to a divided list */
