@@ -3405,3 +3405,42 @@ blockquote {
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
+
+/* ============================================================
+   Odds calculator: value-bet threshold card, mobile thinning.
+   Placed at end of file so it wins the cascade over the earlier
+   unconditional .ev-threshold-control rules (same specificity,
+   later source order) that were fully overriding the 768px
+   breakpoint defined further up the file.
+   ============================================================ */
+@media (max-width: 768px) {
+  .ev-threshold-control {
+    flex-wrap: wrap;
+    padding: 10px 12px;
+    border-radius: 10px;
+    gap: 6px;
+    margin: 14px auto;
+  }
+
+  .ev-threshold-control label {
+    flex: 1 1 100%;
+    font-size: 13px;
+  }
+
+  #evThreshold {
+    flex: 1 1 auto;
+    max-width: none;
+    height: 36px;
+  }
+
+  #evValue {
+    font-size: 13px;
+    min-width: 28px;
+  }
+
+  .disclaimer-link {
+    flex: 1 1 100%;
+    text-align: center;
+    font-size: 12px;
+  }
+}
