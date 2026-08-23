@@ -71,16 +71,6 @@ layout: default
         </div>
       </div>
 
-      <!-- ELO Chart -->
-      <div class="elo-chart-container">
-        <h3>ELO Progression</h3>
-        <div class="date-range-selector">
-          <label>From: <input type="date" id="chartStartDate" onchange="updateEloChart()"></label>
-          <label>To: <input type="date" id="chartEndDate" onchange="updateEloChart()"></label>
-        </div>
-        <canvas id="eloChart"></canvas>
-      </div>
-      
       <div class="ev-threshold-control">
         <label>
           Value Bet Threshold: 
@@ -98,7 +88,7 @@ layout: default
         <h3>Match Outcome Probabilities (ELO Band Analysis)</h3>
         <div class="outcome-grid">
           <div class="outcome-item">
-            <div class="outcome-label">Home Win</div>
+            <div class="outcome-label" id="homeWinLabel">Home Win</div>
             <div class="outcome-prob" id="homeWinProb">-</div>
             <div class="outcome-odds" id="homeOdds">-</div>
             <div class="bookmaker-row" id="homeBookmaker" style="display:none;">
@@ -118,7 +108,7 @@ layout: default
           </div>
 
           <div class="outcome-item">
-            <div class="outcome-label">Away Win</div>
+            <div class="outcome-label" id="awayWinLabel">Away Win</div>
             <div class="outcome-prob" id="awayWinProb">-</div>
             <div class="outcome-odds" id="awayOdds">-</div>
             <div class="bookmaker-row" id="awayBookmaker" style="display:none;">
@@ -133,6 +123,16 @@ layout: default
         </div>
       </div>
 
+      <!-- ELO Chart -->
+      <div class="elo-chart-container">
+        <h3>ELO Progression</h3>
+        <div class="date-range-selector">
+          <label>From: <input type="date" id="chartStartDate" onchange="updateEloChart()"></label>
+          <label>To: <input type="date" id="chartEndDate" onchange="updateEloChart()"></label>
+        </div>
+        <canvas id="eloChart"></canvas>
+      </div>
+      
       <!-- Markets Grid -->
       <div class="markets-grid">
         <!-- Mobile-only market picker: swaps between Goals / BTTS / Booking Points -->
@@ -482,6 +482,8 @@ function calculateOdds() {
   // Update ELO display
   document.getElementById('homeTeamName').textContent = homeTeam;
   document.getElementById('awayTeamName').textContent = awayTeam;
+  document.getElementById('homeWinLabel').textContent = `${homeTeam} Win`;
+  document.getElementById('awayWinLabel').textContent = `${awayTeam} Win`;
   document.getElementById('homeElo').textContent = homeElo;
   document.getElementById('homeRank').textContent = `Rank: #${homeEloData.rank}`;
   document.getElementById('awayElo').textContent = awayElo;
