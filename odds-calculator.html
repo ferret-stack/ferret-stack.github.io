@@ -684,13 +684,24 @@ function calculatePoissonMatrix(homeTeam, awayTeam) {
     return null;
   }
   
-  // League average (calculate from all matches)
+  // League average (calculate from all *scored* matches).
+  //
+  // matchesData can include a record with no result yet -- an unplayed
+  // fixture, or a scrape artifact -- and home_goals/away_goals on those is
+  // undefined, not 0. Summing straight through them turns totalGoals (and
+  // everything downstream: leagueAvg, both expected-goals figures, every
+  // Poisson cell) into NaN. Same class of bug as the odds-calculator repo's
+  // calculate_poisson() KeyError fix -- skip scoreless records here too.
   let totalGoals = 0;
-  let totalMatches = matchesData.length;
+  let totalMatches = 0;
   matchesData.forEach(match => {
+    if (typeof match.home_goals !== 'number' || typeof match.away_goals !== 'number') {
+      return;
+    }
     totalGoals += match.home_goals + match.away_goals;
+    totalMatches++;
   });
-  const leagueAvg = totalGoals / (totalMatches * 2);
+  const leagueAvg = totalMatches > 0 ? totalGoals / (totalMatches * 2) : 1.3;
   
   // Calculate expected goals with home advantage
   const homeAttack = homeStats.last_10_avg_goals_for / leagueAvg;
